@@ -1,4 +1,6 @@
 import { LogoCv } from '../components/Ikon'
+import { TombolAksi } from '../components/Tombol'
+import { usePasang } from '../hooks/usePasang'
 import { KONFIGURASI } from '../konfigurasi'
 
 const TEKNOLOGI = [
@@ -29,6 +31,8 @@ const LANGKAH = [
 ]
 
 export function Tentang() {
+  const { bisaPasang, berdiriSendiri, pasang } = usePasang()
+
   return (
     <div className="space-y-7">
       <header>
@@ -127,6 +131,37 @@ export function Tentang() {
             </li>
           ))}
         </ol>
+      </section>
+
+      <section aria-labelledby="tentang-pasang">
+        <h2 id="tentang-pasang" className="mb-2 text-sm font-semibold">
+          Pasang di perangkat
+        </h2>
+        <div className="rounded-2xl border border-garis bg-panel/50 p-3.5">
+          {berdiriSendiri ? (
+            <p className="text-xs leading-relaxed text-redup">
+              Aplikasi ini sedang berjalan sebagai aplikasi terpasang. Tidak ada bilah alamat, dan
+              ikonnya ada di layar utama perangkat.
+            </p>
+          ) : bisaPasang ? (
+            <>
+              <p className="text-xs leading-relaxed text-redup">
+                Peramban ini mendukung pemasangan. Tekan tombol di bawah untuk menambahkan
+                ChromaVibe ke layar utama.
+              </p>
+              <TombolAksi onClick={pasang} utama className="mt-2.5 min-h-10 px-3 text-xs">
+                Pasang aplikasi
+              </TombolAksi>
+            </>
+          ) : (
+            <p className="text-xs leading-relaxed text-redup">
+              Tombol pasang otomatis hanya muncul pada Chrome Android dan Chrome desktop. Di iPhone,
+              buka menu Bagikan di Safari lalu pilih Tambahkan ke Layar Utama. Peramban di dalam
+              aplikasi seperti Instagram, WhatsApp, atau TikTok tidak menyediakan pemasangan, jadi
+              buka alamat ini lewat Chrome atau Safari.
+            </p>
+          )}
+        </div>
       </section>
 
       <section aria-labelledby="tentang-tautan">

@@ -20,7 +20,7 @@ Bagian ini yang paling sering ditanya. Setiap syarat dipetakan ke berkas dan bar
 | Detail dari daftar pertama | `web/src/pages/DetailTema.tsx` | 23 | Slug dibaca dari URL lewat useParams, lalu palet kurasi tema itu dimuat. Inilah daftar kedua. |
 | Daftar kedua, yaitu palet per tema | `web/src/pages/DetailTema.tsx` | 90 | Setiap item palet menuju halaman detailnya sendiri. Jadi ada dua pasang daftar dan detail. |
 | Halaman detail palet | `web/src/pages/DetailPalet.tsx` | 156 | Menampilkan pratinjau, lima peran warna, tabel kontras beserta lencana AA/AAA, dan tombol ekspor CSS. |
-| Halaman profil atau tentang | `web/src/pages/Tentang.tsx` | 4 | Memuat penyusun, ide dasar, teknologi, daftar endpoint, dan tautan repositori. Nama serta NIM diambil dari src/konfigurasi.ts. |
+| Halaman profil atau tentang | `web/src/pages/Tentang.tsx` | 6 | Memuat penyusun, ide dasar, teknologi, daftar endpoint, dan tautan repositori. Nama serta NIM diambil dari src/konfigurasi.ts. |
 | PWA dan manifest | `web/vite.config.ts` | 20 | Nama, ikon 192 dan 512 termasuk maskable, display standalone, serta warna tema. Dihasilkan menjadi manifest.webmanifest saat build. |
 | Service worker dan cache offline | `web/src/sw.ts` | 144 | Tiga cabang: permintaan /api/v1, navigasi halaman, dan aset. Strategi cache dijelaskan pada fungsi layaniApi di berkas yang sama. |
 
