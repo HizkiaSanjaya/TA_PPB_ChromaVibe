@@ -65,13 +65,13 @@ export function Tentang() {
           {[
             ['Nama', KONFIGURASI.praktikan],
             ['NIM', KONFIGURASI.nim],
-            ['Asisten', KONFIGURASI.asisten],
+            ['Kelompok', `${KONFIGURASI.kelompok} / Shift ${KONFIGURASI.shift}`],
             ['Mata kuliah', KONFIGURASI.mataKuliah],
             ['Institusi', KONFIGURASI.institusi],
           ].map(([label, nilai]) => (
-            <div key={label} className="flex items-start justify-between gap-4 px-3.5 py-2.5">
-              <dt className="text-redup">{label}</dt>
-              <dd className="text-right font-medium">{nilai}</dd>
+            <div key={label} className="px-3.5 py-2.5">
+              <dt className="text-[10px] uppercase tracking-wider text-redup">{label}</dt>
+              <dd className="mt-0.5 font-medium leading-snug break-words">{nilai}</dd>
             </div>
           ))}
         </dl>
