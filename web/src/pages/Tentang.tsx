@@ -154,12 +154,30 @@ export function Tentang() {
               </TombolAksi>
             </>
           ) : (
-            <p className="text-xs leading-relaxed text-redup">
-              Tombol pasang otomatis hanya muncul pada Chrome Android dan Chrome desktop. Di iPhone,
-              buka menu Bagikan di Safari lalu pilih Tambahkan ke Layar Utama. Peramban di dalam
-              aplikasi seperti Instagram, WhatsApp, atau TikTok tidak menyediakan pemasangan, jadi
-              buka alamat ini lewat Chrome atau Safari.
-            </p>
+            <div className="space-y-2 text-xs leading-relaxed text-redup">
+              <p>
+                Peramban ini tidak menawarkan pemasangan otomatis. Pemasangan tetap bisa dilakukan
+                manual lewat menu peramban.
+              </p>
+              <ul className="list-disc space-y-1 pl-4">
+                <li>
+                  <span className="text-teks">Chrome Android</span>: menu titik tiga di kanan atas,
+                  pilih Instal aplikasi atau Tambahkan ke layar utama.
+                </li>
+                <li>
+                  <span className="text-teks">Chrome desktop</span>: ikon layar di ujung kanan bilah
+                  alamat, atau menu titik tiga lalu Install ChromaVibe.
+                </li>
+                <li>
+                  <span className="text-teks">Safari iPhone</span>: tombol Bagikan, lalu Tambahkan
+                  ke Layar Utama. Hanya Safari yang menyediakan ini di iOS.
+                </li>
+              </ul>
+              <p>
+                Peramban di dalam aplikasi seperti Instagram, WhatsApp, atau TikTok tidak
+                menyediakan pemasangan. Salin alamat ini lalu buka lewat Chrome atau Safari.
+              </p>
+            </div>
           )}
         </div>
       </section>

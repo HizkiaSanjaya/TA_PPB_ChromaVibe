@@ -5,52 +5,57 @@ interface PeristiwaPasang extends Event {
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
 }
 
+declare global {
+  interface Window {
+    __cvPromptPasang?: PeristiwaPasang | null
+  }
+}
+
 /**
- * Menangkap peristiwa beforeinstallprompt.
+ * Status keterpasangan PWA.
  *
- * Chrome hanya memancarkannya bila syarat keterpasangan terpenuhi: manifest
- * lengkap, ikon 192 dan 512, service worker aktif, dan situs disajikan lewat
- * HTTPS. Kalau tombol di halaman Tentang tidak muncul, itu petunjuk bahwa
- * syarat tersebut belum terpenuhi di peramban pengguna, bukan karena tombolnya
- * rusak. Peramban dalam aplikasi seperti Instagram atau WhatsApp tidak pernah
- * memancarkan peristiwa ini.
+ * Peristiwa beforeinstallprompt ditangkap lebih dulu oleh skrip di index.html,
+ * karena React bisa kalah cepat dan kehilangan peristiwa tersebut. Hook ini
+ * hanya membaca simpanan itu dan menunggu pemberitahuan berikutnya.
  */
 export function usePasang() {
-  const [peristiwa, setPeristiwa] = useState<PeristiwaPasang | null>(null)
+  const [peristiwa, setPeristiwa] = useState<PeristiwaPasang | null>(
+    () => window.__cvPromptPasang ?? null
+  )
   const [berdiriSendiri, setBerdiriSendiri] = useState(false)
 
   useEffect(() => {
     const media = window.matchMedia('(display-mode: standalone)')
-    setBerdiriSendiri(media.matches)
+    const iosTerpasang =
+      (window.navigator as Navigator & { standalone?: boolean }).standalone === true
+    setBerdiriSendiri(media.matches || iosTerpasang)
 
-    const tangkap = (e: Event) => {
-      e.preventDefault()
-      setPeristiwa(e as PeristiwaPasang)
-    }
-
-    const selesai = () => {
-      setPeristiwa(null)
-      setBerdiriSendiri(true)
-    }
-
+    const ambil = () => setPeristiwa(window.__cvPromptPasang ?? null)
+    const ditutup = () => setPeristiwa(null)
     const pantauMode = (e: MediaQueryListEvent) => setBerdiriSendiri(e.matches)
 
-    window.addEventListener('beforeinstallprompt', tangkap)
-    window.addEventListener('appinstalled', selesai)
+    window.addEventListener('chromavibe:pasang-tersedia', ambil)
+    window.addEventListener('chromavibe:terpasang', ditutup)
     media.addEventListener('change', pantauMode)
 
     return () => {
-      window.removeEventListener('beforeinstallprompt', tangkap)
-      window.removeEventListener('appinstalled', selesai)
+      window.removeEventListener('chromavibe:pasang-tersedia', ambil)
+      window.removeEventListener('chromavibe:terpasang', ditutup)
       media.removeEventListener('change', pantauMode)
     }
   }, [])
 
   async function pasang() {
-    if (!peristiwa) return
-    await peristiwa.prompt()
-    const pilihan = await peristiwa.userChoice
-    if (pilihan.outcome === 'accepted') setPeristiwa(null)
+    const tersedia = peristiwa ?? window.__cvPromptPasang ?? null
+    if (!tersedia) return
+
+    await tersedia.prompt()
+    const pilihan = await tersedia.userChoice
+
+    window.__cvPromptPasang = null
+    setPeristiwa(null)
+
+    if (pilihan.outcome === 'accepted') setBerdiriSendiri(true)
   }
 
   return { bisaPasang: Boolean(peristiwa) && !berdiriSendiri, berdiriSendiri, pasang }

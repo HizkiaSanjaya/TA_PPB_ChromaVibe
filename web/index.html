@@ -18,6 +18,25 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      /*
+       * Peristiwa beforeinstallprompt bisa dipancarkan peramban sebelum React
+       * selesai dipasang. Kalau pendengarnya baru dipasang di dalam useEffect,
+       * peristiwa itu sudah lewat dan tombol Pasang tidak pernah muncul.
+       * Skrip ini berjalan lebih dulu dan menyimpannya supaya bisa diambil
+       * kapan pun komponen siap.
+       */
+      window.__cvPromptPasang = null
+      window.addEventListener('beforeinstallprompt', function (peristiwa) {
+        peristiwa.preventDefault()
+        window.__cvPromptPasang = peristiwa
+        window.dispatchEvent(new Event('chromavibe:pasang-tersedia'))
+      })
+      window.addEventListener('appinstalled', function () {
+        window.__cvPromptPasang = null
+        window.dispatchEvent(new Event('chromavibe:terpasang'))
+      })
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
