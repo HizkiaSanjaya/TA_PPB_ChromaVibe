@@ -9,6 +9,12 @@ Dibuat oleh Hizkia Yosefha Wetrawatri Sanjaya (21120124130091), Kelompok 03 Shif
 sebagai Tugas Akhir Praktikum Pemrograman Perangkat Bergerak dengan platform
 **Progressive Web App**.
 
+| Layanan | Alamat |
+| --- | --- |
+| Aplikasi (PWA) | https://ta-ppb-chroma-vibe-nixt.vercel.app |
+| API | https://ta-ppb-chroma-vibe.vercel.app |
+| Repositori | https://github.com/HizkiaSanjaya/TA_PPB_ChromaVibe |
+
 ## Struktur repositori
 
 ```

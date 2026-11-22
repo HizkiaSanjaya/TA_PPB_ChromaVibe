@@ -15,7 +15,8 @@ sudah ditandai.
 | Asisten Pembimbing | _(lengkapi)_ |
 | Tanggal Bimbingan | _(lengkapi, usulkan 23 November 2026)_ |
 | Link GitHub | https://github.com/HizkiaSanjaya/TA_PPB_ChromaVibe |
-| Link Deploy | _(lengkapi setelah deploy Vercel)_ |
+| Link Deploy | https://ta-ppb-chroma-vibe-nixt.vercel.app |
+| Link API | https://ta-ppb-chroma-vibe.vercel.app |
 
 ## Catatan Bimbingan
 
