@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto'
 import { mkdirSync, writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 
@@ -44,6 +45,24 @@ const KURASI = [
 
 const SEED = 2026
 
+/**
+ * Id palet kurasi diturunkan dari slug, bukan dibiarkan acak oleh Postgres.
+ * Dengan begitu JSON cadangan dan tabel Supabase memakai id yang sama, sehingga
+ * tautan /palet/:id dan palet yang sudah tersimpan di koleksi tetap valid
+ * meskipun sumber datanya berganti.
+ */
+function uuidDariSlug(slug) {
+  const h = createHash('md5').update(`chromavibe:${slug}`).digest('hex')
+  const varian = ((parseInt(h.slice(16, 18), 16) & 0x3f) | 0x80).toString(16)
+  return [
+    h.slice(0, 8),
+    h.slice(8, 12),
+    `5${h.slice(13, 16)}`,
+    `${varian}${h.slice(18, 20)}`,
+    h.slice(20, 32),
+  ].join('-')
+}
+
 const hitunganTema = {}
 const kurasi = []
 
@@ -51,6 +70,7 @@ for (const item of KURASI) {
   hitunganTema[item.tema] = (hitunganTema[item.tema] ?? 0) + 1
   const urutan = hitunganTema[item.tema]
   const indeks = urutan - 1
+  const slug = `${item.tema}-${urutan}`
 
   const palet = buatPalet({
     base: item.base,
@@ -61,8 +81,8 @@ for (const item of KURASI) {
   })
 
   kurasi.push({
-    id: `kurasi-${item.tema}-${urutan}`,
-    slug: `${item.tema}-${urutan}`,
+    id: uuidDariSlug(slug),
+    slug,
     tema: item.tema,
     tema_nama: ambilTema(item.tema)?.nama ?? item.tema,
     nama: palet.nama,
@@ -84,17 +104,30 @@ const json = (nilai) => `$json$${JSON.stringify(nilai)}$json$`
 const barisSql = kurasi
   .map(
     (item) =>
-      `  (${kutip(item.tema)}, ${kutip(item.slug)}, ${kutip(item.nama)}, ${kutip(
-        item.harmoni
-      )}, ${json(item.warna)}, ${json(item.pasangan_kontras)}, ${json(item.ringkasan)})`
+      `  (${kutip(item.id)}::uuid, ${kutip(item.tema)}, ${kutip(item.slug)}, ${kutip(
+        item.nama
+      )}, ${kutip(item.harmoni)}, ${json(item.warna)}, ${json(item.pasangan_kontras)}, ${json(
+        item.ringkasan
+      )})`
   )
   .join(',\n')
 
 const sql = `-- Dihasilkan otomatis oleh npm run seed:build. Jangan disunting manual.
-insert into palet (tema_slug, slug, nama, harmoni, warna, pasangan_kontras, ringkasan)
+--
+-- Id ditulis eksplisit karena diturunkan dari slug, bukan dibiarkan acak oleh
+-- Postgres. Dengan begitu data contoh di src/data/palet.kurasi.json dan tabel
+-- Supabase memakai id yang sama, sehingga tautan /palet/:id tetap valid walau
+-- sumber data berganti.
+insert into palet (id, tema_slug, slug, nama, harmoni, warna, pasangan_kontras, ringkasan)
 values
 ${barisSql}
-on conflict (slug) do nothing;
+on conflict (slug) do update set
+  id = excluded.id,
+  nama = excluded.nama,
+  harmoni = excluded.harmoni,
+  warna = excluded.warna,
+  pasangan_kontras = excluded.pasangan_kontras,
+  ringkasan = excluded.ringkasan;
 `
 
 const jalurSql = fileURLToPath(new URL('../../supabase/seed.sql', import.meta.url))

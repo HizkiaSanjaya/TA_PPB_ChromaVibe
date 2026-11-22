@@ -90,7 +90,7 @@ Sumber data palet kurasi serta perilaku aplikasi saat jaringan mati.
 | --- | --- | --- | --- |
 | Saklar Supabase dan data contoh | `api/src/config/sumber-data.js` | 63 | Kalau kredensial belum diisi, membaca JSON contoh. Controller tidak perlu tahu sumbernya. |
 | Pemeriksaan kredensial Supabase | `api/src/config/supabase.js` | 14 | Melempar 503 kalau belum dikonfigurasi. Kunci service role tidak pernah keluar dari proses server. |
-| Pembangkit palet kurasi | `api/scripts/bangun-seed.js` | 12 | Tiga puluh pasangan warna dan tema. Warnanya tetap hasil generator, bukan ditulis tangan. |
+| Pembangkit palet kurasi | `api/scripts/bangun-seed.js` | 13 | Tiga puluh pasangan warna dan tema. Warnanya tetap hasil generator, bukan ditulis tangan. |
 | Skema tabel Supabase | `supabase/schema.sql` | 10 | Satu tabel dengan kolom jsonb untuk warna, pasangan kontras, dan ringkasan. |
 | Alamat API di sisi klien | `web/src/api/client.ts` | 3 | Dibaca dari VITE_API_URL. Tidak ada URL yang ditanam langsung di kode sumber. |
 | Menangkap kegagalan jaringan di klien | `web/src/api/client.ts` | 23 | fetch yang gagal, atau balasan 503 dari service worker, memicu kejadian ini untuk menampilkan penanda offline. |

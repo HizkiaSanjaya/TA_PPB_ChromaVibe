@@ -111,16 +111,23 @@ npm run seed
 `ringkasan` bertipe `jsonb`. Tema tidak disimpan di tabel karena definisinya adalah
 konfigurasi kode, sehingga tidak ada dua sumber kebenaran.
 
-Selama `SUPABASE_URL` belum diisi, API otomatis memakai data contoh dari
-`api/src/data/palet.kurasi.json` dan menulis satu peringatan di log. Perilaku ini
-memudahkan demo saat asistensi tanpa menunggu basis data siap.
+Proyek Supabase yang dipakai: `https://okwfivpuwyypaeehbvef.supabase.co`. Selama
+`SUPABASE_SERVICE_ROLE_KEY` kosong, API otomatis memakai data contoh dari
+`api/src/data/palet.kurasi.json` dan menulis satu peringatan di log, sehingga demo tetap
+bisa jalan tanpa basis data.
 
-Langkah mengaktifkan Supabase:
+Langkah menyiapkan Supabase:
 
-1. Jalankan `supabase/schema.sql` di SQL Editor Supabase.
-2. Jalankan `supabase/seed.sql` untuk mengisi 21 palet kurasi.
+1. Jalankan `supabase/schema.sql` di SQL Editor. Berkas ini memuat `GRANT` untuk role
+   `anon`, `authenticated`, dan `service_role`. Tanpa blok itu, permintaan gagal dengan
+   kode `42501 permission denied` walau kuncinya benar.
+2. Jalankan `supabase/seed.sql` untuk mengisi 30 palet kurasi.
 3. Isi `SUPABASE_URL` dan `SUPABASE_SERVICE_ROLE_KEY` pada environment variables.
 4. Nyalakan ulang API. Peringatan data contoh tidak muncul lagi.
+
+Id palet kurasi diturunkan dari slug lewat MD5, bukan dibiarkan acak oleh Postgres. Dengan
+begitu JSON cadangan dan tabel Supabase memakai uuid yang sama, sehingga tautan `/palet/:id`
+dan palet yang sudah tersimpan di koleksi tetap valid walau sumber data berganti.
 
 Kunci `SUPABASE_SERVICE_ROLE_KEY` hanya dipakai di sisi server dan tidak pernah dikirim
 ke klien.

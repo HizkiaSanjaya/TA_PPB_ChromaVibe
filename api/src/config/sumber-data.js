@@ -79,12 +79,22 @@ export async function ambilPaletKurasi(temaSlug) {
 export async function ambilPaletById(id) {
   if (supabase) {
     const { data, error } = await supabase.from('palet').select('*').eq('id', id).maybeSingle()
-    if (error) throw new ApiError(500, error.message)
-    return data ? petakanBaris(data) : null
+
+    // Kolom id bertipe uuid. Kalau nilainya bukan uuid, Postgres menolak dengan
+    // kode 22P02. Itu bukan kegagalan server, cukup berarti id tidak ditemukan.
+    const bukanUuid = error?.code === '22P02'
+
+    if (error && !bukanUuid) throw new ApiError(500, error.message)
+    if (data) return petakanBaris(data)
+
+    // Slug ikut dicoba agar tautan lama yang memakai slug tetap bisa dibuka.
+    const cadangan = await supabase.from('palet').select('*').eq('slug', id).maybeSingle()
+    if (cadangan.error) throw new ApiError(500, cadangan.error.message)
+    return cadangan.data ? petakanBaris(cadangan.data) : null
   }
 
   peringatanContoh()
-  const ketemu = muatContoh().find((item) => item.id === id)
+  const ketemu = muatContoh().find((item) => item.id === id || item.slug === id)
   return ketemu ? lengkapiNama(ketemu) : null
 }
 

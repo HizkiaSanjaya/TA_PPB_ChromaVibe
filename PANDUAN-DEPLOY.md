@@ -26,14 +26,13 @@ perubahan berikutnya, jangan menumpuk semuanya dalam satu commit.
 1. Proyek sudah dibuat: `https://okwfivpuwyypaeehbvef.supabase.co`.
 2. Buka SQL Editor, tempel seluruh isi `supabase/schema.sql`, lalu Run.
 3. Tempel seluruh isi `supabase/seed.sql`, lalu Run. Ini mengisi 30 palet kurasi.
-4. Buka Project Settings, API Keys. Proyek ini sudah tercatat di `api/.env`, tinggal
-   tempel `service_role` key ke variabel `SUPABASE_SERVICE_ROLE_KEY`.
+4. Buka Project Settings, API Keys. Kunci `service_role` disimpan hanya di `api/.env` lokal`n   dan di Environment Variables Vercel, tidak pernah di berkas yang di-commit.
 5. Jangan pakai kunci `anon` untuk server. Kunci `service_role` melewati Row Level Security
    dan hanya boleh berada di environment variables Vercel.
 
 Bila isi palet diubah, jalankan `npm run seed` lalu ulangi langkah 3. Skrip itu menulis
-ulang `supabase/seed.sql` dengan perintah `on conflict (slug) do nothing`, sehingga aman
-dijalankan berkali-kali.
+ulang `supabase/seed.sql` dengan `on conflict (slug) do update`, sehingga aman dijalankan
+berkali-kali: baris lama diperbarui, bukan diduplikasi.
 
 ## 3. Vercel untuk API
 

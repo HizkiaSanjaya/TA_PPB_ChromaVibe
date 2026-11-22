@@ -23,8 +23,15 @@ create index if not exists idx_palet_tema_slug on palet (tema_slug);
 
 alter table palet enable row level security;
 
--- Aplikasi membaca data lewat server yang memakai service role, tetapi kebijakan
--- baca publik tetap dipasang agar data bisa diperiksa langsung dari dasbor.
+-- Tabel yang dibuat lewat SQL Editor tidak otomatis mendapat hak akses untuk
+-- role API Supabase. Tanpa blok GRANT berikut, permintaan akan gagal dengan
+-- kode 42501 "permission denied for table palet" walau kuncinya benar.
+grant usage on schema public to anon, authenticated, service_role;
+grant select, insert, update, delete on public.palet to service_role;
+grant select on public.palet to anon;
+
+-- Aplikasi membaca dan menulis lewat server yang memakai service role, tetapi
+-- kebijakan baca publik tetap dipasang agar data bisa diperiksa dari dasbor.
 drop policy if exists "palet_baca_publik" on palet;
 create policy "palet_baca_publik" on palet
   for select
