@@ -1,0 +1,6 @@
+# Normalisasi akhir baris agar konsisten di Windows, Linux, dan Vercel.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.ico binary

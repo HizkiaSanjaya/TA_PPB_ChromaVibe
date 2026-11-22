@@ -1,0 +1,6 @@
+node_modules/
+dist/
+coverage/
+
+# Dibangun ulang oleh `npm run seed:build`, jangan diformat tangan.
+src/data/palet.kurasi.json
