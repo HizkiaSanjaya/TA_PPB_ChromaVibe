@@ -9,12 +9,12 @@ sudah ditandai.
 | --- | --- |
 | Judul Tugas Akhir | ChromaVibe: Aplikasi Rekomendasi Palet Warna Web Berbasis Estetika Tema dan Harmoni Kontras |
 | Platform | Progressive Web App (PWA) |
-| Nama Praktikan | _(lengkapi)_ |
-| NIM | _(lengkapi)_ |
-| Kelas / Shift | _(lengkapi)_ |
+| Nama Praktikan | Hizkia Yosefha Wetrawatri Sanjaya |
+| NIM | 21120124130091 |
+| Kelas / Shift | Kelompok 03, Shift 01 |
 | Asisten Pembimbing | _(lengkapi)_ |
 | Tanggal Bimbingan | _(lengkapi, usulkan 23 November 2026)_ |
-| Link GitHub | _(lengkapi)_ |
+| Link GitHub | https://github.com/HizkiaSanjaya/TA_PPB_ChromaVibe |
 | Link Deploy | _(lengkapi setelah deploy Vercel)_ |
 
 ## Catatan Bimbingan

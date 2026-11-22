@@ -7,27 +7,27 @@ untuk hosting API dan PWA. Kerjakan berurutan.
 
 ```bash
 cd "D:\Kuliah\5_Praktikum Pemroraman Perangkat Bergerak\TA"
-git init
+git remote -v          # sudah terpasang ke repositori ini
+git status
 git add .
-git commit -m "feat: ChromaVibe API palet warna dan PWA"
-git branch -M main
-git remote add origin https://github.com/USERNAME/chromavibe.git
-git push -u origin main
+git commit -m "pesan"
+git push
 ```
 
 Pastikan berkas `.env` tidak ikut terkirim. Berkas `.gitignore` sudah mengecualikannya.
-Periksa dengan `git status` sebelum commit pertama.
+Periksa dengan `git status` sebelum commit.
 
-Untuk riwayat yang lebih meyakinkan saat responsi, pecah menjadi beberapa commit, misalnya
-lapisan warna, konfigurasi tema, endpoint, data kurasi, lalu PWA. Repositori dengan satu
-commit besar sering dipertanyakan asisten.
+Riwayat repositori ini sudah dipecah menjadi tujuh commit bertema: lapisan warna, tema dan
+generator, endpoint, skema basis data, PWA, lalu dokumentasi. Pertahankan pola itu untuk
+perubahan berikutnya, jangan menumpuk semuanya dalam satu commit.
 
 ## 2. Supabase
 
-1. Buat proyek baru, catat region dan *password* basis data.
+1. Proyek sudah dibuat: `https://okwfivpuwyypaeehbvef.supabase.co`.
 2. Buka SQL Editor, tempel seluruh isi `supabase/schema.sql`, lalu Run.
-3. Tempel seluruh isi `supabase/seed.sql`, lalu Run. Ini mengisi 21 palet kurasi.
-4. Buka Project Settings, bagian API. Salin `Project URL` dan `service_role` key.
+3. Tempel seluruh isi `supabase/seed.sql`, lalu Run. Ini mengisi 30 palet kurasi.
+4. Buka Project Settings, API Keys. Proyek ini sudah tercatat di `api/.env`, tinggal
+   tempel `service_role` key ke variabel `SUPABASE_SERVICE_ROLE_KEY`.
 5. Jangan pakai kunci `anon` untuk server. Kunci `service_role` melewati Row Level Security
    dan hanya boleh berada di environment variables Vercel.
 
@@ -57,10 +57,10 @@ Tambahkan environment variables pada dasbor Vercel, menu Settings lalu Environme
 Variables:
 
 ```
-SUPABASE_URL=https://xxxx.supabase.co
+SUPABASE_URL=https://okwfivpuwyypaeehbvef.supabase.co
 SUPABASE_SERVICE_ROLE_KEY=...
 CORS_ORIGIN=https://chromavibe.vercel.app
-PORT=3000
+PORT=3001
 ```
 
 `CORS_ORIGIN` boleh berisi beberapa alamat dipisah koma, misalnya juga

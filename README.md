@@ -5,7 +5,8 @@ Pengguna memilih satu warna primer dan satu tema seperti Y2K, Elegant, atau Cybe
 Sistem menyusun lima peran warna: latar, permukaan, primer, aksen, dan teks. Setiap
 pasangan teks dan latar diuji dengan rumus kontras WCAG, lalu diberi nilai AA atau AAA.
 
-Dibuat sebagai Tugas Akhir Praktikum Pemrograman Perangkat Bergerak dengan platform
+Dibuat oleh Hizkia Yosefha Wetrawatri Sanjaya (21120124130091), Kelompok 03 Shift 01,
+sebagai Tugas Akhir Praktikum Pemrograman Perangkat Bergerak dengan platform
 **Progressive Web App**.
 
 ## Struktur repositori
@@ -38,7 +39,7 @@ scripts/
 npm run instal          # pasang dependensi api/ dan web/
 cp api/.env.example api/.env
 cp web/.env.example web/.env
-npm run dev             # API di http://localhost:3000
+npm run dev             # API di http://localhost:3001
 npm run dev:web         # PWA di http://localhost:5173
 ```
 
@@ -77,7 +78,7 @@ Parameter `generate`: `base` (hex wajib), `tema` (wajib), `harmoni` (bawaan `tri
 `jumlah` 1 sampai 5, `seed` bilangan bulat.
 
 ```bash
-curl "http://localhost:3000/api/v1/palettes/generate?base=3B82F6&tema=y2k&harmoni=triadik&jumlah=3&seed=42"
+curl "http://localhost:3001/api/v1/palettes/generate?base=3B82F6&tema=y2k&harmoni=triadik&jumlah=3&seed=42"
 ```
 
 ## Cara kerja mesin warna
