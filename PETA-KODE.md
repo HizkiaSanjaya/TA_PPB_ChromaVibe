@@ -16,7 +16,7 @@ Bagian ini yang paling sering ditanya. Setiap syarat dipetakan ke berkas dan bar
 | Memakai API buatan sendiri | `api/src/app.js` | 65 | Tiga router dipasang di bawah prefiks /api/v1. Daftar lengkap endpoint ada di route "/" pada berkas yang sama. |
 | Bottom navigation bar | `web/src/components/BottomNav.tsx` | 5 | Empat tab: Beranda, Generator, Koleksi, Tentang. Aktif atau tidak ditentukan NavLink lewat fungsi isActive. |
 | Minimal lima halaman | `web/src/App.tsx` | 16 | Tujuh rute terdaftar di bawah ini: beranda, detail tema, detail palet, generator, koleksi, tentang, dan 404. |
-| Daftar pertama, yaitu tema | `web/src/pages/Beranda.tsx` | 30 | Data diambil dari GET /api/v1/themes lewat TanStack Query, lalu dirender sebagai kartu yang bisa diklik. |
+| Daftar pertama, yaitu tema | `web/src/pages/Beranda.tsx` | 36 | Data diambil dari GET /api/v1/themes lewat TanStack Query, lalu dirender sebagai kartu yang bisa diklik. |
 | Detail dari daftar pertama | `web/src/pages/DetailTema.tsx` | 23 | Slug dibaca dari URL lewat useParams, lalu palet kurasi tema itu dimuat. Inilah daftar kedua. |
 | Daftar kedua, yaitu palet per tema | `web/src/pages/DetailTema.tsx` | 101 | Setiap item palet menuju halaman detailnya sendiri. Jadi ada dua pasang daftar dan detail. |
 | Pilihan warna umum dan kecerahan | `web/src/data/warna-umum.ts` | 9 | Daftar tujuh belas warna bernama untuk pengguna awam, ditambah sepuluh tingkat kecerahan. Pemilih warna koordinat tetap ada untuk yang butuh warna persis. |
@@ -100,7 +100,7 @@ Sumber data palet kurasi serta perilaku aplikasi saat jaringan mati.
 | Skema tabel Supabase | `supabase/schema.sql` | 10 | Satu tabel dengan kolom jsonb untuk warna, pasangan kontras, dan ringkasan. |
 | Alamat API di sisi klien | `web/src/api/client.ts` | 3 | Dibaca dari VITE_API_URL. Tidak ada URL yang ditanam langsung di kode sumber. |
 | Menangkap kegagalan jaringan di klien | `web/src/api/client.ts` | 23 | fetch yang gagal, atau balasan 503 dari service worker, memicu kejadian ini untuk menampilkan penanda offline. |
-| Penanda offline di atas halaman | `web/src/components/PenandaOffline.tsx` | 6 | navigator.onLine saja tidak cukup, karena perangkat bisa tersambung WiFi tetapi server API mati. |
+| Penanda offline di atas halaman | `web/src/components/PenandaOffline.tsx` | 19 | navigator.onLine saja tidak cukup, karena perangkat bisa tersambung WiFi tetapi server API mati. |
 | Cache kerangka aplikasi saat instalasi | `web/src/sw.ts` | 29 | Daftar berkas dari manifest Vite dideduplikasi, karena Cache.addAll menolak daftar berisi URL kembar. |
 | Strategi cache untuk permintaan API | `web/src/sw.ts` | 83 | Stale while revalidate: jawab dari cache, perbarui di latar. Aman karena hasil generator deterministik. |
 | Jatuh ke halaman tersimpan saat offline | `web/src/sw.ts` | 110 | Network first, lalu cache halaman yang pernah dibuka, lalu index.html dari precache. |

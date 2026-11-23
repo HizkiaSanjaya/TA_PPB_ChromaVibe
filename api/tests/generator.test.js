@@ -212,6 +212,29 @@ test('monokrom tetap membedakan warna utama dan warna kedua', () => {
   }
 })
 
+test('warna utama dan warna kedua tetap terpisah, termasuk monokrom', () => {
+  for (const tema of ['elegant', 'brutalism', 'y2k', 'minimalis', 'pastel']) {
+    const palet = buatPalet({ base: '#E53935', tema, harmoni: 'monokrom' })
+    const utama = palet.warna.find((item) => item.peran === 'base')
+    const kedua = palet.warna.find((item) => item.peran === 'accent')
+
+    assert.notEqual(utama.hex, kedua.hex, `${tema}: warna utama dan kedua sama persis`)
+
+    // Dihitung sebagai jarak warna, bukan hanya selisih gelap, karena dua warna
+    // bisa dibedakan lewat kepekatan walau tingkat gelapnya mirip.
+    const rad = Math.PI / 180
+    const jarak = Math.hypot(
+      utama.oklch[0] - kedua.oklch[0],
+      utama.oklch[1] * Math.cos(utama.oklch[2] * rad) -
+        kedua.oklch[1] * Math.cos(kedua.oklch[2] * rad),
+      utama.oklch[1] * Math.sin(utama.oklch[2] * rad) -
+        kedua.oklch[1] * Math.sin(kedua.oklch[2] * rad)
+    )
+
+    assert.ok(jarak > 0.12, `${tema}: warna utama dan kedua terlalu mirip (${jarak.toFixed(3)})`)
+  }
+})
+
 test('tema dan harmoni yang tidak dikenal ditolak', () => {
   assert.throws(
     () => buatPalet({ base: '#3B82F6', tema: 'tidak-ada', harmoni: 'triadik' }),

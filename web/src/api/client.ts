@@ -28,6 +28,10 @@ async function ambil<T>(jalur: string): Promise<T> {
 
   if (respons.status === 503) {
     window.dispatchEvent(new Event('chromavibe:jaringan-gagal'))
+  } else if (respons.ok && isi?.success) {
+    // Satu permintaan yang berhasil berarti server sudah terjangkau lagi.
+    // Tanpa sinyal ini, penanda offline menempel terus walau jaringan pulih.
+    window.dispatchEvent(new Event('chromavibe:jaringan-pulih'))
   }
 
   if (!respons.ok || !isi?.success) {
