@@ -44,7 +44,9 @@ export function rasioKontras(hexA: string, hexB: string) {
 
 /** Warna teks yang paling aman di atas sebuah warna latar. */
 export function teksDiAtas(hex: string) {
-  return rasioKontras(hex, '#FFFFFF') >= rasioKontras(hex, '#08080E') ? '#FFFFFF' : '#08080E'
+  // Hitam dan putih murni dipakai karena keduanya memberi rasio tertinggi.
+  // Memakai hitam keabu-abuan seperti #08080E bisa jatuh di bawah 4.5.
+  return rasioKontras(hex, '#FFFFFF') >= rasioKontras(hex, '#000000') ? '#FFFFFF' : '#000000'
 }
 
 export function ambilHex(palet: Palet, peran: PeranWarna) {

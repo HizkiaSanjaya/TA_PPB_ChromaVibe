@@ -4,19 +4,12 @@ import { useParams } from 'react-router-dom'
 import { api } from '../api/client'
 import { KepalaHalaman } from '../components/KepalaHalaman'
 import { LencanaKontras, PilSkor } from '../components/LencanaKontras'
+import { PratinjauPalet } from '../components/PratinjauPalet'
 import { Galat, Memuat } from '../components/Status'
 import { TautanGaris, TombolAksi } from '../components/Tombol'
 import { TombolSalin } from '../components/TombolSalin'
 import { hapusPalet, simpanPalet, useKoleksi } from '../hooks/useKoleksi'
-import {
-  ambilHex,
-  daftarHex,
-  hexKeCss,
-  hexKeTailwind,
-  KETERANGAN_PERAN,
-  LABEL_PERAN,
-  teksDiAtas,
-} from '../utils/warna'
+import { daftarHex, hexKeCss, hexKeTailwind, KETERANGAN_PERAN, LABEL_PERAN } from '../utils/warna'
 
 export function DetailPalet() {
   const { id = '' } = useParams()
@@ -54,12 +47,6 @@ export function DetailPalet() {
     )
   }
 
-  const background = ambilHex(palet, 'background')
-  const surface = ambilHex(palet, 'surface')
-  const base = ambilHex(palet, 'base')
-  const accent = ambilHex(palet, 'accent')
-  const text = ambilHex(palet, 'text')
-
   const sudahTersimpan = koleksi.some((item) => item.id === palet.id)
 
   return (
@@ -71,39 +58,7 @@ export function DetailPalet() {
       />
 
       <section aria-label="Pratinjau palet" className="mb-6">
-        <div
-          className="rounded-2xl p-3.5 ring-1 ring-white/10"
-          style={{ backgroundColor: background }}
-        >
-          <div className="rounded-xl p-3.5" style={{ backgroundColor: surface }}>
-            <p
-              className="text-[10px] font-medium uppercase tracking-widest opacity-70"
-              style={{ color: text }}
-            >
-              Pratinjau
-            </p>
-            <p className="mt-1 text-lg font-semibold" style={{ color: text }}>
-              Judul di atas permukaan
-            </p>
-            <p className="mt-1 text-xs leading-relaxed" style={{ color: text, opacity: 0.78 }}>
-              Beginilah teks terbaca ketika palet dipakai pada antarmuka sungguhan.
-            </p>
-            <div className="mt-3 flex flex-wrap gap-2">
-              <span
-                className="rounded-full px-3 py-1.5 text-[11px] font-semibold"
-                style={{ backgroundColor: base, color: teksDiAtas(base) }}
-              >
-                Primer
-              </span>
-              <span
-                className="rounded-full px-3 py-1.5 text-[11px] font-semibold"
-                style={{ backgroundColor: accent, color: teksDiAtas(accent) }}
-              >
-                Aksen
-              </span>
-            </div>
-          </div>
-        </div>
+        <PratinjauPalet palet={palet} />
 
         <div className="mt-3 flex items-center justify-between gap-3">
           <div className="flex items-center gap-2">

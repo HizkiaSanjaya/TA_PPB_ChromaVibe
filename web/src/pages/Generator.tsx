@@ -1,12 +1,12 @@
-import { keepPreviousData, useQuery } from '@tanstack/react-query'
+import { keepPreviousData, useQueries, useQuery } from '@tanstack/react-query'
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 
 import { api } from '../api/client'
 import type { Palet } from '../api/types'
 import { LencanaKontras } from '../components/LencanaKontras'
+import { PratinjauPalet } from '../components/PratinjauPalet'
 import { Galat, Memuat } from '../components/Status'
-import { StripWarna } from '../components/StripWarna'
 import { TombolAksi } from '../components/Tombol'
 import { TombolSalin } from '../components/TombolSalin'
 import { TombolSimpan } from '../components/TombolSimpan'
@@ -14,8 +14,9 @@ import { daftarHex, hexKeCss, LABEL_PERAN, normalisasiHex } from '../utils/warna
 
 const TEMA_BAWAAN = 'y2k'
 const HARMONI_BAWAAN = 'triadik'
-const JUMLAH_BAWAAN = 3
 const WARNA_BAWAAN = '#7C5CFF'
+const PER_KOMBINASI = 5
+const JARAK_SEED = 977
 
 const CONTOH_WARNA = [
   '#FF2E88',
@@ -32,12 +33,6 @@ const CONTOH_WARNA = [
   '#6B7A4F',
 ]
 
-function keJumlah(nilai: string | null) {
-  const angka = Number(nilai)
-  if (!Number.isFinite(angka)) return JUMLAH_BAWAAN
-  return Math.min(5, Math.max(1, Math.round(angka)))
-}
-
 function keSeed(nilai: string | null) {
   const angka = Number(nilai)
   if (!Number.isFinite(angka) || angka < 0) return 1
@@ -47,7 +42,7 @@ function keSeed(nilai: string | null) {
 function KartuHasil({ palet }: { palet: Palet }) {
   return (
     <article className="rounded-2xl border border-garis bg-panel/60 p-3">
-      <StripWarna warna={daftarHex(palet)} tinggi="h-20" />
+      <PratinjauPalet palet={palet} ringkas />
 
       <div className="mt-2.5 flex items-start justify-between gap-2">
         <div className="min-w-0">
@@ -61,7 +56,7 @@ function KartuHasil({ palet }: { palet: Palet }) {
 
       <details className="mt-2.5 border-t border-garis/70 pt-2">
         <summary className="tautan cursor-pointer list-none text-[11px] font-medium text-teks [&::-webkit-details-marker]:hidden">
-          Detail kontras
+          Detail kontras dan ekspor
         </summary>
         <ul className="mt-2 space-y-1">
           {palet.pasangan_kontras.map((pasangan) => (
@@ -100,14 +95,19 @@ export function Generator() {
   const base = normalisasiHex(cari.get('base')) ?? WARNA_BAWAAN
   const tema = cari.get('tema') ?? TEMA_BAWAAN
   const harmoni = cari.get('harmoni') ?? HARMONI_BAWAAN
-  const jumlah = keJumlah(cari.get('jumlah'))
   const seed = keSeed(cari.get('seed'))
 
   const [teksHex, setTeksHex] = useState(base)
+  const [kombinasi, setKombinasi] = useState(0)
 
   useEffect(() => {
     setTeksHex(base)
   }, [base])
+
+  // Rangkaian tambahan dibuang saat warna, tema, harmoni, atau benih berubah.
+  useEffect(() => {
+    setKombinasi(0)
+  }, [base, tema, harmoni, seed])
 
   function ubah(patch: Record<string, string | number>) {
     const berikut = new URLSearchParams(cari)
@@ -126,11 +126,33 @@ export function Generator() {
   const daftarTema = useQuery({ queryKey: ['tema'], queryFn: api.daftarTema })
   const daftarHarmoni = useQuery({ queryKey: ['harmoni'], queryFn: api.daftarHarmoni })
 
-  const hasil = useQuery({
-    queryKey: ['generate', base, tema, harmoni, jumlah, seed],
-    queryFn: () => api.buatPalet({ base, tema, harmoni, jumlah, seed }),
-    placeholderData: keepPreviousData,
+  // Setiap rangkaian memakai benih yang berbeda, lalu hasilnya digabung.
+  // Dengan begitu pengguna bisa menambah kombinasi tanpa kehilangan yang lama.
+  const benihRangkaian = Array.from({ length: kombinasi + 1 }, (_, i) => seed + i * JARAK_SEED)
+
+  const rangkaian = useQueries({
+    queries: benihRangkaian.map((nilaiSeed) => ({
+      queryKey: ['generate', base, tema, harmoni, nilaiSeed],
+      queryFn: () => api.buatPalet({ base, tema, harmoni, jumlah: PER_KOMBINASI, seed: nilaiSeed }),
+      placeholderData: keepPreviousData,
+    })),
   })
+
+  const semuaPalet: Palet[] = []
+  const sudahAda = new Set<string>()
+
+  for (const kueri of rangkaian) {
+    for (const palet of kueri.data?.palet ?? []) {
+      if (!sudahAda.has(palet.id)) {
+        sudahAda.add(palet.id)
+        semuaPalet.push(palet)
+      }
+    }
+  }
+
+  const memuat = rangkaian.some((kueri) => kueri.isPending)
+  const galat = rangkaian.find((kueri) => kueri.isError)?.error as Error | undefined
+  const menyegarkan = rangkaian.some((kueri) => kueri.isFetching)
 
   const temaTerpilih = daftarTema.data?.find((item) => item.slug === tema)
   const harmoniTerpilih = daftarHarmoni.data?.find((item) => item.slug === harmoni)
@@ -140,8 +162,8 @@ export function Generator() {
       <header className="mb-5">
         <h1 className="text-2xl font-semibold tracking-tight">Generator</h1>
         <p className="mt-1.5 text-sm leading-relaxed text-redup">
-          Satu warna primer, satu tema, satu skema harmoni. Hasilnya selalu bisa direproduksi dengan
-          kombinasi dan <em>seed</em> yang sama.
+          Satu warna primer, satu tema, satu skema harmoni. Hasilnya bisa direproduksi dengan warna,
+          tema, dan <em>seed</em> yang sama.
         </p>
       </header>
 
@@ -268,25 +290,6 @@ export function Generator() {
             </p>
           )}
         </fieldset>
-
-        <fieldset>
-          <legend className="text-xs font-semibold">Jumlah palet</legend>
-          <div className="mt-2 inline-flex rounded-xl border border-garis p-0.5">
-            {[1, 3, 5].map((nilai) => (
-              <button
-                key={nilai}
-                type="button"
-                onClick={() => ubah({ jumlah: nilai })}
-                aria-pressed={jumlah === nilai}
-                className={`min-h-8 w-11 rounded-lg text-xs font-semibold transition ${
-                  jumlah === nilai ? 'bg-brand text-ink' : 'text-redup hover:text-teks'
-                }`}
-              >
-                {nilai}
-              </button>
-            ))}
-          </div>
-        </fieldset>
       </section>
 
       <section aria-labelledby="judul-hasil" className="mt-7">
@@ -303,19 +306,33 @@ export function Generator() {
           </button>
         </div>
 
-        {hasil.isPending && <Memuat pesan="Menyusun palet" />}
-        {hasil.isError && (
-          <Galat pesan={(hasil.error as Error).message} ulangi={() => void hasil.refetch()} />
-        )}
+        {memuat && semuaPalet.length === 0 && <Memuat pesan="Menyusun palet" />}
+        {galat && <Galat pesan={galat.message} ulangi={() => void rangkaian[0]?.refetch()} />}
 
-        {hasil.data && (
-          <ul className={`space-y-2.5 ${hasil.isFetching ? 'opacity-70' : ''}`}>
-            {hasil.data.palet.map((palet) => (
-              <li key={palet.id}>
-                <KartuHasil palet={palet} />
-              </li>
-            ))}
-          </ul>
+        {semuaPalet.length > 0 && (
+          <>
+            <ul className={`space-y-2.5 ${menyegarkan ? 'opacity-70' : ''}`}>
+              {semuaPalet.map((palet) => (
+                <li key={palet.id}>
+                  <KartuHasil palet={palet} />
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-3">
+              <TombolAksi
+                onClick={() => setKombinasi((nilai) => nilai + 1)}
+                className="w-full text-xs"
+                nonaktif={menyegarkan}
+              >
+                Tampilkan {PER_KOMBINASI} kombinasi lain
+              </TombolAksi>
+              <p className="mt-2 text-[10px] leading-relaxed text-redup">
+                {semuaPalet.length} palet dari {kombinasi + 1} rangkaian. Setiap rangkaian memakai{' '}
+                <em>seed</em> berbeda, jadi kombinasinya tidak mengulang yang sudah tampil.
+              </p>
+            </div>
+          </>
         )}
 
         <p className="mt-3 font-mono text-[10px] leading-relaxed text-redup">

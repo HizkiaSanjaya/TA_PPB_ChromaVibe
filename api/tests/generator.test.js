@@ -89,6 +89,22 @@ test('jumlah palet mengikuti permintaan dan tidak identik satu sama lain', () =>
   assert.equal(new Set(kumpulanHex).size, 3)
 })
 
+test('lima palet dalam satu rangkaian berbeda dan bernama unik', () => {
+  for (const tema of TEMA.map((item) => item.slug)) {
+    for (const harmoni of ['monokrom', 'triadik', 'analog']) {
+      const daftar = buatDaftarPalet({ base: '#7C5CFF', tema, harmoni, jumlah: 5, seed: 11 })
+
+      assert.equal(daftar.length, 5, `${tema}/${harmoni} tidak menghasilkan 5 palet`)
+
+      const warna = daftar.map((item) => item.warna.map((w) => w.hex).join(','))
+      assert.equal(new Set(warna).size, 5, `${tema}/${harmoni} punya palet kembar`)
+
+      const nama = daftar.map((item) => item.nama)
+      assert.equal(new Set(nama).size, 5, `${tema}/${harmoni} punya nama kembar`)
+    }
+  }
+})
+
 test('tema dan harmoni yang tidak dikenal ditolak', () => {
   assert.throws(
     () => buatPalet({ base: '#3B82F6', tema: 'tidak-ada', harmoni: 'triadik' }),

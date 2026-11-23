@@ -10,36 +10,36 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#11080A",
+        "hex": "#0A0405",
         "oklch": [
-          0.15,
+          0.118,
           0.016,
           3.2
         ]
       },
       {
         "peran": "surface",
-        "hex": "#231316",
+        "hex": "#1B0C0F",
         "oklch": [
-          0.21,
+          0.178,
           0.028,
           5.4
         ]
       },
       {
         "peran": "base",
-        "hex": "#CC0064",
+        "hex": "#BF005D",
         "oklch": [
-          0.546,
+          0.518,
           0.244,
           2.8
         ]
       },
       {
         "peran": "accent",
-        "hex": "#92B700",
+        "hex": "#759300",
         "oklch": [
-          0.726,
+          0.618,
           0.3,
           123.2
         ]
@@ -57,69 +57,69 @@
     "pasangan_kontras": [
       {
         "depan": "#F9F3F5",
-        "belakang": "#11080A",
+        "belakang": "#0A0405",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 18.03,
+        "rasio": 18.56,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#F9F3F5",
-        "belakang": "#231316",
+        "belakang": "#1B0C0F",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 16.3,
+        "rasio": 17.33,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#CC0064",
-        "belakang": "#11080A",
+        "depan": "#BF005D",
+        "belakang": "#0A0405",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3.53,
+        "rasio": 3.27,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#CC0064",
-        "belakang": "#231316",
+        "depan": "#BF005D",
+        "belakang": "#1B0C0F",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.19,
+        "rasio": 3.05,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#92B700",
-        "belakang": "#11080A",
+        "depan": "#759300",
+        "belakang": "#0A0405",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 8.46,
+        "rasio": 5.74,
         "ambang": 3,
-        "nilai": "AAA",
+        "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#92B700",
-        "belakang": "#231316",
+        "depan": "#759300",
+        "belakang": "#1B0C0F",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 7.65,
+        "rasio": 5.36,
         "ambang": 3,
-        "nilai": "AAA",
+        "nilai": "AA",
         "lolos": true
       }
     ],
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 16.3,
+      "rasio_teks_terendah": 17.33,
       "skor_aksesibilitas": 100
     }
   },
@@ -134,38 +134,38 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#040D0F",
+        "hex": "#020A0B",
         "oklch": [
-          0.15,
+          0.134,
           0.016,
-          209.4
+          204.4
         ]
       },
       {
         "peran": "surface",
-        "hex": "#061C1F",
+        "hex": "#03181A",
         "oklch": [
-          0.21,
+          0.194,
           0.028,
-          208.5
+          203.5
         ]
       },
       {
         "peran": "base",
-        "hex": "#007684",
+        "hex": "#00727A",
         "oklch": [
-          0.517,
+          0.502,
           0.16,
-          209.1
+          204.1
         ]
       },
       {
         "peran": "accent",
-        "hex": "#FF7E66",
+        "hex": "#F2665B",
         "oklch": [
-          0.737,
+          0.682,
           0.175,
-          32.1
+          27.1
         ]
       },
       {
@@ -174,76 +174,76 @@
         "oklch": [
           0.97,
           0.006,
-          209.1
+          204.1
         ]
       }
     ],
     "pasangan_kontras": [
       {
         "depan": "#F1F6F7",
-        "belakang": "#040D0F",
+        "belakang": "#020A0B",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 18.01,
+        "rasio": 18.33,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#F1F6F7",
-        "belakang": "#061C1F",
+        "belakang": "#03181A",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 16.14,
+        "rasio": 16.76,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#007684",
-        "belakang": "#040D0F",
+        "depan": "#00727A",
+        "belakang": "#020A0B",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3.67,
+        "rasio": 3.51,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#007684",
-        "belakang": "#061C1F",
+        "depan": "#00727A",
+        "belakang": "#03181A",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.29,
+        "rasio": 3.21,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#FF7E66",
-        "belakang": "#040D0F",
+        "depan": "#F2665B",
+        "belakang": "#020A0B",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 7.88,
+        "rasio": 6.5,
         "ambang": 3,
-        "nilai": "AAA",
+        "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#FF7E66",
-        "belakang": "#061C1F",
+        "depan": "#F2665B",
+        "belakang": "#03181A",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 7.06,
+        "rasio": 5.94,
         "ambang": 3,
-        "nilai": "AAA",
+        "nilai": "AA",
         "lolos": true
       }
     ],
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 16.14,
+      "rasio_teks_terendah": 16.76,
       "skor_aksesibilitas": 100
     }
   },
@@ -258,107 +258,107 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#070D07",
+        "hex": "#080D06",
         "oklch": [
           0.15,
           0.016,
-          144.2
+          134.2
         ]
       },
       {
         "peran": "surface",
-        "hex": "#101C10",
+        "hex": "#131B0E",
         "oklch": [
           0.21,
           0.028,
-          144.1
+          134.1
         ]
       },
       {
         "peran": "base",
-        "hex": "#007F16",
+        "hex": "#427A00",
         "oklch": [
           0.519,
           0.238,
-          143.9
+          133.9
         ]
       },
       {
         "peran": "accent",
-        "hex": "#00C7A3",
+        "hex": "#00C98E",
         "oklch": [
           0.739,
           0.283,
-          173.4
+          163.4
         ]
       },
       {
         "peran": "text",
-        "hex": "#F3F6F3",
+        "hex": "#F3F6F2",
         "oklch": [
           0.97,
           0.006,
-          143.9
+          133.9
         ]
       }
     ],
     "pasangan_kontras": [
       {
-        "depan": "#F3F6F3",
-        "belakang": "#070D07",
+        "depan": "#F3F6F2",
+        "belakang": "#080D06",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 18.03,
+        "rasio": 18.01,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#F3F6F3",
-        "belakang": "#101C10",
+        "depan": "#F3F6F2",
+        "belakang": "#131B0E",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 16.13,
+        "rasio": 16.19,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#007F16",
-        "belakang": "#070D07",
+        "depan": "#427A00",
+        "belakang": "#080D06",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3.78,
+        "rasio": 3.75,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#007F16",
-        "belakang": "#101C10",
+        "depan": "#427A00",
+        "belakang": "#131B0E",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.39,
+        "rasio": 3.37,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#00C7A3",
-        "belakang": "#070D07",
+        "depan": "#00C98E",
+        "belakang": "#080D06",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 9.07,
+        "rasio": 9.1,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#00C7A3",
-        "belakang": "#101C10",
+        "depan": "#00C98E",
+        "belakang": "#131B0E",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 8.11,
+        "rasio": 8.18,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -367,7 +367,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 16.13,
+      "rasio_teks_terendah": 16.19,
       "skor_aksesibilitas": 100
     }
   },
@@ -382,36 +382,36 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#F4F3F1",
+        "hex": "#EAE9E6",
         "oklch": [
-          0.965,
+          0.933,
           0.003,
           85.9
         ]
       },
       {
         "peran": "surface",
-        "hex": "#FCFAF6",
+        "hex": "#F1EFEC",
         "oklch": [
-          0.985,
+          0.953,
           0.005,
           85
         ]
       },
       {
         "peran": "base",
-        "hex": "#887444",
+        "hex": "#655122",
         "oklch": [
-          0.566,
+          0.446,
           0.07,
           87.5
         ]
       },
       {
         "peran": "accent",
-        "hex": "#404A1B",
+        "hex": "#252D00",
         "oklch": [
-          0.387,
+          0.28,
           0.07,
           119.9
         ]
@@ -429,60 +429,60 @@
     "pasangan_kontras": [
       {
         "depan": "#201F1C",
-        "belakang": "#F4F3F1",
+        "belakang": "#EAE9E6",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 14.86,
+        "rasio": 13.57,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#201F1C",
-        "belakang": "#FCFAF6",
+        "belakang": "#F1EFEC",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 15.81,
+        "rasio": 14.36,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#887444",
-        "belakang": "#F4F3F1",
+        "depan": "#655122",
+        "belakang": "#EAE9E6",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.09,
+        "rasio": 6.28,
         "ambang": 3,
-        "nilai": "AA-Large",
+        "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#887444",
-        "belakang": "#FCFAF6",
+        "depan": "#655122",
+        "belakang": "#F1EFEC",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 4.35,
+        "rasio": 6.65,
         "ambang": 3,
-        "nilai": "AA-Large",
+        "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#404A1B",
-        "belakang": "#F4F3F1",
+        "depan": "#252D00",
+        "belakang": "#EAE9E6",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 8.56,
+        "rasio": 11.9,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#404A1B",
-        "belakang": "#FCFAF6",
+        "depan": "#252D00",
+        "belakang": "#F1EFEC",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 9.1,
+        "rasio": 12.58,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -491,7 +491,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 14.86,
+      "rasio_teks_terendah": 13.57,
       "skor_aksesibilitas": 100
     }
   },
@@ -506,38 +506,38 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#F5F3F1",
+        "hex": "#F0EEEC",
         "oklch": [
-          0.965,
+          0.949,
           0.003,
-          72.3
+          67.3
         ]
       },
       {
         "peran": "surface",
-        "hex": "#FCFAF6",
+        "hex": "#F7F4F1",
         "oklch": [
-          0.985,
+          0.969,
           0.005,
-          70.5
+          65.5
         ]
       },
       {
         "peran": "base",
-        "hex": "#94887B",
+        "hex": "#928579",
         "oklch": [
-          0.633,
+          0.625,
           0.023,
-          69.5
+          64.5
         ]
       },
       {
         "peran": "accent",
-        "hex": "#54493C",
+        "hex": "#64574B",
         "oklch": [
-          0.413,
+          0.465,
           0.025,
-          70.7
+          65.7
         ]
       },
       {
@@ -546,76 +546,76 @@
         "oklch": [
           0.24,
           0.006,
-          69.5
+          64.5
         ]
       }
     ],
     "pasangan_kontras": [
       {
         "depan": "#211F1C",
-        "belakang": "#F5F3F1",
+        "belakang": "#F0EEEC",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 14.85,
+        "rasio": 14.21,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#211F1C",
-        "belakang": "#FCFAF6",
+        "belakang": "#F7F4F1",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 15.77,
+        "rasio": 15,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#94887B",
-        "belakang": "#F5F3F1",
+        "depan": "#928579",
+        "belakang": "#F0EEEC",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3.13,
+        "rasio": 3.1,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#94887B",
-        "belakang": "#FCFAF6",
+        "depan": "#928579",
+        "belakang": "#F7F4F1",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.32,
+        "rasio": 3.27,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#54493C",
-        "belakang": "#F5F3F1",
+        "depan": "#64574B",
+        "belakang": "#F0EEEC",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 7.92,
+        "rasio": 6.04,
         "ambang": 3,
-        "nilai": "AAA",
+        "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#54493C",
-        "belakang": "#FCFAF6",
+        "depan": "#64574B",
+        "belakang": "#F7F4F1",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 8.41,
+        "rasio": 6.37,
         "ambang": 3,
-        "nilai": "AAA",
+        "nilai": "AA",
         "lolos": true
       }
     ],
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 14.85,
+      "rasio_teks_terendah": 14.21,
       "skor_aksesibilitas": 100
     }
   },
@@ -630,11 +630,11 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#F2F4F5",
+        "hex": "#F1F4F5",
         "oklch": [
           0.965,
           0.003,
-          247
+          237
         ]
       },
       {
@@ -643,25 +643,25 @@
         "oklch": [
           0.985,
           0.005,
-          242.2
+          232.2
         ]
       },
       {
         "peran": "base",
-        "hex": "#71899D",
+        "hex": "#6E8A9B",
         "oklch": [
           0.618,
           0.041,
-          244.7
+          234.7
         ]
       },
       {
         "peran": "accent",
-        "hex": "#5D3E37",
+        "hex": "#5E3E3B",
         "oklch": [
           0.398,
           0.046,
-          33.7
+          23.7
         ]
       },
       {
@@ -670,17 +670,17 @@
         "oklch": [
           0.24,
           0.006,
-          244.7
+          234.7
         ]
       }
     ],
     "pasangan_kontras": [
       {
         "depan": "#1D2022",
-        "belakang": "#F2F4F5",
+        "belakang": "#F1F4F5",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 14.85,
+        "rasio": 14.82,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
@@ -696,41 +696,41 @@
         "lolos": true
       },
       {
-        "depan": "#71899D",
-        "belakang": "#F2F4F5",
+        "depan": "#6E8A9B",
+        "belakang": "#F1F4F5",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3.3,
+        "rasio": 3.29,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#71899D",
+        "depan": "#6E8A9B",
         "belakang": "#F7FBFD",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.5,
+        "rasio": 3.49,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#5D3E37",
-        "belakang": "#F2F4F5",
+        "depan": "#5E3E3B",
+        "belakang": "#F1F4F5",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 8.61,
+        "rasio": 8.53,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#5D3E37",
+        "depan": "#5E3E3B",
         "belakang": "#F7FBFD",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 9.13,
+        "rasio": 9.05,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -739,7 +739,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 14.85,
+      "rasio_teks_terendah": 14.82,
       "skor_aksesibilitas": 100
     }
   },
@@ -754,36 +754,36 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#EBF1F8",
+        "hex": "#E0E6ED",
         "oklch": [
-          0.955,
+          0.923,
           0.011,
           252.6
         ]
       },
       {
         "peran": "surface",
-        "hex": "#F7FAFF",
+        "hex": "#E7F0FC",
         "oklch": [
-          0.985,
+          0.953,
           0.018,
           254.4
         ]
       },
       {
         "peran": "base",
-        "hex": "#6082AA",
+        "hex": "#416087",
         "oklch": [
-          0.597,
+          0.483,
           0.073,
           253.9
         ]
       },
       {
         "peran": "accent",
-        "hex": "#682C31",
+        "hex": "#460C15",
         "oklch": [
-          0.377,
+          0.263,
           0.086,
           16.8
         ]
@@ -801,60 +801,60 @@
     "pasangan_kontras": [
       {
         "depan": "#141619",
-        "belakang": "#EBF1F8",
+        "belakang": "#E0E6ED",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 15.94,
+        "rasio": 14.42,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#141619",
-        "belakang": "#F7FAFF",
+        "belakang": "#E7F0FC",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 17.33,
+        "rasio": 15.77,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#6082AA",
-        "belakang": "#EBF1F8",
+        "depan": "#416087",
+        "belakang": "#E0E6ED",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3.5,
+        "rasio": 5.15,
         "ambang": 3,
-        "nilai": "AA-Large",
+        "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#6082AA",
-        "belakang": "#F7FAFF",
+        "depan": "#416087",
+        "belakang": "#E7F0FC",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.81,
+        "rasio": 5.62,
         "ambang": 3,
-        "nilai": "AA-Large",
+        "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#682C31",
-        "belakang": "#EBF1F8",
+        "depan": "#460C15",
+        "belakang": "#E0E6ED",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 9.27,
+        "rasio": 12.62,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#682C31",
-        "belakang": "#F7FAFF",
+        "depan": "#460C15",
+        "belakang": "#E7F0FC",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 10.07,
+        "rasio": 13.8,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -863,7 +863,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 15.94,
+      "rasio_teks_terendah": 14.42,
       "skor_aksesibilitas": 100
     }
   },
@@ -878,107 +878,107 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#F8EEEC",
+        "hex": "#F2E8E7",
         "oklch": [
-          0.955,
+          0.939,
           0.011,
-          30.5
+          25.5
         ]
       },
       {
         "peran": "surface",
-        "hex": "#FFF8F7",
+        "hex": "#FFF1F0",
         "oklch": [
-          0.985,
+          0.969,
           0.018,
-          30.5
+          25.5
         ]
       },
       {
         "peran": "base",
-        "hex": "#AE5B50",
+        "hex": "#9D4B48",
         "oklch": [
-          0.568,
+          0.516,
           0.11,
-          29.2
+          24.2
         ]
       },
       {
         "peran": "accent",
-        "hex": "#00424B",
+        "hex": "#003438",
         "oklch": [
-          0.348,
+          0.296,
           0.119,
-          208.8
+          203.8
         ]
       },
       {
         "peran": "text",
-        "hex": "#191514",
+        "hex": "#191515",
         "oklch": [
           0.2,
           0.006,
-          29.2
+          24.2
         ]
       }
     ],
     "pasangan_kontras": [
       {
-        "depan": "#191514",
-        "belakang": "#F8EEEC",
+        "depan": "#191515",
+        "belakang": "#F2E8E7",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 15.91,
+        "rasio": 15.07,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#191514",
-        "belakang": "#FFF8F7",
+        "depan": "#191515",
+        "belakang": "#FFF1F0",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 17.28,
+        "rasio": 16.47,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#AE5B50",
-        "belakang": "#F8EEEC",
+        "depan": "#9D4B48",
+        "belakang": "#F2E8E7",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.18,
-        "ambang": 3,
-        "nilai": "AA-Large",
-        "lolos": true
-      },
-      {
-        "depan": "#AE5B50",
-        "belakang": "#FFF8F7",
-        "peran_depan": "base",
-        "peran_belakang": "surface",
-        "rasio": 4.54,
+        "rasio": 4.94,
         "ambang": 3,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#00424B",
-        "belakang": "#F8EEEC",
+        "depan": "#9D4B48",
+        "belakang": "#FFF1F0",
+        "peran_depan": "base",
+        "peran_belakang": "surface",
+        "rasio": 5.4,
+        "ambang": 3,
+        "nilai": "AA",
+        "lolos": true
+      },
+      {
+        "depan": "#003438",
+        "belakang": "#F2E8E7",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 9.8,
+        "rasio": 11.28,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#00424B",
-        "belakang": "#FFF8F7",
+        "depan": "#003438",
+        "belakang": "#FFF1F0",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 10.65,
+        "rasio": 12.33,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -987,7 +987,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 15.91,
+      "rasio_teks_terendah": 15.07,
       "skor_aksesibilitas": 100
     }
   },
@@ -1002,107 +1002,107 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#E9F3EF",
+        "hex": "#EAF3ED",
         "oklch": [
           0.955,
           0.011,
-          169.6
+          159.6
         ]
       },
       {
         "peran": "surface",
-        "hex": "#EFFEF8",
+        "hex": "#F0FEF6",
         "oklch": [
           0.985,
           0.018,
-          170.6
+          160.6
         ]
       },
       {
         "peran": "base",
-        "hex": "#488471",
+        "hex": "#50846A",
         "oklch": [
-          0.567,
+          0.569,
           0.07,
-          170.7
+          160.7
         ]
       },
       {
         "peran": "accent",
-        "hex": "#004346",
+        "hex": "#004441",
         "oklch": [
-          0.347,
+          0.349,
           0.08,
-          199.8
+          189.8
         ]
       },
       {
         "peran": "text",
-        "hex": "#131716",
+        "hex": "#141715",
         "oklch": [
           0.2,
           0.006,
-          170.7
+          160.7
         ]
       }
     ],
     "pasangan_kontras": [
       {
-        "depan": "#131716",
-        "belakang": "#E9F3EF",
+        "depan": "#141715",
+        "belakang": "#EAF3ED",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 15.95,
+        "rasio": 15.94,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#131716",
-        "belakang": "#EFFEF8",
+        "depan": "#141715",
+        "belakang": "#F0FEF6",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 17.39,
+        "rasio": 17.38,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#488471",
-        "belakang": "#E9F3EF",
+        "depan": "#50846A",
+        "belakang": "#EAF3ED",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3.85,
+        "rasio": 3.82,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#488471",
-        "belakang": "#EFFEF8",
+        "depan": "#50846A",
+        "belakang": "#F0FEF6",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 4.2,
+        "rasio": 4.17,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#004346",
-        "belakang": "#E9F3EF",
+        "depan": "#004441",
+        "belakang": "#EAF3ED",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 9.8,
+        "rasio": 9.74,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#004346",
-        "belakang": "#EFFEF8",
+        "depan": "#004441",
+        "belakang": "#F0FEF6",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 10.68,
+        "rasio": 10.62,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -1111,7 +1111,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 15.95,
+      "rasio_teks_terendah": 15.94,
       "skor_aksesibilitas": 100
     }
   },
@@ -1126,36 +1126,36 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#FFF4EF",
+        "hex": "#F6E9E3",
         "oklch": [
-          0.975,
+          0.943,
           0.016,
           47.9
         ]
       },
       {
         "peran": "surface",
-        "hex": "#FFFDFC",
+        "hex": "#FFEFE7",
         "oklch": [
-          0.995,
+          0.963,
           0.028,
           50.4
         ]
       },
       {
         "peran": "base",
-        "hex": "#DF6900",
+        "hex": "#D26300",
         "oklch": [
-          0.652,
+          0.624,
           0.2,
           50.1
         ]
       },
       {
         "peran": "accent",
-        "hex": "#00A27C",
+        "hex": "#008A69",
         "oklch": [
-          0.632,
+          0.564,
           0.218,
           168.5
         ]
@@ -1173,60 +1173,60 @@
     "pasangan_kontras": [
       {
         "depan": "#120F0D",
-        "belakang": "#FFF4EF",
+        "belakang": "#F6E9E3",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 17.67,
+        "rasio": 16.08,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#120F0D",
-        "belakang": "#FFFDFC",
+        "belakang": "#FFEFE7",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 18.83,
+        "rasio": 17.05,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#DF6900",
-        "belakang": "#FFF4EF",
+        "depan": "#D26300",
+        "belakang": "#F6E9E3",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3.16,
+        "rasio": 3.2,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#DF6900",
-        "belakang": "#FFFDFC",
+        "depan": "#D26300",
+        "belakang": "#FFEFE7",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.36,
+        "rasio": 3.39,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#00A27C",
-        "belakang": "#FFF4EF",
+        "depan": "#008A69",
+        "belakang": "#F6E9E3",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.01,
+        "rasio": 3.65,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#00A27C",
-        "belakang": "#FFFDFC",
+        "depan": "#008A69",
+        "belakang": "#FFEFE7",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.21,
+        "rasio": 3.87,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -1235,7 +1235,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 17.67,
+      "rasio_teks_terendah": 16.08,
       "skor_aksesibilitas": 100
     }
   },
@@ -1250,107 +1250,107 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#FBF7EB",
+        "hex": "#F6F1E6",
         "oklch": [
-          0.975,
+          0.959,
           0.016,
-          91
+          86
         ]
       },
       {
         "peran": "surface",
-        "hex": "#FFFDF8",
+        "hex": "#FFF7E7",
         "oklch": [
-          0.995,
+          0.979,
           0.028,
-          91
+          86
         ]
       },
       {
         "peran": "base",
-        "hex": "#A78600",
+        "hex": "#AF8500",
         "oklch": [
-          0.633,
+          0.64,
           0.19,
-          91.1
+          86.1
         ]
       },
       {
         "peran": "accent",
-        "hex": "#CD7900",
+        "hex": "#C56C00",
         "oklch": [
-          0.653,
+          0.62,
           0.223,
-          63.8
+          58.8
         ]
       },
       {
         "peran": "text",
-        "hex": "#100F0C",
+        "hex": "#110F0C",
         "oklch": [
           0.17,
           0.006,
-          91.1
+          86.1
         ]
       }
     ],
     "pasangan_kontras": [
       {
-        "depan": "#100F0C",
-        "belakang": "#FBF7EB",
+        "depan": "#110F0C",
+        "belakang": "#F6F1E6",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 17.89,
+        "rasio": 16.99,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#100F0C",
-        "belakang": "#FFFDF8",
+        "depan": "#110F0C",
+        "belakang": "#FFF7E7",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 18.85,
+        "rasio": 17.96,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#A78600",
-        "belakang": "#FBF7EB",
+        "depan": "#AF8500",
+        "belakang": "#F6F1E6",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3.24,
+        "rasio": 3.02,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#A78600",
-        "belakang": "#FFFDF8",
+        "depan": "#AF8500",
+        "belakang": "#FFF7E7",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.41,
+        "rasio": 3.19,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#CD7900",
-        "belakang": "#FBF7EB",
+        "depan": "#C56C00",
+        "belakang": "#F6F1E6",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.1,
+        "rasio": 3.38,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#CD7900",
-        "belakang": "#FFFDF8",
+        "depan": "#C56C00",
+        "belakang": "#FFF7E7",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.26,
+        "rasio": 3.57,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -1359,7 +1359,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 17.89,
+      "rasio_teks_terendah": 16.99,
       "skor_aksesibilitas": 100
     }
   },
@@ -1374,11 +1374,11 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#FFF4F1",
+        "hex": "#FFF4F3",
         "oklch": [
           0.975,
           0.016,
-          35.5
+          25.5
         ]
       },
       {
@@ -1387,81 +1387,81 @@
         "oklch": [
           0.995,
           0.028,
-          37.8
+          27.8
         ]
       },
       {
         "peran": "base",
-        "hex": "#F8551A",
+        "hex": "#F94F45",
         "oklch": [
-          0.665,
+          0.664,
           0.208,
-          37.6
+          27.6
         ]
       },
       {
         "peran": "accent",
-        "hex": "#009C94",
+        "hex": "#009D88",
         "oklch": [
-          0.625,
+          0.624,
           0.247,
-          188.1
+          178.1
         ]
       },
       {
         "peran": "text",
-        "hex": "#120F0E",
+        "hex": "#120E0E",
         "oklch": [
           0.17,
           0.006,
-          37.6
+          27.6
         ]
       }
     ],
     "pasangan_kontras": [
       {
-        "depan": "#120F0E",
-        "belakang": "#FFF4F1",
+        "depan": "#120E0E",
+        "belakang": "#FFF4F3",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 17.69,
+        "rasio": 17.8,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#120F0E",
+        "depan": "#120E0E",
         "belakang": "#FFFDFC",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 18.82,
+        "rasio": 18.91,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#F8551A",
-        "belakang": "#FFF4F1",
+        "depan": "#F94F45",
+        "belakang": "#FFF4F3",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3.09,
+        "rasio": 3.13,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#F8551A",
+        "depan": "#F94F45",
         "belakang": "#FFFDFC",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.28,
+        "rasio": 3.32,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#009C94",
-        "belakang": "#FFF4F1",
+        "depan": "#009D88",
+        "belakang": "#FFF4F3",
         "peran_depan": "accent",
         "peran_belakang": "background",
         "rasio": 3.15,
@@ -1470,7 +1470,7 @@
         "lolos": true
       },
       {
-        "depan": "#009C94",
+        "depan": "#009D88",
         "belakang": "#FFFDFC",
         "peran_depan": "accent",
         "peran_belakang": "surface",
@@ -1483,7 +1483,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 17.69,
+      "rasio_teks_terendah": 17.8,
       "skor_aksesibilitas": 100
     }
   },
@@ -1498,36 +1498,36 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#EDF0F6",
+        "hex": "#E2E6EB",
         "oklch": [
-          0.955,
+          0.923,
           0.008,
           259.8
         ]
       },
       {
         "peran": "surface",
-        "hex": "#F5F9FF",
+        "hex": "#E9EEF7",
         "oklch": [
-          0.98,
+          0.948,
           0.013,
           259.3
         ]
       },
       {
         "peran": "base",
-        "hex": "#6C88B8",
+        "hex": "#6481B0",
         "oklch": [
-          0.625,
+          0.6,
           0.08,
           260.3
         ]
       },
       {
         "peran": "accent",
-        "hex": "#8880C0",
+        "hex": "#7E76B6",
         "oklch": [
-          0.633,
+          0.6,
           0.096,
           289
         ]
@@ -1545,37 +1545,37 @@
     "pasangan_kontras": [
       {
         "depan": "#313336",
-        "belakang": "#EDF0F6",
+        "belakang": "#E2E6EB",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 11.1,
+        "rasio": 10.11,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#313336",
-        "belakang": "#F5F9FF",
+        "belakang": "#E9EEF7",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 11.99,
+        "rasio": 10.88,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#6C88B8",
-        "belakang": "#EDF0F6",
+        "depan": "#6481B0",
+        "belakang": "#E2E6EB",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3.14,
+        "rasio": 3.16,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#6C88B8",
-        "belakang": "#F5F9FF",
+        "depan": "#6481B0",
+        "belakang": "#E9EEF7",
         "peran_depan": "base",
         "peran_belakang": "surface",
         "rasio": 3.4,
@@ -1584,21 +1584,21 @@
         "lolos": true
       },
       {
-        "depan": "#8880C0",
-        "belakang": "#EDF0F6",
+        "depan": "#7E76B6",
+        "belakang": "#E2E6EB",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.12,
+        "rasio": 3.25,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#8880C0",
-        "belakang": "#F5F9FF",
+        "depan": "#7E76B6",
+        "belakang": "#E9EEF7",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.37,
+        "rasio": 3.5,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -1607,7 +1607,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 11.1,
+      "rasio_teks_terendah": 10.11,
       "skor_aksesibilitas": 100
     }
   },
@@ -1622,38 +1622,38 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#F5EEF0",
+        "hex": "#EFE9EC",
         "oklch": [
-          0.955,
+          0.939,
           0.008,
-          353.8
+          348.8
         ]
       },
       {
         "peran": "surface",
-        "hex": "#FFF6F9",
+        "hex": "#FBF0F4",
         "oklch": [
-          0.98,
+          0.964,
           0.013,
-          354.9
+          349.9
         ]
       },
       {
         "peran": "base",
-        "hex": "#B57992",
+        "hex": "#AC7390",
         "oklch": [
-          0.644,
+          0.624,
           0.081,
-          353.2
+          348.2
         ]
       },
       {
         "peran": "accent",
-        "hex": "#B9708E",
+        "hex": "#B56E91",
         "oklch": [
-          0.633,
+          0.626,
           0.1,
-          354.2
+          349.2
         ]
       },
       {
@@ -1662,67 +1662,67 @@
         "oklch": [
           0.32,
           0.006,
-          353.2
+          348.2
         ]
       }
     ],
     "pasangan_kontras": [
       {
         "depan": "#353233",
-        "belakang": "#F5EEF0",
+        "belakang": "#EFE9EC",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 11.1,
+        "rasio": 10.59,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#353233",
-        "belakang": "#FFF6F9",
+        "belakang": "#FBF0F4",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 11.96,
+        "rasio": 11.4,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#B57992",
-        "belakang": "#F5EEF0",
+        "depan": "#AC7390",
+        "belakang": "#EFE9EC",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3,
+        "rasio": 3.13,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#B57992",
-        "belakang": "#FFF6F9",
+        "depan": "#AC7390",
+        "belakang": "#FBF0F4",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.24,
+        "rasio": 3.36,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#B9708E",
-        "belakang": "#F5EEF0",
+        "depan": "#B56E91",
+        "belakang": "#EFE9EC",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.18,
+        "rasio": 3.13,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#B9708E",
-        "belakang": "#FFF6F9",
+        "depan": "#B56E91",
+        "belakang": "#FBF0F4",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.43,
+        "rasio": 3.37,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -1731,7 +1731,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 11.1,
+      "rasio_teks_terendah": 10.59,
       "skor_aksesibilitas": 100
     }
   },
@@ -1746,38 +1746,38 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#ECF2EE",
+        "hex": "#EDF2ED",
         "oklch": [
           0.955,
           0.008,
-          153.4
+          143.4
         ]
       },
       {
         "peran": "surface",
-        "hex": "#F2FBF4",
+        "hex": "#F3FBF3",
         "oklch": [
           0.98,
           0.013,
-          154.2
+          144.2
         ]
       },
       {
         "peran": "base",
-        "hex": "#6C9377",
+        "hex": "#729271",
         "oklch": [
           0.626,
           0.061,
-          153.4
+          143.4
         ]
       },
       {
         "peran": "accent",
-        "hex": "#7A88B6",
+        "hex": "#718AB5",
         "oklch": [
-          0.633,
+          0.631,
           0.071,
-          270.6
+          260.6
         ]
       },
       {
@@ -1786,67 +1786,67 @@
         "oklch": [
           0.32,
           0.006,
-          153.4
+          143.4
         ]
       }
     ],
     "pasangan_kontras": [
       {
         "depan": "#313431",
-        "belakang": "#ECF2EE",
+        "belakang": "#EDF2ED",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 11.1,
+        "rasio": 11.12,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#313431",
-        "belakang": "#F2FBF4",
+        "belakang": "#F3FBF3",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 11.93,
+        "rasio": 11.95,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#6C9377",
-        "belakang": "#ECF2EE",
+        "depan": "#729271",
+        "belakang": "#EDF2ED",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3.04,
+        "rasio": 3.05,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#6C9377",
-        "belakang": "#F2FBF4",
+        "depan": "#729271",
+        "belakang": "#F3FBF3",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.27,
+        "rasio": 3.28,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#7A88B6",
-        "belakang": "#ECF2EE",
+        "depan": "#718AB5",
+        "belakang": "#EDF2ED",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.07,
+        "rasio": 3.08,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#7A88B6",
-        "belakang": "#F2FBF4",
+        "depan": "#718AB5",
+        "belakang": "#F3FBF3",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.3,
+        "rasio": 3.31,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -1855,7 +1855,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 11.1,
+      "rasio_teks_terendah": 11.12,
       "skor_aksesibilitas": 100
     }
   },
@@ -1870,36 +1870,36 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#050F11",
+        "hex": "#02080A",
         "oklch": [
-          0.16,
+          0.128,
           0.016,
           208
         ]
       },
       {
         "peran": "surface",
-        "hex": "#091E21",
+        "hex": "#03171A",
         "oklch": [
-          0.22,
+          0.188,
           0.028,
           207.6
         ]
       },
       {
         "peran": "base",
-        "hex": "#008290",
+        "hex": "#006D79",
         "oklch": [
-          0.555,
+          0.49,
           0.22,
           207.7
         ]
       },
       {
         "peran": "accent",
-        "hex": "#FF9385",
+        "hex": "#FF4C3F",
         "oklch": [
-          0.775,
+          0.67,
           0.284,
           28.4
         ]
@@ -1917,69 +1917,69 @@
     "pasangan_kontras": [
       {
         "depan": "#F4FAFA",
-        "belakang": "#050F11",
+        "belakang": "#02080A",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 18.38,
+        "rasio": 19.1,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#F4FAFA",
-        "belakang": "#091E21",
+        "belakang": "#03171A",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 16.32,
+        "rasio": 17.44,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#008290",
-        "belakang": "#050F11",
+        "depan": "#006D79",
+        "belakang": "#02080A",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.24,
+        "rasio": 3.32,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#008290",
-        "belakang": "#091E21",
+        "depan": "#006D79",
+        "belakang": "#03171A",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.77,
+        "rasio": 3.03,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#FF9385",
-        "belakang": "#050F11",
+        "depan": "#FF4C3F",
+        "belakang": "#02080A",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 9.02,
+        "rasio": 6.1,
         "ambang": 3,
-        "nilai": "AAA",
+        "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#FF9385",
-        "belakang": "#091E21",
+        "depan": "#FF4C3F",
+        "belakang": "#03171A",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 8.01,
+        "rasio": 5.57,
         "ambang": 3,
-        "nilai": "AAA",
+        "nilai": "AA",
         "lolos": true
       }
     ],
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 16.32,
+      "rasio_teks_terendah": 17.44,
       "skor_aksesibilitas": 100
     }
   },
@@ -1994,38 +1994,38 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#120B10",
+        "hex": "#0E080D",
         "oklch": [
-          0.16,
+          0.144,
           0.016,
-          337.9
+          332.9
         ]
       },
       {
         "peran": "surface",
-        "hex": "#23151F",
+        "hex": "#1F121C",
         "oklch": [
-          0.22,
+          0.204,
           0.028,
-          338.6
+          333.6
         ]
       },
       {
         "peran": "base",
-        "hex": "#D600B3",
+        "hex": "#B700A7",
         "oklch": [
-          0.595,
+          0.537,
           0.282,
-          338.1
+          333.1
         ]
       },
       {
         "peran": "accent",
-        "hex": "#DBACFF",
+        "hex": "#C795FF",
         "oklch": [
-          0.815,
+          0.757,
           0.341,
-          309.8
+          304.8
         ]
       },
       {
@@ -2034,67 +2034,67 @@
         "oklch": [
           0.98,
           0.006,
-          338.1
+          333.1
         ]
       }
     ],
     "pasangan_kontras": [
       {
         "depan": "#FBF7FA",
-        "belakang": "#120B10",
+        "belakang": "#0E080D",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 18.3,
+        "rasio": 18.68,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#FBF7FA",
-        "belakang": "#23151F",
+        "belakang": "#1F121C",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 16.51,
+        "rasio": 17.03,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#D600B3",
-        "belakang": "#120B10",
+        "depan": "#B700A7",
+        "belakang": "#0E080D",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.17,
+        "rasio": 3.37,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#D600B3",
-        "belakang": "#23151F",
+        "depan": "#B700A7",
+        "belakang": "#1F121C",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.76,
+        "rasio": 3.07,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#DBACFF",
-        "belakang": "#120B10",
+        "depan": "#C795FF",
+        "belakang": "#0E080D",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 10.51,
+        "rasio": 8.66,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#DBACFF",
-        "belakang": "#23151F",
+        "depan": "#C795FF",
+        "belakang": "#1F121C",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 9.48,
+        "rasio": 7.9,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -2103,7 +2103,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 16.51,
+      "rasio_teks_terendah": 17.03,
       "skor_aksesibilitas": 100
     }
   },
@@ -2118,107 +2118,107 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#0E0C13",
+        "hex": "#0D0C14",
         "oklch": [
           0.16,
           0.016,
-          302.1
+          292.1
         ]
       },
       {
         "peran": "surface",
-        "hex": "#1C1826",
+        "hex": "#1A1927",
         "oklch": [
           0.22,
           0.028,
-          296.7
+          286.7
         ]
       },
       {
         "peran": "base",
-        "hex": "#9851F3",
+        "hex": "#8259FC",
         "oklch": [
-          0.602,
+          0.598,
           0.23,
-          299.3
+          289.3
         ]
       },
       {
         "peran": "accent",
-        "hex": "#00DEF3",
+        "hex": "#00DEE2",
         "oklch": [
-          0.822,
+          0.818,
           0.256,
-          207.1
+          197.1
         ]
       },
       {
         "peran": "text",
-        "hex": "#F9F8FC",
+        "hex": "#F8F8FC",
         "oklch": [
           0.98,
           0.006,
-          299.3
+          289.3
         ]
       }
     ],
     "pasangan_kontras": [
       {
-        "depan": "#F9F8FC",
-        "belakang": "#0E0C13",
+        "depan": "#F8F8FC",
+        "belakang": "#0D0C14",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 18.38,
+        "rasio": 18.36,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#F9F8FC",
-        "belakang": "#1C1826",
+        "depan": "#F8F8FC",
+        "belakang": "#1A1927",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 16.44,
+        "rasio": 16.35,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#9851F3",
-        "belakang": "#0E0C13",
+        "depan": "#8259FC",
+        "belakang": "#0D0C14",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.45,
+        "rasio": 4.43,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#9851F3",
-        "belakang": "#1C1826",
+        "depan": "#8259FC",
+        "belakang": "#1A1927",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.98,
+        "rasio": 3.95,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#00DEF3",
-        "belakang": "#0E0C13",
+        "depan": "#00DEE2",
+        "belakang": "#0D0C14",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 11.79,
+        "rasio": 11.62,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#00DEF3",
-        "belakang": "#1C1826",
+        "depan": "#00DEE2",
+        "belakang": "#1A1927",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 10.55,
+        "rasio": 10.35,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -2227,7 +2227,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 16.44,
+      "rasio_teks_terendah": 16.35,
       "skor_aksesibilitas": 100
     }
   },
@@ -2242,36 +2242,36 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#EDE6E3",
+        "hex": "#E2DCD9",
         "oklch": [
-          0.93,
+          0.898,
           0.008,
           49.8
         ]
       },
       {
         "peran": "surface",
-        "hex": "#FAEFEA",
+        "hex": "#EFE5E0",
         "oklch": [
-          0.96,
+          0.928,
           0.013,
           48.7
         ]
       },
       {
         "peran": "base",
-        "hex": "#B76F46",
+        "hex": "#AE663D",
         "oklch": [
-          0.612,
+          0.583,
           0.108,
           49
         ]
       },
       {
         "peran": "accent",
-        "hex": "#7F5900",
+        "hex": "#593E00",
         "oklch": [
-          0.492,
+          0.383,
           0.12,
           80.3
         ]
@@ -2289,69 +2289,69 @@
     "pasangan_kontras": [
       {
         "depan": "#221E1D",
-        "belakang": "#EDE6E3",
+        "belakang": "#E2DCD9",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 13.39,
+        "rasio": 12.17,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#221E1D",
-        "belakang": "#FAEFEA",
+        "belakang": "#EFE5E0",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 14.63,
+        "rasio": 13.33,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#B76F46",
-        "belakang": "#EDE6E3",
+        "depan": "#AE663D",
+        "belakang": "#E2DCD9",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3.17,
+        "rasio": 3.25,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#B76F46",
-        "belakang": "#FAEFEA",
+        "depan": "#AE663D",
+        "belakang": "#EFE5E0",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.46,
+        "rasio": 3.56,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#7F5900",
-        "belakang": "#EDE6E3",
+        "depan": "#593E00",
+        "belakang": "#E2DCD9",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 5.11,
+        "rasio": 7.32,
         "ambang": 3,
-        "nilai": "AA",
+        "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#7F5900",
-        "belakang": "#FAEFEA",
+        "depan": "#593E00",
+        "belakang": "#EFE5E0",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 5.58,
+        "rasio": 8.02,
         "ambang": 3,
-        "nilai": "AA",
+        "nilai": "AAA",
         "lolos": true
       }
     ],
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 13.39,
+      "rasio_teks_terendah": 12.17,
       "skor_aksesibilitas": 100
     }
   },
@@ -2366,38 +2366,38 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#EAE7E2",
+        "hex": "#E5E2DD",
         "oklch": [
-          0.93,
+          0.914,
           0.008,
-          83.5
+          78.5
         ]
       },
       {
         "peran": "surface",
-        "hex": "#F6F1E8",
+        "hex": "#F1ECE3",
         "oklch": [
-          0.96,
+          0.944,
           0.013,
-          83.7
+          78.7
         ]
       },
       {
         "peran": "base",
-        "hex": "#A27A16",
+        "hex": "#A6781A",
         "oklch": [
           0.603,
           0.117,
-          84.1
+          79.1
         ]
       },
       {
         "peran": "accent",
-        "hex": "#8B4F90",
+        "hex": "#754083",
         "oklch": [
-          0.523,
+          0.463,
           0.12,
-          324
+          319
         ]
       },
       {
@@ -2406,67 +2406,67 @@
         "oklch": [
           0.24,
           0.006,
-          84.1
+          79.1
         ]
       }
     ],
     "pasangan_kontras": [
       {
         "depan": "#211F1C",
-        "belakang": "#EAE7E2",
+        "belakang": "#E5E2DD",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 13.33,
+        "rasio": 12.72,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#211F1C",
-        "belakang": "#F6F1E8",
+        "belakang": "#F1ECE3",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 14.61,
+        "rasio": 13.97,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#A27A16",
-        "belakang": "#EAE7E2",
+        "depan": "#A6781A",
+        "belakang": "#E5E2DD",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3.19,
+        "rasio": 3.05,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#A27A16",
-        "belakang": "#F6F1E8",
+        "depan": "#A6781A",
+        "belakang": "#F1ECE3",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.5,
+        "rasio": 3.35,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#8B4F90",
-        "belakang": "#EAE7E2",
+        "depan": "#754083",
+        "belakang": "#E5E2DD",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 4.71,
+        "rasio": 5.77,
         "ambang": 3,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#8B4F90",
-        "belakang": "#F6F1E8",
+        "depan": "#754083",
+        "belakang": "#F1ECE3",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 5.16,
+        "rasio": 6.33,
         "ambang": 3,
         "nilai": "AA",
         "lolos": true
@@ -2475,7 +2475,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 13.33,
+      "rasio_teks_terendah": 12.72,
       "skor_aksesibilitas": 100
     }
   },
@@ -2490,84 +2490,84 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#E6E9E4",
+        "hex": "#E7E9E3",
         "oklch": [
           0.93,
           0.008,
-          133.7
+          123.7
         ]
       },
       {
         "peran": "surface",
-        "hex": "#EFF4EB",
+        "hex": "#F0F3EA",
         "oklch": [
           0.96,
           0.013,
-          131.1
+          121.1
         ]
       },
       {
         "peran": "base",
-        "hex": "#728960",
+        "hex": "#7A875A",
         "oklch": [
           0.6,
           0.065,
-          131.4
+          121.4
         ]
       },
       {
         "peran": "accent",
-        "hex": "#4F6E3B",
+        "hex": "#596B32",
         "oklch": [
           0.5,
           0.085,
-          134.3
+          124.3
         ]
       },
       {
         "peran": "text",
-        "hex": "#1E201D",
+        "hex": "#1F201D",
         "oklch": [
           0.24,
           0.006,
-          131.4
+          121.4
         ]
       }
     ],
     "pasangan_kontras": [
       {
-        "depan": "#1E201D",
-        "belakang": "#E6E9E4",
+        "depan": "#1F201D",
+        "belakang": "#E7E9E3",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 13.4,
+        "rasio": 13.38,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#1E201D",
-        "belakang": "#EFF4EB",
+        "depan": "#1F201D",
+        "belakang": "#F0F3EA",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 14.7,
+        "rasio": 14.59,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#728960",
-        "belakang": "#E6E9E4",
+        "depan": "#7A875A",
+        "belakang": "#E7E9E3",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3.14,
+        "rasio": 3.15,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#728960",
-        "belakang": "#EFF4EB",
+        "depan": "#7A875A",
+        "belakang": "#F0F3EA",
         "peran_depan": "base",
         "peran_belakang": "surface",
         "rasio": 3.44,
@@ -2576,21 +2576,21 @@
         "lolos": true
       },
       {
-        "depan": "#4F6E3B",
-        "belakang": "#E6E9E4",
+        "depan": "#596B32",
+        "belakang": "#E7E9E3",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 4.73,
+        "rasio": 4.8,
         "ambang": 3,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#4F6E3B",
-        "belakang": "#EFF4EB",
+        "depan": "#596B32",
+        "belakang": "#F0F3EA",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 5.19,
+        "rasio": 5.24,
         "ambang": 3,
         "nilai": "AA",
         "lolos": true
@@ -2599,7 +2599,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 13.4,
+      "rasio_teks_terendah": 13.38,
       "skor_aksesibilitas": 100
     }
   },
@@ -2614,36 +2614,36 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#FBFCFD",
+        "hex": "#F0F1F2",
         "oklch": [
-          0.99,
+          0.958,
           0.001,
           258.6
         ]
       },
       {
         "peran": "surface",
-        "hex": "#FFFFFF",
+        "hex": "#F4F4F6",
         "oklch": [
-          1,
+          0.968,
           0.002,
           260.1
         ]
       },
       {
         "peran": "base",
-        "hex": "#4E5866",
+        "hex": "#6E7887",
         "oklch": [
-          0.455,
+          0.57,
           0.026,
           257.2
         ]
       },
       {
         "peran": "accent",
-        "hex": "#141E2E",
+        "hex": "#303B4C",
         "oklch": [
-          0.235,
+          0.35,
           0.033,
           258.2
         ]
@@ -2661,60 +2661,60 @@
     "pasangan_kontras": [
       {
         "depan": "#0A0B0E",
-        "belakang": "#FBFCFD",
+        "belakang": "#F0F1F2",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 19.16,
+        "rasio": 17.4,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#0A0B0E",
-        "belakang": "#FFFFFF",
+        "belakang": "#F4F4F6",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 19.68,
+        "rasio": 17.92,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#4E5866",
-        "belakang": "#FBFCFD",
+        "depan": "#6E7887",
+        "belakang": "#F0F1F2",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 7.02,
+        "rasio": 3.95,
         "ambang": 3,
-        "nilai": "AAA",
+        "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#4E5866",
-        "belakang": "#FFFFFF",
+        "depan": "#6E7887",
+        "belakang": "#F4F4F6",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 7.21,
+        "rasio": 4.07,
         "ambang": 3,
-        "nilai": "AAA",
+        "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#141E2E",
-        "belakang": "#FBFCFD",
+        "depan": "#303B4C",
+        "belakang": "#F0F1F2",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 16.29,
+        "rasio": 10.01,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#141E2E",
-        "belakang": "#FFFFFF",
+        "depan": "#303B4C",
+        "belakang": "#F4F4F6",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 16.73,
+        "rasio": 10.3,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -2723,7 +2723,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 19.16,
+      "rasio_teks_terendah": 17.4,
       "skor_aksesibilitas": 100
     }
   },
@@ -2738,38 +2738,38 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#FBFCFD",
+        "hex": "#F6F6F7",
         "oklch": [
-          0.99,
+          0.974,
           0.001,
-          265.3
+          260.3
         ]
       },
       {
         "peran": "surface",
-        "hex": "#FFFFFF",
+        "hex": "#F9FAFB",
         "oklch": [
-          1,
+          0.984,
           0.002,
-          269.4
+          264.4
         ]
       },
       {
         "peran": "base",
-        "hex": "#4A4D56",
+        "hex": "#393E45",
         "oklch": [
-          0.422,
+          0.362,
           0.015,
-          267.9
+          262.9
         ]
       },
       {
         "peran": "accent",
-        "hex": "#192228",
+        "hex": "#0C161B",
         "oklch": [
-          0.246,
+          0.194,
           0.018,
-          236
+          231
         ]
       },
       {
@@ -2778,67 +2778,67 @@
         "oklch": [
           0.15,
           0.006,
-          267.9
+          262.9
         ]
       }
     ],
     "pasangan_kontras": [
       {
         "depan": "#0A0B0E",
-        "belakang": "#FBFCFD",
+        "belakang": "#F6F6F7",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 19.16,
+        "rasio": 18.22,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#0A0B0E",
-        "belakang": "#FFFFFF",
+        "belakang": "#F9FAFB",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 19.68,
+        "rasio": 18.83,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#4A4D56",
-        "belakang": "#FBFCFD",
+        "depan": "#393E45",
+        "belakang": "#F6F6F7",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 8.22,
+        "rasio": 9.98,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#4A4D56",
-        "belakang": "#FFFFFF",
+        "depan": "#393E45",
+        "belakang": "#F9FAFB",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 8.44,
+        "rasio": 10.31,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#192228",
-        "belakang": "#FBFCFD",
+        "depan": "#0C161B",
+        "belakang": "#F6F6F7",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 15.72,
+        "rasio": 16.96,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#192228",
-        "belakang": "#FFFFFF",
+        "depan": "#0C161B",
+        "belakang": "#F9FAFB",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 16.14,
+        "rasio": 17.53,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -2847,7 +2847,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 19.16,
+      "rasio_teks_terendah": 18.22,
       "skor_aksesibilitas": 100
     }
   },
@@ -2866,7 +2866,7 @@
         "oklch": [
           0.99,
           0.001,
-          244
+          234
         ]
       },
       {
@@ -2875,54 +2875,54 @@
         "oklch": [
           1,
           0.002,
-          242.2
+          232.2
         ]
       },
       {
         "peran": "base",
         "hex": "#5A5F63",
         "oklch": [
-          0.483,
+          0.482,
           0.009,
-          244.4
+          234.4
         ]
       },
       {
         "peran": "accent",
-        "hex": "#2A2321",
+        "hex": "#2A2322",
         "oklch": [
-          0.263,
+          0.262,
           0.011,
-          33.2
+          23.2
         ]
       },
       {
         "peran": "text",
-        "hex": "#090B0E",
+        "hex": "#090C0D",
         "oklch": [
           0.15,
           0.006,
-          244.4
+          234.4
         ]
       }
     ],
     "pasangan_kontras": [
       {
-        "depan": "#090B0E",
+        "depan": "#090C0D",
         "belakang": "#FBFCFC",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 19.17,
+        "rasio": 19.09,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#090B0E",
+        "depan": "#090C0D",
         "belakang": "#FFFFFF",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 19.7,
+        "rasio": 19.63,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
@@ -2948,21 +2948,21 @@
         "lolos": true
       },
       {
-        "depan": "#2A2321",
+        "depan": "#2A2322",
         "belakang": "#FBFCFC",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 15.01,
+        "rasio": 15,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#2A2321",
+        "depan": "#2A2322",
         "belakang": "#FFFFFF",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 15.43,
+        "rasio": 15.42,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -2971,7 +2971,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 19.17,
+      "rasio_teks_terendah": 19.09,
       "skor_aksesibilitas": 100
     }
   },
@@ -2986,36 +2986,36 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#FFF8F7",
+        "hex": "#FAECE9",
         "oklch": [
-          0.985,
+          0.953,
           0.016,
           33.2
         ]
       },
       {
         "peran": "surface",
-        "hex": "#FFFFFF",
+        "hex": "#FFF1ED",
         "oklch": [
-          1,
+          0.968,
           0.028,
           33.8
         ]
       },
       {
         "peran": "base",
-        "hex": "#FF4C23",
+        "hex": "#F93900",
         "oklch": [
-          0.668,
+          0.64,
           0.26,
           33.7
         ]
       },
       {
         "peran": "accent",
-        "hex": "#00859B",
+        "hex": "#006374",
         "oklch": [
-          0.568,
+          0.46,
           0.33,
           214.6
         ]
@@ -3033,69 +3033,69 @@
     "pasangan_kontras": [
       {
         "depan": "#020101",
-        "belakang": "#FFF8F7",
+        "belakang": "#FAECE9",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 19.88,
+        "rasio": 18.11,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#020101",
-        "belakang": "#FFFFFF",
+        "belakang": "#FFF1ED",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 20.85,
+        "rasio": 18.92,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#FF4C23",
-        "belakang": "#FFF8F7",
+        "depan": "#F93900",
+        "belakang": "#FAECE9",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3.17,
+        "rasio": 3.25,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#FF4C23",
-        "belakang": "#FFFFFF",
+        "depan": "#F93900",
+        "belakang": "#FFF1ED",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.33,
+        "rasio": 3.4,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#00859B",
-        "belakang": "#FFF8F7",
+        "depan": "#006374",
+        "belakang": "#FAECE9",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 4.15,
+        "rasio": 6.01,
         "ambang": 3,
-        "nilai": "AA-Large",
+        "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#00859B",
-        "belakang": "#FFFFFF",
+        "depan": "#006374",
+        "belakang": "#FFF1ED",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 4.35,
+        "rasio": 6.28,
         "ambang": 3,
-        "nilai": "AA-Large",
+        "nilai": "AA",
         "lolos": true
       }
     ],
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 19.88,
+      "rasio_teks_terendah": 18.11,
       "skor_aksesibilitas": 100
     }
   },
@@ -3110,38 +3110,38 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#F8FAFF",
+        "hex": "#F0F5FF",
         "oklch": [
-          0.985,
+          0.969,
           0.016,
-          271.1
+          266.1
         ]
       },
       {
         "peran": "surface",
-        "hex": "#FFFFFF",
+        "hex": "#F7FAFF",
         "oklch": [
-          1,
+          0.984,
           0.028,
-          270.8
+          265.8
         ]
       },
       {
         "peran": "base",
-        "hex": "#6084FF",
+        "hex": "#4B82FF",
         "oklch": [
-          0.648,
+          0.636,
           0.277,
-          268.7
+          263.7
         ]
       },
       {
         "peran": "accent",
-        "hex": "#009033",
+        "hex": "#087E00",
         "oklch": [
-          0.568,
+          0.516,
           0.309,
-          147.1
+          142.1
         ]
       },
       {
@@ -3150,76 +3150,76 @@
         "oklch": [
           0.08,
           0.006,
-          268.7
+          263.7
         ]
       }
     ],
     "pasangan_kontras": [
       {
         "depan": "#010203",
-        "belakang": "#F8FAFF",
+        "belakang": "#F0F5FF",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 19.89,
+        "rasio": 19,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#010203",
-        "belakang": "#FFFFFF",
+        "belakang": "#F7FAFF",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 20.77,
+        "rasio": 19.85,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#6084FF",
-        "belakang": "#F8FAFF",
+        "depan": "#4B82FF",
+        "belakang": "#F0F5FF",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3.22,
+        "rasio": 3.24,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#6084FF",
-        "belakang": "#FFFFFF",
+        "depan": "#4B82FF",
+        "belakang": "#F7FAFF",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.36,
+        "rasio": 3.38,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#009033",
-        "belakang": "#F8FAFF",
+        "depan": "#087E00",
+        "belakang": "#F0F5FF",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.99,
+        "rasio": 4.81,
         "ambang": 3,
-        "nilai": "AA-Large",
+        "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#009033",
-        "belakang": "#FFFFFF",
+        "depan": "#087E00",
+        "belakang": "#F7FAFF",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 4.17,
+        "rasio": 5.02,
         "ambang": 3,
-        "nilai": "AA-Large",
+        "nilai": "AA",
         "lolos": true
       }
     ],
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 19.89,
+      "rasio_teks_terendah": 19,
       "skor_aksesibilitas": 100
     }
   },
@@ -3234,11 +3234,11 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#F2FEF6",
+        "hex": "#F3FDF4",
         "oklch": [
           0.985,
           0.016,
-          159.7
+          149.7
         ]
       },
       {
@@ -3247,25 +3247,25 @@
         "oklch": [
           1,
           0.028,
-          155.6
+          145.6
         ]
       },
       {
         "peran": "base",
-        "hex": "#00A467",
+        "hex": "#00A744",
         "oklch": [
-          0.634,
+          0.635,
           0.26,
-          158.3
+          148.3
         ]
       },
       {
         "peran": "accent",
-        "hex": "#008B81",
+        "hex": "#008D76",
         "oklch": [
-          0.574,
+          0.575,
           0.282,
-          185.7
+          175.7
         ]
       },
       {
@@ -3274,17 +3274,17 @@
         "oklch": [
           0.08,
           0.006,
-          158.3
+          148.3
         ]
       }
     ],
     "pasangan_kontras": [
       {
         "depan": "#010201",
-        "belakang": "#F2FEF6",
+        "belakang": "#F3FDF4",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 20.07,
+        "rasio": 19.96,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
@@ -3300,41 +3300,41 @@
         "lolos": true
       },
       {
-        "depan": "#00A467",
-        "belakang": "#F2FEF6",
+        "depan": "#00A744",
+        "belakang": "#F3FDF4",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3.12,
+        "rasio": 3.05,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#00A467",
+        "depan": "#00A744",
         "belakang": "#FFFFFF",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.23,
+        "rasio": 3.18,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#008B81",
-        "belakang": "#F2FEF6",
+        "depan": "#008D76",
+        "belakang": "#F3FDF4",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 4.05,
+        "rasio": 3.98,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#008B81",
+        "depan": "#008D76",
         "belakang": "#FFFFFF",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 4.19,
+        "rasio": 4.14,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -3343,7 +3343,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 20.07,
+      "rasio_teks_terendah": 19.96,
       "skor_aksesibilitas": 100
     }
   },
@@ -3358,36 +3358,36 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#E0DDDC",
+        "hex": "#D6D3D1",
         "oklch": [
-          0.9,
+          0.868,
           0.004,
           44.6
         ]
       },
       {
         "peran": "surface",
-        "hex": "#F2EDEB",
+        "hex": "#E8E3E0",
         "oklch": [
-          0.95,
+          0.918,
           0.007,
           49
         ]
       },
       {
         "peran": "base",
-        "hex": "#9E6B52",
+        "hex": "#7D4D35",
         "oklch": [
-          0.576,
+          0.47,
           0.075,
           47.1
         ]
       },
       {
         "peran": "accent",
-        "hex": "#503700",
+        "hex": "#2F1E00",
         "oklch": [
-          0.356,
+          0.25,
           0.075,
           79.9
         ]
@@ -3405,60 +3405,60 @@
     "pasangan_kontras": [
       {
         "depan": "#221E1D",
-        "belakang": "#E0DDDC",
+        "belakang": "#D6D3D1",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 12.23,
+        "rasio": 11.09,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#221E1D",
-        "belakang": "#F2EDEB",
+        "belakang": "#E8E3E0",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 14.23,
+        "rasio": 12.97,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#9E6B52",
-        "belakang": "#E0DDDC",
+        "depan": "#7D4D35",
+        "belakang": "#D6D3D1",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3.32,
+        "rasio": 4.72,
         "ambang": 3,
-        "nilai": "AA-Large",
+        "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#9E6B52",
-        "belakang": "#F2EDEB",
+        "depan": "#7D4D35",
+        "belakang": "#E8E3E0",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.87,
+        "rasio": 5.53,
         "ambang": 3,
-        "nilai": "AA-Large",
+        "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#503700",
-        "belakang": "#E0DDDC",
+        "depan": "#2F1E00",
+        "belakang": "#D6D3D1",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 8.24,
+        "rasio": 10.79,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#503700",
-        "belakang": "#F2EDEB",
+        "depan": "#2F1E00",
+        "belakang": "#E8E3E0",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 9.58,
+        "rasio": 12.62,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -3467,7 +3467,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 12.23,
+      "rasio_teks_terendah": 11.09,
       "skor_aksesibilitas": 100
     }
   },
@@ -3482,38 +3482,38 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#DFDEDB",
+        "hex": "#DAD9D6",
         "oklch": [
-          0.9,
+          0.884,
           0.004,
-          93.1
+          88.1
         ]
       },
       {
         "peran": "surface",
-        "hex": "#F0EEEA",
+        "hex": "#EBE9E4",
         "oklch": [
-          0.95,
+          0.934,
           0.007,
-          92.3
+          87.3
         ]
       },
       {
         "peran": "base",
-        "hex": "#887A4A",
+        "hex": "#816F3F",
         "oklch": [
-          0.582,
+          0.546,
           0.069,
-          94.2
+          89.2
         ]
       },
       {
         "peran": "accent",
-        "hex": "#593354",
+        "hex": "#482648",
         "oklch": [
-          0.382,
+          0.326,
           0.073,
-          331.9
+          326.9
         ]
       },
       {
@@ -3522,67 +3522,67 @@
         "oklch": [
           0.24,
           0.006,
-          94.2
+          89.2
         ]
       }
     ],
     "pasangan_kontras": [
       {
         "depan": "#201F1C",
-        "belakang": "#DFDEDB",
+        "belakang": "#DAD9D6",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 12.25,
+        "rasio": 11.68,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#201F1C",
-        "belakang": "#F0EEEA",
+        "belakang": "#EBE9E4",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 14.22,
+        "rasio": 13.58,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#887A4A",
-        "belakang": "#DFDEDB",
+        "depan": "#816F3F",
+        "belakang": "#DAD9D6",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3.17,
+        "rasio": 3.48,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#887A4A",
-        "belakang": "#F0EEEA",
+        "depan": "#816F3F",
+        "belakang": "#EBE9E4",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.68,
+        "rasio": 4.04,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#593354",
-        "belakang": "#DFDEDB",
+        "depan": "#482648",
+        "belakang": "#DAD9D6",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 7.7,
+        "rasio": 9.04,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#593354",
-        "belakang": "#F0EEEA",
+        "depan": "#482648",
+        "belakang": "#EBE9E4",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 8.94,
+        "rasio": 10.51,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -3591,7 +3591,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 12.25,
+      "rasio_teks_terendah": 11.68,
       "skor_aksesibilitas": 100
     }
   },
@@ -3606,11 +3606,11 @@
     "warna": [
       {
         "peran": "background",
-        "hex": "#DFDEDB",
+        "hex": "#E0DDDB",
         "oklch": [
           0.9,
           0.004,
-          78.2
+          68.2
         ]
       },
       {
@@ -3619,25 +3619,25 @@
         "oklch": [
           0.95,
           0.007,
-          78.6
+          68.6
         ]
       },
       {
         "peran": "base",
-        "hex": "#867A65",
+        "hex": "#8A7966",
         "oklch": [
-          0.583,
+          0.587,
           0.034,
-          81.1
+          71.1
         ]
       },
       {
         "peran": "accent",
-        "hex": "#493C26",
+        "hex": "#4D3B28",
         "oklch": [
-          0.363,
+          0.367,
           0.039,
-          78.5
+          68.5
         ]
       },
       {
@@ -3646,17 +3646,17 @@
         "oklch": [
           0.24,
           0.006,
-          81.1
+          71.1
         ]
       }
     ],
     "pasangan_kontras": [
       {
         "depan": "#211F1C",
-        "belakang": "#DFDEDB",
+        "belakang": "#E0DDDB",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 12.22,
+        "rasio": 12.16,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
@@ -3672,41 +3672,41 @@
         "lolos": true
       },
       {
-        "depan": "#867A65",
-        "belakang": "#DFDEDB",
+        "depan": "#8A7966",
+        "belakang": "#E0DDDB",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 3.13,
+        "rasio": 3.1,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#867A65",
+        "depan": "#8A7966",
         "belakang": "#F1EEEA",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 3.64,
+        "rasio": 3.63,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#493C26",
-        "belakang": "#DFDEDB",
+        "depan": "#4D3B28",
+        "belakang": "#E0DDDB",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 7.97,
+        "rasio": 7.88,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#493C26",
+        "depan": "#4D3B28",
         "belakang": "#F1EEEA",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 9.28,
+        "rasio": 9.21,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -3715,7 +3715,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 12.22,
+      "rasio_teks_terendah": 12.16,
       "skor_aksesibilitas": 100
     }
   }

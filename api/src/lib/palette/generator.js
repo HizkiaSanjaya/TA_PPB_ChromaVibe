@@ -59,17 +59,25 @@ export function buatPalet({ base, tema, harmoni = 'triadik', seed = 0, indeks = 
   const acak = buatPrng(`${String(base).toUpperCase()}|${tema}|${harmoni}|${seed}|${indeks}`)
   const dasar = hexKeOklch(base)
 
+  // Indeks menentukan variasi dalam satu rangkaian. Variasi harus cukup besar,
+  // karena pergeseran lima derajat membuat lima palet terlihat identik.
+  const variasi = indeks % 5
+  const geserLatar = (variasi - 2) * 0.016
+
   const jitter = (acak() * 2 - 1) * konfigurasi.jitter
-  const hueDasar = normalkanHue(dasar.h + jitter + indeks * 5)
+  const hueDasar = normalkanHue(dasar.h + jitter)
 
   const offset = skemaHarmoni.offset
   const pilihanAksen = offset.length > 1 ? offset.length - 1 : 1
-  const posisiAksen = offset.length > 1 ? 1 + (indeks % pilihanAksen) : 0
+  const posisiAksen = offset.length > 1 ? 1 + (variasi % pilihanAksen) : 0
   const hueAksen = normalkanHue(hueDasar + offset[posisiAksen] + (acak() * 2 - 1) * 3)
 
   const warnaDasar = {
     L: batasi(
-      0.45 * dasar.L + 0.55 * konfigurasi.lightness.aksen + (acak() - 0.5) * 0.04,
+      0.45 * dasar.L +
+        0.55 * konfigurasi.lightness.aksen +
+        (variasi - 2) * 0.06 +
+        (acak() - 0.5) * 0.04,
       0.12,
       0.94
     ),
@@ -78,13 +86,13 @@ export function buatPalet({ base, tema, harmoni = 'triadik', seed = 0, indeks = 
   }
 
   const warnaBackground = {
-    L: konfigurasi.lightness.background,
+    L: batasi(konfigurasi.lightness.background + geserLatar, 0.06, 0.995),
     C: Math.min(konfigurasi.chroma[0] * 0.16, 0.016),
     h: normalkanHue(hueDasar + (acak() - 0.5) * 6),
   }
 
   const warnaSurface = {
-    L: konfigurasi.lightness.surface,
+    L: batasi(konfigurasi.lightness.surface + geserLatar, 0.06, 1),
     C: Math.min(konfigurasi.chroma[0] * 0.26, 0.028),
     h: normalkanHue(hueDasar + (acak() - 0.5) * 6),
   }
@@ -92,8 +100,17 @@ export function buatPalet({ base, tema, harmoni = 'triadik', seed = 0, indeks = 
   const hexBackground = oklchKeHex(warnaBackground)
   const hexSurface = oklchKeHex(warnaSurface)
 
+  // Pada monokrom, warna primer dan aksen berbagi hue. Satu-satunya pembeda
+  // adalah kecerahan, jadi keduanya digeser ke arah berlawanan agar terlihat
+  // sebagai dua anak tangga, bukan dua warna yang sama.
+  const arahAksen = harmoni === 'monokrom' ? -1 : 1
+
   let warnaAksen = {
-    L: batasi(konfigurasi.lightness.aksen + (acak() - 0.5) * 0.05, 0.1, 0.95),
+    L: batasi(
+      konfigurasi.lightness.aksen + arahAksen * (variasi - 2) * 0.055 + (acak() - 0.5) * 0.04,
+      0.1,
+      0.95
+    ),
     C: batasi(warnaDasar.C * (1.05 + acak() * 0.25), konfigurasi.chroma[0], konfigurasi.chroma[1]),
     h: hueAksen,
   }
@@ -165,10 +182,35 @@ export function buatPalet({ base, tema, harmoni = 'triadik', seed = 0, indeks = 
  * Menghasilkan beberapa palet sekaligus. Setiap indeks menggeser posisi hue
  * pada skema harmoni supaya hasilnya tidak terasa sebagai duplikat.
  */
+/**
+ * Menghasilkan beberapa palet sekaligus, dijamin berbeda satu sama lain.
+ *
+ * Kandidat diuji berurutan sampai jumlah terpenuhi. Palet yang warna atau
+ * namanya kembar dilewati, lalu kandidat berikutnya dicoba. Karena urutannya
+ * tetap, hasilnya masih deterministik untuk masukan yang sama.
+ */
 export function buatDaftarPalet({ base, tema, harmoni = 'triadik', jumlah = 1, seed = 0 }) {
-  return Array.from({ length: jumlah }, (_, indeks) =>
-    buatPalet({ base, tema, harmoni, seed, indeks })
-  )
+  const hasil = []
+  const sidik = new Set()
+  const nama = new Set()
+
+  let kandidat = 0
+  const batas = jumlah * 16
+
+  while (hasil.length < jumlah && kandidat < batas) {
+    const palet = buatPalet({ base, tema, harmoni, seed, indeks: kandidat })
+    const kunci = palet.warna.map((item) => item.hex).join(',')
+
+    if (!sidik.has(kunci) && !nama.has(palet.nama)) {
+      sidik.add(kunci)
+      nama.add(palet.nama)
+      hasil.push(palet)
+    }
+
+    kandidat += 1
+  }
+
+  return hasil
 }
 
 const CADANGAN_HUE = [12, 130, 250]
