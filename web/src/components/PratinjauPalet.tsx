@@ -7,12 +7,26 @@ interface Props {
 }
 
 /**
+ * Warna yang paling kontras di antara beberapa kandidat.
+ * Dipakai untuk menaruh tulisan di atas bidang berwarna kedua.
+ */
+function teksAman(hex: string, kandidat: string[]) {
+  const urut = kandidat
+    .map((warna) => ({ warna, rasio: rasioKontras(hex, warna) }))
+    .sort((a, b) => b.rasio - a.rasio)
+
+  return urut[0] && urut[0].rasio >= 4.5 ? urut[0].warna : teksDiAtas(hex)
+}
+
+/**
  * Pratinjau palet dalam bentuk antarmuka mini, bukan deretan kotak warna.
  *
- * Kotak warna terpisah sulit dinilai sebagai satu kesatuan, jadi warnanya
- * ditumpuk seperti halaman sungguhan: latar paling belakang, kartu di atasnya,
- * judul memakai warna utama, isi teks memakai warna teks, dan keterangan kecil
- * memakai warna kedua. Setiap peran benar-benar dipakai, bukan sekadar dipajang.
+ * Pembagian tugasnya mengikuti aturan kontras yang dipakai generator:
+ * - warna utama dipakai sebagai judul, aman karena dijamin 4.5 banding 1;
+ * - warna teks dipakai untuk isi tulisan;
+ * - warna kedua dipakai sebagai isian bidang, garis tebal, dan titik, karena
+ *   hanya dijamin 3 banding 1, cukup untuk komponen tetapi bukan untuk
+ *   tulisan kecil.
  */
 export function PratinjauPalet({ palet, ringkas = false }: Props) {
   const background = ambilHex(palet, 'background')
@@ -21,14 +35,7 @@ export function PratinjauPalet({ palet, ringkas = false }: Props) {
   const accent = ambilHex(palet, 'accent')
   const text = ambilHex(palet, 'text')
 
-  // Warna kedua dipakai sebagai isi penuh pada satu elemen. Warna tulisan di
-  // atasnya dipilih dari kandidat yang tersedia, dan hanya dipakai kalau
-  // mencapau 4.5. Kalau tidak ada yang cukup, elemen kembali jadi garis saja.
-  const kandidat = [background, surface, text, '#FFFFFF', '#000000']
-  const terbaik = kandidat
-    .map((hex) => ({ hex, rasio: rasioKontras(accent, hex) }))
-    .sort((a, b) => b.rasio - a.rasio)[0]
-  const isiAksen = terbaik && terbaik.rasio >= 4.5 ? terbaik.hex : null
+  const diAtasAksen = teksAman(accent, [background, surface, text, '#FFFFFF', '#000000'])
 
   return (
     <div
@@ -37,12 +44,19 @@ export function PratinjauPalet({ palet, ringkas = false }: Props) {
     >
       <div className={ringkas ? 'p-2.5' : 'p-3.5'}>
         <div className="rounded-lg p-3" style={{ backgroundColor: surface }}>
-          <p
-            className="text-[9px] font-semibold uppercase tracking-[0.16em]"
-            style={{ color: accent }}
-          >
-            Warna kedua
-          </p>
+          <div className="flex items-center gap-1.5">
+            <span
+              aria-hidden="true"
+              className="size-2 rounded-full"
+              style={{ backgroundColor: accent }}
+            />
+            <p
+              className="text-[9px] font-semibold uppercase tracking-[0.16em]"
+              style={{ color: text }}
+            >
+              Warna kedua sebagai titik
+            </p>
+          </div>
 
           <p
             className={ringkas ? 'mt-1 text-[15px] font-bold' : 'mt-1.5 text-lg font-bold'}
@@ -52,12 +66,7 @@ export function PratinjauPalet({ palet, ringkas = false }: Props) {
           </p>
 
           <p className="mt-1 text-[11px] leading-relaxed" style={{ color: text }}>
-            Isi tulisan memakai warna teks. Ukurannya lebih kecil daripada judul, tetapi
-            keterbacaannya tetap dijamin.
-          </p>
-
-          <p className="mt-1.5 text-[10px] font-medium leading-relaxed" style={{ color: accent }}>
-            Keterangan kecil memakai warna kedua.
+            Isi tulisan memakai warna teks, supaya selalu mudah dibaca.
           </p>
 
           <div className="mt-3 flex flex-wrap items-center gap-2">
@@ -69,27 +78,35 @@ export function PratinjauPalet({ palet, ringkas = false }: Props) {
             </span>
             <span
               className="rounded-md px-2.5 py-1.5 text-[11px] font-semibold"
-              style={
-                isiAksen
-                  ? { backgroundColor: accent, color: isiAksen }
-                  : { border: `1px solid ${accent}`, color: accent }
-              }
+              style={{ backgroundColor: accent, color: diAtasAksen }}
             >
               Tombol kedua
             </span>
           </div>
 
-          {/* Bilah warna kedua selebar kartu, supaya perannya terlihat jelas. */}
-          {isiAksen && (
-            <div
-              className="mt-2 flex items-center justify-between rounded-md px-2 py-1"
-              style={{ backgroundColor: accent, color: isiAksen }}
-            >
-              <span className="text-[9px] font-semibold uppercase tracking-wider">Warna kedua</span>
-              <span className="font-mono text-[9px]">{accent}</span>
-            </div>
-          )}
+          {/* Warna kedua sebagai garis tebal, pemakaian yang sah pada 3 banding 1. */}
+          <div className="mt-3 flex items-stretch gap-2">
+            <span
+              aria-hidden="true"
+              className="w-1.5 shrink-0 rounded-full"
+              style={{ backgroundColor: accent }}
+            />
+            <p className="text-[10px] leading-relaxed" style={{ color: text }}>
+              Garis di kiri memakai warna kedua. Bidang berwarna ini aman untuk komponen, bukan
+              untuk tulisan kecil.
+            </p>
+          </div>
         </div>
+
+        {!ringkas && (
+          <div
+            className="mt-2 flex items-center justify-between rounded-md px-2 py-1"
+            style={{ backgroundColor: accent, color: diAtasAksen }}
+          >
+            <span className="text-[9px] font-semibold uppercase tracking-wider">Warna kedua</span>
+            <span className="font-mono text-[9px]">{accent}</span>
+          </div>
+        )}
       </div>
     </div>
   )
@@ -101,6 +118,7 @@ export function PratinjauPalet({ palet, ringkas = false }: Props) {
  */
 export function LegendaPalet({ palet }: { palet: Palet }) {
   const surface = ambilHex(palet, 'surface')
+  const text = ambilHex(palet, 'text')
 
   return (
     <ul className="mt-2 grid grid-cols-1 gap-1">
@@ -115,13 +133,10 @@ export function LegendaPalet({ palet }: { palet: Palet }) {
             className="size-4 shrink-0 rounded ring-1 ring-black/20"
             style={{ backgroundColor: warna.hex }}
           />
-          <span className="text-[10px] font-medium" style={{ color: ambilHex(palet, 'text') }}>
+          <span className="text-[10px] font-medium" style={{ color: text }}>
             {LABEL_PERAN[warna.peran]}
           </span>
-          <code
-            className="ml-auto font-mono text-[10px]"
-            style={{ color: ambilHex(palet, 'text') }}
-          >
+          <code className="ml-auto font-mono text-[10px]" style={{ color: text }}>
             {warna.hex}
           </code>
         </li>

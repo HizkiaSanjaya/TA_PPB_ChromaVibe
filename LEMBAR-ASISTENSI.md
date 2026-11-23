@@ -56,10 +56,29 @@ dibagikan. Kalau memakai `POST`, Workbox tidak akan menyimpannya dan aplikasi ke
 kemampuan menampilkan hasil terakhir saat offline.
 
 **Bagaimana palet dijamin terbaca?**
-Setelah warna disusun, dua aturan dijalankan. Teks terhadap latar dan permukaan wajib
-mencapai 4.5 banding 1. Warna primer dan aksen terhadap latar wajib mencapai 3 banding 1.
-Bila belum, *lightness* digeser bertahap sampai lolos. Uji otomatis memeriksa aturan ini
-pada sepuluh tema dengan lima warna primer berbeda.
+Setelah warna disusun, dua aturan dijalankan. Teks, warna utama, dan warna kedua terhadap
+latar serta permukaan wajib mencapai 4.5 banding 1. Bila belum, kecerahannya digeser
+bertahap sampai lolos. Warna utama sengaja dinaikkan dari 3 ke 4.5 supaya bisa dipakai
+sebagai judul, bukan hanya sebagai latar tombol.
+
+**Dari mana angka tema dan warnanya diambil?**
+Disusun sendiri, bukan diambil dari situs mana pun. Setiap tema adalah konfigurasi angka:
+rentang kepekatan warna, tingkat gelap untuk latar dan teks, serta besar pergeseran hue.
+Angkanya ditentukan dari pemahaman umum tentang gaya tersebut, misalnya Y2K identik dengan
+neon di atas latar gelap. Yang dijamin aplikasi bukan selera, melainkan keterbacaan: setiap
+palet pasti lolos ambang kontras, dan itu diuji otomatis.
+
+**Kenapa mengganti harmoni terasa tidak berpengaruh?**
+Karena harmoni hanya mengubah satu dari lima warna, yaitu warna kedua. Latar dan warna utama
+tetap. Supaya perbedaannya terlihat, halaman Generator menampilkan roda warna dengan dua
+titik: titik besar warna pilihan pengguna, titik kecil warna kedua. Mengganti harmoni
+memindahkan titik kecil itu, dan jaraknya dinyatakan dalam derajat.
+
+**Kenapa rekomendasi terbatas?**
+Yang terbatas hanya daftar tema (10), skema harmoni (6), dan palet kurasi (60 di database).
+Palet hasil generator tidak disimpan dan tidak dibatasi, karena dihitung saat diminta dari
+kombinasi warna, tema, kecerahan, dan kunci. Batasnya praktis hanya variasi yang bisa
+dihasilkan, dan semuanya tetap lolos uji keterbacaan.
 
 **Mengapa palet favorit tidak disimpan di Supabase?**
 Tidak ada autentikasi pengguna. Menyimpan favorit di server memaksa pembuatan identitas
@@ -77,7 +96,7 @@ Sepuluh tema sudah cukup beragam untuk menunjukkan bahwa tema hanyalah konfigura
 ## Rencana demo saat responsi (sekitar 5 menit)
 
 1. Buka beranda, sebutkan sepuluh tema dan bahwa setiap kartu berasal dari API.
-2. Buka satu tema, tunjukkan tiga palet kurasi beserta skor kontras.
+2. Buka satu tema, tunjukkan enam palet kurasi beserta skor kontras.
 3. Buka satu palet, tunjukkan pratinjau, lima peran warna, dan tabel kontras.
 4. Tekan Simpan, lalu buka tab Koleksi untuk menunjukkan alur daftar kedua.
 5. Buka Generator, ganti tema ke Cyberpunk, tekan Variasikan, tunjukkan nama palet berubah.

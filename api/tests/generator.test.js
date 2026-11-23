@@ -167,7 +167,7 @@ test('warna berbeda menghasilkan palet berbeda dalam tema yang sama', () => {
   assert.notEqual(latarMerah, latarBiru, 'latar tidak mengikuti warna pilihan pengguna')
 })
 
-test('warna utama dan warna kedua aman dipakai sebagai tulisan', () => {
+test('warna utama layak jadi tulisan, warna kedua layak jadi komponen', () => {
   for (const tema of TEMA.map((item) => item.slug)) {
     for (const base of ['#E53935', '#1E88E5', '#FDD835', '#8E24AA', '#F5F5F5', '#111111']) {
       const palet = buatPalet({ base, tema, harmoni: 'triadik' })
@@ -175,13 +175,17 @@ test('warna utama dan warna kedua aman dipakai sebagai tulisan', () => {
       const utama = palet.warna.find((item) => item.peran === 'base').hex
       const kedua = palet.warna.find((item) => item.peran === 'accent').hex
 
+      // Warna utama dipakai sebagai judul, jadi wajib 4.5.
       assert.ok(
         rasioKontras(utama, kartu) >= 4.5,
         `${tema} ${base}: warna utama tidak layak jadi judul (${utama} di atas ${kartu})`
       )
+
+      // Warna kedua dipakai sebagai isian dan garis, cukup 3 sesuai WCAG untuk
+      // komponen non-teks. Memaksakan 4.5 membuat warna cerah jadi hitam.
       assert.ok(
-        rasioKontras(kedua, kartu) >= 4.5,
-        `${tema} ${base}: warna kedua tidak layak jadi tulisan (${kedua} di atas ${kartu})`
+        rasioKontras(kedua, kartu) >= 3,
+        `${tema} ${base}: warna kedua tidak layak jadi komponen (${kedua} di atas ${kartu})`
       )
     }
   }

@@ -13,19 +13,21 @@ import { ambilTema } from './themes.js'
 import { buatNama } from './names.js'
 
 /**
- * Urutan periksa disengaja. Semua warna yang bisa dipakai sebagai tulisan
- * wajib 4.5 banding satu: teks, warna utama, dan warna kedua. Warna utama
- * dinaikkan dari 3 menjadi 4.5 supaya benar-benar bisa dipakai sebagai judul,
- * bukan hanya sebagai latar tombol. Tanpa itu, pratinjau terpaksa memakai
- * warna teks biasa untuk judul, dan paletnya terasa tidak terpakai.
+ * Urutan periksa disengaja, dan ambangnya berbeda sesuai pemakaian.
+ *
+ * Teks dan warna utama wajib 4.5 banding 1 karena keduanya dipakai sebagai
+ * tulisan. Warna kedua cukup 3 banding 1 karena dipakai sebagai isian, garis,
+ * dan bidang berwarna, bukan sebagai tulisan kecil. Memaksakan 4.5 pada warna
+ * kedua membuat warna cerah seperti kuning dan jingga menjadi nyaris hitam,
+ * kehilangan kepekatannya, dan semua tema terlihat sama.
  */
 const PASANGAN_DIPERIKSA = [
   ['text', 'background', 4.5],
   ['text', 'surface', 4.5],
   ['base', 'background', 4.5],
   ['base', 'surface', 4.5],
-  ['accent', 'background', 4.5],
-  ['accent', 'surface', 4.5],
+  ['accent', 'background', 3],
+  ['accent', 'surface', 3],
 ]
 
 const URUTAN_PERAN = ['background', 'surface', 'base', 'accent', 'text']
@@ -175,26 +177,22 @@ export function buatPalet({
     h: hueAksen,
   }
 
-  // Warna primer ditegakkan lebih dulu supaya posisinya final. Aksen kemudian
-  // disesuaikan terhadap warna primer itu, lalu kontras aksen diperiksa lagi.
-  // Urutan ini penting: menggeser aksen setelah pemeriksaan kontras membuat
-  // hasilnya bisa gagal, dan itu yang dulu menurunkan skor menjadi 67.
+  // Warna primer ditegakkan lebih dulu supaya posisinya final.
   warnaDasar.L = tegakkanKontras(warnaDasar, hexSurface, 4.5, latarGelap).L
   warnaDasar.L = tegakkanKontras(warnaDasar, hexBackground, 4.5, latarGelap).L
 
-  // Kontras ditegakkan lebih dulu supaya posisi keduanya sudah sah. Setelah itu
-  // baru dipisahkan, karena memisahkan sebelum penegakan kontras akan ditarik
-  // kembali oleh aturan kontras dan hasilnya menyatu lagi.
-  warnaAksen = tegakkanKontras(warnaAksen, hexSurface, 4.5, latarGelap)
-  warnaAksen = tegakkanKontras(warnaAksen, hexBackground, 4.5, latarGelap)
+  // Warna kedua cukup 3 banding 1, sesuai pemakaiannya sebagai isian dan garis.
+  // Ambang rendah ini yang membuat warnanya tetap pekat, bukan menjadi hitam.
+  warnaAksen = tegakkanKontras(warnaAksen, hexSurface, 3, latarGelap)
+  warnaAksen = tegakkanKontras(warnaAksen, hexBackground, 3, latarGelap)
 
-  // Warna utama dan warna kedua harus bisa dibedakan mata. Digeser menjauhi
-  // latar, sehingga pemisahannya sekaligus menambah kontras, lalu diperiksa
-  // ulang agar tetap memenuhi ambang.
-  if (Math.abs(warnaDasar.L - warnaAksen.L) < 0.14) {
-    warnaAksen.L = batasi(latarGelap ? warnaAksen.L + 0.3 : warnaAksen.L - 0.3, 0.05, 0.97)
-    warnaAksen = tegakkanKontras(warnaAksen, hexSurface, 4.5, latarGelap)
-    warnaAksen = tegakkanKontras(warnaAksen, hexBackground, 4.5, latarGelap)
+  // Khusus monokrom, kedua warna berbagi hue, jadi hanya kecerahan yang bisa
+  // memisahkan. Pada skema lain, perbedaan hue sudah cukup dan kecerahan tidak
+  // perlu digeser, karena menggesernya justru menghilangkan kepekatan warna.
+  if (harmoni === 'monokrom' && Math.abs(warnaDasar.L - warnaAksen.L) < 0.14) {
+    warnaAksen.L = batasi(latarGelap ? warnaDasar.L + 0.3 : warnaDasar.L - 0.3, 0.05, 0.97)
+    warnaAksen = tegakkanKontras(warnaAksen, hexSurface, 3, latarGelap)
+    warnaAksen = tegakkanKontras(warnaAksen, hexBackground, 3, latarGelap)
   }
 
   let warnaTeks = { L: konfigurasi.lightness.teks, C: 0.006, h: hueDasar }
