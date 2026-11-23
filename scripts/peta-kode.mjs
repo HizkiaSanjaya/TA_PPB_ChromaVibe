@@ -74,11 +74,18 @@ const BAGIAN = [
           "Angka 10 sampai 100 diubah menjadi kecerahan warna pilihan pengguna. Latar otomatis dipasang di sisi berlawanan agar teksnya tetap terbaca.",
       },
       {
-        tanya: "Kenapa lima palet dulu terlihat sama",
+        tanya: "Kenapa lima palet bisa terlihat sama, dan apa yang diperbaiki",
         berkas: "api/src/lib/palette/generator.js",
-        penanda: "const variasi = indeks % 7",
+        penanda: "const sebar = (i) => (i * EMAS) % 1",
         catatan:
-          "Variasi menggeser latar dan warna utama, siklusnya tujuh supaya palet kelima tidak mengulang latar palet pertama. Latar juga ikut diwarnai hue pengguna, bukan abu-abu.",
+          "Latar berangkat dari kepekatan tema masing-masing, lalu digeser menjauhi ujung memakai perbandingan emas. Titik awalnya tetap membawa ciri tema, tetapi tiap indeks mendapat nilai berbeda sehingga tidak ada latar kembar.",
+      },
+      {
+        tanya: "Kenapa nama palet seperti Oranye Kasar",
+        berkas: "api/src/lib/palette/names.js",
+        penanda: "export function buatNama",
+        catatan:
+          "Nama dibentuk dari keluarga warna (Merah, Oranye, Kuning, dan seterusnya, ditentukan oleh hue) ditambah kata sifat tema. Tujuannya supaya tiap palet bisa disebut tanpa menyebut kode hex.",
       },
       {
         tanya: "Kenapa judul pratinjau bisa memakai warna utama",
