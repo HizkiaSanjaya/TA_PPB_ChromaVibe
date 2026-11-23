@@ -5,7 +5,8 @@ import { useSearchParams } from 'react-router-dom'
 import { api } from '../api/client'
 import type { Palet } from '../api/types'
 import { LencanaKontras } from '../components/LencanaKontras'
-import { PratinjauPalet } from '../components/PratinjauPalet'
+import { PratinjauPalet, LegendaPalet } from '../components/PratinjauPalet'
+import { RodaWarna, bacaHarmoni } from '../components/RodaWarna'
 import { Galat, Memuat } from '../components/Status'
 import { TombolAksi } from '../components/Tombol'
 import { TombolSalin } from '../components/TombolSalin'
@@ -39,14 +40,13 @@ function KartuHasil({ palet }: { palet: Palet }) {
   return (
     <article className="rounded-2xl border border-garis bg-panel/60 p-3">
       <PratinjauPalet palet={palet} ringkas />
+      <LegendaPalet palet={palet} />
 
       <div className="mt-2.5 flex items-start justify-between gap-2">
         <div className="min-w-0">
           <p className="truncate text-sm font-semibold">{palet.nama}</p>
           <p className="mt-0.5 text-[11px] text-redup">
-            {lolos === total
-              ? `Semua ${total} pasangan warna mudah dibaca`
-              : `${lolos} dari ${total} pasangan aman dibaca`}
+            {lolos === total ? `Aman dibaca ${lolos}/${total}` : `Perlu dicek ${lolos}/${total}`}
           </p>
         </div>
         <TombolSimpan palet={palet} />
@@ -54,7 +54,7 @@ function KartuHasil({ palet }: { palet: Palet }) {
 
       <details className="mt-2.5 border-t border-garis/70 pt-2">
         <summary className="tautan cursor-pointer list-none text-[11px] font-medium text-teks [&::-webkit-details-marker]:hidden">
-          Rincian keterbacaan dan kode warna
+          Angka keterbacaan dan salin warna
         </summary>
         <ul className="mt-2 space-y-1">
           {palet.pasangan_kontras.map((pasangan) => (
@@ -369,6 +369,24 @@ export function Generator() {
               </button>
             ))}
           </div>
+
+          {/* Roda warna membuat perbedaan antar harmoni terlihat, bukan hanya terbaca. */}
+          {semuaPalet.length > 0 && (
+            <div className="mt-3 flex items-center gap-3 rounded-xl border border-garis bg-panel/40 p-3">
+              <RodaWarna palet={semuaPalet[0]} ukuran={104} />
+              <div className="min-w-0">
+                <p className="text-[11px] font-semibold text-teks">{harmoniTerpilih?.nama}</p>
+                <p className="mt-1 text-[11px] leading-relaxed text-redup">
+                  {bacaHarmoni(semuaPalet[0])}
+                </p>
+                <p className="mt-1 text-[10px] leading-relaxed text-redup">
+                  Titik besar adalah warna pilihanmu, titik kecil adalah warna kedua. Ganti harmoni
+                  untuk melihat kedua titik itu berpindah.
+                </p>
+              </div>
+            </div>
+          )}
+
           {harmoniTerpilih && (
             <p className="mt-1.5 text-[11px] leading-relaxed text-redup">
               {harmoniTerpilih.deskripsi}

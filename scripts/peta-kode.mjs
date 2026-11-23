@@ -81,6 +81,27 @@ const BAGIAN = [
           "Variasi menggeser latar dan warna utama, siklusnya tujuh supaya palet kelima tidak mengulang latar palet pertama. Latar juga ikut diwarnai hue pengguna, bukan abu-abu.",
       },
       {
+        tanya: "Kenapa judul pratinjau bisa memakai warna utama",
+        berkas: "api/src/lib/palette/generator.js",
+        penanda: "const PASANGAN_DIPERIKSA",
+        catatan:
+          "Warna utama dan warna kedua wajib 4.5 banding 1 terhadap latar dan kartu, bukan hanya 3. Syarat itu yang membuat keduanya layak dipakai sebagai tulisan, bukan sekadar latar tombol.",
+      },
+      {
+        tanya: "Roda warna untuk menjelaskan harmoni",
+        berkas: "web/src/components/RodaWarna.tsx",
+        penanda: "export function RodaWarna",
+        catatan:
+          "Menampilkan posisi hue warna utama dan warna kedua pada lingkaran, supaya perbedaan harmoni terlihat, bukan hanya terbaca sebagai nama.",
+      },
+      {
+        tanya: "Kenapa monokrom dulu menghasilkan dua warna sama",
+        berkas: "api/src/lib/palette/generator.js",
+        penanda: "Math.abs(warnaDasar.L - warnaAksen.L) < 0.14",
+        catatan:
+          "Pada monokrom kedua warna berbagi hue, jadi hanya kecerahan yang memisahkan. Pemisahan dilakukan setelah kontras ditegakkan, kalau tidak, aturan kontras akan menariknya kembali.",
+      },
+      {
         tanya: "Halaman detail palet dan bukti uji kontrasnya di mana?",
         berkas: "web/src/pages/DetailPalet.tsx",
         penanda: "palet.pasangan_kontras.map",

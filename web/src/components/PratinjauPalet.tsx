@@ -9,10 +9,10 @@ interface Props {
 /**
  * Pratinjau palet dalam bentuk antarmuka mini, bukan deretan kotak warna.
  *
- * Kotak warna terpisah sulit dinilai sebagai satu kesatuan. Komponen ini
- * menumpuk kelima peran seperti halaman sungguhan: latar paling belakang,
- * kartu di atasnya, teks sebagai isi, primer untuk tombol utama, dan aksen
- * untuk tombol kedua. Dengan begitu pengguna melihat apakah warnanya menyatu.
+ * Kotak warna terpisah sulit dinilai sebagai satu kesatuan, jadi warnanya
+ * ditumpuk seperti halaman sungguhan: latar paling belakang, kartu di atasnya,
+ * judul memakai warna utama, isi teks memakai warna teks, dan keterangan kecil
+ * memakai warna kedua. Setiap peran benar-benar dipakai, bukan sekadar dipajang.
  */
 export function PratinjauPalet({ palet, ringkas = false }: Props) {
   const background = ambilHex(palet, 'background')
@@ -30,23 +30,25 @@ export function PratinjauPalet({ palet, ringkas = false }: Props) {
         <div className="rounded-lg p-3" style={{ backgroundColor: surface }}>
           <p
             className="text-[9px] font-semibold uppercase tracking-[0.16em]"
-            style={{ color: text }}
+            style={{ color: accent }}
           >
-            Contoh antarmuka
+            Warna kedua
           </p>
+
           <p
-            className={ringkas ? 'mt-1 text-sm font-semibold' : 'mt-1.5 text-base font-semibold'}
-            style={{ color: text }}
+            className={ringkas ? 'mt-1 text-[15px] font-bold' : 'mt-1.5 text-lg font-bold'}
+            style={{ color: base }}
           >
-            Judul di atas kartu
+            Judul memakai warna utama
           </p>
-          {/*
-            Teks isi tidak diberi transparansi. Warna teks palet sudah dijamin
-            4.5 banding 1 terhadap latar, dan menurunkan kepekatannya akan
-            merusak jaminan itu.
-          */}
+
           <p className="mt-1 text-[11px] leading-relaxed" style={{ color: text }}>
-            Isi teks memakai warna yang sama dengan judul, dibedakan lewat ukuran huruf.
+            Isi tulisan memakai warna teks. Ukurannya lebih kecil daripada judul, tetapi
+            keterbacaannya tetap dijamin.
+          </p>
+
+          <p className="mt-1.5 text-[10px] font-medium leading-relaxed" style={{ color: accent }}>
+            Keterangan kecil memakai warna kedua.
           </p>
 
           <div className="mt-3 flex flex-wrap items-center gap-2">
@@ -54,48 +56,52 @@ export function PratinjauPalet({ palet, ringkas = false }: Props) {
               className="rounded-md px-2.5 py-1.5 text-[11px] font-semibold"
               style={{ backgroundColor: base, color: teksDiAtas(base) }}
             >
-              Tombol primer
+              Tombol
             </span>
-            {/*
-              Warna aksen hanya dijamin 3 banding 1 terhadap latar, cukup untuk
-              batas komponen tetapi belum tentu untuk teks kecil. Karena itu
-              aksen dipakai sebagai garis dan titik, sedangkan teksnya memakai
-              warna teks palet yang sudah dijamin 4.5 banding 1.
-            */}
             <span
-              className="flex items-center gap-1.5 rounded-md border px-2.5 py-1.5 text-[11px] font-semibold"
-              style={{ borderColor: accent, color: text }}
+              className="rounded-md border px-2.5 py-1.5 text-[11px] font-semibold"
+              style={{ borderColor: accent, color: accent }}
             >
-              <span
-                aria-hidden="true"
-                className="size-1.5 rounded-full"
-                style={{ backgroundColor: accent }}
-              />
-              Tombol sekunder
+              Tombol kedua
             </span>
           </div>
         </div>
-
-        {!ringkas && (
-          <dl className="mt-3 grid grid-cols-2 gap-x-3 gap-y-1.5">
-            {palet.warna.map((warna) => (
-              <div key={warna.peran} className="flex items-center gap-1.5">
-                <span
-                  aria-hidden="true"
-                  className="size-2.5 shrink-0 rounded-full ring-1 ring-white/25"
-                  style={{ backgroundColor: warna.hex }}
-                />
-                <dt className="text-[10px]" style={{ color: text }}>
-                  {LABEL_PERAN[warna.peran]}
-                </dt>
-                <dd className="ml-auto font-mono text-[10px]" style={{ color: text }}>
-                  {warna.hex}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        )}
       </div>
     </div>
+  )
+}
+
+/**
+ * Daftar lima warna beserta nama dan kodenya. Dipakai di kartu hasil supaya
+ * pengguna tahu warna apa saja yang sedang dilihat, bukan hanya melihat contoh.
+ */
+export function LegendaPalet({ palet }: { palet: Palet }) {
+  const surface = ambilHex(palet, 'surface')
+
+  return (
+    <ul className="mt-2 grid grid-cols-1 gap-1">
+      {palet.warna.map((warna) => (
+        <li
+          key={warna.peran}
+          className="flex items-center gap-2 rounded-md px-1.5 py-1"
+          style={{ backgroundColor: surface }}
+        >
+          <span
+            aria-hidden="true"
+            className="size-4 shrink-0 rounded ring-1 ring-black/20"
+            style={{ backgroundColor: warna.hex }}
+          />
+          <span className="text-[10px] font-medium" style={{ color: ambilHex(palet, 'text') }}>
+            {LABEL_PERAN[warna.peran]}
+          </span>
+          <code
+            className="ml-auto font-mono text-[10px]"
+            style={{ color: ambilHex(palet, 'text') }}
+          >
+            {warna.hex}
+          </code>
+        </li>
+      ))}
+    </ul>
   )
 }

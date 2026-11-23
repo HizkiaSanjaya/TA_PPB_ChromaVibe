@@ -7,37 +7,38 @@ export const HARMONI = [
     slug: 'komplementer',
     nama: 'Komplementer',
     offset: [0, 180],
-    deskripsi: 'Dua hue berlawanan, kontras maksimal dan paling berani.',
+    deskripsi:
+      'Warna kedua diambil dari seberang roda warna. Kontras paling kuat dan paling mencolok.',
   },
   {
     slug: 'analog',
     nama: 'Analog',
     offset: [0, 30, -30],
-    deskripsi: 'Hue bertetangga, terasa tenang dan menyatu.',
+    deskripsi: 'Warna kedua diambil dari tetangga dekat. Terasa tenang dan menyatu.',
   },
   {
     slug: 'triadik',
     nama: 'Triadik',
     offset: [0, 120, 240],
-    deskripsi: 'Tiga hue berjarak sama, seimbang tanpa monoton.',
+    deskripsi: 'Tiga warna berjarak sama di roda. Seimbang, tidak monoton, tidak menabrak.',
   },
   {
     slug: 'split',
     nama: 'Split Komplementer',
     offset: [0, 150, 210],
-    deskripsi: 'Komplementer yang dipecah, tegang tetapi tidak kasar.',
+    deskripsi: 'Seberang roda warna dipecah jadi dua. Tegang, tetapi tidak sekasar komplementer.',
   },
   {
     slug: 'tetradik',
     nama: 'Tetradik',
     offset: [0, 90, 180, 270],
-    deskripsi: 'Empat hue pada dua sumbu, kaya dan dinamis.',
+    deskripsi: 'Empat warna menyebar di roda. Kaya dan dinamis, butuh keberanian memakainya.',
   },
   {
     slug: 'monokrom',
     nama: 'Monokromatik',
     offset: [0],
-    deskripsi: 'Satu hue dengan anak tangga kecerahan, rapi dan aman.',
+    deskripsi: 'Satu warna saja. Bedanya hanya di tingkat gelap dan terang, jadi paling aman.',
   },
 ]
 

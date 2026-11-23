@@ -167,6 +167,51 @@ test('warna berbeda menghasilkan palet berbeda dalam tema yang sama', () => {
   assert.notEqual(latarMerah, latarBiru, 'latar tidak mengikuti warna pilihan pengguna')
 })
 
+test('warna utama dan warna kedua aman dipakai sebagai tulisan', () => {
+  for (const tema of TEMA.map((item) => item.slug)) {
+    for (const base of ['#E53935', '#1E88E5', '#FDD835', '#8E24AA', '#F5F5F5', '#111111']) {
+      const palet = buatPalet({ base, tema, harmoni: 'triadik' })
+      const kartu = palet.warna.find((item) => item.peran === 'surface').hex
+      const utama = palet.warna.find((item) => item.peran === 'base').hex
+      const kedua = palet.warna.find((item) => item.peran === 'accent').hex
+
+      assert.ok(
+        rasioKontras(utama, kartu) >= 4.5,
+        `${tema} ${base}: warna utama tidak layak jadi judul (${utama} di atas ${kartu})`
+      )
+      assert.ok(
+        rasioKontras(kedua, kartu) >= 4.5,
+        `${tema} ${base}: warna kedua tidak layak jadi tulisan (${kedua} di atas ${kartu})`
+      )
+    }
+  }
+})
+
+test('monokrom tetap membedakan warna utama dan warna kedua', () => {
+  for (const tema of ['elegant', 'brutalism', 'y2k', 'minimalis', 'pastel']) {
+    const palet = buatPalet({ base: '#E53935', tema, harmoni: 'monokrom' })
+    const utama = palet.warna.find((item) => item.peran === 'base')
+    const kedua = palet.warna.find((item) => item.peran === 'accent')
+
+    // Jarak diukur di ruang OKLab, bukan hanya selisih gelap, karena warna
+    // pucat bisa dibedakan lewat kepekatan walau tingkat gelapnya mirip.
+    const [L1, C1, h1] = utama.oklch
+    const [L2, C2, h2] = kedua.oklch
+    const rad = Math.PI / 180
+    const a1 = C1 * Math.cos(h1 * rad)
+    const b1 = C1 * Math.sin(h1 * rad)
+    const a2 = C2 * Math.cos(h2 * rad)
+    const b2 = C2 * Math.sin(h2 * rad)
+    const jarak = Math.hypot(L1 - L2, a1 - a2, b1 - b2)
+
+    assert.notEqual(utama.hex, kedua.hex, `${tema}: warna utama dan kedua sama persis`)
+    assert.ok(
+      jarak > 0.12,
+      `${tema}: warna utama dan kedua terlalu mirip (jarak ${jarak.toFixed(3)})`
+    )
+  }
+})
+
 test('tema dan harmoni yang tidak dikenal ditolak', () => {
   assert.throws(
     () => buatPalet({ base: '#3B82F6', tema: 'tidak-ada', harmoni: 'triadik' }),
