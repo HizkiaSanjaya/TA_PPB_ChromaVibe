@@ -40,8 +40,13 @@ export function PratinjauPalet({ palet, ringkas = false }: Props) {
           >
             Judul di atas kartu
           </p>
-          <p className="mt-1 text-[11px] leading-relaxed" style={{ color: text, opacity: 0.85 }}>
-            Isi teks memakai warna yang sama dengan judul, diturunkan kepekatannya.
+          {/*
+            Teks isi tidak diberi transparansi. Warna teks palet sudah dijamin
+            4.5 banding 1 terhadap latar, dan menurunkan kepekatannya akan
+            merusak jaminan itu.
+          */}
+          <p className="mt-1 text-[11px] leading-relaxed" style={{ color: text }}>
+            Isi teks memakai warna yang sama dengan judul, dibedakan lewat ukuran huruf.
           </p>
 
           <div className="mt-3 flex flex-wrap items-center gap-2">
