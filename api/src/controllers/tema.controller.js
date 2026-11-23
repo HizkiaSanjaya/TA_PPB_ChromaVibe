@@ -2,8 +2,32 @@ import { asyncHandler } from '../utils/asyncHandler.js'
 import { ApiError } from '../utils/ApiError.js'
 import { ok } from '../utils/response.js'
 import { TEMA, ambilTema } from '../lib/palette/themes.js'
-import { saranWarnaTema } from '../lib/palette/generator.js'
+import { buatPalet, saranWarnaTema } from '../lib/palette/generator.js'
 import { hitungPaletPerTema } from '../config/sumber-data.js'
+
+/**
+ * Satu palet contoh per tema.
+ *
+ * Kartu tema di beranda perlu memperlihatkan karakter temanya, bukan hanya dua
+ * kotak warna. Palet contoh dihitung dari saran warna tema itu sendiri, jadi
+ * tidak perlu menyimpan data tambahan di basis data.
+ */
+function paletContoh(slug) {
+  const saran = saranWarnaTema(slug)
+  if (saran.length === 0) return null
+
+  const { warna, ringkasan } = buatPalet({
+    base: saran[0],
+    tema: slug,
+    harmoni: 'triadik',
+    seed: 7,
+  })
+
+  return {
+    warna: warna.map((item) => ({ peran: item.peran, hex: item.hex })),
+    skor: ringkasan.skor_aksesibilitas,
+  }
+}
 
 export const listTema = asyncHandler(async (req, res) => {
   const hitungan = await hitungPaletPerTema()
@@ -11,6 +35,7 @@ export const listTema = asyncHandler(async (req, res) => {
   const data = TEMA.map((tema) => ({
     ...tema,
     saran_base: saranWarnaTema(tema.slug),
+    contoh: paletContoh(tema.slug),
     jumlah_palet: hitungan[tema.slug] ?? 0,
   }))
 
@@ -25,6 +50,7 @@ export const getTema = asyncHandler(async (req, res) => {
   const data = {
     ...tema,
     saran_base: saranWarnaTema(tema.slug),
+    contoh: paletContoh(tema.slug),
     jumlah_palet: hitungan[tema.slug] ?? 0,
   }
 

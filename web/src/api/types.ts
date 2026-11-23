@@ -55,6 +55,10 @@ export interface Tema {
   }
   jitter: number
   saran_base: string[]
+  contoh: {
+    warna: { peran: PeranWarna; hex: string }[]
+    skor: number
+  } | null
   jumlah_palet: number
 }
 

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { api } from '../api/client'
 import { LogoCv } from '../components/Ikon'
-import { PratinjauPalet } from '../components/PratinjauPalet'
+import { KartuTema, warnaTema } from '../components/KartuTema'
 import { Galat, Memuat } from '../components/Status'
 import { TautanGaris, TautanUtama } from '../components/Tombol'
 import { KONFIGURASI } from '../konfigurasi'
@@ -22,27 +22,12 @@ const LANGKAH = [
   {
     nomor: '03',
     judul: 'Pakai hasilnya',
-    isi: 'Lima warna langsung bisa dipakai. Setiap tulisan dijamin terbaca, dan kodenya siap disalin.',
+    isi: 'Lima warna siap dipakai. Setiap tulisan dijamin terbaca, dan kodenya bisa disalin.',
   },
 ]
 
-/** Palet sorotan dipilih dari tanggal, jadi berganti sendiri tiap hari tanpa server tambahan. */
-function indeksSorotan(jumlah: number) {
-  const hari = Math.floor(Date.now() / 86_400_000)
-  return jumlah > 0 ? hari % jumlah : 0
-}
-
 export function Beranda() {
   const tema = useQuery({ queryKey: ['tema'], queryFn: api.daftarTema })
-  const temaSorotan = tema.data?.find((item) => item.slug === 'brutalism') ?? tema.data?.[0]
-
-  const sorotan = useQuery({
-    queryKey: ['palet-tema', temaSorotan?.slug],
-    queryFn: () => api.paletTema(temaSorotan!.slug),
-    enabled: Boolean(temaSorotan?.slug),
-  })
-
-  const paletSorotan = sorotan.data?.[indeksSorotan(sorotan.data.length)] ?? null
 
   return (
     <div className="space-y-10">
@@ -55,13 +40,13 @@ export function Beranda() {
           </span>
         </div>
 
-        <h1 className="mt-7 text-[34px] font-bold leading-[1.05] tracking-tight">
-          Satu warna.
+        <h1 className="mt-7 text-[32px] font-bold leading-[1.08] tracking-tight">
+          Satu warna,
           <br />
-          Lima yang
+          lima yang saling
           <br />
           <span className="relative inline-block">
-            saling cocok.
+            cocok.
             <span
               aria-hidden="true"
               className="absolute inset-x-0 bottom-1 -z-10 h-3 bg-brand/25"
@@ -80,49 +65,7 @@ export function Beranda() {
           </TautanUtama>
           <TautanGaris to="/tentang">Cara kerja</TautanGaris>
         </div>
-
-        {/* Contoh hasil langsung di beranda, supaya terlihat sebelum mencoba. */}
-        {sorotan.data && paletSorotan && (
-          <Link
-            to={`/palet/${paletSorotan.id}`}
-            className="mt-7 block rounded-2xl border border-garis bg-panel/50 p-3 transition hover:border-brand/50"
-          >
-            <div className="mb-2 flex items-baseline justify-between gap-2">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-redup">
-                Contoh hasil
-              </p>
-              <p className="truncate font-mono text-[10px] text-redup">{paletSorotan.nama}</p>
-            </div>
-            <PratinjauPalet palet={paletSorotan} />
-          </Link>
-        )}
-        {sorotan.isPending && temaSorotan && (
-          <div className="mt-7">
-            <Memuat pesan="Menyiapkan contoh" />
-          </div>
-        )}
       </header>
-
-      <section aria-label="Ringkasan aplikasi">
-        <dl className="grid grid-cols-3 gap-2">
-          {[
-            { angka: tema.data?.length ?? '—', label: 'tema' },
-            {
-              angka: tema.data ? tema.data.reduce((n, item) => n + item.jumlah_palet, 0) : '—',
-              label: 'palet siap pakai',
-            },
-            { angka: '5', label: 'warna per palet' },
-          ].map((item) => (
-            <div
-              key={item.label}
-              className="rounded-xl border border-garis bg-panel/40 px-2.5 py-3 text-center"
-            >
-              <dt className="text-xl font-bold tabular-nums">{item.angka}</dt>
-              <dd className="mt-0.5 text-[10px] leading-tight text-redup">{item.label}</dd>
-            </div>
-          ))}
-        </dl>
-      </section>
 
       <section aria-labelledby="judul-tema">
         <div className="mb-3 flex items-baseline justify-between">
@@ -138,30 +81,28 @@ export function Beranda() {
         )}
 
         {tema.data && (
-          <ul className="grid grid-cols-2 gap-3">
-            {tema.data.map((item) => (
-              <li key={item.slug}>
-                <Link
-                  to={`/tema/${item.slug}`}
-                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-garis bg-panel/60 transition hover:-translate-y-0.5 hover:border-brand/60"
-                >
-                  <div className="flex h-20" aria-hidden="true">
-                    {item.saran_base.map((hex) => (
-                      <span key={hex} className="flex-1" style={{ backgroundColor: hex }} />
-                    ))}
-                  </div>
-                  <div className="flex flex-1 flex-col p-3">
-                    <p className="text-sm font-semibold">{item.nama}</p>
-                    <p className="mt-1 line-clamp-2 flex-1 text-[11px] leading-relaxed text-redup">
-                      {item.deskripsi}
-                    </p>
-                    <p className="mt-2 text-[10px] font-medium uppercase tracking-wider text-redup">
-                      {item.jumlah_palet} palet
-                    </p>
-                  </div>
-                </Link>
-              </li>
-            ))}
+          <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {tema.data.map((item) => {
+              const warna = warnaTema(item)
+              if (!warna) return null
+
+              return (
+                <li key={item.slug}>
+                  <Link
+                    to={`/tema/${item.slug}`}
+                    className="block overflow-hidden rounded-2xl border border-garis transition hover:-translate-y-0.5 hover:border-brand/60"
+                  >
+                    <KartuTema tema={item} warna={warna} />
+                    <div className="bg-panel/60 p-3">
+                      <p className="text-sm font-semibold">{item.nama}</p>
+                      <p className="mt-1 line-clamp-2 text-[11px] leading-relaxed text-redup">
+                        {item.deskripsi}
+                      </p>
+                    </div>
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         )}
       </section>
@@ -184,24 +125,6 @@ export function Beranda() {
             </li>
           ))}
         </ol>
-      </section>
-
-      <section
-        aria-labelledby="judul-ajakan"
-        className="rounded-2xl border border-garis bg-panel/60 p-4"
-      >
-        <h2 id="judul-ajakan" className="text-base font-semibold">
-          Belum ada warna di kepala?
-        </h2>
-        <p className="mt-1.5 text-xs leading-relaxed text-redup">
-          Mulai dari tema yang paling menarik, lalu ganti warnanya sampai cocok. Semua hasil tetap
-          lolos uji keterbacaan.
-        </p>
-        <div className="mt-3">
-          <TautanUtama to="/generator" className="w-full">
-            Mulai dari Generator
-          </TautanUtama>
-        </div>
       </section>
 
       <footer className="pb-2 text-center text-[10px] text-redup">
