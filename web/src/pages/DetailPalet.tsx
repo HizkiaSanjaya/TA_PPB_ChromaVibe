@@ -62,8 +62,11 @@ export function DetailPalet() {
 
         <div className="mt-3 flex items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <PilSkor skor={palet.ringkasan.skor_aksesibilitas} />
-            <span className="text-[11px] text-redup">pasangan lolos ambang</span>
+            <PilSkor
+              skor={palet.ringkasan.skor_aksesibilitas}
+              total={palet.pasangan_kontras.length}
+            />
+            <span className="text-[11px] text-redup">pasangan aman dibaca</span>
           </div>
           <TombolAksi
             onClick={() => (sudahTersimpan ? hapusPalet(palet.id) : simpanPalet(palet))}
@@ -105,8 +108,13 @@ export function DetailPalet() {
 
       <section aria-labelledby="judul-kontras" className="mb-6">
         <h2 id="judul-kontras" className="mb-2.5 text-sm font-semibold">
-          Uji kontras WCAG
+          Apakah warnanya mudah dibaca?
         </h2>
+        <p className="mb-2.5 text-[11px] leading-relaxed text-redup">
+          Setiap baris menguji satu pasangan: warna teks di atas warna latarnya. Angka di kanan
+          menunjukkan seberapa berbeda tingkat terang keduanya. Semakin besar, semakin jelas tulisan
+          terbaca. Angka 4,5 ke atas sudah aman untuk teks biasa.
+        </p>
         <ul className="space-y-1.5">
           {palet.pasangan_kontras.map((pasangan) => (
             <li
@@ -134,8 +142,8 @@ export function DetailPalet() {
           ))}
         </ul>
         <p className="mt-2 text-[10px] leading-relaxed text-redup">
-          Ambang 4.5 banding 1 untuk teks normal dan 3 banding 1 untuk komponen antarmuka, mengikuti
-          WCAG 2.1 butir 1.4.3 dan 1.4.11.
+          Patokan yang dipakai: 4,5 banding 1 untuk teks biasa dan 3 banding 1 untuk tombol serta
+          batas komponen. Ini mengikuti pedoman keterbacaan WCAG 2.1.
         </p>
       </section>
 

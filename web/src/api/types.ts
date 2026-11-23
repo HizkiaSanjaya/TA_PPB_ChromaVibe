@@ -71,6 +71,7 @@ export interface MasukanGenerate {
   harmoni: string
   jumlah: number
   seed: number
+  terang?: number
 }
 
 export interface HasilGenerate {

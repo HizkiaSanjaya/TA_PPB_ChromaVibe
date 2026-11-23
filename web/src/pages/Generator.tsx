@@ -10,6 +10,7 @@ import { Galat, Memuat } from '../components/Status'
 import { TombolAksi } from '../components/Tombol'
 import { TombolSalin } from '../components/TombolSalin'
 import { TombolSimpan } from '../components/TombolSimpan'
+import { TINGKAT_KECERAHAN, WARNA_UMUM, namaWarna } from '../data/warna-umum'
 import { daftarHex, hexKeCss, LABEL_PERAN, normalisasiHex } from '../utils/warna'
 
 const TEMA_BAWAAN = 'y2k'
@@ -18,28 +19,23 @@ const WARNA_BAWAAN = '#7C5CFF'
 const PER_KOMBINASI = 5
 const JARAK_SEED = 977
 
-const CONTOH_WARNA = [
-  '#FF2E88',
-  '#00E5FF',
-  '#FFD400',
-  '#7C5CFF',
-  '#22C55E',
-  '#FF6B00',
-  '#E63946',
-  '#A8C7FA',
-  '#B4892E',
-  '#00F0FF',
-  '#F7B7D2',
-  '#6B7A4F',
-]
-
 function keSeed(nilai: string | null) {
   const angka = Number(nilai)
   if (!Number.isFinite(angka) || angka < 0) return 1
   return Math.floor(angka)
 }
 
+/** Kecerahan hanya dikirim kalau pengguna benar-benar memilih tingkat tertentu. */
+function keTerang(nilai: string | null) {
+  const angka = Number(nilai)
+  if (!nilai || !Number.isFinite(angka)) return null
+  return Math.min(100, Math.max(10, Math.round(angka)))
+}
+
 function KartuHasil({ palet }: { palet: Palet }) {
+  const total = palet.pasangan_kontras.length
+  const lolos = palet.pasangan_kontras.filter((item) => item.lolos).length
+
   return (
     <article className="rounded-2xl border border-garis bg-panel/60 p-3">
       <PratinjauPalet palet={palet} ringkas />
@@ -48,7 +44,9 @@ function KartuHasil({ palet }: { palet: Palet }) {
         <div className="min-w-0">
           <p className="truncate text-sm font-semibold">{palet.nama}</p>
           <p className="mt-0.5 text-[11px] text-redup">
-            {palet.harmoni_nama} · {palet.ringkasan.skor_aksesibilitas}% pasangan lolos
+            {lolos === total
+              ? `Semua ${total} pasangan warna mudah dibaca`
+              : `${lolos} dari ${total} pasangan aman dibaca`}
           </p>
         </div>
         <TombolSimpan palet={palet} />
@@ -56,7 +54,7 @@ function KartuHasil({ palet }: { palet: Palet }) {
 
       <details className="mt-2.5 border-t border-garis/70 pt-2">
         <summary className="tautan cursor-pointer list-none text-[11px] font-medium text-teks [&::-webkit-details-marker]:hidden">
-          Detail kontras dan ekspor
+          Rincian keterbacaan dan kode warna
         </summary>
         <ul className="mt-2 space-y-1">
           {palet.pasangan_kontras.map((pasangan) => (
@@ -96,6 +94,7 @@ export function Generator() {
   const tema = cari.get('tema') ?? TEMA_BAWAAN
   const harmoni = cari.get('harmoni') ?? HARMONI_BAWAAN
   const seed = keSeed(cari.get('seed'))
+  const terang = keTerang(cari.get('terang'))
 
   const [teksHex, setTeksHex] = useState(base)
   const [kombinasi, setKombinasi] = useState(0)
@@ -104,15 +103,16 @@ export function Generator() {
     setTeksHex(base)
   }, [base])
 
-  // Rangkaian tambahan dibuang saat warna, tema, harmoni, atau benih berubah.
+  // Rangkaian tambahan dibuang saat warna, tema, harmoni, kecerahan, atau benih berubah.
   useEffect(() => {
     setKombinasi(0)
-  }, [base, tema, harmoni, seed])
+  }, [base, tema, harmoni, seed, terang])
 
-  function ubah(patch: Record<string, string | number>) {
+  function ubah(patch: Record<string, string | number | null>) {
     const berikut = new URLSearchParams(cari)
     for (const [kunci, nilai] of Object.entries(patch)) {
-      berikut.set(kunci, String(nilai))
+      if (nilai === null) berikut.delete(kunci)
+      else berikut.set(kunci, String(nilai))
     }
     setCari(berikut, { replace: true })
   }
@@ -132,8 +132,16 @@ export function Generator() {
 
   const rangkaian = useQueries({
     queries: benihRangkaian.map((nilaiSeed) => ({
-      queryKey: ['generate', base, tema, harmoni, nilaiSeed],
-      queryFn: () => api.buatPalet({ base, tema, harmoni, jumlah: PER_KOMBINASI, seed: nilaiSeed }),
+      queryKey: ['generate', base, tema, harmoni, nilaiSeed, terang],
+      queryFn: () =>
+        api.buatPalet({
+          base,
+          tema,
+          harmoni,
+          jumlah: PER_KOMBINASI,
+          seed: nilaiSeed,
+          ...(terang ? { terang } : {}),
+        }),
       placeholderData: keepPreviousData,
     })),
   })
@@ -169,17 +177,52 @@ export function Generator() {
 
       <section aria-label="Pengaturan palet" className="space-y-4">
         <div className="rounded-2xl border border-garis bg-panel/60 p-3.5">
-          <label htmlFor="warna-primer" className="text-xs font-semibold">
-            Warna primer
-          </label>
-          <div className="mt-2 flex items-center gap-2.5">
+          <div className="flex items-baseline justify-between gap-2">
+            <label htmlFor="warna-primer" className="text-xs font-semibold">
+              Warna dasar
+            </label>
+            {namaWarna(base) && <span className="text-[11px] text-redup">{namaWarna(base)}</span>}
+          </div>
+
+          <fieldset className="mt-2">
+            <legend className="text-[10px] uppercase tracking-wider text-redup">
+              Pilih langsung
+            </legend>
+            <div className="mt-1.5 grid grid-cols-4 gap-1.5">
+              {WARNA_UMUM.map((warna) => {
+                const aktif = warna.hex.toUpperCase() === base.toUpperCase()
+                return (
+                  <button
+                    key={warna.hex}
+                    type="button"
+                    onClick={() => ubah({ base: warna.hex })}
+                    aria-pressed={aktif}
+                    className={`flex flex-col items-center gap-1 rounded-lg border p-1.5 transition ${
+                      aktif
+                        ? 'border-brand bg-brand/10'
+                        : 'border-garis bg-panel/40 hover:border-redup'
+                    }`}
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="size-6 rounded-md ring-1 ring-white/20"
+                      style={{ backgroundColor: warna.hex }}
+                    />
+                    <span className="text-[9px] leading-tight text-redup">{warna.nama}</span>
+                  </button>
+                )
+              })}
+            </div>
+          </fieldset>
+
+          <div className="mt-3 flex items-center gap-2.5">
             <input
               id="warna-primer"
               type="color"
               value={base}
               onChange={(peristiwa) => ubah({ base: peristiwa.target.value.toUpperCase() })}
-              className="size-12 shrink-0 cursor-pointer rounded-xl border border-garis bg-transparent p-0"
-              aria-label="Pilih warna primer lewat pemilih warna"
+              className="size-11 shrink-0 cursor-pointer rounded-lg border border-garis bg-transparent p-0"
+              aria-label="Pilih warna dasar lewat pemilih warna"
             />
             <input
               value={teksHex}
@@ -190,13 +233,13 @@ export function Generator() {
               }}
               maxLength={7}
               spellCheck={false}
-              aria-label="Kode hex warna primer"
-              className="h-11 min-w-0 flex-1 rounded-xl border border-garis bg-latar-2 px-3 font-mono text-sm uppercase tracking-wide outline-none focus:border-brand"
+              aria-label="Kode hex warna dasar"
+              className="h-11 min-w-0 flex-1 rounded-lg border border-garis bg-latar-2 px-3 font-mono text-sm uppercase tracking-wide outline-none focus:border-brand"
             />
             <TombolAksi
               onClick={() =>
                 ubah({
-                  base: CONTOH_WARNA[Math.floor(Math.random() * CONTOH_WARNA.length)],
+                  base: WARNA_UMUM[Math.floor(Math.random() * WARNA_UMUM.length)].hex,
                 })
               }
               className="min-h-11 px-3 text-xs"
@@ -204,6 +247,48 @@ export function Generator() {
               Acak
             </TombolAksi>
           </div>
+
+          <fieldset className="mt-3">
+            <legend className="flex w-full items-baseline justify-between gap-2 text-[10px] uppercase tracking-wider text-redup">
+              <span>Kecerahan warna</span>
+              <span className="normal-case tracking-normal">
+                {terang === null ? 'sesuai warna asli' : `${terang}%`}
+              </span>
+            </legend>
+            <div className="mt-1.5 grid grid-cols-5 gap-1">
+              {TINGKAT_KECERAHAN.map((nilai) => (
+                <button
+                  key={nilai}
+                  type="button"
+                  onClick={() => ubah({ terang: nilai })}
+                  aria-pressed={terang === nilai}
+                  className={`min-h-8 rounded-md border text-[10px] font-semibold transition ${
+                    terang === nilai
+                      ? 'border-brand bg-brand/15 text-white'
+                      : 'border-garis bg-panel/40 text-redup hover:border-redup hover:text-teks'
+                  }`}
+                >
+                  {nilai}%
+                </button>
+              ))}
+            </div>
+            <button
+              type="button"
+              onClick={() => ubah({ terang: null })}
+              aria-pressed={terang === null}
+              className={`mt-1.5 w-full min-h-8 rounded-md border text-[10px] font-medium transition ${
+                terang === null
+                  ? 'border-brand bg-brand/15 text-white'
+                  : 'border-garis bg-panel/40 text-redup hover:border-redup hover:text-teks'
+              }`}
+            >
+              Pakai kecerahan asli warna
+            </button>
+            <p className="mt-1.5 text-[10px] leading-relaxed text-redup">
+              Angka kecil membuat warna lebih gelap, angka besar lebih terang. Latar palet otomatis
+              menyesuaikan agar teksnya tetap terbaca.
+            </p>
+          </fieldset>
 
           {temaTerpilih && (
             <div className="mt-3">
@@ -328,15 +413,18 @@ export function Generator() {
                 Tampilkan {PER_KOMBINASI} kombinasi lain
               </TombolAksi>
               <p className="mt-2 text-[10px] leading-relaxed text-redup">
-                {semuaPalet.length} palet dari {kombinasi + 1} rangkaian. Setiap rangkaian memakai{' '}
-                <em>seed</em> berbeda, jadi kombinasinya tidak mengulang yang sudah tampil.
+                {semuaPalet.length} palet dari {kombinasi + 1} putaran. Setiap putaran memakai kunci
+                berbeda, jadi kombinasinya tidak mengulang yang sudah tampil.
               </p>
             </div>
           </>
         )}
 
-        <p className="mt-3 font-mono text-[10px] leading-relaxed text-redup">
-          base {base} · tema {tema} · harmoni {harmoni} · seed {seed}
+        <p className="mt-3 text-[10px] leading-relaxed text-redup">
+          Warna {base}
+          {namaWarna(base) ? ` (${namaWarna(base)})` : ''}
+          {terang !== null ? ` · kecerahan ${terang}%` : ''} · tema {temaTerpilih?.nama ?? tema} ·
+          harmoni {harmoniTerpilih?.nama ?? harmoni}
         </p>
       </section>
     </div>

@@ -18,8 +18,11 @@ Bagian ini yang paling sering ditanya. Setiap syarat dipetakan ke berkas dan bar
 | Minimal lima halaman | `web/src/App.tsx` | 16 | Tujuh rute terdaftar di bawah ini: beranda, detail tema, detail palet, generator, koleksi, tentang, dan 404. |
 | Daftar pertama, yaitu tema | `web/src/pages/Beranda.tsx` | 30 | Data diambil dari GET /api/v1/themes lewat TanStack Query, lalu dirender sebagai kartu yang bisa diklik. |
 | Detail dari daftar pertama | `web/src/pages/DetailTema.tsx` | 23 | Slug dibaca dari URL lewat useParams, lalu palet kurasi tema itu dimuat. Inilah daftar kedua. |
-| Daftar kedua, yaitu palet per tema | `web/src/pages/DetailTema.tsx` | 90 | Setiap item palet menuju halaman detailnya sendiri. Jadi ada dua pasang daftar dan detail. |
-| Halaman detail palet | `web/src/pages/DetailPalet.tsx` | 111 | Menampilkan pratinjau, lima peran warna, tabel kontras beserta lencana AA/AAA, dan tombol ekspor CSS. |
+| Daftar kedua, yaitu palet per tema | `web/src/pages/DetailTema.tsx` | 101 | Setiap item palet menuju halaman detailnya sendiri. Jadi ada dua pasang daftar dan detail. |
+| Pilihan warna umum dan kecerahan | `web/src/data/warna-umum.ts` | 9 | Daftar tujuh belas warna bernama untuk pengguna awam, ditambah sepuluh tingkat kecerahan. Pemilih warna koordinat tetap ada untuk yang butuh warna persis. |
+| Kecerahan mengubah warna dan latar | `api/src/lib/palette/generator.js` | 94 | Angka 10 sampai 100 diubah menjadi kecerahan warna pilihan pengguna. Latar otomatis dipasang di sisi berlawanan agar teksnya tetap terbaca. |
+| Kenapa lima palet dulu terlihat sama | `api/src/lib/palette/generator.js` | 80 | Variasi menggeser latar dan warna utama, siklusnya tujuh supaya palet kelima tidak mengulang latar palet pertama. Latar juga ikut diwarnai hue pengguna, bukan abu-abu. |
+| Halaman detail palet dan bukti uji kontrasnya di mana? | `web/src/pages/DetailPalet.tsx` | 119 | Menampilkan pratinjau berbentuk antarmuka mini, lima peran warna, tabel keterbacaan beserta lencana, dan tombol ekspor CSS. |
 | Halaman profil atau tentang | `web/src/pages/Tentang.tsx` | 6 | Memuat penyusun, ide dasar, teknologi, daftar endpoint, dan tautan repositori. Nama serta NIM diambil dari src/konfigurasi.ts. |
 | PWA dan manifest | `web/vite.config.ts` | 20 | Nama, ikon 192 dan 512 termasuk maskable, display standalone, serta warna tema. Dihasilkan menjadi manifest.webmanifest saat build. |
 | Service worker dan cache offline | `web/src/sw.ts` | 144 | Tiga cabang: permintaan /api/v1, navigasi halaman, dan aset. Strategi cache dijelaskan pada fungsi layaniApi di berkas yang sama. |
@@ -33,13 +36,13 @@ Kalau asisten menunjuk layar lalu bertanya kode mana yang menggambarnya.
 | Kerangka halaman dan bottom nav dipasang | `web/src/components/Layout.tsx` | 25 | Nav dipasang sekali di layout induk, jadi tidak dibongkar-pasang saat pindah halaman. |
 | Tab aktif dan aria untuk pembaca layar | `web/src/components/BottomNav.tsx` | 26 | NavLink memberi aria-current="page" otomatis, dan tampilan aktif ditandai garis atas serta warna teks. |
 | Tombol Generator dan perubahan tema | `web/src/pages/Generator.tsx` | 3 | Seluruh pengaturan disimpan di URL, bukan state lokal, sehingga hasil bisa dibagikan dan tetap ada setelah muat ulang. |
-| Permintaan ke API dari Generator | `web/src/pages/Generator.tsx` | 136 | TanStack Query memanggil api.buatPalet dengan base, tema, harmoni, jumlah, dan seed sebagai kunci cache. |
+| Permintaan ke API dari Generator | `web/src/pages/Generator.tsx` | 137 | TanStack Query memanggil api.buatPalet dengan base, tema, harmoni, jumlah, seed, dan kecerahan sebagai kunci cache. |
 | Menyimpan palet ke koleksi | `web/src/hooks/useKoleksi.ts` | 55 | Disimpan ke localStorage dengan kunci chromavibe:koleksi:v1. Pembaca lain diberi tahu lewat useSyncExternalStore. |
 | Halaman koleksi membaca penyimpanan lokal | `web/src/hooks/useKoleksi.ts` | 5 | Kunci penyimpanan dan pembacaan awal. Tidak ada permintaan jaringan di halaman koleksi. |
 | Tombol simpan di kartu hasil | `web/src/components/TombolSimpan.tsx` | 11 | Satu komponen kecil yang membaca status koleksi, jadi tombol langsung berubah jadi Tersimpan. |
 | Tombol salin hex, CSS, dan Tailwind | `web/src/components/TombolSalin.tsx` | 22 | Memakai Clipboard API dengan fallback textarea untuk browser lama. Umpan balik Tersalin muncul 1,6 detik. |
 | Isi teks ekspor CSS | `web/src/utils/warna.ts` | 56 | Menghasilkan custom properties per peran warna. Versi Tailwind ada di fungsi berikutnya, hexKeTailwind. |
-| Pratinjau palet yang dipakai sungguhan | `web/src/pages/DetailPalet.tsx` | 83 | Lima peran warna dirender berurutan dengan label, keterangan, dan kode hex yang bisa disalin. |
+| Pratinjau palet yang dipakai sungguhan | `web/src/pages/DetailPalet.tsx` | 86 | Lima peran warna dirender berurutan dengan label, keterangan, dan kode hex yang bisa disalin. |
 
 ## C. API dan validasi
 
@@ -73,13 +76,13 @@ Urutan penjelasan yang enak dipakai: konversi, tema, harmoni, gamut, lalu kontra
 | Memberi nilai AA atau AAA | `api/src/lib/color/contrast.js` | 21 | Ambang 7 untuk AAA, 4,5 untuk AA, 3 untuk teks besar, di bawah itu gagal. |
 | Daftar tema sebagai konfigurasi angka | `api/src/lib/palette/themes.js` | 8 | Tiap tema hanya berisi rentang chroma, rencana lightness per peran, klaster hue, dan jitter. Menambah tema berarti menambah satu objek di sini. |
 | Contoh tema Minimalis dan Brutalism | `api/src/lib/palette/themes.js` | 94 | Minimalis menyisakan chroma 0,008 sampai 0,035. Brutalism memakai chroma 0,26 sampai 0,34 dengan jitter nol. |
-| Fungsi utama pembuat palet | `api/src/lib/palette/generator.js` | 52 | Masukan satu warna primer, keluaran lima peran warna beserta tabel kontras dan skor. Semua perhitungan ada di fungsi ini. |
-| Benih acak yang deterministik | `api/src/lib/palette/generator.js` | 59 | Benih dibentuk dari base, tema, harmoni, seed, dan indeks. Input sama selalu menghasilkan palet dan id yang sama. |
+| Fungsi utama pembuat palet | `api/src/lib/palette/generator.js` | 60 | Masukan satu warna primer, keluaran lima peran warna beserta tabel kontras dan skor. Semua perhitungan ada di fungsi ini. |
+| Benih acak yang deterministik | `api/src/lib/palette/generator.js` | 74 | Benih dibentuk dari base, tema, harmoni, seed, dan indeks. Input sama selalu menghasilkan palet dan id yang sama. |
 | PRNG yang dipakai | `api/src/lib/color/prng.js` | 18 | mulberry32. Math.random tidak dipakai karena tidak bisa direproduksi, padahal URL hasil harus bisa dibagikan. |
-| Menegakkan kontras, bukan hanya memeriksa | `api/src/lib/palette/generator.js` | 29 | Lightness digeser 0,02 per langkah menjauhi latar sampai ambang terpenuhi, maksimal 40 langkah. |
-| Enam pasangan yang diuji | `api/src/lib/palette/generator.js` | 14 | Teks terhadap latar dan permukaan pada 4,5. Primer dan aksen terhadap latar dan permukaan pada 3. |
+| Menegakkan kontras, bukan hanya memeriksa | `api/src/lib/palette/generator.js` | 34 | Lightness digeser 0,02 per langkah menjauhi latar sampai ambang terpenuhi, maksimal 40 langkah. |
+| Enam pasangan yang diuji | `api/src/lib/palette/generator.js` | 19 | Teks terhadap latar dan permukaan pada 4,5. Primer dan aksen terhadap latar dan permukaan pada 3. |
 | Skema harmoni warna | `api/src/lib/color/harmony.js` | 5 | Enam skema sebagai offset hue: komplementer, analog, triadik, split, tetradik, monokrom. |
-| Saran warna primer per tema | `api/src/lib/palette/generator.js` | 222 | Diambil dari klaster hue tema. Dipakai halaman Generator sebagai titik awal saat pengguna belum memilih warna. |
+| Saran warna primer per tema | `api/src/lib/palette/generator.js` | 286 | Diambil dari klaster hue tema. Dipakai halaman Generator sebagai titik awal saat pengguna belum memilih warna. |
 | Nama palet yang tidak itu-itu saja | `api/src/lib/palette/names.js` | 49 | Kosakata per tema, dipilih memakai PRNG yang sama, termasuk menghindari kata kembar seperti Neon Neon. |
 
 ## E. Data dan PWA

@@ -34,7 +34,7 @@ export const generatePalet = asyncHandler(async (req, res) => {
   const input = generateQuerySchema.parse(req.query)
   const base = rgbKeHex(parseHex(input.base))
 
-  const palet = buatDaftarPalet({ ...input, base })
+  const palet = buatDaftarPalet({ ...input, base, terang: input.terang ?? null })
 
   return ok(res, { input: { ...input, base }, palet }, `${palet.length} palet berhasil dibuat`)
 })

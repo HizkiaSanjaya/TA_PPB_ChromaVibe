@@ -2,18 +2,18 @@ import type { Palet, PeranWarna } from '../api/types'
 
 export const LABEL_PERAN: Record<PeranWarna, string> = {
   background: 'Latar',
-  surface: 'Permukaan',
-  base: 'Primer',
-  accent: 'Aksen',
+  surface: 'Kartu',
+  base: 'Warna utama',
+  accent: 'Warna kedua',
   text: 'Teks',
 }
 
 export const KETERANGAN_PERAN: Record<PeranWarna, string> = {
   background: 'Dasar halaman, area paling belakang',
-  surface: 'Kartu, panel, dan wadah konten',
-  base: 'Warna utama dari pilihan pengguna',
-  accent: 'Penekanan, tombol sekunder, sorotan',
-  text: 'Isi teks dan ikon di atas latar',
+  surface: 'Kotak tempat isi, seperti kartu dan panel',
+  base: 'Warna utama dari pilihanmu, dipakai di tombol',
+  accent: 'Warna pendamping untuk garis dan sorotan',
+  text: 'Warna tulisan dan ikon di atas latar',
 }
 
 function kanal(nilai: number) {

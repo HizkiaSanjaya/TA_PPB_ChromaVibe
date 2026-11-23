@@ -59,9 +59,20 @@ export function DetailTema() {
         </span>
       </div>
 
-      <TautanUtama to={`/generator?tema=${tema.data.slug}`} className="mb-6 w-full">
+      <TautanUtama to={`/generator?tema=${tema.data.slug}`} className="mb-4 w-full">
         Buat palet baru dari tema ini
       </TautanUtama>
+
+      {/* Penjelasan singkat supaya angka pada kartu tidak terasa seperti kode rahasia. */}
+      <div className="mb-6 rounded-xl border border-garis bg-panel/40 p-3">
+        <p className="text-[11px] leading-relaxed text-redup">
+          <span className="font-semibold text-teks">Cara membaca kartu di bawah.</span> Angka
+          seperti <span className="text-teks">16,3 : 1</span> menunjukkan perbedaan terang antara
+          teks dan latarnya. Semakin besar angkanya, semakin mudah dibaca. Nilai 4,5 ke atas sudah
+          memenuhi standar keterbacaan yang dianjurkan (AA). Label seperti{' '}
+          <span className="text-teks">6/6</span> berarti keenam pasangan warna lolos uji.
+        </p>
+      </div>
 
       <section aria-labelledby="judul-palet">
         <div className="mb-3 flex items-baseline justify-between">
@@ -95,17 +106,20 @@ export function DetailTema() {
                 <div className="mt-2.5 flex items-center justify-between gap-2">
                   <div className="min-w-0">
                     <p className="truncate text-sm font-semibold">{item.nama}</p>
-                    <p className="mt-0.5 text-[11px] text-redup">{item.harmoni_nama}</p>
+                    <p className="mt-0.5 text-[11px] text-redup">Harmoni {item.harmoni_nama}</p>
                   </div>
-                  <PilSkor skor={item.ringkasan.skor_aksesibilitas} />
+                  <PilSkor
+                    skor={item.ringkasan.skor_aksesibilitas}
+                    total={item.pasangan_kontras.length}
+                  />
                 </div>
                 <div className="mt-2.5 flex items-center justify-between border-t border-garis/70 pt-2.5">
-                  <div className="flex items-center gap-2">
+                  <div className="flex flex-wrap items-center gap-2">
                     <LencanaKontras
                       nilai={item.ringkasan.teks_lolos_aa ? 'AA' : 'Gagal'}
                       rasio={item.ringkasan.rasio_teks_terendah}
                     />
-                    <span className="text-[11px] text-redup">teks terendah</span>
+                    <span className="text-[11px] text-redup">teks paling sulit dibaca</span>
                   </div>
                   <span className="tautan text-[11px] font-medium text-teks">Detail</span>
                 </div>

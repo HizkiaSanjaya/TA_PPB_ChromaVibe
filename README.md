@@ -81,7 +81,8 @@ Sepuluh tema tersedia: `y2k`, `elegant`, `classic`, `energetic`, `pastel`, `cybe
 `api/src/lib/palette/themes.js` sebagai konfigurasi angka, bukan kode terpisah.
 
 Parameter `generate`: `base` (hex wajib), `tema` (wajib), `harmoni` (bawaan `triadik`),
-`jumlah` 1 sampai 5, `seed` bilangan bulat.
+`jumlah` 1 sampai 5, `seed` bilangan bulat, dan `terang` 10 sampai 100 untuk mengatur
+kecerahan warna pilihan pengguna.
 
 ```bash
 curl "http://localhost:3001/api/v1/palettes/generate?base=3B82F6&tema=y2k&harmoni=triadik&jumlah=3&seed=42"
@@ -104,7 +105,7 @@ curl "http://localhost:3001/api/v1/palettes/generate?base=3B82F6&tema=y2k&harmon
    palet dan `id` yang sama. Sifat ini yang membuat palet hasil generator bisa dibuka
    kembali dari koleksi tanpa disimpan di server.
 
-Seluruh 30 palet kurasi di `api/src/data/palet.kurasi.json` dihasilkan oleh fungsi yang
+Seluruh 60 palet kurasi di `api/src/data/palet.kurasi.json` dihasilkan oleh fungsi yang
 sama dan lolos 100 persen pasangan kontras. Berkas itu dibangun ulang dengan:
 
 ```bash
@@ -127,7 +128,7 @@ Langkah menyiapkan Supabase:
 1. Jalankan `supabase/schema.sql` di SQL Editor. Berkas ini memuat `GRANT` untuk role
    `anon`, `authenticated`, dan `service_role`. Tanpa blok itu, permintaan gagal dengan
    kode `42501 permission denied` walau kuncinya benar.
-2. Jalankan `supabase/seed.sql` untuk mengisi 30 palet kurasi.
+2. Jalankan `supabase/seed.sql` untuk mengisi 60 palet kurasi.
 3. Isi `SUPABASE_URL` dan `SUPABASE_SERVICE_ROLE_KEY` pada environment variables.
 4. Nyalakan ulang API. Peringatan data contoh tidak muncul lagi.
 

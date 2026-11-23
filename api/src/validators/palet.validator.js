@@ -33,6 +33,12 @@ export const generateQuerySchema = z.object({
     .min(0, 'Seed tidak boleh negatif')
     .max(2_000_000_000, 'Seed terlalu besar')
     .default(0),
+  terang: z.coerce
+    .number({ invalid_type_error: 'Kecerahan harus angka' })
+    .int('Kecerahan harus bilangan bulat')
+    .min(10, 'Kecerahan minimal 10 persen')
+    .max(100, 'Kecerahan maksimal 100 persen')
+    .optional(),
 })
 
 export const paletParamSchema = z.object({

@@ -105,6 +105,68 @@ test('lima palet dalam satu rangkaian berbeda dan bernama unik', () => {
   }
 })
 
+test('kecerahan mengubah terang warna dan tetap lolos kontras', () => {
+  const gelap = buatPalet({ base: '#E53935', tema: 'elegant', harmoni: 'triadik', terang: 10 })
+  const terang = buatPalet({ base: '#E53935', tema: 'elegant', harmoni: 'triadik', terang: 100 })
+
+  const Lgelap = gelap.warna.find((item) => item.peran === 'base').oklch[0]
+  const Lterang = terang.warna.find((item) => item.peran === 'base').oklch[0]
+
+  assert.ok(Lterang > Lgelap + 0.3, `kecerahan tidak berubah: ${Lgelap} vs ${Lterang}`)
+
+  for (const tingkat of [10, 30, 50, 70, 90, 100]) {
+    for (const tema of ['y2k', 'elegant', 'brutalism', 'minimalis']) {
+      const palet = buatPalet({ base: '#E53935', tema, harmoni: 'triadik', terang: tingkat })
+      assert.equal(
+        palet.ringkasan.skor_aksesibilitas,
+        100,
+        `${tema} dengan kecerahan ${tingkat} gagal kontras`
+      )
+    }
+  }
+})
+
+test('lima palet selalu punya latar berbeda, termasuk saat kecerahan diatur', () => {
+  for (const tema of TEMA.map((item) => item.slug)) {
+    for (const terang of [null, 10, 50, 100]) {
+      const daftar = buatDaftarPalet({
+        base: '#E53935',
+        tema,
+        harmoni: 'triadik',
+        jumlah: 5,
+        seed: 0,
+        terang,
+      })
+
+      const latar = daftar.map((item) => item.warna[0].hex)
+      assert.equal(
+        new Set(latar).size,
+        5,
+        `${tema} dengan kecerahan ${terang} punya latar kembar: ${latar.join(' ')}`
+      )
+    }
+  }
+})
+
+test('tema berbeda menghasilkan latar berbeda untuk warna yang sama', () => {
+  const latar = TEMA.map((tema) => {
+    const palet = buatPalet({ base: '#E53935', tema: tema.slug, harmoni: 'triadik' })
+    return palet.warna.find((item) => item.peran === 'background').hex
+  })
+
+  assert.equal(new Set(latar).size, TEMA.length, `latar antar tema kembar: ${latar.join(' ')}`)
+})
+
+test('warna berbeda menghasilkan palet berbeda dalam tema yang sama', () => {
+  const merah = buatPalet({ base: '#E53935', tema: 'brutalism', harmoni: 'triadik' })
+  const biru = buatPalet({ base: '#1E88E5', tema: 'brutalism', harmoni: 'triadik' })
+
+  const latarMerah = merah.warna.find((item) => item.peran === 'background').hex
+  const latarBiru = biru.warna.find((item) => item.peran === 'background').hex
+
+  assert.notEqual(latarMerah, latarBiru, 'latar tidak mengikuti warna pilihan pengguna')
+})
+
 test('tema dan harmoni yang tidak dikenal ditolak', () => {
   assert.throws(
     () => buatPalet({ base: '#3B82F6', tema: 'tidak-ada', harmoni: 'triadik' }),

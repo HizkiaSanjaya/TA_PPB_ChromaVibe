@@ -51,6 +51,7 @@ export const api = {
       jumlah: String(masukan.jumlah),
       seed: String(masukan.seed),
     })
+    if (masukan.terang) kueri.set('terang', String(masukan.terang))
     return ambil<HasilGenerate>(`/palettes/generate?${kueri.toString()}`)
   },
 }

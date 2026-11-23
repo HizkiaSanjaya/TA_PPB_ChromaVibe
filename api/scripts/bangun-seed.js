@@ -14,33 +14,63 @@ const KURASI = [
   { tema: 'y2k', base: '#FF2E88', harmoni: 'triadik' },
   { tema: 'y2k', base: '#00E5FF', harmoni: 'komplementer' },
   { tema: 'y2k', base: '#B8FF00', harmoni: 'analog' },
+  { tema: 'y2k', base: '#7A5CFF', harmoni: 'tetradik' },
+  { tema: 'y2k', base: '#FFD400', harmoni: 'split' },
+  { tema: 'y2k', base: '#FF6B00', harmoni: 'monokrom' },
   { tema: 'elegant', base: '#C9A227', harmoni: 'analog' },
   { tema: 'elegant', base: '#7C6F64', harmoni: 'monokrom' },
   { tema: 'elegant', base: '#2F4858', harmoni: 'split' },
+  { tema: 'elegant', base: '#8E7CC3', harmoni: 'komplementer' },
+  { tema: 'elegant', base: '#9C6B5E', harmoni: 'triadik' },
+  { tema: 'elegant', base: '#4F6B5A', harmoni: 'analog' },
   { tema: 'classic', base: '#1F3A5F', harmoni: 'triadik' },
   { tema: 'classic', base: '#7B2D26', harmoni: 'komplementer' },
   { tema: 'classic', base: '#1B4332', harmoni: 'analog' },
+  { tema: 'classic', base: '#6B5B95', harmoni: 'split' },
+  { tema: 'classic', base: '#8C6A2F', harmoni: 'monokrom' },
+  { tema: 'classic', base: '#2C5777', harmoni: 'tetradik' },
   { tema: 'energetic', base: '#FF6B00', harmoni: 'triadik' },
   { tema: 'energetic', base: '#FFD400', harmoni: 'analog' },
   { tema: 'energetic', base: '#E63946', harmoni: 'split' },
+  { tema: 'energetic', base: '#22C55E', harmoni: 'komplementer' },
+  { tema: 'energetic', base: '#EC4899', harmoni: 'tetradik' },
+  { tema: 'energetic', base: '#0EA5E9', harmoni: 'monokrom' },
   { tema: 'pastel', base: '#A8C7FA', harmoni: 'analog' },
   { tema: 'pastel', base: '#F7B7D2', harmoni: 'monokrom' },
   { tema: 'pastel', base: '#BFE3C0', harmoni: 'triadik' },
+  { tema: 'pastel', base: '#D8B4FE', harmoni: 'komplementer' },
+  { tema: 'pastel', base: '#FDE68A', harmoni: 'split' },
+  { tema: 'pastel', base: '#A5F3FC', harmoni: 'tetradik' },
   { tema: 'cyberpunk', base: '#00F0FF', harmoni: 'komplementer' },
   { tema: 'cyberpunk', base: '#FF2BD6', harmoni: 'analog' },
   { tema: 'cyberpunk', base: '#7A5CFF', harmoni: 'tetradik' },
+  { tema: 'cyberpunk', base: '#22FF88', harmoni: 'split' },
+  { tema: 'cyberpunk', base: '#FF3860', harmoni: 'monokrom' },
+  { tema: 'cyberpunk', base: '#FFD400', harmoni: 'triadik' },
   { tema: 'earthy', base: '#A65C3A', harmoni: 'analog' },
   { tema: 'earthy', base: '#B4892E', harmoni: 'triadik' },
   { tema: 'earthy', base: '#6B7A4F', harmoni: 'monokrom' },
+  { tema: 'earthy', base: '#8C5A3C', harmoni: 'komplementer' },
+  { tema: 'earthy', base: '#C2A15A', harmoni: 'split' },
+  { tema: 'earthy', base: '#4F6350', harmoni: 'tetradik' },
   { tema: 'minimalis', base: '#4B5563', harmoni: 'monokrom' },
   { tema: 'minimalis', base: '#8A8F98', harmoni: 'analog' },
   { tema: 'minimalis', base: '#2F3437', harmoni: 'split' },
+  { tema: 'minimalis', base: '#6B7280', harmoni: 'komplementer' },
+  { tema: 'minimalis', base: '#9CA3AF', harmoni: 'triadik' },
+  { tema: 'minimalis', base: '#374151', harmoni: 'tetradik' },
   { tema: 'brutalism', base: '#FF3B00', harmoni: 'komplementer' },
   { tema: 'brutalism', base: '#0044FF', harmoni: 'triadik' },
   { tema: 'brutalism', base: '#00C853', harmoni: 'analog' },
+  { tema: 'brutalism', base: '#FFD400', harmoni: 'split' },
+  { tema: 'brutalism', base: '#E040FB', harmoni: 'tetradik' },
+  { tema: 'brutalism', base: '#000000', harmoni: 'monokrom' },
   { tema: 'vintage', base: '#A0522D', harmoni: 'analog' },
   { tema: 'vintage', base: '#7A6A3A', harmoni: 'triadik' },
   { tema: 'vintage', base: '#5B4B3A', harmoni: 'monokrom' },
+  { tema: 'vintage', base: '#8C7B5A', harmoni: 'komplementer' },
+  { tema: 'vintage', base: '#6B4E3D', harmoni: 'split' },
+  { tema: 'vintage', base: '#9C8B6A', harmoni: 'tetradik' },
 ]
 
 const SEED = 2026
@@ -64,6 +94,7 @@ function uuidDariSlug(slug) {
 }
 
 const hitunganTema = {}
+const namaPerTema = {}
 const kurasi = []
 
 for (const item of KURASI) {
@@ -72,13 +103,27 @@ for (const item of KURASI) {
   const indeks = urutan - 1
   const slug = `${item.tema}-${urutan}`
 
-  const palet = buatPalet({
+  // Nama palet diambil dari kumpulan kata yang terbatas, jadi bisa kembar
+  // dalam satu tema. Seed digeser sampai namanya unik, tanpa mengubah warna.
+  const dipakai = (namaPerTema[item.tema] ??= new Set())
+  let palet = buatPalet({
     base: item.base,
     tema: item.tema,
     harmoni: item.harmoni,
     seed: SEED,
     indeks,
   })
+
+  for (let percobaan = 1; dipakai.has(palet.nama) && percobaan <= 40; percobaan += 1) {
+    palet = buatPalet({
+      base: item.base,
+      tema: item.tema,
+      harmoni: item.harmoni,
+      seed: SEED + percobaan * 7919,
+      indeks,
+    })
+  }
+  dipakai.add(palet.nama)
 
   kurasi.push({
     id: uuidDariSlug(slug),

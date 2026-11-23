@@ -60,11 +60,32 @@ const BAGIAN = [
           "Setiap item palet menuju halaman detailnya sendiri. Jadi ada dua pasang daftar dan detail.",
       },
       {
-        tanya: "Halaman detail palet",
+        tanya: "Pilihan warna umum dan kecerahan",
+        berkas: "web/src/data/warna-umum.ts",
+        penanda: "export const WARNA_UMUM",
+        catatan:
+          "Daftar tujuh belas warna bernama untuk pengguna awam, ditambah sepuluh tingkat kecerahan. Pemilih warna koordinat tetap ada untuk yang butuh warna persis.",
+      },
+      {
+        tanya: "Kecerahan mengubah warna dan latar",
+        berkas: "api/src/lib/palette/generator.js",
+        penanda: "const kecerahanPengguna",
+        catatan:
+          "Angka 10 sampai 100 diubah menjadi kecerahan warna pilihan pengguna. Latar otomatis dipasang di sisi berlawanan agar teksnya tetap terbaca.",
+      },
+      {
+        tanya: "Kenapa lima palet dulu terlihat sama",
+        berkas: "api/src/lib/palette/generator.js",
+        penanda: "const variasi = indeks % 7",
+        catatan:
+          "Variasi menggeser latar dan warna utama, siklusnya tujuh supaya palet kelima tidak mengulang latar palet pertama. Latar juga ikut diwarnai hue pengguna, bukan abu-abu.",
+      },
+      {
+        tanya: "Halaman detail palet dan bukti uji kontrasnya di mana?",
         berkas: "web/src/pages/DetailPalet.tsx",
         penanda: "palet.pasangan_kontras.map",
         catatan:
-          "Menampilkan pratinjau, lima peran warna, tabel kontras beserta lencana AA/AAA, dan tombol ekspor CSS.",
+          "Menampilkan pratinjau berbentuk antarmuka mini, lima peran warna, tabel keterbacaan beserta lencana, dan tombol ekspor CSS.",
       },
       {
         tanya: "Halaman profil atau tentang",
@@ -120,7 +141,7 @@ const BAGIAN = [
         berkas: "web/src/pages/Generator.tsx",
         penanda: "api.buatPalet",
         catatan:
-          "TanStack Query memanggil api.buatPalet dengan base, tema, harmoni, jumlah, dan seed sebagai kunci cache.",
+          "TanStack Query memanggil api.buatPalet dengan base, tema, harmoni, jumlah, seed, dan kecerahan sebagai kunci cache.",
       },
       {
         tanya: "Menyimpan palet ke koleksi",
