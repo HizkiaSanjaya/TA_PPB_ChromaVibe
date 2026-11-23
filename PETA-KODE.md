@@ -159,6 +159,29 @@ merek aplikasi dan warna objek yang diuji.
 API memakai data contoh dari `api/src/data/palet.kurasi.json` dan menulis satu peringatan di
 log. Data itu dibangun generator yang sama lewat `npm run seed`, jadi bukan angka karangan.
 
+**Apa itu harmoni, dan seberapa besar pengaruhnya?**
+Harmoni adalah aturan jarak hue antara warna primer pengguna dan warna aksen. Jaraknya diukur
+dalam derajat pada lingkaran warna OKLCH, lalu diubah menjadi enam pilihan: komplementer 180
+derajat, analog lebih kurang 30, triadik 120 dan 240, split 150 dan 210, tetradik empat sumbu,
+dan monokrom tanpa pergeseran. Pengaruhnya besar pada warna aksen, tetapi tidak mengubah latar
+maupun teks, karena keduanya diatur tema. Ringkasnya: tema mengatur terang-gelap dan seberapa
+pekat warnanya, harmoni mengatur posisi hue aksen.
+
+**Kenapa beranda dimulai dari memilih tema, bukan langsung generator?**
+Tema adalah sumbu yang paling mudah dipahami orang awam, dan ia yang menentukan apakah hasilnya
+terasa seperti Y2K, Brutalism, atau Elegant. Kalau pengguna diarahkan ke pemilih warna lebih
+dulu, satu warna tanpa konteks tidak memberi gambaran apa pun. Beranda menampilkan sepuluh
+tema sebagai daftar yang bisa ditelusuri, lalu halaman tema menawarkan tombol menuju Generator
+dengan tema tersebut sudah terpilih.
+
+**Kenapa lima palet bisa terlihat sama, dan apa yang diperbaiki?**
+Versi pertama hanya menggeser hue lima derajat per variasi, sedangkan latar dan permukaan
+dikunci tema, sehingga kelima palet nyaris identik. Sekarang variasi menggeser anak tangga
+kecerahan latar, kecerahan warna primer, dan posisi aksen pada skema harmoni. Khusus monokrom,
+primer dan aksen digeser ke arah berlawanan supaya terbaca sebagai dua tingkat kecerahan.
+`buatDaftarPalet` juga menolak kandidat yang warnanya atau namanya kembar, dan uji otomatis
+memastikan lima palet selalu berbeda untuk setiap tema.
+
 ## Kalau nomor baris bergeser
 
 ```bash

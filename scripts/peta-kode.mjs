@@ -646,6 +646,61 @@ baris.push(
   "log. Data itu dibangun generator yang sama lewat `npm run seed`, jadi bukan angka karangan.",
 );
 baris.push("");
+baris.push("**Apa itu harmoni, dan seberapa besar pengaruhnya?**");
+baris.push(
+  "Harmoni adalah aturan jarak hue antara warna primer pengguna dan warna aksen. Jaraknya diukur",
+);
+baris.push(
+  "dalam derajat pada lingkaran warna OKLCH, lalu diubah menjadi enam pilihan: komplementer 180",
+);
+baris.push(
+  "derajat, analog lebih kurang 30, triadik 120 dan 240, split 150 dan 210, tetradik empat sumbu,",
+);
+baris.push(
+  "dan monokrom tanpa pergeseran. Pengaruhnya besar pada warna aksen, tetapi tidak mengubah latar",
+);
+baris.push(
+  "maupun teks, karena keduanya diatur tema. Ringkasnya: tema mengatur terang-gelap dan seberapa",
+);
+baris.push("pekat warnanya, harmoni mengatur posisi hue aksen.");
+baris.push("");
+baris.push(
+  "**Kenapa beranda dimulai dari memilih tema, bukan langsung generator?**",
+);
+baris.push(
+  "Tema adalah sumbu yang paling mudah dipahami orang awam, dan ia yang menentukan apakah hasilnya",
+);
+baris.push(
+  "terasa seperti Y2K, Brutalism, atau Elegant. Kalau pengguna diarahkan ke pemilih warna lebih",
+);
+baris.push(
+  "dulu, satu warna tanpa konteks tidak memberi gambaran apa pun. Beranda menampilkan sepuluh",
+);
+baris.push(
+  "tema sebagai daftar yang bisa ditelusuri, lalu halaman tema menawarkan tombol menuju Generator",
+);
+baris.push("dengan tema tersebut sudah terpilih.");
+baris.push("");
+baris.push(
+  "**Kenapa lima palet bisa terlihat sama, dan apa yang diperbaiki?**",
+);
+baris.push(
+  "Versi pertama hanya menggeser hue lima derajat per variasi, sedangkan latar dan permukaan",
+);
+baris.push(
+  "dikunci tema, sehingga kelima palet nyaris identik. Sekarang variasi menggeser anak tangga",
+);
+baris.push(
+  "kecerahan latar, kecerahan warna primer, dan posisi aksen pada skema harmoni. Khusus monokrom,",
+);
+baris.push(
+  "primer dan aksen digeser ke arah berlawanan supaya terbaca sebagai dua tingkat kecerahan.",
+);
+baris.push(
+  "`buatDaftarPalet` juga menolak kandidat yang warnanya atau namanya kembar, dan uji otomatis",
+);
+baris.push("memastikan lima palet selalu berbeda untuk setiap tema.");
+baris.push("");
 baris.push("## Kalau nomor baris bergeser");
 baris.push("");
 baris.push("```bash");
