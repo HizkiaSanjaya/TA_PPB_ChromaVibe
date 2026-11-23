@@ -90,9 +90,6 @@ API memakai data contoh di `api/src/data/palet.kurasi.json` dan menulis satu per
 log. Data contoh itu dibangun oleh generator yang sama, jadi isinya bukan angka karangan.
 Berkasnya dibuat ulang dengan `npm run seed`.
 
-**Mengapa jumlah tema dibatasi sepuluh?**
-Sepuluh tema sudah cukup beragam untuk menunjukkan bahwa tema hanyalah konfigurasi angka. Menambah tema ke-11 cukup menambahkan satu objek di `api/src/lib/palette/themes.js`, tanpa menyentuh kode generator, rute, maupun tampilan.
-
 ## Rencana demo saat responsi (sekitar 5 menit)
 
 1. Buka beranda, sebutkan sepuluh tema dan bahwa setiap kartu berasal dari API.
