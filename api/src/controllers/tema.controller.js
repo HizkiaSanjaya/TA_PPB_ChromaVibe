@@ -5,13 +5,8 @@ import { TEMA, ambilTema } from '../lib/palette/themes.js'
 import { buatPalet, saranWarnaTema } from '../lib/palette/generator.js'
 import { hitungPaletPerTema } from '../config/sumber-data.js'
 
-/**
- * Satu palet contoh per tema.
- *
- * Kartu tema di beranda perlu memperlihatkan karakter temanya, bukan hanya dua
- * kotak warna. Palet contoh dihitung dari saran warna tema itu sendiri, jadi
- * tidak perlu menyimpan data tambahan di basis data.
- */
+// Satu palet contoh per tema untuk kartu di beranda. Dihitung dari saran warna
+// tema itu sendiri, jadi tidak perlu disimpan di basis data.
 function paletContoh(slug) {
   const saran = saranWarnaTema(slug)
   if (saran.length === 0) return null

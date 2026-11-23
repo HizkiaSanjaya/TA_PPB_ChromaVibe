@@ -7,8 +7,7 @@ interface Props {
 }
 
 /**
- * Warna yang paling kontras di antara beberapa kandidat.
- * Dipakai untuk menaruh tulisan di atas bidang berwarna kedua.
+ * Pilih warna tulisan yang paling kontras di atas sebuah bidang warna.
  */
 function teksAman(hex: string, kandidat: string[]) {
   const urut = kandidat
@@ -19,14 +18,9 @@ function teksAman(hex: string, kandidat: string[]) {
 }
 
 /**
- * Pratinjau palet dalam bentuk antarmuka mini, bukan deretan kotak warna.
- *
- * Pembagian tugasnya mengikuti aturan kontras yang dipakai generator:
- * - warna utama dipakai sebagai judul, aman karena dijamin 4.5 banding 1;
- * - warna teks dipakai untuk isi tulisan;
- * - warna kedua dipakai sebagai isian bidang, garis tebal, dan titik, karena
- *   hanya dijamin 3 banding 1, cukup untuk komponen tetapi bukan untuk
- *   tulisan kecil.
+ * Pratinjau palet berupa antarmuka mini.
+ * Warna utama untuk judul (jaminan 4.5), warna teks untuk isi, warna kedua
+ * untuk isian bidang dan garis (jaminan 3, sesuai komponen non-teks).
  */
 export function PratinjauPalet({ palet, ringkas = false }: Props) {
   const background = ambilHex(palet, 'background')

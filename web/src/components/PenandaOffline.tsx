@@ -1,13 +1,10 @@
 import { useEffect, useState } from 'react'
 
 /**
- * Penanda koneksi ke server.
- *
- * navigator.onLine hanya melaporkan status jaringan perangkat, bukan apakah
- * server API benar-benar bisa dihubungi. Karena itu penanda ini juga mendengar
- * kegagalan fetch dari klien. Yang penting: penanda harus hilang lagi begitu
- * ada satu permintaan yang berhasil, karena kalau tidak ia menempel terus
- * meski gangguannya sudah lewat.
+ * Penanda koneksi server.
+ * navigator.onLine cuma tahu status jaringan perangkat, belum tentu server
+ * terjangkau. Karena itu penanda ini ikut mendengar kegagalan dan pemulihan
+ * permintaan dari klien.
  */
 export function PenandaOffline() {
   const [terputus, setTerputus] = useState(false)

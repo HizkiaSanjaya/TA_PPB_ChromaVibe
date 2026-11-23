@@ -12,15 +12,10 @@ import { buatPrng } from '../color/prng.js'
 import { ambilTema } from './themes.js'
 import { buatNama } from './names.js'
 
-/**
- * Urutan periksa disengaja, dan ambangnya berbeda sesuai pemakaian.
- *
- * Teks dan warna utama wajib 4.5 banding 1 karena keduanya dipakai sebagai
- * tulisan. Warna kedua cukup 3 banding 1 karena dipakai sebagai isian, garis,
- * dan bidang berwarna, bukan sebagai tulisan kecil. Memaksakan 4.5 pada warna
- * kedua membuat warna cerah seperti kuning dan jingga menjadi nyaris hitam,
- * kehilangan kepekatannya, dan semua tema terlihat sama.
- */
+// Ambang berbeda sesuai pemakaian. Teks dan warna utama dipakai sebagai
+// tulisan, jadi wajib 4.5. Warna kedua dipakai sebagai isian dan garis, cukup 3
+// sesuai WCAG untuk komponen non-teks. Kalau dipaksa 4.5, warna cerah seperti
+// kuning jadi nyaris hitam dan kehilangan kepekatannya.
 const PASANGAN_DIPERIKSA = [
   ['text', 'background', 4.5],
   ['text', 'surface', 4.5],
@@ -56,11 +51,9 @@ function sidikPalet(warna, tema, harmoni, seed, indeks) {
 }
 
 /**
- * Menghasilkan satu palet utuh dari satu warna primer.
- * Fungsi ini murni: input sama selalu menghasilkan keluaran sama.
- *
- * `terang` (10 sampai 100) menggantikan kecerahan warna pilihan pengguna.
- * Bila kosong, kecerahan asli warna yang dipakai.
+ * Menghasilkan satu palet dari satu warna primer. Deterministik: input sama
+ * selalu menghasilkan keluaran sama. `terang` 10 sampai 100 menggantikan
+ * kecerahan warna pilihan; kalau kosong, kecerahan asli yang dipakai.
  */
 export function buatPalet({
   base,
@@ -243,15 +236,9 @@ export function buatPalet({
 }
 
 /**
- * Menghasilkan beberapa palet sekaligus. Setiap indeks menggeser posisi hue
- * pada skema harmoni supaya hasilnya tidak terasa sebagai duplikat.
- */
-/**
- * Menghasilkan beberapa palet sekaligus, dijamin berbeda satu sama lain.
- *
- * Kandidat diuji berurutan sampai jumlah terpenuhi. Palet yang warna atau
- * namanya kembar dilewati, lalu kandidat berikutnya dicoba. Karena urutannya
- * tetap, hasilnya masih deterministik untuk masukan yang sama.
+ * Menghasilkan beberapa palet yang dijamin berbeda satu sama lain.
+ * Kandidat kembar (warna atau nama) dilewati, lalu kandidat berikutnya dicoba.
+ * Urutannya tetap, jadi hasilnya masih deterministik.
  */
 export function buatDaftarPalet({
   base,

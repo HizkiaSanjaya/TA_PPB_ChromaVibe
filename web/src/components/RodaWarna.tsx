@@ -6,12 +6,9 @@ interface Props {
 }
 
 /**
- * Roda warna yang menunjukkan posisi hue tiap warna pada lingkaran.
- *
- * Nama harmoni seperti "triadik" tidak berarti apa pun bagi orang awam.
- * Dengan menampilkan titik-titik pada roda, perbedaan antar harmoni langsung
- * terlihat: komplementer menaruh dua titik berseberangan, analog menaruh titik
- * berdempetan, triadik menyebar tiga arah.
+ * Roda warna dengan posisi hue tiap warna.
+ * Nama harmoni tidak berarti bagi orang awam, jadi perbedaannya ditunjukkan
+ * lewat posisi titik pada roda.
  */
 export function RodaWarna({ palet, ukuran = 132 }: Props) {
   const jari = ukuran / 2

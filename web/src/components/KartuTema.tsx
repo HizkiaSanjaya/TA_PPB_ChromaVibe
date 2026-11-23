@@ -1,4 +1,5 @@
 import type { Tema } from '../api/types'
+import { teksDiAtas } from '../utils/warna'
 
 interface Warna {
   background: string
@@ -13,25 +14,10 @@ interface Props {
   warna: Warna
 }
 
-/**
- * Kartu tema berbentuk cuplikan antarmuka.
- *
- * Dua kotak warna tidak menunjukkan karakter tema apa pun, karena yang
- * membedakan Elegant dari Brutalism bukan warnanya saja, melainkan cara
- * warnanya dipakai: sudut membulat atau tajam, garis tipis atau tebal, huruf
- * berjarak lebar atau rapat. Karena itu setiap tema menampilkan bentuk yang
- * berbeda, bukan hanya warna yang berbeda.
- */
-
-function dalamKotak(warna: string) {
-  const bersih = warna.replace('#', '')
-  const [r, g, b] = [0, 2, 4].map((i) => parseInt(bersih.slice(i, i + 2), 16))
-  const terang = 0.2126 * r + 0.7152 * g + 0.0722 * b
-  return terang > 140
-}
-
+// Kartu tema berupa cuplikan antarmuka. Yang membedakan tema bukan cuma warna,
+// tapi juga sudut, tebal garis, dan bentuk hurufnya.
 export function KartuTema({ tema, warna }: Props) {
-  const warnaKedua = dalamKotak(warna.accent) ? 'rgba(0,0,0,0.55)' : 'rgba(255,255,255,0.75)'
+  const warnaKedua = teksDiAtas(warna.accent)
 
   // Setiap tema punya bentuk sendiri, mengikuti ciri yang melekat padanya.
   const gaya = (() => {
@@ -141,7 +127,7 @@ export function KartuTema({ tema, warna }: Props) {
               className="mt-1.5 inline-block rounded-full px-2 py-0.5 text-[8px] font-bold uppercase"
               style={{
                 backgroundColor: warna.base,
-                color: dalamKotak(warna.base) ? '#000' : '#fff',
+                color: teksDiAtas(warna.base),
               }}
               aria-hidden="true"
             >

@@ -16,15 +16,15 @@ Bagian ini yang paling sering ditanya. Setiap syarat dipetakan ke berkas dan bar
 | Memakai API buatan sendiri | `api/src/app.js` | 65 | Tiga router dipasang di bawah prefiks /api/v1. Daftar lengkap endpoint ada di route "/" pada berkas yang sama. |
 | Bottom navigation bar | `web/src/components/BottomNav.tsx` | 5 | Empat tab: Beranda, Generator, Koleksi, Tentang. Aktif atau tidak ditentukan NavLink lewat fungsi isActive. |
 | Minimal lima halaman | `web/src/App.tsx` | 16 | Tujuh rute terdaftar di bawah ini: beranda, detail tema, detail palet, generator, koleksi, tentang, dan 404. |
-| Daftar pertama, yaitu tema | `web/src/pages/Beranda.tsx` | 36 | Data diambil dari GET /api/v1/themes lewat TanStack Query, lalu dirender sebagai kartu yang bisa diklik. |
+| Daftar pertama, yaitu tema | `web/src/pages/Beranda.tsx` | 30 | Data diambil dari GET /api/v1/themes lewat TanStack Query, lalu dirender sebagai kartu yang bisa diklik. |
 | Detail dari daftar pertama | `web/src/pages/DetailTema.tsx` | 23 | Slug dibaca dari URL lewat useParams, lalu palet kurasi tema itu dimuat. Inilah daftar kedua. |
 | Daftar kedua, yaitu palet per tema | `web/src/pages/DetailTema.tsx` | 101 | Setiap item palet menuju halaman detailnya sendiri. Jadi ada dua pasang daftar dan detail. |
 | Pilihan warna umum dan kecerahan | `web/src/data/warna-umum.ts` | 9 | Daftar tujuh belas warna bernama untuk pengguna awam, ditambah sepuluh tingkat kecerahan. Pemilih warna koordinat tetap ada untuk yang butuh warna persis. |
-| Kecerahan mengubah warna dan latar | `api/src/lib/palette/generator.js` | 99 | Angka 10 sampai 100 diubah menjadi kecerahan warna pilihan pengguna. Latar otomatis dipasang di sisi berlawanan agar teksnya tetap terbaca. |
-| Kenapa lima palet dulu terlihat sama | `api/src/lib/palette/generator.js` | 85 | Variasi menggeser latar dan warna utama, siklusnya tujuh supaya palet kelima tidak mengulang latar palet pertama. Latar juga ikut diwarnai hue pengguna, bukan abu-abu. |
-| Kenapa judul pratinjau bisa memakai warna utama | `api/src/lib/palette/generator.js` | 24 | Warna utama dan warna kedua wajib 4.5 banding 1 terhadap latar dan kartu, bukan hanya 3. Syarat itu yang membuat keduanya layak dipakai sebagai tulisan, bukan sekadar latar tombol. |
-| Roda warna untuk menjelaskan harmoni | `web/src/components/RodaWarna.tsx` | 16 | Menampilkan posisi hue warna utama dan warna kedua pada lingkaran, supaya perbedaan harmoni terlihat, bukan hanya terbaca sebagai nama. |
-| Kenapa monokrom dulu menghasilkan dua warna sama | `api/src/lib/palette/generator.js` | 192 | Pada monokrom kedua warna berbagi hue, jadi hanya kecerahan yang memisahkan. Pemisahan dilakukan setelah kontras ditegakkan, kalau tidak, aturan kontras akan menariknya kembali. |
+| Kecerahan mengubah warna dan latar | `api/src/lib/palette/generator.js` | 92 | Angka 10 sampai 100 diubah menjadi kecerahan warna pilihan pengguna. Latar otomatis dipasang di sisi berlawanan agar teksnya tetap terbaca. |
+| Kenapa lima palet dulu terlihat sama | `api/src/lib/palette/generator.js` | 78 | Variasi menggeser latar dan warna utama, siklusnya tujuh supaya palet kelima tidak mengulang latar palet pertama. Latar juga ikut diwarnai hue pengguna, bukan abu-abu. |
+| Kenapa judul pratinjau bisa memakai warna utama | `api/src/lib/palette/generator.js` | 19 | Warna utama dan warna kedua wajib 4.5 banding 1 terhadap latar dan kartu, bukan hanya 3. Syarat itu yang membuat keduanya layak dipakai sebagai tulisan, bukan sekadar latar tombol. |
+| Roda warna untuk menjelaskan harmoni | `web/src/components/RodaWarna.tsx` | 13 | Menampilkan posisi hue warna utama dan warna kedua pada lingkaran, supaya perbedaan harmoni terlihat, bukan hanya terbaca sebagai nama. |
+| Kenapa monokrom dulu menghasilkan dua warna sama | `api/src/lib/palette/generator.js` | 185 | Pada monokrom kedua warna berbagi hue, jadi hanya kecerahan yang memisahkan. Pemisahan dilakukan setelah kontras ditegakkan, kalau tidak, aturan kontras akan menariknya kembali. |
 | Halaman detail palet dan bukti uji kontrasnya di mana? | `web/src/pages/DetailPalet.tsx` | 119 | Menampilkan pratinjau berbentuk antarmuka mini, lima peran warna, tabel keterbacaan beserta lencana, dan tombol ekspor CSS. |
 | Halaman profil atau tentang | `web/src/pages/Tentang.tsx` | 6 | Memuat penyusun, ide dasar, teknologi, daftar endpoint, dan tautan repositori. Nama serta NIM diambil dari src/konfigurasi.ts. |
 | PWA dan manifest | `web/vite.config.ts` | 20 | Nama, ikon 192 dan 512 termasuk maskable, display standalone, serta warna tema. Dihasilkan menjadi manifest.webmanifest saat build. |
@@ -79,13 +79,13 @@ Urutan penjelasan yang enak dipakai: konversi, tema, harmoni, gamut, lalu kontra
 | Memberi nilai AA atau AAA | `api/src/lib/color/contrast.js` | 21 | Ambang 7 untuk AAA, 4,5 untuk AA, 3 untuk teks besar, di bawah itu gagal. |
 | Daftar tema sebagai konfigurasi angka | `api/src/lib/palette/themes.js` | 8 | Tiap tema hanya berisi rentang chroma, rencana lightness per peran, klaster hue, dan jitter. Menambah tema berarti menambah satu objek di sini. |
 | Contoh tema Minimalis dan Brutalism | `api/src/lib/palette/themes.js` | 94 | Minimalis menyisakan chroma 0,008 sampai 0,035. Brutalism memakai chroma 0,26 sampai 0,34 dengan jitter nol. |
-| Fungsi utama pembuat palet | `api/src/lib/palette/generator.js` | 65 | Masukan satu warna primer, keluaran lima peran warna beserta tabel kontras dan skor. Semua perhitungan ada di fungsi ini. |
-| Benih acak yang deterministik | `api/src/lib/palette/generator.js` | 79 | Benih dibentuk dari base, tema, harmoni, seed, dan indeks. Input sama selalu menghasilkan palet dan id yang sama. |
+| Fungsi utama pembuat palet | `api/src/lib/palette/generator.js` | 58 | Masukan satu warna primer, keluaran lima peran warna beserta tabel kontras dan skor. Semua perhitungan ada di fungsi ini. |
+| Benih acak yang deterministik | `api/src/lib/palette/generator.js` | 72 | Benih dibentuk dari base, tema, harmoni, seed, dan indeks. Input sama selalu menghasilkan palet dan id yang sama. |
 | PRNG yang dipakai | `api/src/lib/color/prng.js` | 18 | mulberry32. Math.random tidak dipakai karena tidak bisa direproduksi, padahal URL hasil harus bisa dibagikan. |
-| Menegakkan kontras, bukan hanya memeriksa | `api/src/lib/palette/generator.js` | 39 | Lightness digeser 0,02 per langkah menjauhi latar sampai ambang terpenuhi, maksimal 40 langkah. |
-| Enam pasangan yang diuji | `api/src/lib/palette/generator.js` | 24 | Teks terhadap latar dan permukaan pada 4,5. Primer dan aksen terhadap latar dan permukaan pada 3. |
+| Menegakkan kontras, bukan hanya memeriksa | `api/src/lib/palette/generator.js` | 34 | Lightness digeser 0,02 per langkah menjauhi latar sampai ambang terpenuhi, maksimal 40 langkah. |
+| Enam pasangan yang diuji | `api/src/lib/palette/generator.js` | 19 | Teks terhadap latar dan permukaan pada 4,5. Primer dan aksen terhadap latar dan permukaan pada 3. |
 | Skema harmoni warna | `api/src/lib/color/harmony.js` | 5 | Enam skema sebagai offset hue: komplementer, analog, triadik, split, tetradik, monokrom. |
-| Saran warna primer per tema | `api/src/lib/palette/generator.js` | 293 | Diambil dari klaster hue tema. Dipakai halaman Generator sebagai titik awal saat pengguna belum memilih warna. |
+| Saran warna primer per tema | `api/src/lib/palette/generator.js` | 280 | Diambil dari klaster hue tema. Dipakai halaman Generator sebagai titik awal saat pengguna belum memilih warna. |
 | Nama palet yang tidak itu-itu saja | `api/src/lib/palette/names.js` | 49 | Kosakata per tema, dipilih memakai PRNG yang sama, termasuk menghindari kata kembar seperti Neon Neon. |
 
 ## E. Data dan PWA
@@ -100,7 +100,7 @@ Sumber data palet kurasi serta perilaku aplikasi saat jaringan mati.
 | Skema tabel Supabase | `supabase/schema.sql` | 10 | Satu tabel dengan kolom jsonb untuk warna, pasangan kontras, dan ringkasan. |
 | Alamat API di sisi klien | `web/src/api/client.ts` | 3 | Dibaca dari VITE_API_URL. Tidak ada URL yang ditanam langsung di kode sumber. |
 | Menangkap kegagalan jaringan di klien | `web/src/api/client.ts` | 23 | fetch yang gagal, atau balasan 503 dari service worker, memicu kejadian ini untuk menampilkan penanda offline. |
-| Penanda offline di atas halaman | `web/src/components/PenandaOffline.tsx` | 19 | navigator.onLine saja tidak cukup, karena perangkat bisa tersambung WiFi tetapi server API mati. |
+| Penanda offline di atas halaman | `web/src/components/PenandaOffline.tsx` | 16 | navigator.onLine saja tidak cukup, karena perangkat bisa tersambung WiFi tetapi server API mati. |
 | Cache kerangka aplikasi saat instalasi | `web/src/sw.ts` | 29 | Daftar berkas dari manifest Vite dideduplikasi, karena Cache.addAll menolak daftar berisi URL kembar. |
 | Strategi cache untuk permintaan API | `web/src/sw.ts` | 83 | Stale while revalidate: jawab dari cache, perbarui di latar. Aman karena hasil generator deterministik. |
 | Jatuh ke halaman tersimpan saat offline | `web/src/sw.ts` | 110 | Network first, lalu cache halaman yang pernah dibuka, lalu index.html dari precache. |
