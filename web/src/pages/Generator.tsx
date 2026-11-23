@@ -40,19 +40,18 @@ function KartuHasil({ palet }: { palet: Palet }) {
   return (
     <article className="rounded-2xl border border-garis bg-panel/60 p-3">
       <PratinjauPalet palet={palet} ringkas />
-      <LegendaPalet palet={palet} />
 
-      <div className="mt-2.5 flex items-start justify-between gap-2">
+      <div className="mt-2 flex items-center justify-between gap-2">
         <div className="min-w-0">
           <p className="truncate text-sm font-semibold">{palet.nama}</p>
           <p className="mt-0.5 text-[11px] text-redup">
-            {lolos === total
-              ? `Aman dibaca ${lolos}/${total} — tidak ada tulisan yang terlalu samar`
-              : `Perlu dicek ${lolos}/${total} — ada tulisan yang kurang terbaca`}
+            {lolos === total ? `Aman dibaca ${lolos}/${total}` : `Perlu dicek ${lolos}/${total}`}
           </p>
         </div>
         <TombolSimpan palet={palet} />
       </div>
+
+      <LegendaPalet palet={palet} />
 
       <details className="mt-2.5 border-t border-garis/70 pt-2">
         <summary className="tautan cursor-pointer list-none text-[11px] font-medium text-teks [&::-webkit-details-marker]:hidden">
@@ -169,11 +168,10 @@ export function Generator() {
 
   return (
     <div>
-      <header className="mb-5">
+      <header className="mb-4">
         <h1 className="text-2xl font-semibold tracking-tight">Generator</h1>
-        <p className="mt-1.5 text-sm leading-relaxed text-redup">
-          Satu warna primer, satu tema, satu skema harmoni. Hasilnya bisa direproduksi dengan warna,
-          tema, dan <em>seed</em> yang sama.
+        <p className="mt-1 text-sm leading-relaxed text-redup">
+          Pilih warna dan tema. Hasilnya bisa diulang dengan pengaturan yang sama.
         </p>
       </header>
 
@@ -374,25 +372,21 @@ export function Generator() {
 
           {/* Roda warna membuat perbedaan antar harmoni terlihat, bukan hanya terbaca. */}
           {semuaPalet.length > 0 && (
-            <div className="mt-3 flex items-center gap-3 rounded-xl border border-garis bg-panel/40 p-3">
-              <RodaWarna palet={semuaPalet[0]} ukuran={104} />
+            <div className="mt-3 flex items-center gap-3 rounded-xl border border-garis bg-panel/40 p-2.5">
+              <RodaWarna palet={semuaPalet[0]} ukuran={88} />
               <div className="min-w-0">
-                <p className="text-[11px] font-semibold text-teks">{harmoniTerpilih?.nama}</p>
-                <p className="mt-1 text-[11px] leading-relaxed text-redup">
-                  {bacaHarmoni(semuaPalet[0])}
+                <p className="text-[11px] font-semibold text-teks">
+                  {harmoniTerpilih?.nama}
+                  <span className="ml-1 font-normal text-redup">
+                    · {bacaHarmoni(semuaPalet[0])}
+                  </span>
                 </p>
-                <p className="mt-1 text-[10px] leading-relaxed text-redup">
-                  Titik besar adalah warna pilihanmu, titik kecil adalah warna kedua. Ganti harmoni
-                  untuk melihat kedua titik itu berpindah.
-                </p>
+                {harmoniTerpilih && (
+                  <p className="mt-1 text-[11px] leading-relaxed text-redup">
+                    {harmoniTerpilih.deskripsi}
+                  </p>
+                )}
               </div>
-            </div>
-          )}
-
-          {harmoniTerpilih && (
-            <div className="mt-2 rounded-lg border border-garis bg-panel/40 px-2.5 py-2">
-              <p className="text-[11px] leading-relaxed text-teks">{harmoniTerpilih.deskripsi}</p>
-              <p className="mt-1 text-[11px] leading-relaxed text-redup">{harmoniTerpilih.saran}</p>
             </div>
           )}
         </fieldset>
@@ -412,13 +406,16 @@ export function Generator() {
           </button>
         </div>
 
-        <p className="mb-3 rounded-lg border border-garis bg-panel/40 px-2.5 py-2 text-[10px] leading-relaxed text-redup">
-          <span className="font-semibold text-teks">Arti angka pada kartu.</span> Setiap palet diuji
-          dengan enam pasangan warna, misalnya teks di atas latar, atau judul di atas kartu. Tulisan
-          &ldquo;6/6&rdquo; berarti keenam pasangan itu lolos, jadi tidak ada tulisan yang terlalu
-          samar untuk dibaca. Nama seperti &ldquo;Oranye Kasar&rdquo; dibentuk dari warna dasar
-          ditambah kata sifat temanya, supaya tiap palet bisa disebut tanpa menyebut kode hex.
-        </p>
+        <details className="mb-3 rounded-lg border border-garis bg-panel/40 px-2.5 py-2">
+          <summary className="cursor-pointer list-none text-[10px] font-medium text-redup [&::-webkit-details-marker]:hidden">
+            Apa arti angka 6/6 dan nama palet?
+          </summary>
+          <p className="mt-1.5 text-[10px] leading-relaxed text-redup">
+            Setiap palet diuji lewat enam pasangan warna, misalnya teks di atas latar. Angka 6/6
+            berarti keenamnya lolos, jadi tidak ada tulisan yang terlalu samar. Nama seperti
+            &ldquo;Merah Kasar&rdquo; berarti warna dasarnya merah, temanya Brutalism.
+          </p>
+        </details>
 
         {memuat && semuaPalet.length === 0 && <Memuat pesan="Menyusun palet" />}
         {galat && <Galat pesan={galat.message} ulangi={() => void rangkaian[0]?.refetch()} />}

@@ -224,20 +224,39 @@ export function KartuTema({ tema, warna }: Props) {
   )
 }
 
-/** Mengubah larik warna dari API menjadi objek per peran. */
-export function warnaTema(tema: Tema): Warna | null {
+/**
+ * Mengubah larik warna dari API menjadi objek per peran.
+ *
+ * Cadangan dipakai kalau API belum mengirim `contoh`, misalnya karena service
+ * worker masih menyimpan jawaban lama. Tanpa cadangan, kartu tema tidak
+ * dirender sama sekali dan beranda terlihat kosong.
+ */
+export function warnaTema(tema: Tema): Warna {
   const contoh = tema.contoh
-  if (!contoh) return null
 
-  const ambil = (peran: string) => contoh.warna.find((w) => w.peran === peran)?.hex
+  if (contoh) {
+    const ambil = (peran: string) => contoh.warna.find((w) => w.peran === peran)?.hex
 
-  const background = ambil('background')
-  const surface = ambil('surface')
-  const base = ambil('base')
-  const accent = ambil('accent')
-  const text = ambil('text')
+    const background = ambil('background')
+    const surface = ambil('surface')
+    const base = ambil('base')
+    const accent = ambil('accent')
+    const text = ambil('text')
 
-  if (!background || !surface || !base || !accent || !text) return null
+    if (background && surface && base && accent && text) {
+      return { background, surface, base, accent, text }
+    }
+  }
 
-  return { background, surface, base, accent, text }
+  // Cadangan: susun dari saran warna tema dan label gelap terangnya.
+  const saran = tema.saran_base
+  const gelap = tema.gelap
+
+  return {
+    background: gelap ? '#101014' : '#f7f7f5',
+    surface: gelap ? '#1b1b21' : '#ffffff',
+    base: saran[0] ?? '#777777',
+    accent: saran[1] ?? saran[0] ?? '#999999',
+    text: gelap ? '#f2f2f0' : '#1a1a1a',
+  }
 }

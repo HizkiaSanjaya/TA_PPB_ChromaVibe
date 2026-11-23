@@ -26,10 +26,31 @@
 
   html {
     scrollbar-gutter: stable;
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-latar text-teks font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  /*
+   * fieldset punya min-width bawaan min-content, sehingga baris tema yang
+   * berisi tombol bisa melebar melebihi layar dan menggeser seluruh halaman.
+   * min-width 0 membuatnya boleh menyusut. Elemen lain dibatasi agar gambar
+   * atau tabel panjang tidak menembus layar.
+   */
+  fieldset {
+    min-width: 0;
+  }
+
+  img,
+  svg,
+  video,
+  canvas,
+  table,
+  pre {
+    max-width: 100%;
   }
 
   :focus-visible {

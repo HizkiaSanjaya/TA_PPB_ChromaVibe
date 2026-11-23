@@ -12,17 +12,17 @@ const LANGKAH = [
   {
     nomor: '01',
     judul: 'Pilih warna',
-    isi: 'Ambil satu warna dari daftar nama, pemilih warna, atau ketik kodenya. Atur juga mau gelap atau terang.',
+    isi: 'dari daftar nama, pemilih warna, atau ketik kodenya',
   },
   {
     nomor: '02',
     judul: 'Pilih tema',
-    isi: 'Tema menentukan karakter: neon, lembut, mentah, atau klasik. Sepuluh pilihan, tinggal coba.',
+    isi: 'neon, lembut, mentah, atau klasik',
   },
   {
     nomor: '03',
     judul: 'Pakai hasilnya',
-    isi: 'Lima warna siap dipakai. Setiap tulisan dijamin terbaca, dan kodenya bisa disalin.',
+    isi: 'lima warna siap disalin ke kode',
   },
 ]
 
@@ -55,8 +55,7 @@ export function Beranda() {
         </h1>
 
         <p className="mt-4 text-sm leading-relaxed text-redup">
-          Pilih warna apa pun, lalu pilih temanya. ChromaVibe menyusun lima warna yang bekerja
-          bersama, dan memastikan setiap tulisan tetap terbaca di atasnya.
+          Pilih warna dan tema. Lima warna disusun otomatis, semua tulisan dijamin terbaca.
         </p>
 
         <div className="mt-5 flex flex-wrap gap-2.5">
@@ -84,7 +83,6 @@ export function Beranda() {
           <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             {tema.data.map((item) => {
               const warna = warnaTema(item)
-              if (!warna) return null
 
               return (
                 <li key={item.slug}>
@@ -111,17 +109,19 @@ export function Beranda() {
         <h2 id="judul-cara" className="mb-3 text-base font-semibold">
           Tiga langkah
         </h2>
-        <ol className="space-y-2.5">
+        <ol className="space-y-2">
           {LANGKAH.map((langkah) => (
             <li
               key={langkah.nomor}
-              className="flex gap-3 rounded-2xl border border-garis bg-panel/40 p-3.5"
+              className="flex items-baseline gap-3 rounded-xl border border-garis bg-panel/40 px-3 py-2"
             >
-              <span className="font-mono text-xs font-semibold text-brand">{langkah.nomor}</span>
-              <div>
-                <p className="text-sm font-medium">{langkah.judul}</p>
-                <p className="mt-1 text-xs leading-relaxed text-redup">{langkah.isi}</p>
-              </div>
+              <span className="font-mono text-[10px] font-semibold text-brand">
+                {langkah.nomor}
+              </span>
+              <p className="text-xs">
+                <span className="font-medium">{langkah.judul}</span>{' '}
+                <span className="text-redup">— {langkah.isi}</span>
+              </p>
             </li>
           ))}
         </ol>

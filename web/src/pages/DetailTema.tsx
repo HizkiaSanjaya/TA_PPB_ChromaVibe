@@ -63,16 +63,16 @@ export function DetailTema() {
         Buat palet baru dari tema ini
       </TautanUtama>
 
-      {/* Penjelasan singkat supaya angka pada kartu tidak terasa seperti kode rahasia. */}
-      <div className="mb-6 rounded-xl border border-garis bg-panel/40 p-3">
-        <p className="text-[11px] leading-relaxed text-redup">
-          <span className="font-semibold text-teks">Cara membaca kartu di bawah.</span> Angka
-          seperti <span className="text-teks">16,3 : 1</span> menunjukkan perbedaan terang antara
-          teks dan latarnya. Semakin besar angkanya, semakin mudah dibaca. Nilai 4,5 ke atas sudah
-          memenuhi standar keterbacaan yang dianjurkan (AA). Label seperti{' '}
-          <span className="text-teks">6/6</span> berarti keenam pasangan warna lolos uji.
+      <details className="mb-5 rounded-xl border border-garis bg-panel/40 px-3 py-2">
+        <summary className="cursor-pointer list-none text-[11px] font-medium text-redup [&::-webkit-details-marker]:hidden">
+          Cara membaca angka di kartu
+        </summary>
+        <p className="mt-1.5 text-[11px] leading-relaxed text-redup">
+          Angka seperti <span className="text-teks">16,3 : 1</span> adalah perbedaan terang antara
+          teks dan latarnya. Semakin besar, semakin mudah dibaca. Nilai 4,5 ke atas sudah aman.
+          Label <span className="text-teks">6/6</span> berarti keenam pasangan warna lolos uji.
         </p>
-      </div>
+      </details>
 
       <section aria-labelledby="judul-palet">
         <div className="mb-3 flex items-baseline justify-between">
