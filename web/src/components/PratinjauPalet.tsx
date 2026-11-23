@@ -1,5 +1,5 @@
 import type { Palet } from '../api/types'
-import { ambilHex, LABEL_PERAN, teksDiAtas } from '../utils/warna'
+import { ambilHex, LABEL_PERAN, rasioKontras, teksDiAtas } from '../utils/warna'
 
 interface Props {
   palet: Palet
@@ -20,6 +20,15 @@ export function PratinjauPalet({ palet, ringkas = false }: Props) {
   const base = ambilHex(palet, 'base')
   const accent = ambilHex(palet, 'accent')
   const text = ambilHex(palet, 'text')
+
+  // Warna kedua dipakai sebagai isi penuh pada satu elemen. Warna tulisan di
+  // atasnya dipilih dari kandidat yang tersedia, dan hanya dipakai kalau
+  // mencapau 4.5. Kalau tidak ada yang cukup, elemen kembali jadi garis saja.
+  const kandidat = [background, surface, text, '#FFFFFF', '#000000']
+  const terbaik = kandidat
+    .map((hex) => ({ hex, rasio: rasioKontras(accent, hex) }))
+    .sort((a, b) => b.rasio - a.rasio)[0]
+  const isiAksen = terbaik && terbaik.rasio >= 4.5 ? terbaik.hex : null
 
   return (
     <div
@@ -59,12 +68,27 @@ export function PratinjauPalet({ palet, ringkas = false }: Props) {
               Tombol
             </span>
             <span
-              className="rounded-md border px-2.5 py-1.5 text-[11px] font-semibold"
-              style={{ borderColor: accent, color: accent }}
+              className="rounded-md px-2.5 py-1.5 text-[11px] font-semibold"
+              style={
+                isiAksen
+                  ? { backgroundColor: accent, color: isiAksen }
+                  : { border: `1px solid ${accent}`, color: accent }
+              }
             >
               Tombol kedua
             </span>
           </div>
+
+          {/* Bilah warna kedua selebar kartu, supaya perannya terlihat jelas. */}
+          {isiAksen && (
+            <div
+              className="mt-2 flex items-center justify-between rounded-md px-2 py-1"
+              style={{ backgroundColor: accent, color: isiAksen }}
+            >
+              <span className="text-[9px] font-semibold uppercase tracking-wider">Warna kedua</span>
+              <span className="font-mono text-[9px]">{accent}</span>
+            </div>
+          )}
         </div>
       </div>
     </div>
