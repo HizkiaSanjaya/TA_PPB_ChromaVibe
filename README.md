@@ -78,7 +78,12 @@ oleh service worker dan URL-nya bisa dibagikan. Bentuk respons selalu
 
 Sepuluh tema tersedia: `y2k`, `elegant`, `classic`, `energetic`, `pastel`, `cyberpunk`,
 `earthy`, `minimalis`, `brutalism`, dan `vintage`. Semuanya didefinisikan di
-`api/src/lib/palette/themes.js` sebagai konfigurasi angka, bukan kode terpisah.
+`api/src/lib/palette/themes.js` sebagai konfigurasi angka, bukan kode terpisah. Setiap tema
+memiliki enam palet kurasi, jadi totalnya 60.
+
+Halaman Generator juga menerima `terang` (10 sampai 100). Angka kecil membuat warna pilihan
+lebih gelap, angka besar lebih terang, dan latar palet otomatis dipasang di sisi berlawanan
+agar teksnya tetap lolos ambang keterbacaan.
 
 Parameter `generate`: `base` (hex wajib), `tema` (wajib), `harmoni` (bawaan `triadik`),
 `jumlah` 1 sampai 5, `seed` bilangan bulat, dan `terang` 10 sampai 100 untuk mengatur
