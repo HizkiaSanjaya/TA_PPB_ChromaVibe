@@ -1,5 +1,4 @@
 import type { Tema } from '../api/types'
-import { teksDiAtas } from '../utils/warna'
 
 interface Warna {
   background: string
@@ -17,8 +16,6 @@ interface Props {
 // Kartu tema berupa cuplikan antarmuka. Yang membedakan tema bukan cuma warna,
 // tapi juga sudut, tebal garis, dan bentuk hurufnya.
 export function KartuTema({ tema, warna }: Props) {
-  const warnaKedua = teksDiAtas(warna.accent)
-
   // Setiap tema punya bentuk sendiri, mengikuti ciri yang melekat padanya.
   const gaya = (() => {
     switch (tema.slug) {
@@ -213,10 +210,10 @@ export function KartuTema({ tema, warna }: Props) {
             {tema.jumlah_palet} palet
           </span>
           <span
-            className="rounded-full px-1.5 py-0.5 text-[8px] font-bold"
-            style={{ backgroundColor: warna.accent, color: warnaKedua }}
+            className="tautan text-[8px] font-semibold"
+            style={{ color: warna.text, opacity: 0.85 }}
           >
-            {tema.contoh?.skor ?? 0}%
+            Lihat
           </span>
         </div>
       </div>

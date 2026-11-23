@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom'
 
 import { api } from '../api/client'
 import { KepalaHalaman } from '../components/KepalaHalaman'
-import { LencanaKontras, PilSkor } from '../components/LencanaKontras'
 import { PratinjauPalet } from '../components/PratinjauPalet'
 import { Galat, Memuat } from '../components/Status'
 import { TautanGaris, TombolAksi } from '../components/Tombol'
@@ -60,14 +59,7 @@ export function DetailPalet() {
       <section aria-label="Pratinjau palet" className="mb-6">
         <PratinjauPalet palet={palet} />
 
-        <div className="mt-3 flex items-center justify-between gap-3">
-          <div className="flex items-center gap-2">
-            <PilSkor
-              skor={palet.ringkasan.skor_aksesibilitas}
-              total={palet.pasangan_kontras.length}
-            />
-            <span className="text-[11px] text-redup">pasangan aman dibaca</span>
-          </div>
+        <div className="mt-3 flex justify-end">
           <TombolAksi
             onClick={() => (sudahTersimpan ? hapusPalet(palet.id) : simpanPalet(palet))}
             utama={!sudahTersimpan}
@@ -104,47 +96,6 @@ export function DetailPalet() {
             </li>
           ))}
         </ul>
-      </section>
-
-      <section aria-labelledby="judul-kontras" className="mb-6">
-        <h2 id="judul-kontras" className="mb-2.5 text-sm font-semibold">
-          Apakah warnanya mudah dibaca?
-        </h2>
-        <p className="mb-2.5 text-[11px] leading-relaxed text-redup">
-          Setiap baris menguji satu pasangan: warna teks di atas warna latarnya. Angka di kanan
-          menunjukkan seberapa berbeda tingkat terang keduanya. Semakin besar, semakin jelas tulisan
-          terbaca. Angka 4,5 ke atas sudah aman untuk teks biasa.
-        </p>
-        <ul className="space-y-1.5">
-          {palet.pasangan_kontras.map((pasangan) => (
-            <li
-              key={`${pasangan.peran_depan}-${pasangan.peran_belakang}`}
-              className="flex items-center justify-between gap-2 rounded-xl border border-garis bg-panel/40 p-2.5"
-            >
-              <div className="flex min-w-0 items-center gap-2.5">
-                <span className="flex shrink-0 -space-x-1.5" aria-hidden="true">
-                  <span
-                    className="size-6 rounded-full ring-2 ring-panel"
-                    style={{ backgroundColor: pasangan.depan }}
-                  />
-                  <span
-                    className="size-6 rounded-full ring-2 ring-panel"
-                    style={{ backgroundColor: pasangan.belakang }}
-                  />
-                </span>
-                <span className="truncate text-[11px] text-redup">
-                  {LABEL_PERAN[pasangan.peran_depan]} di atas{' '}
-                  {LABEL_PERAN[pasangan.peran_belakang].toLowerCase()}
-                </span>
-              </div>
-              <LencanaKontras nilai={pasangan.nilai} rasio={pasangan.rasio} />
-            </li>
-          ))}
-        </ul>
-        <p className="mt-2 text-[10px] leading-relaxed text-redup">
-          Patokan yang dipakai: 4,5 banding 1 untuk teks biasa dan 3 banding 1 untuk tombol serta
-          batas komponen. Ini mengikuti pedoman keterbacaan WCAG 2.1.
-        </p>
       </section>
 
       <section aria-labelledby="judul-ekspor">

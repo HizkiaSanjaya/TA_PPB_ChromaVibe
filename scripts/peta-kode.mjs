@@ -109,11 +109,11 @@ const BAGIAN = [
           "Pada monokrom kedua warna berbagi hue, jadi hanya kecerahan yang memisahkan. Pemisahan dilakukan setelah kontras ditegakkan, kalau tidak, aturan kontras akan menariknya kembali.",
       },
       {
-        tanya: "Halaman detail palet dan bukti uji kontrasnya di mana?",
+        tanya: "Halaman detail palet ada di mana",
         berkas: "web/src/pages/DetailPalet.tsx",
-        penanda: "palet.pasangan_kontras.map",
+        penanda: "palet.warna.map",
         catatan:
-          "Menampilkan pratinjau berbentuk antarmuka mini, lima peran warna, tabel keterbacaan beserta lencana, dan tombol ekspor CSS.",
+          "Menampilkan pratinjau berbentuk antarmuka mini, lima peran warna beserta kodenya, dan tombol ekspor CSS.",
       },
       {
         tanya: "Halaman profil atau tentang",

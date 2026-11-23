@@ -4,7 +4,6 @@ import { useSearchParams } from 'react-router-dom'
 
 import { api } from '../api/client'
 import type { Palet } from '../api/types'
-import { LencanaKontras } from '../components/LencanaKontras'
 import { PratinjauPalet, LegendaPalet } from '../components/PratinjauPalet'
 import { RodaWarna, bacaHarmoni } from '../components/RodaWarna'
 import { Galat, Memuat } from '../components/Status'
@@ -12,7 +11,7 @@ import { TombolAksi } from '../components/Tombol'
 import { TombolSalin } from '../components/TombolSalin'
 import { TombolSimpan } from '../components/TombolSimpan'
 import { TINGKAT_KECERAHAN, WARNA_UMUM, namaWarna } from '../data/warna-umum'
-import { daftarHex, hexKeCss, LABEL_PERAN, normalisasiHex } from '../utils/warna'
+import { daftarHex, hexKeCss, normalisasiHex } from '../utils/warna'
 
 const TEMA_BAWAAN = 'y2k'
 const HARMONI_BAWAAN = 'triadik'
@@ -34,56 +33,29 @@ function keTerang(nilai: string | null) {
 }
 
 function KartuHasil({ palet }: { palet: Palet }) {
-  const total = palet.pasangan_kontras.length
-  const lolos = palet.pasangan_kontras.filter((item) => item.lolos).length
-
   return (
     <article className="rounded-2xl border border-garis bg-panel/60 p-3">
       <PratinjauPalet palet={palet} ringkas />
 
       <div className="mt-2 flex items-center justify-between gap-2">
-        <div className="min-w-0">
-          <p className="truncate text-sm font-semibold">{palet.nama}</p>
-          <p className="mt-0.5 text-[11px] text-redup">
-            {lolos === total ? `Aman dibaca ${lolos}/${total}` : `Perlu dicek ${lolos}/${total}`}
-          </p>
-        </div>
+        <p className="truncate text-sm font-semibold">{palet.nama}</p>
         <TombolSimpan palet={palet} />
       </div>
 
       <LegendaPalet palet={palet} />
 
-      <details className="mt-2.5 border-t border-garis/70 pt-2">
-        <summary className="tautan cursor-pointer list-none text-[11px] font-medium text-teks [&::-webkit-details-marker]:hidden">
-          Angka keterbacaan dan salin warna
-        </summary>
-        <ul className="mt-2 space-y-1">
-          {palet.pasangan_kontras.map((pasangan) => (
-            <li
-              key={`${pasangan.peran_depan}-${pasangan.peran_belakang}`}
-              className="flex items-center justify-between gap-2"
-            >
-              <span className="truncate text-[11px] text-redup">
-                {LABEL_PERAN[pasangan.peran_depan]} di atas{' '}
-                {LABEL_PERAN[pasangan.peran_belakang].toLowerCase()}
-              </span>
-              <LencanaKontras nilai={pasangan.nilai} rasio={pasangan.rasio} />
-            </li>
-          ))}
-        </ul>
-        <div className="mt-2.5 flex flex-wrap gap-2">
-          <TombolSalin
-            teks={daftarHex(palet).join(', ')}
-            label="Salin hex"
-            className="min-h-8 px-2 text-[10px]"
-          />
-          <TombolSalin
-            teks={hexKeCss(palet)}
-            label="Salin CSS"
-            className="min-h-8 px-2 text-[10px]"
-          />
-        </div>
-      </details>
+      <div className="mt-2 flex flex-wrap gap-2 border-t border-garis/70 pt-2">
+        <TombolSalin
+          teks={daftarHex(palet).join(', ')}
+          label="Salin hex"
+          className="min-h-8 px-2 text-[10px]"
+        />
+        <TombolSalin
+          teks={hexKeCss(palet)}
+          label="Salin CSS"
+          className="min-h-8 px-2 text-[10px]"
+        />
+      </div>
     </article>
   )
 }
@@ -405,17 +377,6 @@ export function Generator() {
             Variasikan
           </button>
         </div>
-
-        <details className="mb-3 rounded-lg border border-garis bg-panel/40 px-2.5 py-2">
-          <summary className="cursor-pointer list-none text-[10px] font-medium text-redup [&::-webkit-details-marker]:hidden">
-            Apa arti angka 6/6 dan nama palet?
-          </summary>
-          <p className="mt-1.5 text-[10px] leading-relaxed text-redup">
-            Setiap palet diuji lewat enam pasangan warna, misalnya teks di atas latar. Angka 6/6
-            berarti keenamnya lolos, jadi tidak ada tulisan yang terlalu samar. Nama seperti
-            &ldquo;Merah Kasar&rdquo; berarti warna dasarnya merah, temanya Brutalism.
-          </p>
-        </details>
 
         {memuat && semuaPalet.length === 0 && <Memuat pesan="Menyusun palet" />}
         {galat && <Galat pesan={galat.message} ulangi={() => void rangkaian[0]?.refetch()} />}

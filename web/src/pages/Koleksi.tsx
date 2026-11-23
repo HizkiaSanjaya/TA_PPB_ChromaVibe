@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 
-import { PilSkor } from '../components/LencanaKontras'
 import { Kosong } from '../components/Status'
 import { StripWarna } from '../components/StripWarna'
 import { TautanUtama } from '../components/Tombol'
@@ -42,14 +41,11 @@ export function Koleksi() {
               >
                 <Link to={`/palet/${palet.id}`} className="block">
                   <StripWarna warna={daftarHex(palet)} tinggi="h-14" />
-                  <div className="mt-2.5 flex items-center justify-between gap-2">
-                    <div className="min-w-0">
-                      <p className="truncate text-sm font-semibold">{palet.nama}</p>
-                      <p className="mt-0.5 text-[11px] text-redup">
-                        {palet.tema_nama} · {palet.harmoni_nama}
-                      </p>
-                    </div>
-                    <PilSkor skor={palet.ringkasan.skor_aksesibilitas} />
+                  <div className="mt-2.5 min-w-0">
+                    <p className="truncate text-sm font-semibold">{palet.nama}</p>
+                    <p className="mt-0.5 text-[11px] text-redup">
+                      {palet.tema_nama} · {palet.harmoni_nama}
+                    </p>
                   </div>
                 </Link>
 

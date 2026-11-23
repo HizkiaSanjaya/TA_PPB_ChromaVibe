@@ -17,8 +17,8 @@ Bagian ini yang paling sering ditanya. Setiap syarat dipetakan ke berkas dan bar
 | Bottom navigation bar | `web/src/components/BottomNav.tsx` | 5 | Empat tab: Beranda, Generator, Koleksi, Tentang. Aktif atau tidak ditentukan NavLink lewat fungsi isActive. |
 | Minimal lima halaman | `web/src/App.tsx` | 16 | Tujuh rute terdaftar di bawah ini: beranda, detail tema, detail palet, generator, koleksi, tentang, dan 404. |
 | Daftar pertama, yaitu tema | `web/src/pages/Beranda.tsx` | 30 | Data diambil dari GET /api/v1/themes lewat TanStack Query, lalu dirender sebagai kartu yang bisa diklik. |
-| Detail dari daftar pertama | `web/src/pages/DetailTema.tsx` | 23 | Slug dibaca dari URL lewat useParams, lalu palet kurasi tema itu dimuat. Inilah daftar kedua. |
-| Daftar kedua, yaitu palet per tema | `web/src/pages/DetailTema.tsx` | 101 | Setiap item palet menuju halaman detailnya sendiri. Jadi ada dua pasang daftar dan detail. |
+| Detail dari daftar pertama | `web/src/pages/DetailTema.tsx` | 22 | Slug dibaca dari URL lewat useParams, lalu palet kurasi tema itu dimuat. Inilah daftar kedua. |
+| Daftar kedua, yaitu palet per tema | `web/src/pages/DetailTema.tsx` | 89 | Setiap item palet menuju halaman detailnya sendiri. Jadi ada dua pasang daftar dan detail. |
 | Pilihan warna umum dan kecerahan | `web/src/data/warna-umum.ts` | 9 | Daftar tujuh belas warna bernama untuk pengguna awam, ditambah sepuluh tingkat kecerahan. Pemilih warna koordinat tetap ada untuk yang butuh warna persis. |
 | Kecerahan mengubah warna dan latar | `api/src/lib/palette/generator.js` | 91 | Angka 10 sampai 100 diubah menjadi kecerahan warna pilihan pengguna. Latar otomatis dipasang di sisi berlawanan agar teksnya tetap terbaca. |
 | Kenapa lima palet bisa terlihat sama, dan apa yang diperbaiki | `api/src/lib/palette/generator.js` | 123 | Latar berangkat dari kepekatan tema masing-masing, lalu digeser menjauhi ujung memakai perbandingan emas. Titik awalnya tetap membawa ciri tema, tetapi tiap indeks mendapat nilai berbeda sehingga tidak ada latar kembar. |
@@ -26,7 +26,7 @@ Bagian ini yang paling sering ditanya. Setiap syarat dipetakan ke berkas dan bar
 | Kenapa judul pratinjau bisa memakai warna utama | `api/src/lib/palette/generator.js` | 19 | Warna utama dan warna kedua wajib 4.5 banding 1 terhadap latar dan kartu, bukan hanya 3. Syarat itu yang membuat keduanya layak dipakai sebagai tulisan, bukan sekadar latar tombol. |
 | Roda warna untuk menjelaskan harmoni | `web/src/components/RodaWarna.tsx` | 13 | Menampilkan posisi hue warna utama dan warna kedua pada lingkaran, supaya perbedaan harmoni terlihat, bukan hanya terbaca sebagai nama. |
 | Kenapa monokrom dulu menghasilkan dua warna sama | `api/src/lib/palette/generator.js` | 188 | Pada monokrom kedua warna berbagi hue, jadi hanya kecerahan yang memisahkan. Pemisahan dilakukan setelah kontras ditegakkan, kalau tidak, aturan kontras akan menariknya kembali. |
-| Halaman detail palet dan bukti uji kontrasnya di mana? | `web/src/pages/DetailPalet.tsx` | 119 | Menampilkan pratinjau berbentuk antarmuka mini, lima peran warna, tabel keterbacaan beserta lencana, dan tombol ekspor CSS. |
+| Halaman detail palet ada di mana | `web/src/pages/DetailPalet.tsx` | 78 | Menampilkan pratinjau berbentuk antarmuka mini, lima peran warna beserta kodenya, dan tombol ekspor CSS. |
 | Halaman profil atau tentang | `web/src/pages/Tentang.tsx` | 6 | Memuat penyusun, ide dasar, teknologi, daftar endpoint, dan tautan repositori. Nama serta NIM diambil dari src/konfigurasi.ts. |
 | PWA dan manifest | `web/vite.config.ts` | 20 | Nama, ikon 192 dan 512 termasuk maskable, display standalone, serta warna tema. Dihasilkan menjadi manifest.webmanifest saat build. |
 | Service worker dan cache offline | `web/src/sw.ts` | 147 | Tiga cabang: permintaan /api/v1, navigasi halaman, dan aset. Strategi cache dijelaskan pada fungsi layaniApi di berkas yang sama. |
@@ -40,13 +40,13 @@ Kalau asisten menunjuk layar lalu bertanya kode mana yang menggambarnya.
 | Kerangka halaman dan bottom nav dipasang | `web/src/components/Layout.tsx` | 25 | Nav dipasang sekali di layout induk, jadi tidak dibongkar-pasang saat pindah halaman. |
 | Tab aktif dan aria untuk pembaca layar | `web/src/components/BottomNav.tsx` | 26 | NavLink memberi aria-current="page" otomatis, dan tampilan aktif ditandai garis atas serta warna teks. |
 | Tombol Generator dan perubahan tema | `web/src/pages/Generator.tsx` | 3 | Seluruh pengaturan disimpan di URL, bukan state lokal, sehingga hasil bisa dibagikan dan tetap ada setelah muat ulang. |
-| Permintaan ke API dari Generator | `web/src/pages/Generator.tsx` | 138 | TanStack Query memanggil api.buatPalet dengan base, tema, harmoni, jumlah, seed, dan kecerahan sebagai kunci cache. |
+| Permintaan ke API dari Generator | `web/src/pages/Generator.tsx` | 110 | TanStack Query memanggil api.buatPalet dengan base, tema, harmoni, jumlah, seed, dan kecerahan sebagai kunci cache. |
 | Menyimpan palet ke koleksi | `web/src/hooks/useKoleksi.ts` | 55 | Disimpan ke localStorage dengan kunci chromavibe:koleksi:v1. Pembaca lain diberi tahu lewat useSyncExternalStore. |
 | Halaman koleksi membaca penyimpanan lokal | `web/src/hooks/useKoleksi.ts` | 5 | Kunci penyimpanan dan pembacaan awal. Tidak ada permintaan jaringan di halaman koleksi. |
 | Tombol simpan di kartu hasil | `web/src/components/TombolSimpan.tsx` | 11 | Satu komponen kecil yang membaca status koleksi, jadi tombol langsung berubah jadi Tersimpan. |
 | Tombol salin hex, CSS, dan Tailwind | `web/src/components/TombolSalin.tsx` | 22 | Memakai Clipboard API dengan fallback textarea untuk browser lama. Umpan balik Tersalin muncul 1,6 detik. |
 | Isi teks ekspor CSS | `web/src/utils/warna.ts` | 56 | Menghasilkan custom properties per peran warna. Versi Tailwind ada di fungsi berikutnya, hexKeTailwind. |
-| Pratinjau palet yang dipakai sungguhan | `web/src/pages/DetailPalet.tsx` | 86 | Lima peran warna dirender berurutan dengan label, keterangan, dan kode hex yang bisa disalin. |
+| Pratinjau palet yang dipakai sungguhan | `web/src/pages/DetailPalet.tsx` | 78 | Lima peran warna dirender berurutan dengan label, keterangan, dan kode hex yang bisa disalin. |
 
 ## C. API dan validasi
 
