@@ -41,12 +41,12 @@ export function Beranda() {
         </div>
 
         <h1 className="mt-7 text-[32px] font-bold leading-[1.08] tracking-tight">
-          Satu warna,
+          Semua warna,
           <br />
-          lima yang saling
+          untuk semua
           <br />
           <span className="relative inline-block">
-            cocok.
+            tema.
             <span
               aria-hidden="true"
               className="absolute inset-x-0 bottom-1 -z-10 h-3 bg-brand/25"
@@ -55,8 +55,8 @@ export function Beranda() {
         </h1>
 
         <p className="mt-4 text-sm leading-relaxed text-redup">
-          Pilih satu warna dan satu tema. ChromaVibe menyusun lima warna yang bekerja bersama, lalu
-          memastikan setiap tulisan tetap terbaca di atasnya.
+          Pilih warna apa pun, lalu pilih temanya. ChromaVibe menyusun lima warna yang bekerja
+          bersama, dan memastikan setiap tulisan tetap terbaca di atasnya.
         </p>
 
         <div className="mt-5 flex flex-wrap gap-2.5">

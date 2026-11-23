@@ -72,19 +72,18 @@ export function buatPalet({
   const acak = buatPrng(`${String(base).toUpperCase()}|${tema}|${harmoni}|${seed}|${indeks}`)
   const dasar = hexKeOklch(base)
 
-  // Indeks menentukan variasi dalam satu rangkaian. Siklusnya tujuh, bukan lima,
-  // supaya palet kelima tidak mengulang latar palet pertama ketika ada kandidat
-  // yang ditolak karena kembar.
-  const variasi = indeks % 7
+  // Indeks menentukan variasi dalam satu rangkaian. Pergeseran latar naik terus
+  // mengikuti indeks, bukan berulang tiap beberapa langkah, supaya palet tidak
+  // mendapat latar yang sama ketika ada kandidat ditolak karena nama kembar.
   const dasarGelap = konfigurasi.lightness.background <= 0.5
-  const geserDasar = (dasarGelap ? 1 : -1) * variasi * 0.05
+  const geserDasar = (dasarGelap ? 1 : -1) * indeks * 0.04
 
   const jitter = (acak() * 2 - 1) * konfigurasi.jitter
   const hueDasar = normalkanHue(dasar.h + jitter)
 
   const offset = skemaHarmoni.offset
   const pilihanAksen = offset.length > 1 ? offset.length - 1 : 1
-  const posisiAksen = offset.length > 1 ? 1 + (variasi % pilihanAksen) : 0
+  const posisiAksen = offset.length > 1 ? 1 + (indeks % pilihanAksen) : 0
   const hueAksen = normalkanHue(hueDasar + offset[posisiAksen] + (acak() * 2 - 1) * 6)
 
   // Kecerahan: 10 persen berarti warna sangat gelap, 100 persen sangat terang.
@@ -115,35 +114,40 @@ export function buatPalet({
   // Latar harus berada di sisi berlawanan dari kecerahan warna, kalau tidak
   // aturan kontras akan menolak warnanya dan tombol kecerahan terasa mati.
   // Warna terang dipasang di latar gelap, warna gelap di latar terang.
-  let latarL = konfigurasi.lightness.background
-  let surfaceL = konfigurasi.lightness.surface
-  let geserLatar
+  //
+  // Titik awalnya tetap kepekatan tema masing-masing, supaya Elegant dan
+  // Brutalism tidak jadi sama. Pergeserannya memakai perbandingan emas dan
+  // hanya bergerak menjauh dari ujung, sehingga tiap indeks berbeda tanpa
+  // mentok di batas.
+  const EMAS = 0.6180339887498949
+  const sebar = (i) => (i * EMAS) % 1
+
+  let latarL
+  let surfaceL
 
   if (terang === null) {
-    // Tanpa pengaturan kecerahan, latar bergerak menjauhi ujung tema.
-    geserLatar = (dasarGelap ? 1 : -1) * variasi * 0.032
+    latarL = dasarGelap
+      ? konfigurasi.lightness.background + sebar(indeks) * 0.06
+      : konfigurasi.lightness.background - sebar(indeks) * 0.075
+
+    surfaceL = dasarGelap ? Math.min(0.24, latarL + 0.06) : Math.min(0.995, latarL + 0.02)
   } else {
     const inginGelap = kecerahanPengguna >= 0.55
-    latarL = inginGelap ? 0.1 : 0.98
-    surfaceL = inginGelap ? 0.17 : 1
 
-    // Setelah dibalik, arah geser harus mengikuti latar yang baru. Kalau tetap
-    // memakai arah tema, pergeserannya menabrak batas dan semua palet menjadi
-    // sama persis. Nilai variasi dipakai langsung, bukan variasi - 2, supaya
-    // tidak ada palet yang kembali ke titik awal dan terlihat kembar.
-    geserLatar = (inginGelap ? 1 : -1) * (variasi + 1) * (inginGelap ? 0.022 : 0.011)
+    latarL = inginGelap ? 0.1 + sebar(indeks) * 0.1 : 0.98 - sebar(indeks) * 0.12
+    surfaceL = inginGelap ? Math.min(0.24, latarL + 0.06) : Math.min(0.995, latarL + 0.012)
   }
 
   // Latar dan kartu ikut diwarnai hue pilihan pengguna. Sebelumnya kromanya
   // hanya 0,016 sehingga praktis abu-abu, dan semua tema terang terlihat sama.
   const warnaBackground = {
-    L: batasi(latarL + geserLatar, 0.06, 0.995),
+    L: batasi(latarL, 0.06, 0.995),
     C: Math.min(konfigurasi.chroma[0] * 0.5, 0.05),
     h: normalkanHue(hueDasar + (acak() - 0.5) * 8),
   }
 
   const warnaSurface = {
-    L: batasi(surfaceL + geserLatar, 0.06, 1),
+    L: batasi(surfaceL, 0.06, 1),
     C: Math.min(konfigurasi.chroma[0] * 0.75, 0.07),
     h: normalkanHue(hueDasar + (acak() - 0.5) * 8),
   }
@@ -155,14 +159,13 @@ export function buatPalet({
   // bukan dari label tema. Kalau kecerahan membalik latar, arahnya ikut berubah.
   const latarGelap = luminansiRelatif(hexBackground) < 0.35
 
-  // Pada monokrom, warna primer dan aksen berbagi hue. Satu-satunya pembeda
-  // adalah kecerahan, jadi keduanya digeser ke arah berlawanan agar terlihat
-  // sebagai dua anak tangga, bukan dua warna yang sama.
+  // Pada monokrom, warna utama dan warna kedua berbagi hue. Satu-satunya
+  // pembeda adalah kecerahan, jadi keduanya digeser ke arah berlawanan.
   const arahAksen = harmoni === 'monokrom' ? -1 : 1
 
   let warnaAksen = {
     L: batasi(
-      konfigurasi.lightness.aksen + arahAksen * (variasi - 2) * 0.055 + (acak() - 0.5) * 0.04,
+      konfigurasi.lightness.aksen + arahAksen * indeks * 0.03 + (acak() - 0.5) * 0.04,
       0.1,
       0.95
     ),
@@ -219,7 +222,7 @@ export function buatPalet({
       seed,
       indeks
     )}`,
-    nama: buatNama(tema, acak),
+    nama: buatNama(tema, acak, { hue: hueDasar, kroma: warnaDasar.C }),
     tema,
     tema_nama: konfigurasi.nama,
     harmoni,

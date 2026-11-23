@@ -67,6 +67,7 @@ export interface SkemaHarmoni {
   nama: string
   offset: number[]
   deskripsi: string
+  saran: string
 }
 
 export interface MasukanGenerate {

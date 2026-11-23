@@ -1,63 +1,59 @@
 /**
- * Nama palet dibentuk dari dua kata yang dipilih deterministik.
- * Tujuannya bukan keindahan bahasa, tetapi supaya daftar palet terasa
- * digarap dan setiap hasil tetap punya identitas saat dibagikan.
+ * Nama palet dibentuk dari dua bagian: nama keluarga warna dan kata sifat tema.
+ *
+ * Contoh: "Oranye Tegas" untuk Brutalism, "Biru Anggun" untuk Elegant.
+ * Dipakai nama seperti ini supaya palet yang berbeda bisa disebut tanpa harus
+ * menunjuk kode hex, dan supaya namanya tetap masuk akal kalau dibaca orang lain.
  */
-const KOSAKATA = {
-  y2k: {
-    depan: ['Transit', 'Krom', 'Disket', 'Pixel', 'Neon', 'Fajar'],
-    belakang: ['Neon', 'Kilau', 'Metalik', 'Malam', 'Pop', 'Milenium'],
-  },
-  elegant: {
-    depan: ['Sutra', 'Marmer', 'Senja', 'Krem', 'Lilin', 'Pualam'],
-    belakang: ['Lembut', 'Anggun', 'Teduh', 'Klasik', 'Mewah', 'Sunyi'],
-  },
-  classic: {
-    depan: ['Dermaga', 'Arsip', 'Botol', 'Marun', 'Katedral', 'Pesisir'],
-    belakang: ['Klasik', 'Agung', 'Tenang', 'Formal', 'Tua', 'Akademik'],
-  },
-  energetic: {
-    depan: ['Kilat', 'Sirine', 'Deru', 'Pesta', 'Pagi', 'Sorak'],
-    belakang: ['Cepat', 'Menyala', 'Ledak', 'Tegang', 'Ceria', 'Gencar'],
-  },
-  pastel: {
-    depan: ['Awan', 'Gula', 'Kapas', 'Sorbet', 'Kelopak', 'Embun'],
-    belakang: ['Lembut', 'Manis', 'Pucat', 'Tenang', 'Susu', 'Ringan'],
-  },
-  cyberpunk: {
-    depan: ['Grid', 'Volt', 'Kabut', 'Saraf', 'Sirkuit', 'Bawah'],
-    belakang: ['Neon', 'Nokturnal', 'Krom', 'Digital', 'Listrik', 'Bayangan'],
-  },
-  earthy: {
-    depan: ['Terakota', 'Zaitun', 'Gandum', 'Kayu', 'Bata', 'Lembah'],
-    belakang: ['Hangat', 'Tanah', 'Panen', 'Teduh', 'Gurun', 'Rempah'],
-  },
-  minimalis: {
-    depan: ['Kertas', 'Kapur', 'Garis', 'Ruang', 'Dinding', 'Nada'],
-    belakang: ['Bersih', 'Polos', 'Hening', 'Tipis', 'Netral', 'Sunyi'],
-  },
-  brutalism: {
-    depan: ['Beton', 'Blok', 'Tembok', 'Palu', 'Spanduk', 'Gerbang'],
-    belakang: ['Mentah', 'Kasar', 'Berat', 'Tegas', 'Kaku', 'Terang'],
-  },
-  vintage: {
-    depan: ['Sepia', 'Album', 'Loteng', 'Tembakau', 'Pasar', 'Surat'],
-    belakang: ['Usang', 'Pudar', 'Silam', 'Lembap', 'Tua', 'Hangat'],
-  },
+
+/**
+ * Batas hue dalam derajat untuk menamai keluarga warna.
+ * Angkanya mengikuti posisi warna pada ruang OKLCH: merah murni ada di sekitar
+ * 28 derajat, kuning di sekitar 100, biru di sekitar 255.
+ */
+const KELUARGA_WARNA = [
+  { bawah: 345, batas: 360, nama: 'Merah' },
+  { bawah: 0, batas: 40, nama: 'Merah' },
+  { bawah: 40, batas: 70, nama: 'Oranye' },
+  { bawah: 70, batas: 105, nama: 'Kuning' },
+  { bawah: 105, batas: 150, nama: 'Hijau' },
+  { bawah: 150, batas: 195, nama: 'Tosca' },
+  { bawah: 195, batas: 235, nama: 'Biru langit' },
+  { bawah: 235, batas: 285, nama: 'Biru' },
+  { bawah: 285, batas: 320, nama: 'Ungu' },
+  { bawah: 320, batas: 345, nama: 'Magenta' },
+]
+
+/** Kata sifat yang mewakili karakter tiap tema. Minimal enam supaya lima palet
+ *  dalam satu tampilan selalu bisa diberi nama berbeda. */
+const SIFAT_TEMA = {
+  y2k: ['Neon', 'Metalik', 'Retro', 'Kilau', 'Pop', 'Milenium'],
+  elegant: ['Anggun', 'Teduh', 'Mewah', 'Lembut', 'Sunyi', 'Pualam'],
+  classic: ['Formal', 'Klasik', 'Tegas', 'Agung', 'Tenang', 'Arsip'],
+  energetic: ['Ceria', 'Menyala', 'Gencar', 'Cepat', 'Sorak', 'Pesta'],
+  pastel: ['Lembut', 'Manis', 'Ringan', 'Pucat', 'Embun', 'Sorbet'],
+  cyberpunk: ['Digital', 'Nokturnal', 'Listrik', 'Krom', 'Saraf', 'Volt'],
+  earthy: ['Hangat', 'Tanah', 'Panen', 'Rempah', 'Gurun', 'Teduh'],
+  minimalis: ['Polos', 'Hening', 'Bersih', 'Tipis', 'Netral', 'Ruang'],
+  brutalism: ['Mentah', 'Kasar', 'Berat', 'Kaku', 'Tegas', 'Beton'],
+  vintage: ['Usang', 'Pudar', 'Silam', 'Lembap', 'Tua', 'Album'],
 }
 
-export function buatNama(tema, acak) {
-  const daftar = KOSAKATA[tema] ?? KOSAKATA.elegant
-  const ambil = (kata) => kata[Math.floor(acak() * kata.length) % kata.length]
+/** Warna dengan kepekatan sangat rendah lebih tepat disebut abu-abu. */
+function namaKeluargaWarna(hue, kroma) {
+  if (kroma < 0.02) return 'Abu'
+  if (kroma < 0.04) return 'Abu berpendar'
 
-  const depan = ambil(daftar.depan)
-  let belakang = ambil(daftar.belakang)
+  const cocok = KELUARGA_WARNA.find((item) => hue >= item.bawah && hue < item.batas)
+  return cocok ? cocok.nama : 'Merah'
+}
 
-  // Dua kata kembar seperti "Neon Neon" terbaca seperti salah ketik.
-  if (belakang === depan) {
-    const lain = daftar.belakang.filter((kata) => kata !== depan)
-    belakang = lain[Math.floor(acak() * lain.length) % lain.length]
-  }
-
-  return `${depan} ${belakang}`
+/**
+ * Nama palet dari warna dasar dan tema.
+ * `acak` dipakai untuk memilih kata sifat, sisanya ditentukan oleh warna.
+ */
+export function buatNama(tema, acak, { hue, kroma }) {
+  const daftar = SIFAT_TEMA[tema] ?? SIFAT_TEMA.elegant
+  const sifat = daftar[Math.floor(acak() * daftar.length) % daftar.length]
+  return `${namaKeluargaWarna(hue, kroma)} ${sifat}`
 }

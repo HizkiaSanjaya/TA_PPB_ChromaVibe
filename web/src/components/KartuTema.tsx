@@ -119,20 +119,15 @@ export function KartuTema({ tema, warna }: Props) {
         }
       case 'energetic':
         return {
-          sudut: 'rounded-full',
-          huruf: 'font-extrabold uppercase italic tracking-tight',
+          sudut: 'rounded-md',
+          huruf: 'font-extrabold uppercase tracking-tight',
           garis: `2px solid ${warna.base}`,
           aksen: (
             <span
-              className="mt-1.5 inline-block rounded-full px-2 py-0.5 text-[8px] font-bold uppercase"
-              style={{
-                backgroundColor: warna.base,
-                color: teksDiAtas(warna.base),
-              }}
+              className="mt-1.5 block h-1.5 w-12 rounded-sm"
+              style={{ backgroundColor: warna.accent }}
               aria-hidden="true"
-            >
-              gaskeun
-            </span>
+            />
           ),
         }
       case 'pastel':

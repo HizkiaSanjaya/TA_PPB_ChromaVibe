@@ -4,7 +4,7 @@
     "slug": "y2k-1",
     "tema": "y2k",
     "tema_nama": "Y2K",
-    "nama": "Neon Kilau",
+    "nama": "Merah Pop",
     "harmoni": "triadik",
     "harmoni_nama": "Triadik",
     "warna": [
@@ -37,9 +37,9 @@
       },
       {
         "peran": "accent",
-        "hex": "#749400",
+        "hex": "#91B800",
         "oklch": [
-          0.618,
+          0.728,
           0.3,
           123.5
         ]
@@ -96,23 +96,23 @@
         "lolos": true
       },
       {
-        "depan": "#749400",
+        "depan": "#91B800",
         "belakang": "#1B0209",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 5.64,
+        "rasio": 8.55,
         "ambang": 3,
-        "nilai": "AA",
+        "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#749400",
+        "depan": "#91B800",
         "belakang": "#310613",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 5.13,
+        "rasio": 7.77,
         "ambang": 3,
-        "nilai": "AA",
+        "nilai": "AAA",
         "lolos": true
       }
     ],
@@ -128,15 +128,15 @@
     "slug": "y2k-2",
     "tema": "y2k",
     "tema_nama": "Y2K",
-    "nama": "Pixel Malam",
+    "nama": "Biru langit Kilau",
     "harmoni": "komplementer",
     "harmoni_nama": "Komplementer",
     "warna": [
       {
         "peran": "background",
-        "hex": "#001618",
+        "hex": "#00171A",
         "oklch": [
-          0.182,
+          0.187,
           0.05,
           204.5
         ]
@@ -145,25 +145,25 @@
         "peran": "surface",
         "hex": "#002528",
         "oklch": [
-          0.242,
+          0.24,
           0.07,
           203.3
         ]
       },
       {
         "peran": "base",
-        "hex": "#46F0FF",
+        "hex": "#16EEFF",
         "oklch": [
-          0.876,
+          0.866,
           0.146,
           204.1
         ]
       },
       {
         "peran": "accent",
-        "hex": "#EB6D5B",
+        "hex": "#FF8F7E",
         "oklch": [
-          0.682,
+          0.767,
           0.16,
           30.1
         ]
@@ -181,10 +181,10 @@
     "pasangan_kontras": [
       {
         "depan": "#F1F6F7",
-        "belakang": "#001618",
+        "belakang": "#00171A",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 17.08,
+        "rasio": 16.94,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
@@ -200,43 +200,43 @@
         "lolos": true
       },
       {
-        "depan": "#46F0FF",
-        "belakang": "#001618",
+        "depan": "#16EEFF",
+        "belakang": "#00171A",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 13.45,
+        "rasio": 12.93,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#46F0FF",
+        "depan": "#16EEFF",
         "belakang": "#002528",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 11.71,
+        "rasio": 11.36,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#EB6D5B",
-        "belakang": "#001618",
+        "depan": "#FF8F7E",
+        "belakang": "#00171A",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 6.09,
+        "rasio": 8.34,
         "ambang": 3,
-        "nilai": "AA",
+        "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#EB6D5B",
+        "depan": "#FF8F7E",
         "belakang": "#002528",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 5.3,
+        "rasio": 7.32,
         "ambang": 3,
-        "nilai": "AA",
+        "nilai": "AAA",
         "lolos": true
       }
     ],
@@ -252,24 +252,24 @@
     "slug": "y2k-3",
     "tema": "y2k",
     "tema_nama": "Y2K",
-    "nama": "Krom Malam",
+    "nama": "Hijau Metalik",
     "harmoni": "analog",
     "harmoni_nama": "Analog",
     "warna": [
       {
         "peran": "background",
-        "hex": "#0F1E05",
+        "hex": "#051200",
         "oklch": [
-          0.214,
+          0.164,
           0.05,
           134.3
         ]
       },
       {
         "peran": "surface",
-        "hex": "#182E06",
+        "hex": "#0E2200",
         "oklch": [
-          0.274,
+          0.224,
           0.07,
           134.2
         ]
@@ -285,9 +285,9 @@
       },
       {
         "peran": "accent",
-        "hex": "#00C98D",
+        "hex": "#00DF9D",
         "oklch": [
-          0.739,
+          0.799,
           0.283,
           163
         ]
@@ -305,69 +305,69 @@
     "pasangan_kontras": [
       {
         "depan": "#F3F6F2",
-        "belakang": "#0F1E05",
+        "belakang": "#051200",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 15.95,
+        "rasio": 17.64,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#F3F6F2",
-        "belakang": "#182E06",
+        "belakang": "#0E2200",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 13.46,
+        "rasio": 15.45,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#D1FFB4",
-        "belakang": "#0F1E05",
+        "belakang": "#051200",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 15.46,
+        "rasio": 17.09,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#D1FFB4",
-        "belakang": "#182E06",
+        "belakang": "#0E2200",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 13.04,
+        "rasio": 14.97,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#00C98D",
-        "belakang": "#0F1E05",
+        "depan": "#00DF9D",
+        "belakang": "#051200",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 8.06,
+        "rasio": 11.02,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#00C98D",
-        "belakang": "#182E06",
+        "depan": "#00DF9D",
+        "belakang": "#0E2200",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 6.8,
+        "rasio": 9.65,
         "ambang": 3,
-        "nilai": "AA",
+        "nilai": "AAA",
         "lolos": true
       }
     ],
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 13.46,
+      "rasio_teks_terendah": 15.45,
       "skor_aksesibilitas": 100
     }
   },
@@ -376,122 +376,122 @@
     "slug": "y2k-4",
     "tema": "y2k",
     "tema_nama": "Y2K",
-    "nama": "Neon Malam",
+    "nama": "Biru Metalik",
     "harmoni": "tetradik",
     "harmoni_nama": "Tetradik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#201C37",
+        "hex": "#15122C",
         "oklch": [
-          0.246,
+          0.201,
           0.05,
-          289
+          286.1
         ]
       },
       {
         "peran": "surface",
-        "hex": "#2E2950",
+        "hex": "#1E183E",
         "oklch": [
-          0.306,
+          0.24,
           0.07,
-          287.2
+          287.3
         ]
       },
       {
         "peran": "base",
-        "hex": "#B2A3FF",
+        "hex": "#A1A0FF",
         "oklch": [
-          0.763,
+          0.745,
           0.23,
-          290.5
+          283.3
         ]
       },
       {
         "peran": "accent",
-        "hex": "#FF9794",
+        "hex": "#FFB3B4",
         "oklch": [
-          0.784,
-          0.295,
-          21.9
+          0.839,
+          0.245,
+          18.4
         ]
       },
       {
         "peran": "text",
-        "hex": "#F5F4F9",
+        "hex": "#F4F5F9",
         "oklch": [
           0.97,
           0.006,
-          290.5
+          283.3
         ]
       }
     ],
     "pasangan_kontras": [
       {
-        "depan": "#F5F4F9",
-        "belakang": "#201C37",
+        "depan": "#F4F5F9",
+        "belakang": "#15122C",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 14.96,
+        "rasio": 16.69,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#F5F4F9",
-        "belakang": "#2E2950",
+        "depan": "#F4F5F9",
+        "belakang": "#1E183E",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 12.39,
+        "rasio": 15.35,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#B2A3FF",
-        "belakang": "#201C37",
+        "depan": "#A1A0FF",
+        "belakang": "#15122C",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 7.47,
+        "rasio": 7.78,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#B2A3FF",
-        "belakang": "#2E2950",
+        "depan": "#A1A0FF",
+        "belakang": "#1E183E",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 6.18,
+        "rasio": 7.16,
         "ambang": 4.5,
-        "nilai": "AA",
+        "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#FF9794",
-        "belakang": "#201C37",
+        "depan": "#FFB3B4",
+        "belakang": "#15122C",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 7.88,
+        "rasio": 10.7,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#FF9794",
-        "belakang": "#2E2950",
+        "depan": "#FFB3B4",
+        "belakang": "#1E183E",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 6.52,
+        "rasio": 9.84,
         "ambang": 3,
-        "nilai": "AA",
+        "nilai": "AAA",
         "lolos": true
       }
     ],
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 12.39,
+      "rasio_teks_terendah": 15.35,
       "skor_aksesibilitas": 100
     }
   },
@@ -500,24 +500,24 @@
     "slug": "y2k-5",
     "tema": "y2k",
     "tema_nama": "Y2K",
-    "nama": "Disket Metalik",
+    "nama": "Kuning Retro",
     "harmoni": "split",
     "harmoni_nama": "Split Komplementer",
     "warna": [
       {
         "peran": "background",
-        "hex": "#2F2807",
+        "hex": "#161100",
         "oklch": [
-          0.278,
+          0.178,
           0.05,
           97.6
         ]
       },
       {
         "peran": "surface",
-        "hex": "#423700",
+        "hex": "#261E00",
         "oklch": [
-          0.338,
+          0.238,
           0.07,
           96.3
         ]
@@ -533,9 +533,9 @@
       },
       {
         "peran": "accent",
-        "hex": "#A1D0FF",
+        "hex": "#A7D3FF",
         "oklch": [
-          0.841,
+          0.851,
           0.223,
           248.8
         ]
@@ -553,60 +553,60 @@
     "pasangan_kontras": [
       {
         "depan": "#F6F5F1",
-        "belakang": "#2F2807",
+        "belakang": "#161100",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 13.49,
+        "rasio": 17.28,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#F6F5F1",
-        "belakang": "#423700",
+        "belakang": "#261E00",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 10.83,
+        "rasio": 15.18,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#FFF19B",
-        "belakang": "#2F2807",
+        "belakang": "#161100",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 12.83,
+        "rasio": 16.43,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#FFF19B",
-        "belakang": "#423700",
+        "belakang": "#261E00",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 10.3,
+        "rasio": 14.44,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#A1D0FF",
-        "belakang": "#2F2807",
+        "depan": "#A7D3FF",
+        "belakang": "#161100",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 9.09,
+        "rasio": 12.03,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#A1D0FF",
-        "belakang": "#423700",
+        "depan": "#A7D3FF",
+        "belakang": "#261E00",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 7.3,
+        "rasio": 10.57,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -615,7 +615,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 10.83,
+      "rasio_teks_terendah": 15.18,
       "skor_aksesibilitas": 100
     }
   },
@@ -624,42 +624,42 @@
     "slug": "y2k-6",
     "tema": "y2k",
     "tema_nama": "Y2K",
-    "nama": "Krom Pop",
+    "nama": "Oranye Metalik",
     "harmoni": "monokrom",
     "harmoni_nama": "Monokromatik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#46271D",
+        "hex": "#1D0400",
         "oklch": [
-          0.31,
+          0.155,
           0.05,
           39.2
         ]
       },
       {
         "peran": "surface",
-        "hex": "#5E3220",
+        "hex": "#310C00",
         "oklch": [
-          0.37,
+          0.215,
           0.07,
           42.6
         ]
       },
       {
         "peran": "base",
-        "hex": "#FFE7DE",
+        "hex": "#FFD1BF",
         "oklch": [
-          0.946,
+          0.896,
           0.2,
           42.2
         ]
       },
       {
         "peran": "accent",
-        "hex": "#EF5900",
+        "hex": "#D04C00",
         "oklch": [
-          0.654,
+          0.589,
           0.247,
           41.6
         ]
@@ -677,60 +677,60 @@
     "pasangan_kontras": [
       {
         "depan": "#F9F4F2",
-        "belakang": "#46271D",
+        "belakang": "#1D0400",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 12.27,
+        "rasio": 18,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#F9F4F2",
-        "belakang": "#5E3220",
+        "belakang": "#310C00",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 9.86,
+        "rasio": 16.27,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#FFE7DE",
-        "belakang": "#46271D",
+        "depan": "#FFD1BF",
+        "belakang": "#1D0400",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 11.31,
+        "rasio": 14.14,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#FFE7DE",
-        "belakang": "#5E3220",
+        "depan": "#FFD1BF",
+        "belakang": "#310C00",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 9.08,
+        "rasio": 12.78,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#EF5900",
-        "belakang": "#46271D",
+        "depan": "#D04C00",
+        "belakang": "#1D0400",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.89,
+        "rasio": 4.41,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#EF5900",
-        "belakang": "#5E3220",
+        "depan": "#D04C00",
+        "belakang": "#310C00",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.12,
+        "rasio": 3.99,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -739,7 +739,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 9.86,
+      "rasio_teks_terendah": 16.27,
       "skor_aksesibilitas": 100
     }
   },
@@ -748,7 +748,7 @@
     "slug": "elegant-1",
     "tema": "elegant",
     "tema_nama": "Elegant",
-    "nama": "Sutra Anggun",
+    "nama": "Kuning Anggun",
     "harmoni": "analog",
     "harmoni_nama": "Analog",
     "warna": [
@@ -781,9 +781,9 @@
       },
       {
         "peran": "accent",
-        "hex": "#232E00",
+        "hex": "#3E4B1D",
         "oklch": [
-          0.28,
+          0.39,
           0.07,
           122.4
         ]
@@ -840,21 +840,21 @@
         "lolos": true
       },
       {
-        "depan": "#232E00",
+        "depan": "#3E4B1D",
         "belakang": "#F6F3EC",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 12.96,
+        "rasio": 8.5,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#232E00",
+        "depan": "#3E4B1D",
         "belakang": "#FFFAEF",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 13.8,
+        "rasio": 9.05,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -872,42 +872,42 @@
     "slug": "elegant-2",
     "tema": "elegant",
     "tema_nama": "Elegant",
-    "nama": "Lilin Teduh",
+    "nama": "Abu berpendar Sunyi",
     "harmoni": "monokrom",
     "harmoni_nama": "Monokromatik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#EDE8E2",
+        "hex": "#E9E3DD",
         "oklch": [
-          0.933,
+          0.919,
           0.01,
           68.2
         ]
       },
       {
         "peran": "surface",
-        "hex": "#F7EEE5",
+        "hex": "#F2E9E0",
         "oklch": [
-          0.953,
+          0.939,
           0.015,
           65.8
         ]
       },
       {
         "peran": "base",
-        "hex": "#63574C",
+        "hex": "#66594E",
         "oklch": [
-          0.464,
+          0.474,
           0.023,
           64.5
         ]
       },
       {
         "peran": "accent",
-        "hex": "#150C03",
+        "hex": "#180E05",
         "oklch": [
-          0.164,
+          0.174,
           0.025,
           66.9
         ]
@@ -925,60 +925,60 @@
     "pasangan_kontras": [
       {
         "depan": "#211F1C",
-        "belakang": "#EDE8E2",
+        "belakang": "#E9E3DD",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 13.5,
+        "rasio": 12.91,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#211F1C",
-        "belakang": "#F7EEE5",
+        "belakang": "#F2E9E0",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 14.34,
+        "rasio": 13.71,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#63574C",
-        "belakang": "#EDE8E2",
+        "depan": "#66594E",
+        "belakang": "#E9E3DD",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 5.75,
+        "rasio": 5.31,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#63574C",
-        "belakang": "#F7EEE5",
+        "depan": "#66594E",
+        "belakang": "#F2E9E0",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 6.11,
+        "rasio": 5.64,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#150C03",
-        "belakang": "#EDE8E2",
+        "depan": "#180E05",
+        "belakang": "#E9E3DD",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 15.88,
+        "rasio": 14.94,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#150C03",
-        "belakang": "#F7EEE5",
+        "depan": "#180E05",
+        "belakang": "#F2E9E0",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 16.87,
+        "rasio": 15.86,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -987,7 +987,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 13.5,
+      "rasio_teks_terendah": 12.91,
       "skor_aksesibilitas": 100
     }
   },
@@ -996,42 +996,42 @@
     "slug": "elegant-3",
     "tema": "elegant",
     "tema_nama": "Elegant",
-    "nama": "Krem Sunyi",
+    "nama": "Biru langit Lembut",
     "harmoni": "split",
     "harmoni_nama": "Split Komplementer",
     "warna": [
       {
         "peran": "background",
-        "hex": "#D8DFE4",
+        "hex": "#E8EFF4",
         "oklch": [
-          0.901,
+          0.947,
           0.01,
           237.7
         ]
       },
       {
         "peran": "surface",
-        "hex": "#DBE7ED",
+        "hex": "#EBF6FD",
         "oklch": [
-          0.921,
+          0.967,
           0.015,
           231.4
         ]
       },
       {
         "peran": "base",
-        "hex": "#122C3A",
+        "hex": "#17313F",
         "oklch": [
-          0.278,
+          0.298,
           0.041,
           234.7
         ]
       },
       {
         "peran": "accent",
-        "hex": "#5E3E3C",
+        "hex": "#6F4E4C",
         "oklch": [
-          0.398,
+          0.458,
           0.046,
           22.7
         ]
@@ -1049,69 +1049,69 @@
     "pasangan_kontras": [
       {
         "depan": "#1D2022",
-        "belakang": "#D8DFE4",
+        "belakang": "#E8EFF4",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 12.17,
+        "rasio": 14.11,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#1D2022",
-        "belakang": "#DBE7ED",
+        "belakang": "#EBF6FD",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 13,
+        "rasio": 14.93,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#122C3A",
-        "belakang": "#D8DFE4",
+        "depan": "#17313F",
+        "belakang": "#E8EFF4",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 10.78,
+        "rasio": 11.69,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#122C3A",
-        "belakang": "#DBE7ED",
+        "depan": "#17313F",
+        "belakang": "#EBF6FD",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 11.52,
+        "rasio": 12.36,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#5E3E3C",
-        "belakang": "#D8DFE4",
+        "depan": "#6F4E4C",
+        "belakang": "#E8EFF4",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 6.99,
+        "rasio": 6.3,
         "ambang": 3,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#5E3E3C",
-        "belakang": "#DBE7ED",
+        "depan": "#6F4E4C",
+        "belakang": "#EBF6FD",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 7.47,
+        "rasio": 6.67,
         "ambang": 3,
-        "nilai": "AAA",
+        "nilai": "AA",
         "lolos": true
       }
     ],
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 12.17,
+      "rasio_teks_terendah": 14.11,
       "skor_aksesibilitas": 100
     }
   },
@@ -1120,42 +1120,42 @@
     "slug": "elegant-4",
     "tema": "elegant",
     "tema_nama": "Elegant",
-    "nama": "Sutra Lembut",
+    "nama": "Ungu Anggun",
     "harmoni": "komplementer",
     "harmoni_nama": "Komplementer",
     "warna": [
       {
         "peran": "background",
-        "hex": "#D4D3DA",
+        "hex": "#DEDDE4",
         "oklch": [
-          0.869,
+          0.901,
           0.01,
           294.8
         ]
       },
       {
         "peran": "surface",
-        "hex": "#DBD9E4",
+        "hex": "#E5E3EE",
         "oklch": [
-          0.889,
+          0.921,
           0.015,
           293.7
         ]
       },
       {
         "peran": "base",
-        "hex": "#574B76",
+        "hex": "#5F547F",
         "oklch": [
-          0.444,
+          0.474,
           0.07,
           295.7
         ]
       },
       {
         "peran": "accent",
-        "hex": "#515727",
+        "hex": "#5A6131",
         "oklch": [
-          0.439,
+          0.474,
           0.07,
           115.5
         ]
@@ -1173,60 +1173,60 @@
     "pasangan_kontras": [
       {
         "depan": "#1F1F22",
-        "belakang": "#D4D3DA",
+        "belakang": "#DEDDE4",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 11.06,
+        "rasio": 12.19,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#1F1F22",
-        "belakang": "#DBD9E4",
+        "belakang": "#E5E3EE",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 11.79,
+        "rasio": 12.96,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#574B76",
-        "belakang": "#D4D3DA",
+        "depan": "#5F547F",
+        "belakang": "#DEDDE4",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 5.29,
+        "rasio": 5.09,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#574B76",
-        "belakang": "#DBD9E4",
+        "depan": "#5F547F",
+        "belakang": "#E5E3EE",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 5.63,
+        "rasio": 5.41,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#515727",
-        "belakang": "#D4D3DA",
+        "depan": "#5A6131",
+        "belakang": "#DEDDE4",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 5.15,
+        "rasio": 4.88,
         "ambang": 3,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#515727",
-        "belakang": "#DBD9E4",
+        "depan": "#5A6131",
+        "belakang": "#E5E3EE",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 5.49,
+        "rasio": 5.19,
         "ambang": 3,
         "nilai": "AA",
         "lolos": true
@@ -1235,7 +1235,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 11.06,
+      "rasio_teks_terendah": 12.19,
       "skor_aksesibilitas": 100
     }
   },
@@ -1244,44 +1244,44 @@
     "slug": "elegant-5",
     "tema": "elegant",
     "tema_nama": "Elegant",
-    "nama": "Sutra Klasik",
+    "nama": "Merah Sunyi",
     "harmoni": "triadik",
     "harmoni_nama": "Triadik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#D0C7C5",
+        "hex": "#EEE5E3",
         "oklch": [
-          0.837,
+          0.93,
           0.01,
-          31.5
+          33.8
         ]
       },
       {
         "peran": "surface",
-        "hex": "#DACDCA",
+        "hex": "#F8EBE8",
         "oklch": [
-          0.857,
+          0.95,
           0.015,
-          32.2
+          33.9
         ]
       },
       {
         "peran": "base",
-        "hex": "#562B20",
+        "hex": "#663A2E",
         "oklch": [
-          0.344,
+          0.399,
           0.066,
-          35.4
+          35.7
         ]
       },
       {
         "peran": "accent",
-        "hex": "#3B6D52",
+        "hex": "#497454",
         "oklch": [
-          0.492,
+          0.517,
           0.07,
-          158.7
+          151.3
         ]
       },
       {
@@ -1290,76 +1290,76 @@
         "oklch": [
           0.24,
           0.006,
-          35.4
+          35.7
         ]
       }
     ],
     "pasangan_kontras": [
       {
         "depan": "#221E1D",
-        "belakang": "#D0C7C5",
+        "belakang": "#EEE5E3",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 9.96,
+        "rasio": 13.33,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#221E1D",
-        "belakang": "#DACDCA",
+        "belakang": "#F8EBE8",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 10.67,
+        "rasio": 14.19,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#562B20",
-        "belakang": "#D0C7C5",
+        "depan": "#663A2E",
+        "belakang": "#EEE5E3",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 7.18,
+        "rasio": 7.67,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#562B20",
-        "belakang": "#DACDCA",
+        "depan": "#663A2E",
+        "belakang": "#F8EBE8",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 7.7,
+        "rasio": 8.16,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#3B6D52",
-        "belakang": "#D0C7C5",
+        "depan": "#497454",
+        "belakang": "#EEE5E3",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.62,
+        "rasio": 4.34,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#3B6D52",
-        "belakang": "#DACDCA",
+        "depan": "#497454",
+        "belakang": "#F8EBE8",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.88,
+        "rasio": 4.61,
         "ambang": 3,
-        "nilai": "AA-Large",
+        "nilai": "AA",
         "lolos": true
       }
     ],
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 9.96,
+      "rasio_teks_terendah": 13.33,
       "skor_aksesibilitas": 100
     }
   },
@@ -1368,44 +1368,44 @@
     "slug": "elegant-6",
     "tema": "elegant",
     "tema_nama": "Elegant",
-    "nama": "Krem Mewah",
+    "nama": "Tosca Anggun",
     "harmoni": "analog",
     "harmoni_nama": "Analog",
     "warna": [
       {
         "peran": "background",
-        "hex": "#BAC1BD",
+        "hex": "#ECF3EF",
         "oklch": [
-          0.805,
+          0.958,
           0.01,
-          162.7
+          162.6
         ]
       },
       {
         "peran": "surface",
-        "hex": "#BEC9C2",
+        "hex": "#F0FBF4",
         "oklch": [
-          0.825,
+          0.978,
           0.015,
-          158.5
+          157.9
         ]
       },
       {
         "peran": "base",
-        "hex": "#062214",
+        "hex": "#122E21",
         "oklch": [
-          0.224,
+          0.276,
           0.043,
-          159.4
+          160.7
         ]
       },
       {
         "peran": "accent",
-        "hex": "#5A6A4D",
+        "hex": "#637757",
         "oklch": [
-          0.503,
-          0.049,
-          131.6
+          0.545,
+          0.055,
+          134
         ]
       },
       {
@@ -1414,76 +1414,76 @@
         "oklch": [
           0.24,
           0.006,
-          159.4
+          160.7
         ]
       }
     ],
     "pasangan_kontras": [
       {
         "depan": "#1D201E",
-        "belakang": "#BAC1BD",
+        "belakang": "#ECF3EF",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 8.96,
+        "rasio": 14.58,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#1D201E",
-        "belakang": "#BEC9C2",
+        "belakang": "#F0FBF4",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 9.65,
+        "rasio": 15.51,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#062214",
-        "belakang": "#BAC1BD",
+        "depan": "#122E21",
+        "belakang": "#ECF3EF",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 9.19,
+        "rasio": 12.95,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#062214",
-        "belakang": "#BEC9C2",
+        "depan": "#122E21",
+        "belakang": "#F0FBF4",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 9.88,
+        "rasio": 13.77,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#5A6A4D",
-        "belakang": "#BAC1BD",
+        "depan": "#637757",
+        "belakang": "#ECF3EF",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.18,
+        "rasio": 4.33,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#5A6A4D",
-        "belakang": "#BEC9C2",
+        "depan": "#637757",
+        "belakang": "#F0FBF4",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.42,
+        "rasio": 4.6,
         "ambang": 3,
-        "nilai": "AA-Large",
+        "nilai": "AA",
         "lolos": true
       }
     ],
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 8.96,
+      "rasio_teks_terendah": 14.58,
       "skor_aksesibilitas": 100
     }
   },
@@ -1492,7 +1492,7 @@
     "slug": "classic-1",
     "tema": "classic",
     "tema_nama": "Classic",
-    "nama": "Botol Klasik",
+    "nama": "Biru Tegas",
     "harmoni": "triadik",
     "harmoni_nama": "Triadik",
     "warna": [
@@ -1507,9 +1507,9 @@
       },
       {
         "peran": "surface",
-        "hex": "#F7FAFF",
+        "hex": "#F1F7FF",
         "oklch": [
-          0.985,
+          0.975,
           0.053,
           254.5
         ]
@@ -1525,9 +1525,9 @@
       },
       {
         "peran": "accent",
-        "hex": "#460C13",
+        "hex": "#672B2D",
         "oklch": [
-          0.263,
+          0.373,
           0.086,
           19.8
         ]
@@ -1555,10 +1555,10 @@
       },
       {
         "depan": "#141619",
-        "belakang": "#F7FAFF",
+        "belakang": "#F1F7FF",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 17.33,
+        "rasio": 16.82,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
@@ -1575,30 +1575,30 @@
       },
       {
         "depan": "#1B3A5E",
-        "belakang": "#F7FAFF",
+        "belakang": "#F1F7FF",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 11.07,
+        "rasio": 10.75,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#460C13",
+        "depan": "#672B2D",
         "belakang": "#E6F2FF",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 14,
+        "rasio": 9.44,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#460C13",
-        "belakang": "#F7FAFF",
+        "depan": "#672B2D",
+        "belakang": "#F1F7FF",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 15.18,
+        "rasio": 9.94,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -1616,42 +1616,42 @@
     "slug": "classic-2",
     "tema": "classic",
     "tema_nama": "Classic",
-    "nama": "Dermaga Tua",
+    "nama": "Merah Formal",
     "harmoni": "komplementer",
     "harmoni_nama": "Komplementer",
     "warna": [
       {
         "peran": "background",
-        "hex": "#FCDDDA",
+        "hex": "#F8D9D5",
         "oklch": [
-          0.923,
+          0.909,
           0.035,
           25.9
         ]
       },
       {
         "peran": "surface",
-        "hex": "#FFEAE7",
+        "hex": "#FFDFDB",
         "oklch": [
-          0.953,
+          0.929,
           0.053,
           26
         ]
       },
       {
         "peran": "base",
-        "hex": "#6B1D1E",
+        "hex": "#6E2021",
         "oklch": [
-          0.359,
+          0.369,
           0.11,
           24.2
         ]
       },
       {
         "peran": "accent",
-        "hex": "#003438",
+        "hex": "#004C52",
         "oklch": [
-          0.296,
+          0.381,
           0.119,
           203.4
         ]
@@ -1669,60 +1669,60 @@
     "pasangan_kontras": [
       {
         "depan": "#191515",
-        "belakang": "#FCDDDA",
+        "belakang": "#F8D9D5",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 14.23,
+        "rasio": 13.69,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#191515",
-        "belakang": "#FFEAE7",
+        "belakang": "#FFDFDB",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 15.68,
+        "rasio": 14.52,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#6B1D1E",
-        "belakang": "#FCDDDA",
+        "depan": "#6E2021",
+        "belakang": "#F8D9D5",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 9.06,
+        "rasio": 8.39,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#6B1D1E",
-        "belakang": "#FFEAE7",
+        "depan": "#6E2021",
+        "belakang": "#FFDFDB",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 9.99,
+        "rasio": 8.9,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#003438",
-        "belakang": "#FCDDDA",
+        "depan": "#004C52",
+        "belakang": "#F8D9D5",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 10.65,
+        "rasio": 7.37,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#003438",
-        "belakang": "#FFEAE7",
+        "depan": "#004C52",
+        "belakang": "#FFDFDB",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 11.74,
+        "rasio": 7.81,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -1731,7 +1731,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 14.23,
+      "rasio_teks_terendah": 13.69,
       "skor_aksesibilitas": 100
     }
   },
@@ -1740,42 +1740,42 @@
     "slug": "classic-3",
     "tema": "classic",
     "tema_nama": "Classic",
-    "nama": "Katedral Tua",
+    "nama": "Tosca Tenang",
     "harmoni": "analog",
     "harmoni_nama": "Analog",
     "warna": [
       {
         "peran": "background",
-        "hex": "#C8E3D3",
+        "hex": "#D7F2E2",
         "oklch": [
-          0.891,
+          0.937,
           0.035,
           159.2
         ]
       },
       {
         "peran": "surface",
-        "hex": "#C7F0D9",
+        "hex": "#D3FDE5",
         "oklch": [
-          0.921,
+          0.957,
           0.053,
           160.6
         ]
       },
       {
         "peran": "base",
-        "hex": "#012918",
+        "hex": "#052E1D",
         "oklch": [
-          0.247,
+          0.267,
           0.055,
           160.7
         ]
       },
       {
         "peran": "accent",
-        "hex": "#004441",
+        "hex": "#035652",
         "oklch": [
-          0.349,
+          0.409,
           0.07,
           188.8
         ]
@@ -1793,60 +1793,60 @@
     "pasangan_kontras": [
       {
         "depan": "#141715",
-        "belakang": "#C8E3D3",
+        "belakang": "#D7F2E2",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 13.23,
+        "rasio": 15.21,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#141715",
-        "belakang": "#C7F0D9",
+        "belakang": "#D3FDE5",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 14.52,
+        "rasio": 16.29,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#012918",
-        "belakang": "#C8E3D3",
+        "depan": "#052E1D",
+        "belakang": "#D7F2E2",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 11.55,
+        "rasio": 12.5,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#012918",
-        "belakang": "#C7F0D9",
+        "depan": "#052E1D",
+        "belakang": "#D3FDE5",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 12.69,
+        "rasio": 13.39,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#004441",
-        "belakang": "#C8E3D3",
+        "depan": "#035652",
+        "belakang": "#D7F2E2",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 8.08,
+        "rasio": 7.2,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#004441",
-        "belakang": "#C7F0D9",
+        "depan": "#035652",
+        "belakang": "#D3FDE5",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 8.88,
+        "rasio": 7.71,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -1855,7 +1855,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 13.23,
+      "rasio_teks_terendah": 15.21,
       "skor_aksesibilitas": 100
     }
   },
@@ -1864,42 +1864,42 @@
     "slug": "classic-4",
     "tema": "classic",
     "tema_nama": "Classic",
-    "nama": "Katedral Agung",
+    "nama": "Ungu Tenang",
     "harmoni": "split",
     "harmoni_nama": "Split Komplementer",
     "warna": [
       {
         "peran": "background",
-        "hex": "#D1CDE6",
+        "hex": "#DCD7F1",
         "oklch": [
-          0.859,
+          0.891,
           0.035,
           293.5
         ]
       },
       {
         "peran": "surface",
-        "hex": "#DAD5FB",
+        "hex": "#E1DDFF",
         "oklch": [
-          0.889,
+          0.911,
           0.053,
           291.7
         ]
       },
       {
         "peran": "base",
-        "hex": "#39295F",
+        "hex": "#413167",
         "oklch": [
-          0.33,
+          0.36,
           0.091,
           294.9
         ]
       },
       {
         "peran": "accent",
-        "hex": "#255823",
+        "hex": "#2F622D",
         "oklch": [
-          0.413,
+          0.448,
           0.1,
           142.9
         ]
@@ -1917,60 +1917,60 @@
     "pasangan_kontras": [
       {
         "depan": "#161619",
-        "belakang": "#D1CDE6",
+        "belakang": "#DCD7F1",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 11.68,
+        "rasio": 12.93,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#161619",
-        "belakang": "#DAD5FB",
+        "belakang": "#E1DDFF",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 12.81,
+        "rasio": 13.75,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#39295F",
-        "belakang": "#D1CDE6",
+        "depan": "#413167",
+        "belakang": "#DCD7F1",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 8.2,
+        "rasio": 8.08,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#39295F",
-        "belakang": "#DAD5FB",
+        "depan": "#413167",
+        "belakang": "#E1DDFF",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 8.99,
+        "rasio": 8.6,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#255823",
-        "belakang": "#D1CDE6",
+        "depan": "#2F622D",
+        "belakang": "#DCD7F1",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 5.44,
+        "rasio": 5.17,
         "ambang": 3,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#255823",
-        "belakang": "#DAD5FB",
+        "depan": "#2F622D",
+        "belakang": "#E1DDFF",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 5.96,
+        "rasio": 5.5,
         "ambang": 3,
         "nilai": "AA",
         "lolos": true
@@ -1979,7 +1979,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 11.68,
+      "rasio_teks_terendah": 12.93,
       "skor_aksesibilitas": 100
     }
   },
@@ -1988,42 +1988,42 @@
     "slug": "classic-5",
     "tema": "classic",
     "tema_nama": "Classic",
-    "nama": "Marun Klasik",
+    "nama": "Kuning Agung",
     "harmoni": "monokrom",
     "harmoni_nama": "Monokromatik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#D2C5AD",
+        "hex": "#F0E3CB",
         "oklch": [
-          0.827,
+          0.92,
           0.035,
           82.3
         ]
       },
       {
         "peran": "surface",
-        "hex": "#E0CEAA",
+        "hex": "#FCE9C4",
         "oklch": [
-          0.857,
+          0.94,
           0.053,
           84
         ]
       },
       {
         "peran": "base",
-        "hex": "#462F00",
+        "hex": "#533900",
         "oklch": [
-          0.325,
+          0.365,
           0.088,
           80.4
         ]
       },
       {
         "peran": "accent",
-        "hex": "#010000",
+        "hex": "#020100",
         "oklch": [
-          0.05,
+          0.065,
           0.105,
           79.4
         ]
@@ -2041,60 +2041,60 @@
     "pasangan_kontras": [
       {
         "depan": "#171613",
-        "belakang": "#D2C5AD",
+        "belakang": "#F0E3CB",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 10.62,
+        "rasio": 14.26,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#171613",
-        "belakang": "#E0CEAA",
+        "belakang": "#FCE9C4",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 11.7,
+        "rasio": 15.16,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#462F00",
-        "belakang": "#D2C5AD",
+        "depan": "#533900",
+        "belakang": "#F0E3CB",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 7.4,
+        "rasio": 8.48,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#462F00",
-        "belakang": "#E0CEAA",
+        "depan": "#533900",
+        "belakang": "#FCE9C4",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 8.15,
+        "rasio": 9.01,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#010000",
-        "belakang": "#D2C5AD",
+        "depan": "#020100",
+        "belakang": "#F0E3CB",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 12.31,
+        "rasio": 16.44,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#010000",
-        "belakang": "#E0CEAA",
+        "depan": "#020100",
+        "belakang": "#FCE9C4",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 13.56,
+        "rasio": 17.47,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -2103,7 +2103,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 10.62,
+      "rasio_teks_terendah": 14.26,
       "skor_aksesibilitas": 100
     }
   },
@@ -2112,42 +2112,42 @@
     "slug": "classic-6",
     "tema": "classic",
     "tema_nama": "Classic",
-    "nama": "Katedral Akademik",
+    "nama": "Biru Tenang",
     "harmoni": "tetradik",
     "harmoni_nama": "Tetradik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#AABFD2",
+        "hex": "#E0F0FF",
         "oklch": [
-          0.795,
+          0.948,
           0.035,
           244.5
         ]
       },
       {
         "peran": "surface",
-        "hex": "#A9CAE6",
+        "hex": "#ECF6FF",
         "oklch": [
-          0.825,
+          0.968,
           0.053,
           243.8
         ]
       },
       {
         "peran": "base",
-        "hex": "#00101F",
+        "hex": "#001B30",
         "oklch": [
-          0.166,
+          0.216,
           0.071,
           244.3
         ]
       },
       {
         "peran": "accent",
-        "hex": "#317151",
+        "hex": "#397858",
         "oklch": [
-          0.497,
+          0.522,
           0.084,
           159.5
         ]
@@ -2165,69 +2165,69 @@
     "pasangan_kontras": [
       {
         "depan": "#141619",
-        "belakang": "#AABFD2",
+        "belakang": "#E0F0FF",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 9.57,
+        "rasio": 15.6,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#141619",
-        "belakang": "#A9CAE6",
+        "belakang": "#ECF6FF",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 10.6,
+        "rasio": 16.57,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#00101F",
-        "belakang": "#AABFD2",
+        "depan": "#001B30",
+        "belakang": "#E0F0FF",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 10.14,
+        "rasio": 15.07,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#00101F",
-        "belakang": "#A9CAE6",
+        "depan": "#001B30",
+        "belakang": "#ECF6FF",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 11.22,
+        "rasio": 16,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#317151",
-        "belakang": "#AABFD2",
+        "depan": "#397858",
+        "belakang": "#E0F0FF",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.07,
+        "rasio": 4.52,
         "ambang": 3,
-        "nilai": "AA-Large",
+        "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#317151",
-        "belakang": "#A9CAE6",
+        "depan": "#397858",
+        "belakang": "#ECF6FF",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.4,
+        "rasio": 4.8,
         "ambang": 3,
-        "nilai": "AA-Large",
+        "nilai": "AA",
         "lolos": true
       }
     ],
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 9.57,
+      "rasio_teks_terendah": 15.6,
       "skor_aksesibilitas": 100
     }
   },
@@ -2236,7 +2236,7 @@
     "slug": "energetic-1",
     "tema": "energetic",
     "tema_nama": "Energetic",
-    "nama": "Kilat Cepat",
+    "nama": "Oranye Ceria",
     "harmoni": "triadik",
     "harmoni_nama": "Triadik",
     "warna": [
@@ -2269,9 +2269,9 @@
       },
       {
         "peran": "accent",
-        "hex": "#008B67",
+        "hex": "#009C74",
         "oklch": [
-          0.564,
+          0.614,
           0.218,
           166.9
         ]
@@ -2328,21 +2328,21 @@
         "lolos": true
       },
       {
-        "depan": "#008B67",
+        "depan": "#009C74",
         "belakang": "#FFF4EF",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.98,
+        "rasio": 3.24,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#008B67",
+        "depan": "#009C74",
         "belakang": "#FFFDFC",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 4.24,
+        "rasio": 3.45,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -2360,42 +2360,42 @@
     "slug": "energetic-2",
     "tema": "energetic",
     "tema_nama": "Energetic",
-    "nama": "Sirine Cepat",
+    "nama": "Kuning Menyala",
     "harmoni": "analog",
     "harmoni_nama": "Analog",
     "warna": [
       {
         "peran": "background",
-        "hex": "#FBEBC7",
+        "hex": "#F6E6C2",
         "oklch": [
-          0.943,
+          0.929,
           0.05,
           86
         ]
       },
       {
         "peran": "surface",
-        "hex": "#FFF2D5",
+        "hex": "#FFECC4",
         "oklch": [
-          0.963,
+          0.949,
           0.07,
           86
         ]
       },
       {
         "peran": "base",
-        "hex": "#886600",
+        "hex": "#7D5E00",
         "oklch": [
-          0.531,
+          0.501,
           0.181,
           86.1
         ]
       },
       {
         "peran": "accent",
-        "hex": "#C26E00",
+        "hex": "#C47000",
         "oklch": [
-          0.62,
+          0.625,
           0.212,
           61.5
         ]
@@ -2413,60 +2413,60 @@
     "pasangan_kontras": [
       {
         "depan": "#110F0C",
-        "belakang": "#FBEBC7",
+        "belakang": "#F6E6C2",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 16.23,
+        "rasio": 15.5,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#110F0C",
-        "belakang": "#FFF2D5",
+        "belakang": "#FFECC4",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 17.23,
+        "rasio": 16.44,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#886600",
-        "belakang": "#FBEBC7",
+        "depan": "#7D5E00",
+        "belakang": "#F6E6C2",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.51,
+        "rasio": 4.9,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#886600",
-        "belakang": "#FFF2D5",
+        "depan": "#7D5E00",
+        "belakang": "#FFECC4",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 4.79,
+        "rasio": 5.2,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#C26E00",
-        "belakang": "#FBEBC7",
+        "depan": "#C47000",
+        "belakang": "#F6E6C2",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.22,
+        "rasio": 3,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#C26E00",
-        "belakang": "#FFF2D5",
+        "depan": "#C47000",
+        "belakang": "#FFECC4",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.42,
+        "rasio": 3.19,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -2475,7 +2475,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 16.23,
+      "rasio_teks_terendah": 15.5,
       "skor_aksesibilitas": 100
     }
   },
@@ -2484,42 +2484,42 @@
     "slug": "energetic-3",
     "tema": "energetic",
     "tema_nama": "Energetic",
-    "nama": "Pesta Gencar",
+    "nama": "Merah Cepat",
     "harmoni": "split",
     "harmoni_nama": "Split Komplementer",
     "warna": [
       {
         "peran": "background",
-        "hex": "#FFD7D3",
+        "hex": "#FFECEA",
         "oklch": [
-          0.911,
+          0.957,
           0.05,
           24.8
         ]
       },
       {
         "peran": "surface",
-        "hex": "#FFE0DB",
+        "hex": "#FFF5F3",
         "oklch": [
-          0.931,
+          0.977,
           0.07,
           27.9
         ]
       },
       {
         "peran": "base",
-        "hex": "#C30612",
+        "hex": "#D22322",
         "oklch": [
-          0.516,
+          0.556,
           0.208,
           27.6
         ]
       },
       {
         "peran": "accent",
-        "hex": "#00907C",
+        "hex": "#009782",
         "oklch": [
-          0.584,
+          0.604,
           0.247,
           178.7
         ]
@@ -2537,60 +2537,60 @@
     "pasangan_kontras": [
       {
         "depan": "#120E0E",
-        "belakang": "#FFD7D3",
+        "belakang": "#FFECEA",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 14.53,
+        "rasio": 16.84,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#120E0E",
-        "belakang": "#FFE0DB",
+        "belakang": "#FFF5F3",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 15.47,
+        "rasio": 17.91,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#C30612",
-        "belakang": "#FFD7D3",
+        "depan": "#D22322",
+        "belakang": "#FFECEA",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.74,
+        "rasio": 4.61,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#C30612",
-        "belakang": "#FFE0DB",
+        "depan": "#D22322",
+        "belakang": "#FFF5F3",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 5.05,
+        "rasio": 4.9,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#00907C",
-        "belakang": "#FFD7D3",
+        "depan": "#009782",
+        "belakang": "#FFECEA",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.01,
+        "rasio": 3.21,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#00907C",
-        "belakang": "#FFE0DB",
+        "depan": "#009782",
+        "belakang": "#FFF5F3",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.21,
+        "rasio": 3.41,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -2599,7 +2599,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 14.53,
+      "rasio_teks_terendah": 16.84,
       "skor_aksesibilitas": 100
     }
   },
@@ -2608,42 +2608,42 @@
     "slug": "energetic-4",
     "tema": "energetic",
     "tema_nama": "Energetic",
-    "nama": "Pagi Gencar",
+    "nama": "Tosca Sorak",
     "harmoni": "komplementer",
     "harmoni_nama": "Komplementer",
     "warna": [
       {
         "peran": "background",
-        "hex": "#C0E1C7",
+        "hex": "#CAECD2",
         "oklch": [
-          0.879,
+          0.911,
           0.05,
           152.3
         ]
       },
       {
         "peran": "surface",
-        "hex": "#BBECC8",
+        "hex": "#C5F7D3",
         "oklch": [
-          0.899,
+          0.931,
           0.07,
           153.3
         ]
       },
       {
         "peran": "base",
-        "hex": "#006A30",
+        "hex": "#007335",
         "oklch": [
-          0.457,
+          0.487,
           0.192,
           150.9
         ]
       },
       {
         "peran": "accent",
-        "hex": "#CC31C2",
+        "hex": "#D137C7",
         "oklch": [
-          0.606,
+          0.621,
           0.24,
           330.9
         ]
@@ -2661,60 +2661,60 @@
     "pasangan_kontras": [
       {
         "depan": "#0E100E",
-        "belakang": "#C0E1C7",
+        "belakang": "#CAECD2",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 13.5,
+        "rasio": 14.96,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#0E100E",
-        "belakang": "#BBECC8",
+        "belakang": "#C5F7D3",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 14.51,
+        "rasio": 16.03,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#006A30",
-        "belakang": "#C0E1C7",
+        "depan": "#007335",
+        "belakang": "#CAECD2",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.78,
+        "rasio": 4.69,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#006A30",
-        "belakang": "#BBECC8",
+        "depan": "#007335",
+        "belakang": "#C5F7D3",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 5.14,
+        "rasio": 5.03,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#CC31C2",
-        "belakang": "#C0E1C7",
+        "depan": "#D137C7",
+        "belakang": "#CAECD2",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.1,
+        "rasio": 3.23,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#CC31C2",
-        "belakang": "#BBECC8",
+        "depan": "#D137C7",
+        "belakang": "#C5F7D3",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.33,
+        "rasio": 3.47,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -2723,7 +2723,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 13.5,
+      "rasio_teks_terendah": 14.96,
       "skor_aksesibilitas": 100
     }
   },
@@ -2732,44 +2732,44 @@
     "slug": "energetic-5",
     "tema": "energetic",
     "tema_nama": "Energetic",
-    "nama": "Pesta Menyala",
+    "nama": "Merah Gencar",
     "harmoni": "tetradik",
     "harmoni_nama": "Tetradik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#E6C0D4",
+        "hex": "#FFE2F0",
         "oklch": [
-          0.847,
+          0.94,
           0.05,
-          345.3
+          346.8
         ]
       },
       {
         "peran": "surface",
-        "hex": "#F8C1D9",
+        "hex": "#FFEBF5",
         "oklch": [
-          0.867,
+          0.96,
           0.07,
-          350.2
+          346.6
         ]
       },
       {
         "peran": "base",
-        "hex": "#9F006C",
+        "hex": "#AC0074",
         "oklch": [
-          0.466,
+          0.492,
           0.212,
-          348.1
+          348.6
         ]
       },
       {
         "peran": "accent",
-        "hex": "#007C59",
+        "hex": "#009878",
         "oklch": [
-          0.52,
-          0.269,
-          165.4
+          0.605,
+          0.241,
+          171.2
         ]
       },
       {
@@ -2778,67 +2778,67 @@
         "oklch": [
           0.17,
           0.006,
-          348.1
+          348.6
         ]
       }
     ],
     "pasangan_kontras": [
       {
         "depan": "#120E10",
-        "belakang": "#E6C0D4",
+        "belakang": "#FFE2F0",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 11.73,
+        "rasio": 15.87,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#120E10",
-        "belakang": "#F8C1D9",
+        "belakang": "#FFEBF5",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 12.43,
+        "rasio": 16.84,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#9F006C",
-        "belakang": "#E6C0D4",
+        "depan": "#AC0074",
+        "belakang": "#FFE2F0",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.78,
+        "rasio": 5.78,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#9F006C",
-        "belakang": "#F8C1D9",
+        "depan": "#AC0074",
+        "belakang": "#FFEBF5",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 5.06,
+        "rasio": 6.14,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#007C59",
-        "belakang": "#E6C0D4",
+        "depan": "#009878",
+        "belakang": "#FFE2F0",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.19,
+        "rasio": 3.02,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#007C59",
-        "belakang": "#F8C1D9",
+        "depan": "#009878",
+        "belakang": "#FFEBF5",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.38,
+        "rasio": 3.2,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -2847,7 +2847,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 11.73,
+      "rasio_teks_terendah": 15.87,
       "skor_aksesibilitas": 100
     }
   },
@@ -2856,42 +2856,42 @@
     "slug": "energetic-6",
     "tema": "energetic",
     "tema_nama": "Energetic",
-    "nama": "Sorak Tegang",
+    "nama": "Biru Pesta",
     "harmoni": "monokrom",
     "harmoni_nama": "Monokromatik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#A5C8DF",
+        "hex": "#EAF7FF",
         "oklch": [
-          0.815,
+          0.968,
           0.05,
           237.4
         ]
       },
       {
         "peran": "surface",
-        "hex": "#A1CFF3",
+        "hex": "#F8FCFF",
         "oklch": [
-          0.835,
+          0.988,
           0.07,
           242.4
         ]
       },
       {
         "peran": "base",
-        "hex": "#00547E",
+        "hex": "#006393",
         "oklch": [
-          0.425,
+          0.475,
           0.148,
           240
         ]
       },
       {
         "peran": "accent",
-        "hex": "#000711",
+        "hex": "#001221",
         "oklch": [
-          0.125,
+          0.175,
           0.19,
           243.3
         ]
@@ -2909,60 +2909,60 @@
     "pasangan_kontras": [
       {
         "depan": "#0D1012",
-        "belakang": "#A5C8DF",
+        "belakang": "#EAF7FF",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 10.84,
+        "rasio": 17.5,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#0D1012",
-        "belakang": "#A1CFF3",
+        "belakang": "#F8FCFF",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 11.58,
+        "rasio": 18.51,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#00547E",
-        "belakang": "#A5C8DF",
+        "depan": "#006393",
+        "belakang": "#EAF7FF",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.64,
+        "rasio": 6,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#00547E",
-        "belakang": "#A1CFF3",
+        "depan": "#006393",
+        "belakang": "#F8FCFF",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 4.96,
+        "rasio": 6.35,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#000711",
-        "belakang": "#A5C8DF",
+        "depan": "#001221",
+        "belakang": "#EAF7FF",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 11.49,
+        "rasio": 17.36,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#000711",
-        "belakang": "#A1CFF3",
+        "depan": "#001221",
+        "belakang": "#F8FCFF",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 12.26,
+        "rasio": 18.37,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -2971,7 +2971,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 10.84,
+      "rasio_teks_terendah": 17.5,
       "skor_aksesibilitas": 100
     }
   },
@@ -2980,7 +2980,7 @@
     "slug": "pastel-1",
     "tema": "pastel",
     "tema_nama": "Pastel Soft",
-    "nama": "Awan Lembut",
+    "nama": "Biru Lembut",
     "harmoni": "analog",
     "harmoni_nama": "Analog",
     "warna": [
@@ -2995,9 +2995,9 @@
       },
       {
         "peran": "surface",
-        "hex": "#F5F9FF",
+        "hex": "#F2F7FF",
         "oklch": [
-          0.98,
+          0.975,
           0.038,
           259
         ]
@@ -3013,9 +3013,9 @@
       },
       {
         "peran": "accent",
-        "hex": "#8983C3",
+        "hex": "#8680C0",
         "oklch": [
-          0.64,
+          0.63,
           0.096,
           287.7
         ]
@@ -3043,10 +3043,10 @@
       },
       {
         "depan": "#313336",
-        "belakang": "#F5F9FF",
+        "belakang": "#F2F7FF",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 11.99,
+        "rasio": 11.78,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
@@ -3063,30 +3063,30 @@
       },
       {
         "depan": "#516C9A",
-        "belakang": "#F5F9FF",
+        "belakang": "#F2F7FF",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 5.02,
+        "rasio": 4.93,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#8983C3",
+        "depan": "#8680C0",
         "belakang": "#E8F1FF",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.03,
+        "rasio": 3.15,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#8983C3",
-        "belakang": "#F5F9FF",
+        "depan": "#8680C0",
+        "belakang": "#F2F7FF",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.26,
+        "rasio": 3.33,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -3104,42 +3104,42 @@
     "slug": "pastel-2",
     "tema": "pastel",
     "tema_nama": "Pastel Soft",
-    "nama": "Awan Manis",
+    "nama": "Merah Lembut",
     "harmoni": "monokrom",
     "harmoni_nama": "Monokromatik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#F3DFE8",
+        "hex": "#EFDAE3",
         "oklch": [
-          0.923,
+          0.909,
           0.025,
           349
         ]
       },
       {
         "peran": "surface",
-        "hex": "#FFE6F0",
+        "hex": "#FCDEEB",
         "oklch": [
-          0.948,
+          0.929,
           0.038,
           350.4
         ]
       },
       {
         "peran": "base",
-        "hex": "#8C5571",
+        "hex": "#834D69",
         "oklch": [
-          0.522,
+          0.492,
           0.081,
           348.2
         ]
       },
       {
         "peran": "accent",
-        "hex": "#370021",
+        "hex": "#2B0019",
         "oklch": [
-          0.222,
+          0.192,
           0.1,
           350.2
         ]
@@ -3157,60 +3157,60 @@
     "pasangan_kontras": [
       {
         "depan": "#353233",
-        "belakang": "#F3DFE8",
+        "belakang": "#EFDAE3",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 9.99,
+        "rasio": 9.55,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#353233",
-        "belakang": "#FFE6F0",
+        "belakang": "#FCDEEB",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 10.77,
+        "rasio": 10.14,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#8C5571",
-        "belakang": "#F3DFE8",
+        "depan": "#834D69",
+        "belakang": "#EFDAE3",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.53,
+        "rasio": 4.89,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#8C5571",
-        "belakang": "#FFE6F0",
+        "depan": "#834D69",
+        "belakang": "#FCDEEB",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 4.88,
+        "rasio": 5.2,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#370021",
-        "belakang": "#F3DFE8",
+        "depan": "#2B0019",
+        "belakang": "#EFDAE3",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 13.96,
+        "rasio": 14.16,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#370021",
-        "belakang": "#FFE6F0",
+        "depan": "#2B0019",
+        "belakang": "#FCDEEB",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 15.05,
+        "rasio": 15.03,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -3219,7 +3219,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 9.99,
+      "rasio_teks_terendah": 9.55,
       "skor_aksesibilitas": 100
     }
   },
@@ -3228,42 +3228,42 @@
     "slug": "pastel-3",
     "tema": "pastel",
     "tema_nama": "Pastel Soft",
-    "nama": "Sorbet Manis",
+    "nama": "Hijau Pucat",
     "harmoni": "triadik",
     "harmoni_nama": "Triadik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#D2E0D1",
+        "hex": "#E1EFE0",
         "oklch": [
-          0.891,
+          0.937,
           0.025,
           143.3
         ]
       },
       {
         "peran": "surface",
-        "hex": "#D5EAD4",
+        "hex": "#E2F8E2",
         "oklch": [
-          0.916,
+          0.957,
           0.038,
           144.4
         ]
       },
       {
         "peran": "base",
-        "hex": "#466445",
+        "hex": "#517050",
         "oklch": [
-          0.471,
+          0.511,
           0.061,
           143.4
         ]
       },
       {
         "peran": "accent",
-        "hex": "#5D79A1",
+        "hex": "#6985AE",
         "oklch": [
-          0.571,
+          0.611,
           0.071,
           257.8
         ]
@@ -3281,60 +3281,60 @@
     "pasangan_kontras": [
       {
         "depan": "#313431",
-        "belakang": "#D2E0D1",
+        "belakang": "#E1EFE0",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 9.2,
+        "rasio": 10.58,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#313431",
-        "belakang": "#D5EAD4",
+        "belakang": "#E2F8E2",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 9.93,
+        "rasio": 11.26,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#466445",
-        "belakang": "#D2E0D1",
+        "depan": "#517050",
+        "belakang": "#E1EFE0",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.84,
+        "rasio": 4.66,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#466445",
-        "belakang": "#D5EAD4",
+        "depan": "#517050",
+        "belakang": "#E2F8E2",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 5.22,
+        "rasio": 4.96,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#5D79A1",
-        "belakang": "#D2E0D1",
+        "depan": "#6985AE",
+        "belakang": "#E1EFE0",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.25,
+        "rasio": 3.17,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#5D79A1",
-        "belakang": "#D5EAD4",
+        "depan": "#6985AE",
+        "belakang": "#E2F8E2",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.51,
+        "rasio": 3.37,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -3343,7 +3343,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 9.2,
+      "rasio_teks_terendah": 10.58,
       "skor_aksesibilitas": 100
     }
   },
@@ -3352,42 +3352,42 @@
     "slug": "pastel-4",
     "tema": "pastel",
     "tema_nama": "Pastel Soft",
-    "nama": "Kapas Ringan",
+    "nama": "Ungu Ringan",
     "harmoni": "komplementer",
     "harmoni_nama": "Komplementer",
     "warna": [
       {
         "peran": "background",
-        "hex": "#D4CDDE",
+        "hex": "#DED7E9",
         "oklch": [
-          0.859,
+          0.891,
           0.025,
           304.1
         ]
       },
       {
         "peran": "surface",
-        "hex": "#DDD3EE",
+        "hex": "#E6DCF7",
         "oklch": [
-          0.884,
+          0.911,
           0.038,
           303.1
         ]
       },
       {
         "peran": "base",
-        "hex": "#684A86",
+        "hex": "#70528F",
         "oklch": [
-          0.467,
+          0.497,
           0.1,
           305.7
         ]
       },
       {
         "peran": "accent",
-        "hex": "#657C37",
+        "hex": "#69813B",
         "oklch": [
-          0.553,
+          0.568,
           0.1,
           125.2
         ]
@@ -3405,60 +3405,60 @@
     "pasangan_kontras": [
       {
         "depan": "#333235",
-        "belakang": "#D4CDDE",
+        "belakang": "#DED7E9",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 8.24,
+        "rasio": 9.1,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#333235",
-        "belakang": "#DDD3EE",
+        "belakang": "#E6DCF7",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 8.87,
+        "rasio": 9.67,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#684A86",
-        "belakang": "#D4CDDE",
+        "depan": "#70528F",
+        "belakang": "#DED7E9",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.67,
+        "rasio": 4.56,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#684A86",
-        "belakang": "#DDD3EE",
+        "depan": "#70528F",
+        "belakang": "#E6DCF7",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 5.02,
+        "rasio": 4.84,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#657C37",
-        "belakang": "#D4CDDE",
+        "depan": "#69813B",
+        "belakang": "#DED7E9",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.02,
+        "rasio": 3.12,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#657C37",
-        "belakang": "#DDD3EE",
+        "depan": "#69813B",
+        "belakang": "#E6DCF7",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.26,
+        "rasio": 3.32,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -3467,7 +3467,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 8.24,
+      "rasio_teks_terendah": 9.1,
       "skor_aksesibilitas": 100
     }
   },
@@ -3476,42 +3476,42 @@
     "slug": "pastel-5",
     "tema": "pastel",
     "tema_nama": "Pastel Soft",
-    "nama": "Awan Susu",
+    "nama": "Kuning Lembut",
     "harmoni": "split",
     "harmoni_nama": "Split Komplementer",
     "warna": [
       {
         "peran": "background",
-        "hex": "#CDC6B4",
+        "hex": "#EBE4D2",
         "oklch": [
-          0.827,
+          0.92,
           0.025,
           88.5
         ]
       },
       {
         "peran": "surface",
-        "hex": "#D6CFB3",
+        "hex": "#F3EBCF",
         "oklch": [
-          0.852,
+          0.94,
           0.038,
           95.2
         ]
       },
       {
         "peran": "base",
-        "hex": "#604C00",
+        "hex": "#7A620B",
         "oklch": [
-          0.427,
+          0.507,
           0.1,
           91.6
         ]
       },
       {
         "peran": "accent",
-        "hex": "#3270A1",
+        "hex": "#4785B7",
         "oklch": [
-          0.526,
+          0.596,
           0.1,
           245.4
         ]
@@ -3529,60 +3529,60 @@
     "pasangan_kontras": [
       {
         "depan": "#34332F",
-        "belakang": "#CDC6B4",
+        "belakang": "#EBE4D2",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 7.43,
+        "rasio": 9.97,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#34332F",
-        "belakang": "#D6CFB3",
+        "belakang": "#F3EBCF",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 8.09,
+        "rasio": 10.6,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#604C00",
-        "belakang": "#CDC6B4",
+        "depan": "#7A620B",
+        "belakang": "#EBE4D2",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.87,
+        "rasio": 4.63,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#604C00",
-        "belakang": "#D6CFB3",
+        "depan": "#7A620B",
+        "belakang": "#F3EBCF",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 5.31,
+        "rasio": 4.92,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#3270A1",
-        "belakang": "#CDC6B4",
+        "depan": "#4785B7",
+        "belakang": "#EBE4D2",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.11,
+        "rasio": 3.12,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#3270A1",
-        "belakang": "#D6CFB3",
+        "depan": "#4785B7",
+        "belakang": "#F3EBCF",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.39,
+        "rasio": 3.32,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -3591,7 +3591,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 7.43,
+      "rasio_teks_terendah": 9.97,
       "skor_aksesibilitas": 100
     }
   },
@@ -3600,42 +3600,42 @@
     "slug": "pastel-6",
     "tema": "pastel",
     "tema_nama": "Pastel Soft",
-    "nama": "Kapas Manis",
+    "nama": "Biru langit Ringan",
     "harmoni": "tetradik",
     "harmoni_nama": "Tetradik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#ABC1C5",
+        "hex": "#DCF3F7",
         "oklch": [
-          0.795,
+          0.948,
           0.025,
           209.3
         ]
       },
       {
         "peran": "surface",
-        "hex": "#A9CBD1",
+        "hex": "#E0FAFF",
         "oklch": [
-          0.82,
+          0.968,
           0.038,
           209.5
         ]
       },
       {
         "peran": "base",
-        "hex": "#005159",
+        "hex": "#1F727B",
         "oklch": [
-          0.398,
+          0.508,
           0.077,
           206
         ]
       },
       {
         "peran": "accent",
-        "hex": "#676B2E",
+        "hex": "#8A8E51",
         "oklch": [
-          0.51,
+          0.63,
           0.083,
           112
         ]
@@ -3653,47 +3653,47 @@
     "pasangan_kontras": [
       {
         "depan": "#2F3434",
-        "belakang": "#ABC1C5",
+        "belakang": "#DCF3F7",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 6.72,
-        "ambang": 4.5,
-        "nilai": "AA",
-        "lolos": true
-      },
-      {
-        "depan": "#2F3434",
-        "belakang": "#A9CBD1",
-        "peran_depan": "text",
-        "peran_belakang": "surface",
-        "rasio": 7.31,
+        "rasio": 10.96,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#005159",
-        "belakang": "#ABC1C5",
+        "depan": "#2F3434",
+        "belakang": "#E0FAFF",
+        "peran_depan": "text",
+        "peran_belakang": "surface",
+        "rasio": 11.61,
+        "ambang": 4.5,
+        "nilai": "AAA",
+        "lolos": true
+      },
+      {
+        "depan": "#1F727B",
+        "belakang": "#DCF3F7",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.81,
+        "rasio": 4.85,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#005159",
-        "belakang": "#A9CBD1",
+        "depan": "#1F727B",
+        "belakang": "#E0FAFF",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 5.23,
+        "rasio": 5.14,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#676B2E",
-        "belakang": "#ABC1C5",
+        "depan": "#8A8E51",
+        "belakang": "#DCF3F7",
         "peran_depan": "accent",
         "peran_belakang": "background",
         "rasio": 3,
@@ -3702,11 +3702,11 @@
         "lolos": true
       },
       {
-        "depan": "#676B2E",
-        "belakang": "#A9CBD1",
+        "depan": "#8A8E51",
+        "belakang": "#E0FAFF",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.27,
+        "rasio": 3.18,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -3715,7 +3715,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 6.72,
+      "rasio_teks_terendah": 10.96,
       "skor_aksesibilitas": 100
     }
   },
@@ -3724,7 +3724,7 @@
     "slug": "cyberpunk-1",
     "tema": "cyberpunk",
     "tema_nama": "Cyberpunk",
-    "nama": "Kabut Digital",
+    "nama": "Biru langit Listrik",
     "harmoni": "komplementer",
     "harmoni_nama": "Komplementer",
     "warna": [
@@ -3757,9 +3757,9 @@
       },
       {
         "peran": "accent",
-        "hex": "#FF4C3D",
+        "hex": "#FF9687",
         "oklch": [
-          0.67,
+          0.78,
           0.22,
           29.1
         ]
@@ -3816,23 +3816,23 @@
         "lolos": true
       },
       {
-        "depan": "#FF4C3D",
+        "depan": "#FF9687",
         "belakang": "#001013",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 5.86,
+        "rasio": 9.2,
         "ambang": 3,
-        "nilai": "AA",
+        "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#FF4C3D",
+        "depan": "#FF9687",
         "belakang": "#001F24",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 5.2,
+        "rasio": 8.16,
         "ambang": 3,
-        "nilai": "AA",
+        "nilai": "AAA",
         "lolos": true
       }
     ],
@@ -3848,42 +3848,42 @@
     "slug": "cyberpunk-2",
     "tema": "cyberpunk",
     "tema_nama": "Cyberpunk",
-    "nama": "Bawah Neon",
+    "nama": "Magenta Volt",
     "harmoni": "analog",
     "harmoni_nama": "Analog",
     "warna": [
       {
         "peran": "background",
-        "hex": "#210A1E",
+        "hex": "#220C1F",
         "oklch": [
-          0.192,
+          0.197,
           0.05,
           332.9
         ]
       },
       {
         "peran": "surface",
-        "hex": "#351330",
+        "hex": "#32102D",
         "oklch": [
-          0.252,
+          0.24,
           0.07,
           333.8
         ]
       },
       {
         "peran": "base",
-        "hex": "#FF78EC",
+        "hex": "#FF70EB",
         "oklch": [
-          0.769,
+          0.759,
           0.282,
           333.1
         ]
       },
       {
         "peran": "accent",
-        "hex": "#CA93FF",
+        "hex": "#DCBBFF",
         "oklch": [
-          0.757,
+          0.842,
           0.341,
           306.4
         ]
@@ -3901,60 +3901,60 @@
     "pasangan_kontras": [
       {
         "depan": "#FBF7FA",
-        "belakang": "#210A1E",
+        "belakang": "#220C1F",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 17.56,
+        "rasio": 17.35,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#FBF7FA",
-        "belakang": "#351330",
+        "belakang": "#32102D",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 15.37,
+        "rasio": 15.86,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#FF78EC",
-        "belakang": "#210A1E",
+        "depan": "#FF70EB",
+        "belakang": "#220C1F",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 8.12,
+        "rasio": 7.69,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#FF78EC",
-        "belakang": "#351330",
+        "depan": "#FF70EB",
+        "belakang": "#32102D",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 7.11,
+        "rasio": 7.03,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#CA93FF",
-        "belakang": "#210A1E",
+        "depan": "#DCBBFF",
+        "belakang": "#220C1F",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 8.1,
+        "rasio": 11.04,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#CA93FF",
-        "belakang": "#351330",
+        "depan": "#DCBBFF",
+        "belakang": "#32102D",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 7.09,
+        "rasio": 10.1,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -3963,7 +3963,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 15.37,
+      "rasio_teks_terendah": 15.86,
       "skor_aksesibilitas": 100
     }
   },
@@ -3972,42 +3972,42 @@
     "slug": "cyberpunk-3",
     "tema": "cyberpunk",
     "tema_nama": "Cyberpunk",
-    "nama": "Volt Krom",
+    "nama": "Ungu Nokturnal",
     "harmoni": "tetradik",
     "harmoni_nama": "Tetradik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#1D1630",
+        "hex": "#120B24",
         "oklch": [
-          0.224,
+          0.174,
           0.05,
           293
         ]
       },
       {
         "peran": "surface",
-        "hex": "#27234A",
+        "hex": "#1C173D",
         "oklch": [
-          0.284,
+          0.234,
           0.07,
           285.9
         ]
       },
       {
         "peran": "base",
-        "hex": "#A492FF",
+        "hex": "#9E8AFF",
         "oklch": [
-          0.722,
+          0.702,
           0.23,
           289.3
         ]
       },
       {
         "peran": "accent",
-        "hex": "#00DFDF",
+        "hex": "#00F5F5",
         "oklch": [
-          0.818,
+          0.878,
           0.256,
           195
         ]
@@ -4025,60 +4025,60 @@
     "pasangan_kontras": [
       {
         "depan": "#F8F8FC",
-        "belakang": "#1D1630",
+        "belakang": "#120B24",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 16.39,
+        "rasio": 18.04,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#F8F8FC",
-        "belakang": "#27234A",
+        "belakang": "#1C173D",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 13.91,
+        "rasio": 16,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#A492FF",
-        "belakang": "#1D1630",
+        "depan": "#9E8AFF",
+        "belakang": "#120B24",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 6.72,
+        "rasio": 6.85,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#A492FF",
-        "belakang": "#27234A",
+        "depan": "#9E8AFF",
+        "belakang": "#1C173D",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 5.71,
+        "rasio": 6.08,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#00DFDF",
-        "belakang": "#1D1630",
+        "depan": "#00F5F5",
+        "belakang": "#120B24",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 10.43,
+        "rasio": 13.99,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#00DFDF",
-        "belakang": "#27234A",
+        "depan": "#00F5F5",
+        "belakang": "#1C173D",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 8.85,
+        "rasio": 12.41,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -4087,7 +4087,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 13.91,
+      "rasio_teks_terendah": 16,
       "skor_aksesibilitas": 100
     }
   },
@@ -4096,113 +4096,113 @@
     "slug": "cyberpunk-4",
     "tema": "cyberpunk",
     "tema_nama": "Cyberpunk",
-    "nama": "Grid Krom",
+    "nama": "Tosca Listrik",
     "harmoni": "split",
     "harmoni_nama": "Split Komplementer",
     "warna": [
       {
         "peran": "background",
-        "hex": "#122913",
+        "hex": "#031F0C",
         "oklch": [
-          0.256,
+          0.211,
           0.05,
-          145
+          151.3
         ]
       },
       {
         "peran": "surface",
-        "hex": "#103C1F",
+        "hex": "#002711",
         "oklch": [
-          0.316,
+          0.24,
           0.07,
-          151.2
+          153.9
         ]
       },
       {
         "peran": "base",
-        "hex": "#C8FFCF",
+        "hex": "#C5FFD7",
         "oklch": [
           0.95,
           0.225,
-          148.4
+          154.5
         ]
       },
       {
         "peran": "accent",
-        "hex": "#FFB7CC",
+        "hex": "#FFC7D6",
         "oklch": [
-          0.853,
-          0.266,
-          0.2
+          0.883,
+          0.262,
+          0.1
         ]
       },
       {
         "peran": "text",
-        "hex": "#F6FAF6",
+        "hex": "#F5FAF7",
         "oklch": [
           0.98,
           0.006,
-          148.4
+          154.5
         ]
       }
     ],
     "pasangan_kontras": [
       {
-        "depan": "#F6FAF6",
-        "belakang": "#122913",
+        "depan": "#F5FAF7",
+        "belakang": "#031F0C",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 14.73,
+        "rasio": 16.51,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#F6FAF6",
-        "belakang": "#103C1F",
+        "depan": "#F5FAF7",
+        "belakang": "#002711",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 11.8,
+        "rasio": 15.33,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#C8FFCF",
-        "belakang": "#122913",
+        "depan": "#C5FFD7",
+        "belakang": "#031F0C",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 13.8,
+        "rasio": 15.48,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#C8FFCF",
-        "belakang": "#103C1F",
+        "depan": "#C5FFD7",
+        "belakang": "#002711",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 11.05,
+        "rasio": 14.37,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#FFB7CC",
-        "belakang": "#122913",
+        "depan": "#FFC7D6",
+        "belakang": "#031F0C",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 9.54,
+        "rasio": 11.94,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#FFB7CC",
-        "belakang": "#103C1F",
+        "depan": "#FFC7D6",
+        "belakang": "#002711",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 7.64,
+        "rasio": 11.09,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -4211,7 +4211,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 11.8,
+      "rasio_teks_terendah": 15.33,
       "skor_aksesibilitas": 100
     }
   },
@@ -4220,42 +4220,42 @@
     "slug": "cyberpunk-5",
     "tema": "cyberpunk",
     "tema_nama": "Cyberpunk",
-    "nama": "Kabut Bayangan",
+    "nama": "Merah Listrik",
     "harmoni": "monokrom",
     "harmoni_nama": "Monokromatik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#402023",
+        "hex": "#25080C",
         "oklch": [
-          0.288,
+          0.188,
           0.05,
           14.1
         ]
       },
       {
         "peran": "surface",
-        "hex": "#59292F",
+        "hex": "#3A0D15",
         "oklch": [
-          0.348,
+          0.24,
           0.07,
           14
         ]
       },
       {
         "peran": "base",
-        "hex": "#FFC7C8",
+        "hex": "#FFB3B6",
         "oklch": [
-          0.879,
+          0.839,
           0.231,
           16.5
         ]
       },
       {
         "peran": "accent",
-        "hex": "#FF4D5C",
+        "hex": "#FF4356",
         "oklch": [
-          0.676,
+          0.666,
           0.298,
           20.7
         ]
@@ -4273,69 +4273,69 @@
     "pasangan_kontras": [
       {
         "depan": "#FCF7F7",
-        "belakang": "#402023",
+        "belakang": "#25080C",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 13.66,
+        "rasio": 17.69,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#FCF7F7",
-        "belakang": "#59292F",
+        "belakang": "#3A0D15",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 11.1,
+        "rasio": 15.85,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#FFC7C8",
-        "belakang": "#402023",
+        "depan": "#FFB3B6",
+        "belakang": "#25080C",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 9.84,
+        "rasio": 11.06,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#FFC7C8",
-        "belakang": "#59292F",
+        "depan": "#FFB3B6",
+        "belakang": "#3A0D15",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 8,
+        "rasio": 9.91,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#FF4D5C",
-        "belakang": "#402023",
+        "depan": "#FF4356",
+        "belakang": "#25080C",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 4.46,
+        "rasio": 5.53,
         "ambang": 3,
-        "nilai": "AA-Large",
+        "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#FF4D5C",
-        "belakang": "#59292F",
+        "depan": "#FF4356",
+        "belakang": "#3A0D15",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.63,
+        "rasio": 4.96,
         "ambang": 3,
-        "nilai": "AA-Large",
+        "nilai": "AA",
         "lolos": true
       }
     ],
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 11.1,
+      "rasio_teks_terendah": 15.85,
       "skor_aksesibilitas": 100
     }
   },
@@ -4344,24 +4344,24 @@
     "slug": "cyberpunk-6",
     "tema": "cyberpunk",
     "tema_nama": "Cyberpunk",
-    "nama": "Saraf Nokturnal",
+    "nama": "Kuning Krom",
     "harmoni": "triadik",
     "harmoni_nama": "Triadik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#3C3212",
+        "hex": "#140E00",
         "oklch": [
-          0.32,
+          0.165,
           0.05,
           90.8
         ]
       },
       {
         "peran": "surface",
-        "hex": "#533F0D",
+        "hex": "#261A00",
         "oklch": [
-          0.38,
+          0.225,
           0.07,
           85.2
         ]
@@ -4377,9 +4377,9 @@
       },
       {
         "peran": "accent",
-        "hex": "#FFE5FC",
+        "hex": "#FFE1FC",
         "oklch": [
-          0.95,
+          0.941,
           0.22,
           329.7
         ]
@@ -4397,60 +4397,60 @@
     "pasangan_kontras": [
       {
         "depan": "#FAF8F4",
-        "belakang": "#3C3212",
+        "belakang": "#140E00",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 11.95,
+        "rasio": 18.12,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#FAF8F4",
-        "belakang": "#533F0D",
+        "belakang": "#261A00",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 9.5,
+        "rasio": 16.09,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#FFEDC0",
-        "belakang": "#3C3212",
+        "belakang": "#140E00",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 10.94,
+        "rasio": 16.59,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#FFEDC0",
-        "belakang": "#533F0D",
+        "belakang": "#261A00",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 8.7,
+        "rasio": 14.74,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#FFE5FC",
-        "belakang": "#3C3212",
+        "depan": "#FFE1FC",
+        "belakang": "#140E00",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 10.78,
+        "rasio": 15.95,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#FFE5FC",
-        "belakang": "#533F0D",
+        "depan": "#FFE1FC",
+        "belakang": "#261A00",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 8.57,
+        "rasio": 14.17,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -4459,7 +4459,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 9.5,
+      "rasio_teks_terendah": 16.09,
       "skor_aksesibilitas": 100
     }
   },
@@ -4468,7 +4468,7 @@
     "slug": "earthy-1",
     "tema": "earthy",
     "tema_nama": "Earthy Retro",
-    "nama": "Gandum Hangat",
+    "nama": "Oranye Panen",
     "harmoni": "analog",
     "harmoni_nama": "Analog",
     "warna": [
@@ -4483,9 +4483,9 @@
       },
       {
         "peran": "surface",
-        "hex": "#FFEEE5",
+        "hex": "#FFEADF",
         "oklch": [
-          0.96,
+          0.95,
           0.038,
           48.7
         ]
@@ -4501,9 +4501,9 @@
       },
       {
         "peran": "accent",
-        "hex": "#583E00",
+        "hex": "#7E5A00",
         "oklch": [
-          0.383,
+          0.493,
           0.12,
           81.7
         ]
@@ -4531,10 +4531,10 @@
       },
       {
         "depan": "#221E1D",
-        "belakang": "#FFEEE5",
+        "belakang": "#FFEADF",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 14.64,
+        "rasio": 14.23,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
@@ -4551,32 +4551,32 @@
       },
       {
         "depan": "#9A542B",
-        "belakang": "#FFEEE5",
+        "belakang": "#FFEADF",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 5.06,
+        "rasio": 4.92,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#583E00",
+        "depan": "#7E5A00",
         "belakang": "#F7E4D9",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 8.11,
+        "rasio": 5.09,
         "ambang": 3,
-        "nilai": "AAA",
+        "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#583E00",
-        "belakang": "#FFEEE5",
+        "depan": "#7E5A00",
+        "belakang": "#FFEADF",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 8.85,
+        "rasio": 5.4,
         "ambang": 3,
-        "nilai": "AAA",
+        "nilai": "AA",
         "lolos": true
       }
     ],
@@ -4592,42 +4592,42 @@
     "slug": "earthy-2",
     "tema": "earthy",
     "tema_nama": "Earthy Retro",
-    "nama": "Lembah Hangat",
+    "nama": "Kuning Teduh",
     "harmoni": "triadik",
     "harmoni_nama": "Triadik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#E7DCCB",
+        "hex": "#E2D7C7",
         "oklch": [
-          0.898,
+          0.884,
           0.025,
           78.3
         ]
       },
       {
         "peran": "surface",
-        "hex": "#F5E5CC",
+        "hex": "#EDDDC4",
         "oklch": [
-          0.928,
+          0.904,
           0.038,
           78.6
         ]
       },
       {
         "peran": "base",
-        "hex": "#7F5800",
+        "hex": "#7B5500",
         "oklch": [
-          0.489,
+          0.479,
           0.117,
           79.1
         ]
       },
       {
         "peran": "accent",
-        "hex": "#754083",
+        "hex": "#8F589D",
         "oklch": [
-          0.463,
+          0.548,
           0.12,
           319
         ]
@@ -4645,27 +4645,27 @@
     "pasangan_kontras": [
       {
         "depan": "#211F1C",
-        "belakang": "#E7DCCB",
+        "belakang": "#E2D7C7",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 12.13,
+        "rasio": 11.57,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#211F1C",
-        "belakang": "#F5E5CC",
+        "belakang": "#EDDDC4",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 13.28,
+        "rasio": 12.32,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#7F5800",
-        "belakang": "#E7DCCB",
+        "depan": "#7B5500",
+        "belakang": "#E2D7C7",
         "peran_depan": "base",
         "peran_belakang": "background",
         "rasio": 4.7,
@@ -4674,40 +4674,40 @@
         "lolos": true
       },
       {
-        "depan": "#7F5800",
-        "belakang": "#F5E5CC",
+        "depan": "#7B5500",
+        "belakang": "#EDDDC4",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 5.14,
+        "rasio": 5.01,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#754083",
-        "belakang": "#E7DCCB",
+        "depan": "#8F589D",
+        "belakang": "#E2D7C7",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 5.5,
+        "rasio": 3.65,
         "ambang": 3,
-        "nilai": "AA",
+        "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#754083",
-        "belakang": "#F5E5CC",
+        "depan": "#8F589D",
+        "belakang": "#EDDDC4",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 6.02,
+        "rasio": 3.89,
         "ambang": 3,
-        "nilai": "AA",
+        "nilai": "AA-Large",
         "lolos": true
       }
     ],
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 12.13,
+      "rasio_teks_terendah": 11.57,
       "skor_aksesibilitas": 100
     }
   },
@@ -4716,42 +4716,42 @@
     "slug": "earthy-3",
     "tema": "earthy",
     "tema_nama": "Earthy Retro",
-    "nama": "Gandum Panen",
+    "nama": "Hijau Panen",
     "harmoni": "monokrom",
     "harmoni_nama": "Monokromatik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#CFD6C4",
+        "hex": "#DEE5D3",
         "oklch": [
-          0.866,
+          0.912,
           0.025,
           124.5
         ]
       },
       {
         "peran": "surface",
-        "hex": "#D9E1C6",
+        "hex": "#E5EDD1",
         "oklch": [
-          0.896,
+          0.932,
           0.038,
           121
         ]
       },
       {
         "peran": "base",
-        "hex": "#4E5A2F",
+        "hex": "#545F35",
         "oklch": [
-          0.446,
+          0.466,
           0.065,
           121.4
         ]
       },
       {
         "peran": "accent",
-        "hex": "#060D00",
+        "hex": "#091200",
         "oklch": [
-          0.146,
+          0.166,
           0.085,
           127.3
         ]
@@ -4769,60 +4769,60 @@
     "pasangan_kontras": [
       {
         "depan": "#1F201D",
-        "belakang": "#CFD6C4",
+        "belakang": "#DEE5D3",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 10.97,
+        "rasio": 12.67,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#1F201D",
-        "belakang": "#D9E1C6",
+        "belakang": "#E5EDD1",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 12.11,
+        "rasio": 13.54,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#4E5A2F",
-        "belakang": "#CFD6C4",
+        "depan": "#545F35",
+        "belakang": "#DEE5D3",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.98,
+        "rasio": 5.3,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#4E5A2F",
-        "belakang": "#D9E1C6",
+        "depan": "#545F35",
+        "belakang": "#E5EDD1",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 5.49,
+        "rasio": 5.67,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#060D00",
-        "belakang": "#CFD6C4",
+        "depan": "#091200",
+        "belakang": "#DEE5D3",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 13.21,
+        "rasio": 14.8,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#060D00",
-        "belakang": "#D9E1C6",
+        "depan": "#091200",
+        "belakang": "#E5EDD1",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 14.58,
+        "rasio": 15.81,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -4831,7 +4831,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 10.97,
+      "rasio_teks_terendah": 12.67,
       "skor_aksesibilitas": 100
     }
   },
@@ -4840,42 +4840,42 @@
     "slug": "earthy-4",
     "tema": "earthy",
     "tema_nama": "Earthy Retro",
-    "nama": "Bata Tanah",
+    "nama": "Oranye Gurun",
     "harmoni": "komplementer",
     "harmoni_nama": "Komplementer",
     "warna": [
       {
         "peran": "background",
-        "hex": "#D6C5BA",
+        "hex": "#E1CFC4",
         "oklch": [
-          0.834,
+          0.866,
           0.025,
           54.1
         ]
       },
       {
         "peran": "surface",
-        "hex": "#E8CCBD",
+        "hex": "#EFD3C4",
         "oklch": [
-          0.864,
+          0.886,
           0.038,
           48.7
         ]
       },
       {
         "peran": "base",
-        "hex": "#5F3113",
+        "hex": "#68391C",
         "oklch": [
-          0.367,
+          0.397,
           0.079,
           50.4
         ]
       },
       {
         "peran": "accent",
-        "hex": "#247398",
+        "hex": "#307DA3",
         "oklch": [
-          0.525,
+          0.56,
           0.094,
           233.1
         ]
@@ -4893,60 +4893,60 @@
     "pasangan_kontras": [
       {
         "depan": "#221E1D",
-        "belakang": "#D6C5BA",
+        "belakang": "#E1CFC4",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 9.87,
+        "rasio": 10.95,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#221E1D",
-        "belakang": "#E8CCBD",
+        "belakang": "#EFD3C4",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 10.86,
+        "rasio": 11.63,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#5F3113",
-        "belakang": "#D6C5BA",
+        "depan": "#68391C",
+        "belakang": "#E1CFC4",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 6.49,
+        "rasio": 6.36,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#5F3113",
-        "belakang": "#E8CCBD",
+        "depan": "#68391C",
+        "belakang": "#EFD3C4",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 7.13,
+        "rasio": 6.75,
         "ambang": 4.5,
-        "nilai": "AAA",
+        "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#247398",
-        "belakang": "#D6C5BA",
+        "depan": "#307DA3",
+        "belakang": "#E1CFC4",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.15,
+        "rasio": 3.03,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#247398",
-        "belakang": "#E8CCBD",
+        "depan": "#307DA3",
+        "belakang": "#EFD3C4",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.47,
+        "rasio": 3.22,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -4955,7 +4955,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 9.87,
+      "rasio_teks_terendah": 10.95,
       "skor_aksesibilitas": 100
     }
   },
@@ -4964,42 +4964,42 @@
     "slug": "earthy-5",
     "tema": "earthy",
     "tema_nama": "Earthy Retro",
-    "nama": "Terakota Panen",
+    "nama": "Kuning Hangat",
     "harmoni": "split",
     "harmoni_nama": "Split Komplementer",
     "warna": [
       {
         "peran": "background",
-        "hex": "#C6BEAD",
+        "hex": "#E4DBCA",
         "oklch": [
-          0.802,
+          0.895,
           0.025,
           86
         ]
       },
       {
         "peran": "surface",
-        "hex": "#D2C7AD",
+        "hex": "#EDE2C7",
         "oklch": [
-          0.832,
+          0.915,
           0.038,
           88.5
         ]
       },
       {
         "peran": "base",
-        "hex": "#624A00",
+        "hex": "#765A02",
         "oklch": [
-          0.423,
+          0.483,
           0.098,
           86.9
         ]
       },
       {
         "peran": "accent",
-        "hex": "#006A99",
+        "hex": "#137FB4",
         "oklch": [
-          0.497,
+          0.567,
           0.12,
           237.7
         ]
@@ -5017,60 +5017,60 @@
     "pasangan_kontras": [
       {
         "depan": "#201F1C",
-        "belakang": "#C6BEAD",
+        "belakang": "#E4DBCA",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 8.92,
+        "rasio": 12,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#201F1C",
-        "belakang": "#D2C7AD",
+        "belakang": "#EDE2C7",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 9.82,
+        "rasio": 12.8,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#624A00",
-        "belakang": "#C6BEAD",
+        "depan": "#765A02",
+        "belakang": "#E4DBCA",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.55,
+        "rasio": 4.73,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#624A00",
-        "belakang": "#D2C7AD",
+        "depan": "#765A02",
+        "belakang": "#EDE2C7",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 5.01,
+        "rasio": 5.04,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#006A99",
-        "belakang": "#C6BEAD",
+        "depan": "#137FB4",
+        "belakang": "#E4DBCA",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.23,
+        "rasio": 3.24,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#006A99",
-        "belakang": "#D2C7AD",
+        "depan": "#137FB4",
+        "belakang": "#EDE2C7",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.55,
+        "rasio": 3.45,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -5079,7 +5079,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 8.92,
+      "rasio_teks_terendah": 12,
       "skor_aksesibilitas": 100
     }
   },
@@ -5088,44 +5088,44 @@
     "slug": "earthy-6",
     "tema": "earthy",
     "tema_nama": "Earthy Retro",
-    "nama": "Kayu Panen",
+    "nama": "Abu berpendar Teduh",
     "harmoni": "tetradik",
     "harmoni_nama": "Tetradik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#ABB9AA",
+        "hex": "#DBEBDC",
         "oklch": [
-          0.77,
+          0.923,
           0.025,
-          143.8
+          148
         ]
       },
       {
         "peran": "surface",
-        "hex": "#ADC5B1",
+        "hex": "#DAF4E1",
         "oklch": [
-          0.8,
+          0.943,
           0.038,
-          150.1
+          153.6
         ]
       },
       {
         "peran": "base",
-        "hex": "#112313",
+        "hex": "#1C3020",
         "oklch": [
-          0.236,
+          0.286,
           0.039,
-          146.6
+          150.1
         ]
       },
       {
         "peran": "accent",
-        "hex": "#785B46",
+        "hex": "#9C7D67",
         "oklch": [
-          0.496,
+          0.612,
           0.05,
-          58.6
+          57.2
         ]
       },
       {
@@ -5134,67 +5134,67 @@
         "oklch": [
           0.24,
           0.006,
-          146.6
+          150.1
         ]
       }
     ],
     "pasangan_kontras": [
       {
         "depan": "#1D201E",
-        "belakang": "#ABB9AA",
+        "belakang": "#DBEBDC",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 8.02,
+        "rasio": 13.25,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#1D201E",
-        "belakang": "#ADC5B1",
+        "belakang": "#DAF4E1",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 8.92,
+        "rasio": 14.1,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#112313",
-        "belakang": "#ABB9AA",
+        "depan": "#1C3020",
+        "belakang": "#DBEBDC",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 8.05,
+        "rasio": 11.34,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#112313",
-        "belakang": "#ADC5B1",
+        "depan": "#1C3020",
+        "belakang": "#DAF4E1",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 8.95,
+        "rasio": 12.06,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#785B46",
-        "belakang": "#ABB9AA",
+        "depan": "#9C7D67",
+        "belakang": "#DBEBDC",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.03,
+        "rasio": 3.05,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#785B46",
-        "belakang": "#ADC5B1",
+        "depan": "#9C7D67",
+        "belakang": "#DAF4E1",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.37,
+        "rasio": 3.25,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -5203,7 +5203,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 8.02,
+      "rasio_teks_terendah": 13.25,
       "skor_aksesibilitas": 100
     }
   },
@@ -5212,7 +5212,7 @@
     "slug": "minimalis-1",
     "tema": "minimalis",
     "tema_nama": "Minimalis",
-    "nama": "Dinding Sunyi",
+    "nama": "Abu berpendar Netral",
     "harmoni": "monokrom",
     "harmoni_nama": "Monokromatik",
     "warna": [
@@ -5227,9 +5227,9 @@
       },
       {
         "peran": "surface",
-        "hex": "#FFFFFF",
+        "hex": "#FCFDFF",
         "oklch": [
-          1,
+          0.995,
           0.006,
           261.1
         ]
@@ -5245,9 +5245,9 @@
       },
       {
         "peran": "accent",
-        "hex": "#020714",
+        "hex": "#16202F",
         "oklch": [
-          0.129,
+          0.24,
           0.033,
           259.2
         ]
@@ -5275,10 +5275,10 @@
       },
       {
         "depan": "#0A0B0E",
-        "belakang": "#FFFFFF",
+        "belakang": "#FCFDFF",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 19.68,
+        "rasio": 19.34,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
@@ -5295,30 +5295,30 @@
       },
       {
         "depan": "#47505E",
-        "belakang": "#FFFFFF",
+        "belakang": "#FCFDFF",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 8.15,
+        "rasio": 8.01,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#020714",
+        "depan": "#16202F",
         "belakang": "#FAFCFF",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 19.59,
+        "rasio": 15.94,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#020714",
-        "belakang": "#FFFFFF",
+        "depan": "#16202F",
+        "belakang": "#FCFDFF",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 20.13,
+        "rasio": 16.1,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -5336,42 +5336,42 @@
     "slug": "minimalis-2",
     "tema": "minimalis",
     "tema_nama": "Minimalis",
-    "nama": "Dinding Tipis",
+    "nama": "Abu Netral",
     "harmoni": "analog",
     "harmoni_nama": "Analog",
     "warna": [
       {
         "peran": "background",
-        "hex": "#EFF1F4",
+        "hex": "#EBECEF",
         "oklch": [
-          0.958,
+          0.944,
           0.004,
           259.4
         ]
       },
       {
         "peran": "surface",
-        "hex": "#F2F4F9",
+        "hex": "#F1F3F7",
         "oklch": [
-          0.968,
+          0.964,
           0.006,
           264.9
         ]
       },
       {
         "peran": "base",
-        "hex": "#676C75",
+        "hex": "#656972",
         "oklch": [
-          0.531,
+          0.521,
           0.015,
           262.9
         ]
       },
       {
         "peran": "accent",
-        "hex": "#0C161B",
+        "hex": "#202A30",
         "oklch": [
-          0.194,
+          0.279,
           0.018,
           229
         ]
@@ -5389,27 +5389,27 @@
     "pasangan_kontras": [
       {
         "depan": "#0A0B0E",
-        "belakang": "#EFF1F4",
+        "belakang": "#EBECEF",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 17.39,
+        "rasio": 16.66,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#0A0B0E",
-        "belakang": "#F2F4F9",
+        "belakang": "#F1F3F7",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 17.88,
+        "rasio": 17.71,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#676C75",
-        "belakang": "#EFF1F4",
+        "depan": "#656972",
+        "belakang": "#EBECEF",
         "peran_depan": "base",
         "peran_belakang": "background",
         "rasio": 4.66,
@@ -5418,31 +5418,31 @@
         "lolos": true
       },
       {
-        "depan": "#676C75",
-        "belakang": "#F2F4F9",
+        "depan": "#656972",
+        "belakang": "#F1F3F7",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 4.8,
+        "rasio": 4.95,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#0C161B",
-        "belakang": "#EFF1F4",
+        "depan": "#202A30",
+        "belakang": "#EBECEF",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 16.19,
+        "rasio": 12.39,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#0C161B",
-        "belakang": "#F2F4F9",
+        "depan": "#202A30",
+        "belakang": "#F1F3F7",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 16.65,
+        "rasio": 13.17,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -5451,7 +5451,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 17.39,
+      "rasio_teks_terendah": 16.66,
       "skor_aksesibilitas": 100
     }
   },
@@ -5460,42 +5460,42 @@
     "slug": "minimalis-3",
     "tema": "minimalis",
     "tema_nama": "Minimalis",
-    "nama": "Nada Sunyi",
+    "nama": "Abu Ruang",
     "harmoni": "split",
     "harmoni_nama": "Split Komplementer",
     "warna": [
       {
         "peran": "background",
-        "hex": "#E4E7E9",
+        "hex": "#F3F6F8",
         "oklch": [
-          0.926,
+          0.972,
           0.004,
           233.9
         ]
       },
       {
         "peran": "surface",
-        "hex": "#E6EBED",
+        "hex": "#FAFDFF",
         "oklch": [
-          0.936,
+          0.992,
           0.006,
           231.5
         ]
       },
       {
         "peran": "base",
-        "hex": "#161B1E",
+        "hex": "#1B1F22",
         "oklch": [
-          0.218,
+          0.238,
           0.009,
           234.4
         ]
       },
       {
         "peran": "accent",
-        "hex": "#2A2322",
+        "hex": "#393131",
         "oklch": [
-          0.262,
+          0.322,
           0.011,
           21.9
         ]
@@ -5513,60 +5513,60 @@
     "pasangan_kontras": [
       {
         "depan": "#090C0D",
-        "belakang": "#E4E7E9",
+        "belakang": "#F3F6F8",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 15.8,
+        "rasio": 18.08,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#090C0D",
-        "belakang": "#E6EBED",
+        "belakang": "#FAFDFF",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 16.33,
+        "rasio": 19.21,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#161B1E",
-        "belakang": "#E4E7E9",
+        "depan": "#1B1F22",
+        "belakang": "#F3F6F8",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 13.98,
+        "rasio": 15.29,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#161B1E",
-        "belakang": "#E6EBED",
+        "depan": "#1B1F22",
+        "belakang": "#FAFDFF",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 14.44,
+        "rasio": 16.24,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#2A2322",
-        "belakang": "#E4E7E9",
+        "depan": "#393131",
+        "belakang": "#F3F6F8",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 12.41,
+        "rasio": 11.67,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#2A2322",
-        "belakang": "#E6EBED",
+        "depan": "#393131",
+        "belakang": "#FAFDFF",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 12.83,
+        "rasio": 12.4,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -5575,7 +5575,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 15.8,
+      "rasio_teks_terendah": 18.08,
       "skor_aksesibilitas": 100
     }
   },
@@ -5584,42 +5584,42 @@
     "slug": "minimalis-4",
     "tema": "minimalis",
     "tema_nama": "Minimalis",
-    "nama": "Kapur Sunyi",
+    "nama": "Abu berpendar Hening",
     "harmoni": "komplementer",
     "harmoni_nama": "Komplementer",
     "warna": [
       {
         "peran": "background",
-        "hex": "#DADCDF",
+        "hex": "#E5E6E9",
         "oklch": [
-          0.894,
+          0.926,
           0.004,
           260.7
         ]
       },
       {
         "peran": "surface",
-        "hex": "#DDDFE3",
+        "hex": "#EBEDF1",
         "oklch": [
-          0.904,
+          0.946,
           0.006,
           263.6
         ]
       },
       {
         "peran": "base",
-        "hex": "#373E4A",
+        "hex": "#3F4652",
         "oklch": [
-          0.362,
+          0.392,
           0.023,
           264.5
         ]
       },
       {
         "peran": "accent",
-        "hex": "#362D1E",
+        "hex": "#3F3627",
         "oklch": [
-          0.303,
+          0.338,
           0.029,
           79.8
         ]
@@ -5637,60 +5637,60 @@
     "pasangan_kontras": [
       {
         "depan": "#0A0B0E",
-        "belakang": "#DADCDF",
+        "belakang": "#E5E6E9",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 14.32,
+        "rasio": 15.77,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#0A0B0E",
-        "belakang": "#DDDFE3",
+        "belakang": "#EBEDF1",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 14.75,
+        "rasio": 16.79,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#373E4A",
-        "belakang": "#DADCDF",
+        "depan": "#3F4652",
+        "belakang": "#E5E6E9",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 7.84,
+        "rasio": 7.62,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#373E4A",
-        "belakang": "#DDDFE3",
+        "depan": "#3F4652",
+        "belakang": "#EBEDF1",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 8.07,
+        "rasio": 8.11,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#362D1E",
-        "belakang": "#DADCDF",
+        "depan": "#3F3627",
+        "belakang": "#E5E6E9",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 9.85,
+        "rasio": 9.52,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#362D1E",
-        "belakang": "#DDDFE3",
+        "depan": "#3F3627",
+        "belakang": "#EBEDF1",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 10.15,
+        "rasio": 10.13,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -5699,7 +5699,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 14.32,
+      "rasio_teks_terendah": 15.77,
       "skor_aksesibilitas": 100
     }
   },
@@ -5708,42 +5708,42 @@
     "slug": "minimalis-5",
     "tema": "minimalis",
     "tema_nama": "Minimalis",
-    "nama": "Kertas Tipis",
+    "nama": "Abu Polos",
     "harmoni": "triadik",
     "harmoni_nama": "Triadik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#D0D2D4",
+        "hex": "#EEF0F3",
         "oklch": [
-          0.862,
+          0.955,
           0.004,
           257.2
         ]
       },
       {
         "peran": "surface",
-        "hex": "#D2D5D9",
+        "hex": "#F4F7FB",
         "oklch": [
-          0.872,
+          0.975,
           0.006,
           260.2
         ]
       },
       {
         "peran": "base",
-        "hex": "#4C525C",
+        "hex": "#575D68",
         "oklch": [
-          0.437,
+          0.477,
           0.019,
           260.5
         ]
       },
       {
         "peran": "accent",
-        "hex": "#483838",
+        "hex": "#4B3B3B",
         "oklch": [
-          0.359,
+          0.369,
           0.023,
           17.7
         ]
@@ -5761,60 +5761,60 @@
     "pasangan_kontras": [
       {
         "depan": "#0A0B0E",
-        "belakang": "#D0D2D4",
+        "belakang": "#EEF0F3",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 12.98,
+        "rasio": 17.24,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#0A0B0E",
-        "belakang": "#D2D5D9",
+        "belakang": "#F4F7FB",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 13.36,
+        "rasio": 18.31,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#4C525C",
-        "belakang": "#D0D2D4",
+        "depan": "#575D68",
+        "belakang": "#EEF0F3",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 5.19,
+        "rasio": 5.8,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#4C525C",
-        "belakang": "#D2D5D9",
+        "depan": "#575D68",
+        "belakang": "#F4F7FB",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 5.34,
+        "rasio": 6.16,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#483838",
-        "belakang": "#D0D2D4",
+        "depan": "#4B3B3B",
+        "belakang": "#EEF0F3",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 7.3,
+        "rasio": 9.25,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#483838",
-        "belakang": "#D2D5D9",
+        "depan": "#4B3B3B",
+        "belakang": "#F4F7FB",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 7.51,
+        "rasio": 9.83,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -5823,7 +5823,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 12.98,
+      "rasio_teks_terendah": 17.24,
       "skor_aksesibilitas": 100
     }
   },
@@ -5832,42 +5832,42 @@
     "slug": "minimalis-6",
     "tema": "minimalis",
     "tema_nama": "Minimalis",
-    "nama": "Kertas Polos",
+    "nama": "Abu berpendar Polos",
     "harmoni": "tetradik",
     "harmoni_nama": "Tetradik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#C6C7CA",
+        "hex": "#F8FAFC",
         "oklch": [
-          0.83,
+          0.983,
           0.004,
           258
         ]
       },
       {
         "peran": "surface",
-        "hex": "#C8CBCE",
+        "hex": "#FCFDFF",
         "oklch": [
-          0.84,
+          0.995,
           0.006,
           261.1
         ]
       },
       {
         "peran": "base",
-        "hex": "#01040E",
+        "hex": "#050D1A",
         "oklch": [
-          0.107,
+          0.157,
           0.031,
           259.4
         ]
       },
       {
         "peran": "accent",
-        "hex": "#385148",
+        "hex": "#344D44",
         "oklch": [
-          0.412,
+          0.397,
           0.035,
           169.8
         ]
@@ -5885,69 +5885,69 @@
     "pasangan_kontras": [
       {
         "depan": "#0A0B0E",
-        "belakang": "#C6C7CA",
+        "belakang": "#F8FAFC",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 11.64,
+        "rasio": 18.81,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#0A0B0E",
-        "belakang": "#C8CBCE",
+        "belakang": "#FCFDFF",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 12.08,
+        "rasio": 19.34,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#01040E",
-        "belakang": "#C6C7CA",
+        "depan": "#050D1A",
+        "belakang": "#F8FAFC",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 12.12,
+        "rasio": 18.6,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#01040E",
-        "belakang": "#C8CBCE",
+        "depan": "#050D1A",
+        "belakang": "#FCFDFF",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 12.58,
+        "rasio": 19.12,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#385148",
-        "belakang": "#C6C7CA",
+        "depan": "#344D44",
+        "belakang": "#F8FAFC",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 5.09,
+        "rasio": 8.76,
         "ambang": 3,
-        "nilai": "AA",
+        "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#385148",
-        "belakang": "#C8CBCE",
+        "depan": "#344D44",
+        "belakang": "#FCFDFF",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 5.29,
+        "rasio": 9.01,
         "ambang": 3,
-        "nilai": "AA",
+        "nilai": "AAA",
         "lolos": true
       }
     ],
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 11.64,
+      "rasio_teks_terendah": 18.81,
       "skor_aksesibilitas": 100
     }
   },
@@ -5956,7 +5956,7 @@
     "slug": "brutalism-1",
     "tema": "brutalism",
     "tema_nama": "Brutalism",
-    "nama": "Palu Kaku",
+    "nama": "Merah Kaku",
     "harmoni": "komplementer",
     "harmoni_nama": "Komplementer",
     "warna": [
@@ -5971,9 +5971,9 @@
       },
       {
         "peran": "surface",
-        "hex": "#FFFFFF",
+        "hex": "#FFFDFC",
         "oklch": [
-          1,
+          0.995,
           0.07,
           33.8
         ]
@@ -5989,9 +5989,9 @@
       },
       {
         "peran": "accent",
-        "hex": "#006375",
+        "hex": "#00869D",
         "oklch": [
-          0.46,
+          0.57,
           0.3,
           215.5
         ]
@@ -6019,10 +6019,10 @@
       },
       {
         "depan": "#020101",
-        "belakang": "#FFFFFF",
+        "belakang": "#FFFDFC",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 20.85,
+        "rasio": 20.56,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
@@ -6039,32 +6039,32 @@
       },
       {
         "depan": "#D73000",
-        "belakang": "#FFFFFF",
+        "belakang": "#FFFDFC",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 4.87,
+        "rasio": 4.8,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#006375",
+        "depan": "#00869D",
         "belakang": "#FFF8F7",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 6.58,
+        "rasio": 4.09,
         "ambang": 3,
-        "nilai": "AA",
+        "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#006375",
-        "belakang": "#FFFFFF",
+        "depan": "#00869D",
+        "belakang": "#FFFDFC",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 6.9,
+        "rasio": 4.23,
         "ambang": 3,
-        "nilai": "AA",
+        "nilai": "AA-Large",
         "lolos": true
       }
     ],
@@ -6080,42 +6080,42 @@
     "slug": "brutalism-2",
     "tema": "brutalism",
     "tema_nama": "Brutalism",
-    "nama": "Blok Kaku",
+    "nama": "Biru Kasar",
     "harmoni": "triadik",
     "harmoni_nama": "Triadik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#E9EFFF",
+        "hex": "#E2EBFF",
         "oklch": [
-          0.953,
+          0.939,
           0.05,
           266.9
         ]
       },
       {
         "peran": "surface",
-        "hex": "#F0F4FF",
+        "hex": "#EBF1FF",
         "oklch": [
-          0.968,
+          0.959,
           0.07,
           266.5
         ]
       },
       {
         "peran": "base",
-        "hex": "#003ADE",
+        "hex": "#003CE5",
         "oklch": [
-          0.456,
+          0.466,
           0.277,
           263.7
         ]
       },
       {
         "peran": "accent",
-        "hex": "#1E7D00",
+        "hex": "#279A00",
         "oklch": [
-          0.516,
+          0.601,
           0.309,
           140.6
         ]
@@ -6133,69 +6133,69 @@
     "pasangan_kontras": [
       {
         "depan": "#010203",
-        "belakang": "#E9EFFF",
+        "belakang": "#E2EBFF",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 18.05,
+        "rasio": 17.37,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#010203",
-        "belakang": "#F0F4FF",
+        "belakang": "#EBF1FF",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 18.88,
+        "rasio": 18.35,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#003ADE",
-        "belakang": "#E9EFFF",
+        "depan": "#003CE5",
+        "belakang": "#E2EBFF",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 6.86,
+        "rasio": 6.32,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#003ADE",
-        "belakang": "#F0F4FF",
+        "depan": "#003CE5",
+        "belakang": "#EBF1FF",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 7.18,
+        "rasio": 6.68,
         "ambang": 4.5,
-        "nilai": "AAA",
+        "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#1E7D00",
-        "belakang": "#E9EFFF",
+        "depan": "#279A00",
+        "belakang": "#E2EBFF",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 4.58,
+        "rasio": 3.08,
         "ambang": 3,
-        "nilai": "AA",
+        "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#1E7D00",
-        "belakang": "#F0F4FF",
+        "depan": "#279A00",
+        "belakang": "#EBF1FF",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 4.79,
+        "rasio": 3.25,
         "ambang": 3,
-        "nilai": "AA",
+        "nilai": "AA-Large",
         "lolos": true
       }
     ],
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 18.05,
+      "rasio_teks_terendah": 17.37,
       "skor_aksesibilitas": 100
     }
   },
@@ -6204,42 +6204,42 @@
     "slug": "brutalism-3",
     "tema": "brutalism",
     "tema_nama": "Brutalism",
-    "nama": "Blok Terang",
+    "nama": "Hijau Kasar",
     "harmoni": "analog",
     "harmoni_nama": "Analog",
     "warna": [
       {
         "peran": "background",
-        "hex": "#CEEFD4",
+        "hex": "#DDFEE3",
         "oklch": [
-          0.921,
+          0.967,
           0.05,
           150.1
         ]
       },
       {
         "peran": "surface",
-        "hex": "#CEF7CD",
+        "hex": "#F3FFF2",
         "oklch": [
-          0.936,
+          0.987,
           0.07,
           144.7
         ]
       },
       {
         "peran": "base",
-        "hex": "#00772E",
+        "hex": "#007E32",
         "oklch": [
-          0.498,
+          0.518,
           0.208,
           148.3
         ]
       },
       {
         "peran": "accent",
-        "hex": "#008E73",
+        "hex": "#009B7E",
         "oklch": [
-          0.575,
+          0.615,
           0.26,
           173.1
         ]
@@ -6257,60 +6257,60 @@
     "pasangan_kontras": [
       {
         "depan": "#010201",
-        "belakang": "#CEEFD4",
+        "belakang": "#DDFEE3",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 16.75,
+        "rasio": 19.16,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#010201",
-        "belakang": "#CEF7CD",
+        "belakang": "#F3FFF2",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 17.63,
+        "rasio": 20.19,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#00772E",
-        "belakang": "#CEEFD4",
+        "depan": "#007E32",
+        "belakang": "#DDFEE3",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.6,
+        "rasio": 4.8,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#00772E",
-        "belakang": "#CEF7CD",
+        "depan": "#007E32",
+        "belakang": "#F3FFF2",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 4.84,
+        "rasio": 5.06,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#008E73",
-        "belakang": "#CEEFD4",
+        "depan": "#009B7E",
+        "belakang": "#DDFEE3",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.31,
+        "rasio": 3.23,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#008E73",
-        "belakang": "#CEF7CD",
+        "depan": "#009B7E",
+        "belakang": "#F3FFF2",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.48,
+        "rasio": 3.41,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -6319,7 +6319,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 16.75,
+      "rasio_teks_terendah": 19.16,
       "skor_aksesibilitas": 100
     }
   },
@@ -6328,42 +6328,42 @@
     "slug": "brutalism-4",
     "tema": "brutalism",
     "tema_nama": "Brutalism",
-    "nama": "Beton Kaku",
+    "nama": "Kuning Mentah",
     "harmoni": "split",
     "harmoni_nama": "Split Komplementer",
     "warna": [
       {
         "peran": "background",
-        "hex": "#E3DBB6",
+        "hex": "#EEE6C0",
         "oklch": [
-          0.889,
+          0.921,
           0.05,
           97.4
         ]
       },
       {
         "peran": "surface",
-        "hex": "#EDE0AB",
+        "hex": "#F9ECB7",
         "oklch": [
-          0.904,
+          0.941,
           0.07,
           96
         ]
       },
       {
         "peran": "base",
-        "hex": "#6E5A00",
+        "hex": "#786300",
         "oklch": [
-          0.475,
+          0.505,
           0.182,
           94
         ]
       },
       {
         "peran": "accent",
-        "hex": "#B33FF7",
+        "hex": "#B745FC",
         "oklch": [
-          0.616,
+          0.631,
           0.26,
           309.2
         ]
@@ -6381,60 +6381,60 @@
     "pasangan_kontras": [
       {
         "depan": "#020201",
-        "belakang": "#E3DBB6",
+        "belakang": "#EEE6C0",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 14.9,
+        "rasio": 16.52,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#020201",
-        "belakang": "#EDE0AB",
+        "belakang": "#F9ECB7",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 15.67,
+        "rasio": 17.51,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#6E5A00",
-        "belakang": "#E3DBB6",
+        "depan": "#786300",
+        "belakang": "#EEE6C0",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.82,
+        "rasio": 4.66,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#6E5A00",
-        "belakang": "#EDE0AB",
+        "depan": "#786300",
+        "belakang": "#F9ECB7",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 5.07,
+        "rasio": 4.94,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#B33FF7",
-        "belakang": "#E3DBB6",
+        "depan": "#B745FC",
+        "belakang": "#EEE6C0",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.03,
+        "rasio": 3.17,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#B33FF7",
-        "belakang": "#EDE0AB",
+        "depan": "#B745FC",
+        "belakang": "#F9ECB7",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.19,
+        "rasio": 3.36,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -6443,7 +6443,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 14.9,
+      "rasio_teks_terendah": 16.52,
       "skor_aksesibilitas": 100
     }
   },
@@ -6452,44 +6452,44 @@
     "slug": "brutalism-5",
     "tema": "brutalism",
     "tema_nama": "Brutalism",
-    "nama": "Tembok Mentah",
+    "nama": "Magenta Kaku",
     "harmoni": "tetradik",
     "harmoni_nama": "Tetradik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#E1C5E3",
+        "hex": "#F9E7FF",
         "oklch": [
-          0.857,
+          0.95,
           0.05,
-          324.4
+          317.4
         ]
       },
       {
         "peran": "surface",
-        "hex": "#E9C7F3",
+        "hex": "#FDF0FF",
         "oklch": [
-          0.872,
+          0.97,
           0.07,
-          318.2
+          322.2
         ]
       },
       {
         "peran": "base",
-        "hex": "#8B009F",
+        "hex": "#9800AE",
         "oklch": [
-          0.462,
+          0.492,
           0.277,
           321.4
         ]
       },
       {
         "peran": "accent",
-        "hex": "#00841B",
+        "hex": "#009E1A",
         "oklch": [
-          0.532,
-          0.34,
-          144.2
+          0.606,
+          0.292,
+          143.6
         ]
       },
       {
@@ -6505,57 +6505,57 @@
     "pasangan_kontras": [
       {
         "depan": "#020102",
-        "belakang": "#E1C5E3",
+        "belakang": "#F9E7FF",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 13.19,
+        "rasio": 17.76,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#020102",
-        "belakang": "#E9C7F3",
+        "belakang": "#FDF0FF",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 13.82,
+        "rasio": 18.94,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#8B009F",
-        "belakang": "#E1C5E3",
+        "depan": "#9800AE",
+        "belakang": "#F9E7FF",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 5.12,
+        "rasio": 6.08,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#8B009F",
-        "belakang": "#E9C7F3",
+        "depan": "#9800AE",
+        "belakang": "#FDF0FF",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 5.36,
+        "rasio": 6.48,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#00841B",
-        "belakang": "#E1C5E3",
+        "depan": "#009E1A",
+        "belakang": "#F9E7FF",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.08,
+        "rasio": 3.03,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#00841B",
-        "belakang": "#E9C7F3",
+        "depan": "#009E1A",
+        "belakang": "#FDF0FF",
         "peran_depan": "accent",
         "peran_belakang": "surface",
         "rasio": 3.23,
@@ -6567,7 +6567,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 13.19,
+      "rasio_teks_terendah": 17.76,
       "skor_aksesibilitas": 100
     }
   },
@@ -6576,24 +6576,24 @@
     "slug": "brutalism-6",
     "tema": "brutalism",
     "tema_nama": "Brutalism",
-    "nama": "Tembok Terang",
+    "nama": "Merah Berat",
     "harmoni": "monokrom",
     "harmoni_nama": "Monokromatik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#E2B9C4",
+        "hex": "#FFF5F7",
         "oklch": [
-          0.825,
+          0.978,
           0.05,
           0.3
         ]
       },
       {
         "peran": "surface",
-        "hex": "#F2B8C9",
+        "hex": "#FFFDFD",
         "oklch": [
-          0.84,
+          0.995,
           0.07,
           359.4
         ]
@@ -6609,9 +6609,9 @@
       },
       {
         "peran": "accent",
-        "hex": "#90004C",
+        "hex": "#970050",
         "oklch": [
-          0.423,
+          0.438,
           0.26,
           358.8
         ]
@@ -6629,69 +6629,69 @@
     "pasangan_kontras": [
       {
         "depan": "#020102",
-        "belakang": "#E2B9C4",
+        "belakang": "#FFF5F7",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 11.88,
+        "rasio": 19.5,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#020102",
-        "belakang": "#F2B8C9",
+        "belakang": "#FFFDFD",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 12.38,
+        "rasio": 20.56,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#0C0003",
-        "belakang": "#E2B9C4",
+        "belakang": "#FFF5F7",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 11.77,
+        "rasio": 19.33,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#0C0003",
-        "belakang": "#F2B8C9",
+        "belakang": "#FFFDFD",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 12.27,
+        "rasio": 20.38,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#90004C",
-        "belakang": "#E2B9C4",
+        "depan": "#970050",
+        "belakang": "#FFF5F7",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 5.23,
+        "rasio": 8.08,
         "ambang": 3,
-        "nilai": "AA",
+        "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#90004C",
-        "belakang": "#F2B8C9",
+        "depan": "#970050",
+        "belakang": "#FFFDFD",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 5.45,
+        "rasio": 8.52,
         "ambang": 3,
-        "nilai": "AA",
+        "nilai": "AAA",
         "lolos": true
       }
     ],
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 11.88,
+      "rasio_teks_terendah": 19.5,
       "skor_aksesibilitas": 100
     }
   },
@@ -6700,7 +6700,7 @@
     "slug": "vintage-1",
     "tema": "vintage",
     "tema_nama": "Vintage Paper",
-    "nama": "Sepia Hangat",
+    "nama": "Oranye Usang",
     "harmoni": "analog",
     "harmoni_nama": "Analog",
     "warna": [
@@ -6715,9 +6715,9 @@
       },
       {
         "peran": "surface",
-        "hex": "#FAEBE4",
+        "hex": "#F0E1DA",
         "oklch": [
-          0.95,
+          0.92,
           0.019,
           49.6
         ]
@@ -6733,9 +6733,9 @@
       },
       {
         "peran": "accent",
-        "hex": "#2E1F00",
+        "hex": "#503900",
         "oklch": [
-          0.25,
+          0.36,
           0.075,
           82.6
         ]
@@ -6763,10 +6763,10 @@
       },
       {
         "depan": "#221E1D",
-        "belakang": "#FAEBE4",
+        "belakang": "#F0E1DA",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 14.21,
+        "rasio": 12.97,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
@@ -6783,30 +6783,30 @@
       },
       {
         "depan": "#86553D",
-        "belakang": "#FAEBE4",
+        "belakang": "#F0E1DA",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 5.34,
+        "rasio": 4.88,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#2E1F00",
+        "depan": "#503900",
         "belakang": "#E6DCD7",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 11.88,
+        "rasio": 8.09,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#2E1F00",
-        "belakang": "#FAEBE4",
+        "depan": "#503900",
+        "belakang": "#F0E1DA",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 13.77,
+        "rasio": 8.56,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -6824,42 +6824,42 @@
     "slug": "vintage-2",
     "tema": "vintage",
     "tema_nama": "Vintage Paper",
-    "nama": "Surat Pudar",
+    "nama": "Kuning Album",
     "harmoni": "triadik",
     "harmoni_nama": "Triadik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#D7D3CB",
+        "hex": "#D2CFC6",
         "oklch": [
-          0.868,
+          0.854,
           0.013,
           87.7
         ]
       },
       {
         "peran": "surface",
-        "hex": "#E9E3D6",
+        "hex": "#DBD5C8",
         "oklch": [
-          0.918,
+          0.874,
           0.019,
           86.7
         ]
       },
       {
         "peran": "base",
-        "hex": "#655424",
+        "hex": "#685627",
         "oklch": [
-          0.452,
+          0.462,
           0.069,
           89.2
         ]
       },
       {
         "peran": "accent",
-        "hex": "#472649",
+        "hex": "#5F3C61",
         "oklch": [
-          0.326,
+          0.411,
           0.073,
           324.6
         ]
@@ -6877,69 +6877,69 @@
     "pasangan_kontras": [
       {
         "depan": "#201F1C",
-        "belakang": "#D7D3CB",
+        "belakang": "#D2CFC6",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 11.04,
+        "rasio": 10.58,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#201F1C",
-        "belakang": "#E9E3D6",
+        "belakang": "#DBD5C8",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 12.89,
+        "rasio": 11.27,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#655424",
-        "belakang": "#D7D3CB",
+        "depan": "#685627",
+        "belakang": "#D2CFC6",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.94,
+        "rasio": 4.57,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#655424",
-        "belakang": "#E9E3D6",
+        "depan": "#685627",
+        "belakang": "#DBD5C8",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 5.77,
+        "rasio": 4.87,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#472649",
-        "belakang": "#D7D3CB",
+        "depan": "#5F3C61",
+        "belakang": "#D2CFC6",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 8.57,
+        "rasio": 5.85,
         "ambang": 3,
-        "nilai": "AAA",
+        "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#472649",
-        "belakang": "#E9E3D6",
+        "depan": "#5F3C61",
+        "belakang": "#DBD5C8",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 10.01,
+        "rasio": 6.23,
         "ambang": 3,
-        "nilai": "AAA",
+        "nilai": "AA",
         "lolos": true
       }
     ],
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 11.04,
+      "rasio_teks_terendah": 10.58,
       "skor_aksesibilitas": 100
     }
   },
@@ -6948,33 +6948,33 @@
     "slug": "vintage-3",
     "tema": "vintage",
     "tema_nama": "Vintage Paper",
-    "nama": "Surat Silam",
+    "nama": "Abu berpendar Album",
     "harmoni": "monokrom",
     "harmoni_nama": "Monokromatik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#CFC8C1",
+        "hex": "#DED7D0",
         "oklch": [
-          0.836,
+          0.882,
           0.013,
           67.2
         ]
       },
       {
         "peran": "surface",
-        "hex": "#E2D7CD",
+        "hex": "#E7DDD2",
         "oklch": [
-          0.886,
+          0.902,
           0.019,
           67.8
         ]
       },
       {
         "peran": "base",
-        "hex": "#3D2F1E",
+        "hex": "#423423",
         "oklch": [
-          0.317,
+          0.337,
           0.034,
           71.1
         ]
@@ -7001,60 +7001,60 @@
     "pasangan_kontras": [
       {
         "depan": "#211F1C",
-        "belakang": "#CFC8C1",
+        "belakang": "#DED7D0",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 9.93,
+        "rasio": 11.54,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#211F1C",
-        "belakang": "#E2D7CD",
+        "belakang": "#E7DDD2",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 11.61,
+        "rasio": 12.27,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#3D2F1E",
-        "belakang": "#CFC8C1",
+        "depan": "#423423",
+        "belakang": "#DED7D0",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 7.81,
+        "rasio": 8.43,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#3D2F1E",
-        "belakang": "#E2D7CD",
+        "depan": "#423423",
+        "belakang": "#E7DDD2",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 9.14,
+        "rasio": 8.97,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#010000",
-        "belakang": "#CFC8C1",
+        "belakang": "#DED7D0",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 12.67,
+        "rasio": 14.72,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#010000",
-        "belakang": "#E2D7CD",
+        "belakang": "#E7DDD2",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 14.82,
+        "rasio": 15.65,
         "ambang": 3,
         "nilai": "AAA",
         "lolos": true
@@ -7063,7 +7063,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 9.93,
+      "rasio_teks_terendah": 11.54,
       "skor_aksesibilitas": 100
     }
   },
@@ -7072,42 +7072,42 @@
     "slug": "vintage-4",
     "tema": "vintage",
     "tema_nama": "Vintage Paper",
-    "nama": "Loteng Pudar",
+    "nama": "Kuning Silam",
     "harmoni": "komplementer",
     "harmoni_nama": "Komplementer",
     "warna": [
       {
         "peran": "background",
-        "hex": "#C3BEB6",
+        "hex": "#CDC8C0",
         "oklch": [
-          0.804,
+          0.836,
           0.013,
           80.8
         ]
       },
       {
         "peran": "surface",
-        "hex": "#D5CEC2",
+        "hex": "#D5CFC2",
         "oklch": [
-          0.854,
+          0.856,
           0.019,
           85.3
         ]
       },
       {
         "peran": "base",
-        "hex": "#574627",
+        "hex": "#5F4F2F",
         "oklch": [
-          0.405,
+          0.435,
           0.052,
           82.5
         ]
       },
       {
         "peran": "accent",
-        "hex": "#3E5378",
+        "hex": "#485D83",
         "oklch": [
-          0.442,
+          0.477,
           0.067,
           261.8
         ]
@@ -7125,69 +7125,69 @@
     "pasangan_kontras": [
       {
         "depan": "#211F1C",
-        "belakang": "#C3BEB6",
+        "belakang": "#CDC8C0",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 8.89,
+        "rasio": 9.88,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#211F1C",
-        "belakang": "#D5CEC2",
+        "belakang": "#D5CFC2",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 10.52,
+        "rasio": 10.59,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#574627",
-        "belakang": "#C3BEB6",
+        "depan": "#5F4F2F",
+        "belakang": "#CDC8C0",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.92,
+        "rasio": 4.77,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#574627",
-        "belakang": "#D5CEC2",
+        "depan": "#5F4F2F",
+        "belakang": "#D5CFC2",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 5.82,
+        "rasio": 5.11,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#3E5378",
-        "belakang": "#C3BEB6",
+        "depan": "#485D83",
+        "belakang": "#CDC8C0",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 4.19,
+        "rasio": 3.98,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#3E5378",
-        "belakang": "#D5CEC2",
+        "depan": "#485D83",
+        "belakang": "#D5CFC2",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 4.95,
+        "rasio": 4.27,
         "ambang": 3,
-        "nilai": "AA",
+        "nilai": "AA-Large",
         "lolos": true
       }
     ],
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 8.89,
+      "rasio_teks_terendah": 9.88,
       "skor_aksesibilitas": 100
     }
   },
@@ -7196,42 +7196,42 @@
     "slug": "vintage-5",
     "tema": "vintage",
     "tema_nama": "Vintage Paper",
-    "nama": "Album Usang",
+    "nama": "Oranye Pudar",
     "harmoni": "split",
     "harmoni_nama": "Split Komplementer",
     "warna": [
       {
         "peran": "background",
-        "hex": "#BCB3AE",
+        "hex": "#DAD0CB",
         "oklch": [
-          0.772,
+          0.865,
           0.013,
           51.7
         ]
       },
       {
         "peran": "surface",
-        "hex": "#CFC2BA",
+        "hex": "#E4D6CE",
         "oklch": [
-          0.822,
+          0.885,
           0.019,
           50.8
         ]
       },
       {
         "peran": "base",
-        "hex": "#341B0B",
+        "hex": "#3F2515",
         "oklch": [
-          0.253,
+          0.293,
           0.047,
           51.9
         ]
       },
       {
         "peran": "accent",
-        "hex": "#376566",
+        "hex": "#406D6E",
         "oklch": [
-          0.474,
+          0.504,
           0.05,
           197.2
         ]
@@ -7249,60 +7249,60 @@
     "pasangan_kontras": [
       {
         "depan": "#221E1D",
-        "belakang": "#BCB3AE",
+        "belakang": "#DAD0CB",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 8.02,
+        "rasio": 10.91,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#221E1D",
-        "belakang": "#CFC2BA",
+        "belakang": "#E4D6CE",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 9.5,
+        "rasio": 11.65,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#341B0B",
-        "belakang": "#BCB3AE",
+        "depan": "#3F2515",
+        "belakang": "#DAD0CB",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 7.8,
+        "rasio": 9.33,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#341B0B",
-        "belakang": "#CFC2BA",
+        "depan": "#3F2515",
+        "belakang": "#E4D6CE",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 9.24,
+        "rasio": 9.96,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#376566",
-        "belakang": "#BCB3AE",
+        "depan": "#406D6E",
+        "belakang": "#DAD0CB",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.17,
+        "rasio": 3.82,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#376566",
-        "belakang": "#CFC2BA",
+        "depan": "#406D6E",
+        "belakang": "#E4D6CE",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.76,
+        "rasio": 4.08,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -7311,7 +7311,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 8.02,
+      "rasio_teks_terendah": 10.91,
       "skor_aksesibilitas": 100
     }
   },
@@ -7320,44 +7320,44 @@
     "slug": "vintage-6",
     "tema": "vintage",
     "tema_nama": "Vintage Paper",
-    "nama": "Surat Hangat",
+    "nama": "Kuning Usang",
     "harmoni": "tetradik",
     "harmoni_nama": "Tetradik",
     "warna": [
       {
         "peran": "background",
-        "hex": "#AFAAA2",
+        "hex": "#E0DBD3",
         "oklch": [
-          0.74,
+          0.893,
           0.013,
-          83
+          81.2
         ]
       },
       {
         "peran": "surface",
-        "hex": "#C0BAAD",
+        "hex": "#E8E2D5",
         "oklch": [
-          0.79,
+          0.913,
           0.019,
-          85.4
+          83.4
         ]
       },
       {
         "peran": "base",
-        "hex": "#49391B",
+        "hex": "#564627",
         "oklch": [
-          0.356,
+          0.402,
           0.051,
-          83
+          82.2
         ]
       },
       {
         "peran": "accent",
-        "hex": "#714B58",
+        "hex": "#8C6372",
         "oklch": [
-          0.46,
-          0.055,
-          358
+          0.548,
+          0.056,
+          356.1
         ]
       },
       {
@@ -7366,67 +7366,67 @@
         "oklch": [
           0.24,
           0.006,
-          83
+          82.2
         ]
       }
     ],
     "pasangan_kontras": [
       {
         "depan": "#211F1C",
-        "belakang": "#AFAAA2",
+        "belakang": "#E0DBD3",
         "peran_depan": "text",
         "peran_belakang": "background",
-        "rasio": 7.12,
+        "rasio": 11.93,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
         "depan": "#211F1C",
-        "belakang": "#C0BAAD",
+        "belakang": "#E8E2D5",
         "peran_depan": "text",
         "peran_belakang": "surface",
-        "rasio": 8.51,
+        "rasio": 12.74,
         "ambang": 4.5,
         "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#49391B",
-        "belakang": "#AFAAA2",
+        "depan": "#564627",
+        "belakang": "#E0DBD3",
         "peran_depan": "base",
         "peran_belakang": "background",
-        "rasio": 4.83,
+        "rasio": 6.62,
         "ambang": 4.5,
         "nilai": "AA",
         "lolos": true
       },
       {
-        "depan": "#49391B",
-        "belakang": "#C0BAAD",
+        "depan": "#564627",
+        "belakang": "#E8E2D5",
         "peran_depan": "base",
         "peran_belakang": "surface",
-        "rasio": 5.77,
+        "rasio": 7.07,
         "ambang": 4.5,
-        "nilai": "AA",
+        "nilai": "AAA",
         "lolos": true
       },
       {
-        "depan": "#714B58",
-        "belakang": "#AFAAA2",
+        "depan": "#8C6372",
+        "belakang": "#E0DBD3",
         "peran_depan": "accent",
         "peran_belakang": "background",
-        "rasio": 3.19,
+        "rasio": 3.68,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
       },
       {
-        "depan": "#714B58",
-        "belakang": "#C0BAAD",
+        "depan": "#8C6372",
+        "belakang": "#E8E2D5",
         "peran_depan": "accent",
         "peran_belakang": "surface",
-        "rasio": 3.81,
+        "rasio": 3.93,
         "ambang": 3,
         "nilai": "AA-Large",
         "lolos": true
@@ -7435,7 +7435,7 @@
     "ringkasan": {
       "teks_lolos_aa": true,
       "aksen_lolos": true,
-      "rasio_teks_terendah": 7.12,
+      "rasio_teks_terendah": 11.93,
       "skor_aksesibilitas": 100
     }
   }

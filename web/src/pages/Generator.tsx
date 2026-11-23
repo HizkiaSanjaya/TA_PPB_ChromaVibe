@@ -46,7 +46,9 @@ function KartuHasil({ palet }: { palet: Palet }) {
         <div className="min-w-0">
           <p className="truncate text-sm font-semibold">{palet.nama}</p>
           <p className="mt-0.5 text-[11px] text-redup">
-            {lolos === total ? `Aman dibaca ${lolos}/${total}` : `Perlu dicek ${lolos}/${total}`}
+            {lolos === total
+              ? `Aman dibaca ${lolos}/${total} — tidak ada tulisan yang terlalu samar`
+              : `Perlu dicek ${lolos}/${total} — ada tulisan yang kurang terbaca`}
           </p>
         </div>
         <TombolSimpan palet={palet} />
@@ -388,9 +390,10 @@ export function Generator() {
           )}
 
           {harmoniTerpilih && (
-            <p className="mt-1.5 text-[11px] leading-relaxed text-redup">
-              {harmoniTerpilih.deskripsi}
-            </p>
+            <div className="mt-2 rounded-lg border border-garis bg-panel/40 px-2.5 py-2">
+              <p className="text-[11px] leading-relaxed text-teks">{harmoniTerpilih.deskripsi}</p>
+              <p className="mt-1 text-[11px] leading-relaxed text-redup">{harmoniTerpilih.saran}</p>
+            </div>
           )}
         </fieldset>
       </section>
@@ -408,6 +411,14 @@ export function Generator() {
             Variasikan
           </button>
         </div>
+
+        <p className="mb-3 rounded-lg border border-garis bg-panel/40 px-2.5 py-2 text-[10px] leading-relaxed text-redup">
+          <span className="font-semibold text-teks">Arti angka pada kartu.</span> Setiap palet diuji
+          dengan enam pasangan warna, misalnya teks di atas latar, atau judul di atas kartu. Tulisan
+          &ldquo;6/6&rdquo; berarti keenam pasangan itu lolos, jadi tidak ada tulisan yang terlalu
+          samar untuk dibaca. Nama seperti &ldquo;Oranye Kasar&rdquo; dibentuk dari warna dasar
+          ditambah kata sifat temanya, supaya tiap palet bisa disebut tanpa menyebut kode hex.
+        </p>
 
         {memuat && semuaPalet.length === 0 && <Memuat pesan="Menyusun palet" />}
         {galat && <Galat pesan={galat.message} ulangi={() => void rangkaian[0]?.refetch()} />}
