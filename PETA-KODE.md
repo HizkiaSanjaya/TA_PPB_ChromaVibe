@@ -29,7 +29,7 @@ Bagian ini yang paling sering ditanya. Setiap syarat dipetakan ke berkas dan bar
 | Halaman detail palet dan bukti uji kontrasnya di mana? | `web/src/pages/DetailPalet.tsx` | 119 | Menampilkan pratinjau berbentuk antarmuka mini, lima peran warna, tabel keterbacaan beserta lencana, dan tombol ekspor CSS. |
 | Halaman profil atau tentang | `web/src/pages/Tentang.tsx` | 6 | Memuat penyusun, ide dasar, teknologi, daftar endpoint, dan tautan repositori. Nama serta NIM diambil dari src/konfigurasi.ts. |
 | PWA dan manifest | `web/vite.config.ts` | 20 | Nama, ikon 192 dan 512 termasuk maskable, display standalone, serta warna tema. Dihasilkan menjadi manifest.webmanifest saat build. |
-| Service worker dan cache offline | `web/src/sw.ts` | 144 | Tiga cabang: permintaan /api/v1, navigasi halaman, dan aset. Strategi cache dijelaskan pada fungsi layaniApi di berkas yang sama. |
+| Service worker dan cache offline | `web/src/sw.ts` | 147 | Tiga cabang: permintaan /api/v1, navigasi halaman, dan aset. Strategi cache dijelaskan pada fungsi layaniApi di berkas yang sama. |
 
 ## B. Tampilan dan navigasi
 
@@ -40,7 +40,7 @@ Kalau asisten menunjuk layar lalu bertanya kode mana yang menggambarnya.
 | Kerangka halaman dan bottom nav dipasang | `web/src/components/Layout.tsx` | 25 | Nav dipasang sekali di layout induk, jadi tidak dibongkar-pasang saat pindah halaman. |
 | Tab aktif dan aria untuk pembaca layar | `web/src/components/BottomNav.tsx` | 26 | NavLink memberi aria-current="page" otomatis, dan tampilan aktif ditandai garis atas serta warna teks. |
 | Tombol Generator dan perubahan tema | `web/src/pages/Generator.tsx` | 3 | Seluruh pengaturan disimpan di URL, bukan state lokal, sehingga hasil bisa dibagikan dan tetap ada setelah muat ulang. |
-| Permintaan ke API dari Generator | `web/src/pages/Generator.tsx` | 139 | TanStack Query memanggil api.buatPalet dengan base, tema, harmoni, jumlah, seed, dan kecerahan sebagai kunci cache. |
+| Permintaan ke API dari Generator | `web/src/pages/Generator.tsx` | 138 | TanStack Query memanggil api.buatPalet dengan base, tema, harmoni, jumlah, seed, dan kecerahan sebagai kunci cache. |
 | Menyimpan palet ke koleksi | `web/src/hooks/useKoleksi.ts` | 55 | Disimpan ke localStorage dengan kunci chromavibe:koleksi:v1. Pembaca lain diberi tahu lewat useSyncExternalStore. |
 | Halaman koleksi membaca penyimpanan lokal | `web/src/hooks/useKoleksi.ts` | 5 | Kunci penyimpanan dan pembacaan awal. Tidak ada permintaan jaringan di halaman koleksi. |
 | Tombol simpan di kartu hasil | `web/src/components/TombolSimpan.tsx` | 11 | Satu komponen kecil yang membaca status koleksi, jadi tombol langsung berubah jadi Tersimpan. |
@@ -102,9 +102,9 @@ Sumber data palet kurasi serta perilaku aplikasi saat jaringan mati.
 | Alamat API di sisi klien | `web/src/api/client.ts` | 3 | Dibaca dari VITE_API_URL. Tidak ada URL yang ditanam langsung di kode sumber. |
 | Menangkap kegagalan jaringan di klien | `web/src/api/client.ts` | 23 | fetch yang gagal, atau balasan 503 dari service worker, memicu kejadian ini untuk menampilkan penanda offline. |
 | Penanda offline di atas halaman | `web/src/components/PenandaOffline.tsx` | 16 | navigator.onLine saja tidak cukup, karena perangkat bisa tersambung WiFi tetapi server API mati. |
-| Cache kerangka aplikasi saat instalasi | `web/src/sw.ts` | 29 | Daftar berkas dari manifest Vite dideduplikasi, karena Cache.addAll menolak daftar berisi URL kembar. |
-| Strategi cache untuk permintaan API | `web/src/sw.ts` | 83 | Stale while revalidate: jawab dari cache, perbarui di latar. Aman karena hasil generator deterministik. |
-| Jatuh ke halaman tersimpan saat offline | `web/src/sw.ts` | 110 | Network first, lalu cache halaman yang pernah dibuka, lalu index.html dari precache. |
+| Cache kerangka aplikasi saat instalasi | `web/src/sw.ts` | 32 | Daftar berkas dari manifest Vite dideduplikasi, karena Cache.addAll menolak daftar berisi URL kembar. |
+| Strategi cache untuk permintaan API | `web/src/sw.ts` | 86 | Stale while revalidate: jawab dari cache, perbarui di latar. Aman karena hasil generator deterministik. |
+| Jatuh ke halaman tersimpan saat offline | `web/src/sw.ts` | 113 | Network first, lalu cache halaman yang pernah dibuka, lalu index.html dari precache. |
 
 ## F. Pengujian, bukti yang bisa ditunjukkan
 
