@@ -52,6 +52,24 @@ export function IkonKoleksi() {
   )
 }
 
+export function IkonJelajah() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="size-[22px]"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.8}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <circle cx="11" cy="11" r="6.5" />
+      <path d="M20 20l-4.2-4.2" />
+    </svg>
+  )
+}
+
 export function IkonTentang() {
   return (
     <svg

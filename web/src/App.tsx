@@ -5,6 +5,7 @@ import { Beranda } from './pages/Beranda'
 import { DetailPalet } from './pages/DetailPalet'
 import { DetailTema } from './pages/DetailTema'
 import { Generator } from './pages/Generator'
+import { Jelajah } from './pages/Jelajah'
 import { Koleksi } from './pages/Koleksi'
 import { Tentang } from './pages/Tentang'
 import { TidakDitemukan } from './pages/TidakDitemukan'
@@ -14,6 +15,7 @@ export default function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<Beranda />} />
+        <Route path="jelajah" element={<Jelajah />} />
         <Route path="tema/:slug" element={<DetailTema />} />
         <Route path="palet/:id" element={<DetailPalet />} />
         <Route path="generator" element={<Generator />} />

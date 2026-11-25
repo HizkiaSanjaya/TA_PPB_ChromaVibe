@@ -45,6 +45,7 @@ export const api = {
   daftarTema: () => ambil<Tema[]>('/themes'),
   detailTema: (slug: string) => ambil<Tema>(`/themes/${slug}`),
   paletTema: (slug: string) => ambil<Palet[]>(`/themes/${slug}/palettes`),
+  semuaPalet: () => ambil<Palet[]>('/palettes'),
   detailPalet: (id: string) => ambil<Palet>(`/palettes/${id}`),
   daftarHarmoni: () => ambil<SkemaHarmoni[]>('/harmoni'),
   buatPalet: (masukan: MasukanGenerate) => {

@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 
 import { api } from '../api/client'
 import { KepalaHalaman } from '../components/KepalaHalaman'
@@ -12,6 +12,7 @@ import { daftarHex, hexKeCss, hexKeTailwind, KETERANGAN_PERAN, LABEL_PERAN } fro
 
 export function DetailPalet() {
   const { id = '' } = useParams()
+  const lokasi = useLocation()
   const koleksi = useKoleksi()
   const tersimpan = koleksi.find((item) => item.id === id) ?? null
 
@@ -48,12 +49,20 @@ export function DetailPalet() {
 
   const sudahTersimpan = koleksi.some((item) => item.id === palet.id)
 
+  // Tombol kembali mengikuti halaman asal, supaya pengguna yang datang dari
+  // Jelajah tidak dilempar ke halaman tema yang belum pernah dibuka.
+  const asal = (lokasi.state as { dari?: string } | null)?.dari
+  const kembali =
+    asal === '/jelajah'
+      ? { ke: '/jelajah', label: 'Jelajah' }
+      : { ke: `/tema/${palet.tema}`, label: `Tema ${palet.tema_nama}` }
+
   return (
     <div>
       <KepalaHalaman
         judul={palet.nama}
         keterangan={`Tema ${palet.tema_nama} dengan harmoni ${palet.harmoni_nama}.`}
-        kembali={{ ke: `/tema/${palet.tema}`, label: `Tema ${palet.tema_nama}` }}
+        kembali={kembali}
       />
 
       <section aria-label="Pratinjau palet" className="mb-6">
