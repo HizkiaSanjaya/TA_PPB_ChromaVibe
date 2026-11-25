@@ -26,9 +26,9 @@ Poin berikut memudahkan asisten memeriksa.
 1. **API sendiri.** Dua proses berjalan: API pada folder `api/`, PWA pada folder `web/`.
    Tunjukkan `GET /api/v1/themes` di browser dan satu permintaan
    `GET /api/v1/palettes/generate?base=3B82F6&tema=y2k&harmoni=triadik&jumlah=3&seed=42`.
-2. **Bottom navigation.** Empat tab tampil di semua halaman, tab aktif ditandai garis dan
+2. **Bottom navigation.** Lima tab tampil di semua halaman, tab aktif ditandai garis dan
    warna, serta memakai `aria-current` dari `NavLink`.
-3. **Jumlah halaman.** Tujuh rute: beranda, detail tema, detail palet, generator, koleksi,
+3. **Jumlah halaman.** Delapan rute: beranda, jelajah, detail tema, detail palet, generator, koleksi,
    tentang, dan halaman 404.
 4. **Daftar dan detail.** Dua alur: beranda menuju detail tema menuju detail palet, serta
    koleksi menuju detail palet. Tunjukkan keduanya.
