@@ -52,7 +52,7 @@ export function IkonKoleksi() {
   )
 }
 
-export function IkonJelajah() {
+export function IkonPanduan() {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -64,8 +64,8 @@ export function IkonJelajah() {
       strokeLinejoin="round"
       aria-hidden="true"
     >
-      <circle cx="11" cy="11" r="6.5" />
-      <path d="M20 20l-4.2-4.2" />
+      <path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5z" />
+      <path d="M20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5A1.5 1.5 0 0 0 20 18.5z" />
     </svg>
   )
 }

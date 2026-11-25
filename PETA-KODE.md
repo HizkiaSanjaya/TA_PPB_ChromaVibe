@@ -14,20 +14,20 @@ Bagian ini yang paling sering ditanya. Setiap syarat dipetakan ke berkas dan bar
 | Kalau ditanya | Berkas | Baris | Yang dijelaskan |
 | --- | --- | --- | --- |
 | Memakai API buatan sendiri | `api/src/app.js` | 65 | Tiga router dipasang di bawah prefiks /api/v1. Daftar lengkap endpoint ada di route "/" pada berkas yang sama. |
-| Bottom navigation bar | `web/src/components/BottomNav.tsx` | 8 | Lima tab: Beranda, Jelajah, Generator, Koleksi, Tentang. Generator ditaruh di tengah karena itu halaman utama. Tab aktif ditentukan NavLink lewat isActive. |
-| Minimal lima halaman | `web/src/App.tsx` | 17 | Delapan rute terdaftar di bawah ini: beranda, jelajah, detail tema, detail palet, generator, koleksi, tentang, dan 404. |
+| Bottom navigation bar | `web/src/components/BottomNav.tsx` | 8 | Lima tab: Beranda, Panduan, Generator, Koleksi, Tentang. Generator ditaruh di tengah karena itu halaman utama. Tab aktif ditentukan NavLink lewat isActive. |
+| Minimal lima halaman | `web/src/App.tsx` | 17 | Delapan rute terdaftar di bawah ini: beranda, panduan, detail tema, detail palet, generator, koleksi, tentang, dan 404. |
 | Daftar pertama, yaitu tema | `web/src/pages/Beranda.tsx` | 30 | Data diambil dari GET /api/v1/themes lewat TanStack Query, lalu dirender sebagai kartu yang bisa diklik. |
 | Detail dari daftar pertama | `web/src/pages/DetailTema.tsx` | 22 | Slug dibaca dari URL lewat useParams, lalu palet kurasi tema itu dimuat. Inilah daftar kedua. |
 | Daftar kedua, yaitu palet per tema | `web/src/pages/DetailTema.tsx` | 89 | Setiap item palet menuju halaman detailnya sendiri. Jadi ada dua pasang daftar dan detail. |
 | Pilihan warna umum dan kecerahan | `web/src/data/warna-umum.ts` | 9 | Daftar tujuh belas warna bernama untuk pengguna awam, ditambah sepuluh tingkat kecerahan. Pemilih warna koordinat tetap ada untuk yang butuh warna persis. |
-| Halaman Jelajah dan penyaring tema | `web/src/pages/Jelajah.tsx` | 19 | Daftar seluruh palet dari semua tema, bisa disaring per tema. Ini pasangan daftar dan detail ketiga, setelah tema dan koleksi. |
+| Halaman Panduan: arti lima warna dan enam harmoni | `web/src/pages/Panduan.tsx` | 19 | Menjelaskan tugas lima warna dan perbedaan enam harmoni, memakai contoh yang dihitung langsung oleh API. Ada juga kode CSS siap salin. |
 | Kecerahan mengubah warna dan latar | `api/src/lib/palette/generator.js` | 91 | Angka 10 sampai 100 diubah menjadi kecerahan warna pilihan pengguna. Latar otomatis dipasang di sisi berlawanan agar teksnya tetap terbaca. |
 | Kenapa lima palet bisa terlihat sama, dan apa yang diperbaiki | `api/src/lib/palette/generator.js` | 123 | Latar berangkat dari kepekatan tema masing-masing, lalu digeser menjauhi ujung memakai perbandingan emas. Titik awalnya tetap membawa ciri tema, tetapi tiap indeks mendapat nilai berbeda sehingga tidak ada latar kembar. |
 | Kenapa nama palet seperti Oranye Kasar | `api/src/lib/palette/names.js` | 55 | Nama dibentuk dari keluarga warna (Merah, Oranye, Kuning, dan seterusnya, ditentukan oleh hue) ditambah kata sifat tema. Tujuannya supaya tiap palet bisa disebut tanpa menyebut kode hex. |
 | Kenapa judul pratinjau bisa memakai warna utama | `api/src/lib/palette/generator.js` | 19 | Warna utama dan warna kedua wajib 4.5 banding 1 terhadap latar dan kartu, bukan hanya 3. Syarat itu yang membuat keduanya layak dipakai sebagai tulisan, bukan sekadar latar tombol. |
 | Roda warna untuk menjelaskan harmoni | `web/src/components/RodaWarna.tsx` | 13 | Menampilkan posisi hue warna utama dan warna kedua pada lingkaran, supaya perbedaan harmoni terlihat, bukan hanya terbaca sebagai nama. |
 | Kenapa monokrom dulu menghasilkan dua warna sama | `api/src/lib/palette/generator.js` | 188 | Pada monokrom kedua warna berbagi hue, jadi hanya kecerahan yang memisahkan. Pemisahan dilakukan setelah kontras ditegakkan, kalau tidak, aturan kontras akan menariknya kembali. |
-| Halaman detail palet ada di mana | `web/src/pages/DetailPalet.tsx` | 87 | Menampilkan pratinjau berbentuk antarmuka mini, lima peran warna beserta kodenya, dan tombol ekspor CSS. |
+| Halaman detail palet ada di mana | `web/src/pages/DetailPalet.tsx` | 78 | Menampilkan pratinjau berbentuk antarmuka mini, lima peran warna beserta kodenya, dan tombol ekspor CSS. |
 | Halaman profil atau tentang | `web/src/pages/Tentang.tsx` | 6 | Memuat penyusun, ide dasar, teknologi, daftar endpoint, dan tautan repositori. Nama serta NIM diambil dari src/konfigurasi.ts. |
 | PWA dan manifest | `web/vite.config.ts` | 20 | Nama, ikon 192 dan 512 termasuk maskable, display standalone, serta warna tema. Dihasilkan menjadi manifest.webmanifest saat build. |
 | Service worker dan cache offline | `web/src/sw.ts` | 147 | Tiga cabang: permintaan /api/v1, navigasi halaman, dan aset. Strategi cache dijelaskan pada fungsi layaniApi di berkas yang sama. |
@@ -47,7 +47,7 @@ Kalau asisten menunjuk layar lalu bertanya kode mana yang menggambarnya.
 | Tombol simpan di kartu hasil | `web/src/components/TombolSimpan.tsx` | 11 | Satu komponen kecil yang membaca status koleksi, jadi tombol langsung berubah jadi Tersimpan. |
 | Tombol salin hex, CSS, dan Tailwind | `web/src/components/TombolSalin.tsx` | 22 | Memakai Clipboard API dengan fallback textarea untuk browser lama. Umpan balik Tersalin muncul 1,6 detik. |
 | Isi teks ekspor CSS | `web/src/utils/warna.ts` | 56 | Menghasilkan custom properties per peran warna. Versi Tailwind ada di fungsi berikutnya, hexKeTailwind. |
-| Pratinjau palet yang dipakai sungguhan | `web/src/pages/DetailPalet.tsx` | 87 | Lima peran warna dirender berurutan dengan label, keterangan, dan kode hex yang bisa disalin. |
+| Pratinjau palet yang dipakai sungguhan | `web/src/pages/DetailPalet.tsx` | 78 | Lima peran warna dirender berurutan dengan label, keterangan, dan kode hex yang bisa disalin. |
 
 ## C. API dan validasi
 

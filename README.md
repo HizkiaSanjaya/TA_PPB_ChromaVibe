@@ -194,8 +194,8 @@ saat dibuka langsung. Konfigurasi berikut disimpan sebagai `vercel.json` di dala
 | Ketentuan | Pemenuhan |
 | --- | --- |
 | Memakai API buatan sendiri | `api/` dengan 7 endpoint, dokumentasi di atas |
-| Bottom navigation bar | Lima tab: Beranda, Jelajah, Generator, Koleksi, Tentang |
-| Minimal 5 halaman | 8 rute: beranda, jelajah, detail tema, detail palet, generator, koleksi, tentang, 404 |
+| Bottom navigation bar | Lima tab: Beranda, Panduan, Generator, Koleksi, Tentang |
+| Minimal 5 halaman | 8 rute: beranda, panduan, detail tema, detail palet, generator, koleksi, tentang, 404 |
 | 2 halaman daftar dengan detail | Tema ke palet, dan koleksi ke detail palet |
 | Halaman profil atau tentang | Halaman Tentang berisi penyusun, teknologi, dan daftar endpoint |
 | Source code di GitHub | Repositori ini |

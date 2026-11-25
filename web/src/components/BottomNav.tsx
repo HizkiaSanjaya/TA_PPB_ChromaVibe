@@ -1,13 +1,13 @@
 import { NavLink } from 'react-router-dom'
 
-import { IkonBeranda, IkonGenerator, IkonJelajah, IkonKoleksi, IkonTentang } from './Ikon'
+import { IkonBeranda, IkonGenerator, IkonPanduan, IkonKoleksi, IkonTentang } from './Ikon'
 
 /**
  * Lima tab, dengan Generator di tengah karena itu halaman utama aplikasi.
  */
 const ITEM = [
   { ke: '/', label: 'Beranda', ikon: <IkonBeranda />, persis: true },
-  { ke: '/jelajah', label: 'Jelajah', ikon: <IkonJelajah />, persis: false },
+  { ke: '/panduan', label: 'Panduan', ikon: <IkonPanduan />, persis: false },
   { ke: '/generator', label: 'Generator', ikon: <IkonGenerator />, persis: false },
   { ke: '/koleksi', label: 'Koleksi', ikon: <IkonKoleksi />, persis: false },
   { ke: '/tentang', label: 'Tentang', ikon: <IkonTentang />, persis: false },

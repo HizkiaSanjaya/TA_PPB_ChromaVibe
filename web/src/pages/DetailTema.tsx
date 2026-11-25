@@ -87,7 +87,6 @@ export function DetailTema() {
             <li key={item.id}>
               <Link
                 to={`/palet/${item.id}`}
-                state={{ dari: `/tema/${slug}` }}
                 className="block rounded-2xl border border-garis bg-panel/60 p-3 transition hover:border-brand/60 hover:bg-panel"
               >
                 <StripWarna warna={daftarHex(item)} tinggi="h-11" />

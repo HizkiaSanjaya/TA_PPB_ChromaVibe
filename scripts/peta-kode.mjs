@@ -29,14 +29,14 @@ const BAGIAN = [
         berkas: "web/src/components/BottomNav.tsx",
         penanda: "const ITEM = [",
         catatan:
-          "Lima tab: Beranda, Jelajah, Generator, Koleksi, Tentang. Generator ditaruh di tengah karena itu halaman utama. Tab aktif ditentukan NavLink lewat isActive.",
+          "Lima tab: Beranda, Panduan, Generator, Koleksi, Tentang. Generator ditaruh di tengah karena itu halaman utama. Tab aktif ditentukan NavLink lewat isActive.",
       },
       {
         tanya: "Minimal lima halaman",
         berkas: "web/src/App.tsx",
         penanda: "<Route index element={<Beranda />} />",
         catatan:
-          "Delapan rute terdaftar di bawah ini: beranda, jelajah, detail tema, detail palet, generator, koleksi, tentang, dan 404.",
+          "Delapan rute terdaftar di bawah ini: beranda, panduan, detail tema, detail palet, generator, koleksi, tentang, dan 404.",
       },
       {
         tanya: "Daftar pertama, yaitu tema",
@@ -67,11 +67,11 @@ const BAGIAN = [
           "Daftar tujuh belas warna bernama untuk pengguna awam, ditambah sepuluh tingkat kecerahan. Pemilih warna koordinat tetap ada untuk yang butuh warna persis.",
       },
       {
-        tanya: "Halaman Jelajah dan penyaring tema",
-        berkas: "web/src/pages/Jelajah.tsx",
-        penanda: "export function Jelajah",
+        tanya: "Halaman Panduan: arti lima warna dan enam harmoni",
+        berkas: "web/src/pages/Panduan.tsx",
+        penanda: "export function Panduan",
         catatan:
-          "Daftar seluruh palet dari semua tema, bisa disaring per tema. Ini pasangan daftar dan detail ketiga, setelah tema dan koleksi.",
+          "Menjelaskan tugas lima warna dan perbedaan enam harmoni, memakai contoh yang dihitung langsung oleh API. Ada juga kode CSS siap salin.",
       },
       {
         tanya: "Kecerahan mengubah warna dan latar",

@@ -28,7 +28,7 @@ Poin berikut memudahkan asisten memeriksa.
    `GET /api/v1/palettes/generate?base=3B82F6&tema=y2k&harmoni=triadik&jumlah=3&seed=42`.
 2. **Bottom navigation.** Lima tab tampil di semua halaman, tab aktif ditandai garis dan
    warna, serta memakai `aria-current` dari `NavLink`.
-3. **Jumlah halaman.** Delapan rute: beranda, jelajah, detail tema, detail palet, generator, koleksi,
+3. **Jumlah halaman.** Delapan rute: beranda, panduan, detail tema, detail palet, generator, koleksi,
    tentang, dan halaman 404.
 4. **Daftar dan detail.** Dua alur: beranda menuju detail tema menuju detail palet, serta
    koleksi menuju detail palet. Tunjukkan keduanya.
@@ -92,10 +92,11 @@ Berkasnya dibuat ulang dengan `npm run seed`.
 
 ## Rencana demo saat responsi (sekitar 5 menit)
 
-1. Buka beranda, sebutkan sepuluh tema dan bahwa setiap kartu berasal dari API.
-2. Buka satu tema, tunjukkan enam palet kurasi beserta skor kontras.
-3. Buka satu palet, tunjukkan pratinjau, lima peran warna, dan tabel kontras.
-4. Tekan Simpan, lalu buka tab Koleksi untuk menunjukkan alur daftar kedua.
-5. Buka Generator, ganti tema ke Cyberpunk, tekan Variasikan, tunjukkan nama palet berubah.
-6. Buka Tentang, sebutkan penyusun dan daftar endpoint.
-7. Pasang aplikasi ke layar utama untuk membuktikan sifat PWA.
+1. Buka beranda, tunjukkan lima tab dan sepuluh tema.
+2. Buka tab Panduan, tunjukkan arti lima warna dan enam harmoni.
+3. Buka satu tema, tunjukkan enam palet kurasi.
+4. Buka satu palet, tunjukkan pratinjau dan lima peran warna.
+5. Tekan Simpan, lalu buka tab Koleksi untuk menunjukkan alur daftar kedua.
+6. Buka Generator, ganti tema, tunjukkan hasilnya berubah.
+7. Buka Tentang, sebutkan penyusun dan daftar endpoint.
+8. Pasang aplikasi ke layar utama untuk membuktikan sifat PWA.

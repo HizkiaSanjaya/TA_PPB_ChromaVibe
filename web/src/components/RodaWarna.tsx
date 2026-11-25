@@ -77,7 +77,8 @@ export function bacaHarmoni(palet: Palet) {
 
   if (selisih < 20) return 'Dua warna masih satu keluarga, dibedakan lewat gelap terangnya'
   if (selisih < 60) return 'Dua warna bertetangga di roda, terasa menyatu'
-  if (selisih < 120) return 'Dua warna berjarak sedang, cukup berbeda tetapi tidak bertabrakan'
-  if (selisih < 160) return 'Dua warna hampir berseberangan, terasa tegang dan mencolok'
+  if (selisih < 100) return 'Dua warna berjarak sedang, sudah terlihat berbeda'
+  if (selisih < 130) return 'Dua warna berjarak cukup jauh, terasa dinamis'
+  if (selisih < 160) return 'Dua warna hampir berseberangan, terasa tegang'
   return 'Dua warna berseberangan, kontras paling kuat'
 }
