@@ -3,20 +3,10 @@ import { useLocation, useNavigate } from 'react-router-dom'
 
 import { TAB } from '../navigasi'
 
-// Jarak minimum sebelum dianggap geseran, bukan ketukan yang sedikit bergoyang.
 const AMBANG = 60
-// Geseran yang lebih lambat dari ini diabaikan supaya tidak terasa seperti
-// halaman melompat sendiri saat jari berhenti lama di layar.
 const BATAS_WAKTU = 800
-// Geseran harus lebih mendatar daripada menurun, supaya menggulir halaman
-// tidak ikut memindahkan tab.
 const NISBAH = 1.4
 
-/**
- * Apakah sentuhan ini dimulai di area yang memang bisa digeser mendatar.
- * Tanpa pemeriksaan ini, menggeser daftar tema di Generator akan ikut
- * berpindah halaman.
- */
 function adaGeserMendatar(awal: EventTarget | null) {
   if (!(awal instanceof Element)) return false
 
@@ -38,13 +28,6 @@ function adaGeserMendatar(awal: EventTarget | null) {
   return false
 }
 
-/**
- * Pindah tab dengan menggeser jari ke kiri atau ke kanan.
- *
- * Hanya berlaku di lima halaman tab. Di halaman detail, geseran diabaikan
- * karena tidak jelas tab mana yang seharusnya dituju. Navigasi bawah tetap
- * ada, jadi gestur ini hanya jalan pintas, bukan satu-satunya cara.
- */
 export function useGeserTab() {
   const { pathname } = useLocation()
   const navigate = useNavigate()
