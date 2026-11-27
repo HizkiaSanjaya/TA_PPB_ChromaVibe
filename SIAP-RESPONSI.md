@@ -113,8 +113,14 @@ Lalu tunjukkan pengatur kecerahan 10 sampai 100 persen, dan roda harmoni.
 
 **Langkah 6. Tab Panduan.**
 
-> "Ini penjelasan arti lima warna dan bedanya enam harmoni. Semua contohnya pakai
-> warna dasar merah yang sama, jadi bedanya kelihatan langsung."
+Tunjukkan bagian "Tema mengubah kepekatan warna" lebih dulu. Empat kartu di situ
+memakai warna dasar merah yang sama, tapi hasilnya beda: Brutalism pekat, Elegant
+pucat, Cyberpunk gelap menyala, Minimalis nyaris tanpa warna. Ini bukti paling
+cepat bahwa tema bukan sekadar ganti warna.
+
+> "Warna dasarnya sama, yang beda aturannya. Tema yang menentukan seberapa pekat
+> warna boleh tampil. Bagian bawahnya enam harmoni, juga pakai warna dasar yang
+> sama, jadi yang berubah cuma warna keduanya."
 
 **Langkah 7. Tab Tentang.** Sebut penyusun, lalu tunjukkan daftar endpoint.
 
@@ -138,7 +144,7 @@ Tabel ini untuk dipakai kalau penguji menunjuk layar lalu bertanya "kodenya mana
 | Pilihan warna bernama   | `web/src/data/warna-umum.ts`            | 9     |
 | Pengatur kecerahan      | `api/src/lib/palette/generator.js`      | 91    |
 | Roda warna harmoni      | `web/src/components/RodaWarna.tsx`      | 13    |
-| Halaman Panduan         | `web/src/pages/Panduan.tsx`             | 19    |
+| Halaman Panduan         | `web/src/pages/Panduan.tsx`             | 38    |
 | Simpan ke koleksi       | `web/src/hooks/useKoleksi.ts`           | 55    |
 | Pemasangan PWA          | `web/src/hooks/usePasang.ts`            | 21    |
 | Cache dan offline       | `web/src/sw.ts`                         | 32    |
