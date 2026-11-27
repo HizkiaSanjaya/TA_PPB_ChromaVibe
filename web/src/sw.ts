@@ -20,9 +20,9 @@ const sw = self as unknown as ServiceWorkerGlobalScope
 // Akhiran versi ikut dinaikkan setiap kali bentuk data API atau isi kerangka
 // berubah. Tanpa ini, service worker bisa menyajikan jawaban lama tanpa field
 // baru, dan halaman tampak kosong walau server sudah benar.
-const CACHE_KERANGKA = 'chromavibe-kerangka-v3'
-const CACHE_API = 'chromavibe-api-v3'
-const CACHE_RUNTIME = 'chromavibe-runtime-v3'
+const CACHE_KERANGKA = 'chromavibe-kerangka-v4'
+const CACHE_API = 'chromavibe-api-v4'
+const CACHE_RUNTIME = 'chromavibe-runtime-v4'
 
 const SEMUA_CACHE = new Set([CACHE_KERANGKA, CACHE_API, CACHE_RUNTIME])
 
