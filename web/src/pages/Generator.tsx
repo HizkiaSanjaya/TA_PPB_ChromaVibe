@@ -11,7 +11,7 @@ import { TombolAksi } from '../components/Tombol'
 import { TombolSalin } from '../components/TombolSalin'
 import { TombolSimpan } from '../components/TombolSimpan'
 import { TINGKAT_KECERAHAN, WARNA_UMUM, namaWarna } from '../data/warna-umum'
-import { daftarHex, hexKeCss, normalisasiHex } from '../utils/warna'
+import { daftarHex, normalisasiHex } from '../utils/warna'
 
 const TEMA_BAWAAN = 'y2k'
 const HARMONI_BAWAAN = 'triadik'
@@ -48,11 +48,6 @@ function KartuHasil({ palet }: { palet: Palet }) {
         <TombolSalin
           teks={daftarHex(palet).join(', ')}
           label="Salin hex"
-          className="min-h-8 px-2 text-[10px]"
-        />
-        <TombolSalin
-          teks={hexKeCss(palet)}
-          label="Salin CSS"
           className="min-h-8 px-2 text-[10px]"
         />
       </div>

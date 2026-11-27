@@ -53,33 +53,6 @@ export function ambilHex(palet: Palet, peran: PeranWarna) {
   return palet.warna.find((item) => item.peran === peran)?.hex ?? '#000000'
 }
 
-export function hexKeCss(palet: Palet) {
-  const baris = palet.warna
-    .map((item) => `  --warna-${item.peran}: ${item.hex.toLowerCase()};`)
-    .join('\n')
-
-  return `/* ${palet.nama} dari ChromaVibe */\n:root {\n${baris}\n}`
-}
-
-export function hexKeTailwind(palet: Palet) {
-  const baris = palet.warna
-    .map((item) => `        ${item.peran}: '${item.hex.toLowerCase()}',`)
-    .join('\n')
-
-  return `// tailwind.config.js
-export default {
-  theme: {
-    extend: {
-      colors: {
-        palet: {
-${baris}
-        },
-      },
-    },
-  },
-}`
-}
-
 export function daftarHex(palet: Palet) {
   return palet.warna.map((item) => item.hex)
 }

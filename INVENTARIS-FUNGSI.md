@@ -527,7 +527,7 @@ Jumlah baris: 135. Isi: 1 penanda.
 
 Rincian satu palet
 
-Jumlah baris: 115. Isi: 1 penanda.
+Jumlah baris: 116. Isi: 1 penanda.
 
 | Baris | Nama | Jenis |
 | --- | --- | --- |
@@ -547,14 +547,14 @@ Jumlah baris: 107. Isi: 1 penanda.
 
 Pembuat palet baru
 
-Jumlah baris: 419. Isi: 4 penanda.
+Jumlah baris: 414. Isi: 4 penanda.
 
 | Baris | Nama | Jenis |
 | --- | --- | --- |
 | 22 | `keSeed` | fungsi dalam |
 | 29 | `keTerang` | fungsi dalam |
 | 35 | `KartuHasil` | fungsi dalam |
-| 63 | `Generator` | fungsi |
+| 58 | `Generator` | fungsi |
 
 ## `web/src/pages/Koleksi.tsx`
 
@@ -618,7 +618,7 @@ Jumlah baris: 189. Isi: 9 penanda.
 
 Bantuan warna: label, rasio, ekspor CSS
 
-Jumlah baris: 92. Isi: 11 penanda.
+Jumlah baris: 65. Isi: 8 penanda.
 
 | Baris | Nama | Jenis |
 | --- | --- | --- |
@@ -628,11 +628,8 @@ Jumlah baris: 92. Isi: 11 penanda.
 | 37 | `rasioKontras` | fungsi |
 | 46 | `teksDiAtas` | fungsi |
 | 52 | `ambilHex` | fungsi |
-| 56 | `hexKeCss` | fungsi |
-| 64 | `hexKeTailwind` | fungsi |
-| 70 | `(tanpa nama)` | ekspor bawaan |
-| 83 | `daftarHex` | fungsi |
-| 87 | `normalisasiHex` | fungsi |
+| 56 | `daftarHex` | fungsi |
+| 60 | `normalisasiHex` | fungsi |
 
 ## `web/src/vite-env.d.ts`
 
@@ -642,7 +639,7 @@ _Tidak ada fungsi, hanya isi langsung._
 
 ---
 
-Total 52 berkas, 170 penanda fungsi dan kelas.
+Total 52 berkas, 167 penanda fungsi dan kelas.
 
 Untuk memperbarui berkas ini setelah menyunting kode:
 

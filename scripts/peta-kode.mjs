@@ -206,11 +206,11 @@ const BAGIAN = [
           'Memakai Clipboard API dengan fallback textarea untuk browser lama. Umpan balik Tersalin muncul 1,6 detik.',
       },
       {
-        tanya: 'Isi teks ekspor CSS',
+        tanya: 'Daftar kode hex yang bisa disalin',
         berkas: 'web/src/utils/warna.ts',
-        penanda: 'export function hexKeCss',
+        penanda: 'export function daftarHex',
         catatan:
-          'Menghasilkan custom properties per peran warna. Versi Tailwind ada di fungsi berikutnya, hexKeTailwind.',
+          'Mengambil lima kode hex dari satu palet. Dipakai tombol Salin hex di Generator dan Salin semua kode di Detail Palet. Aplikasi sengaja tidak lagi menyediakan ekspor CSS atau Tailwind karena tujuannya merekomendasikan warna, bukan memasangnya ke kode.',
       },
       {
         tanya: 'Pratinjau palet yang dipakai sungguhan',

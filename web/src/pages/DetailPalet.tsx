@@ -8,7 +8,7 @@ import { Galat, Memuat } from '../components/Status'
 import { TautanGaris, TombolAksi } from '../components/Tombol'
 import { TombolSalin } from '../components/TombolSalin'
 import { hapusPalet, simpanPalet, useKoleksi } from '../hooks/useKoleksi'
-import { daftarHex, hexKeCss, hexKeTailwind, KETERANGAN_PERAN, LABEL_PERAN } from '../utils/warna'
+import { daftarHex, KETERANGAN_PERAN, LABEL_PERAN } from '../utils/warna'
 
 export function DetailPalet() {
   const { id = '' } = useParams()
@@ -98,17 +98,18 @@ export function DetailPalet() {
         </ul>
       </section>
 
-      <section aria-labelledby="judul-ekspor">
-        <h2 id="judul-ekspor" className="mb-2.5 text-sm font-semibold">
-          Ekspor
+      <section aria-labelledby="judul-kode">
+        <h2 id="judul-kode" className="mb-2.5 text-sm font-semibold">
+          Semua kode warna
         </h2>
-        <div className="grid grid-cols-2 gap-2">
-          <TombolSalin teks={hexKeCss(palet)} label="Salin CSS" className="min-h-11" />
-          <TombolSalin teks={hexKeTailwind(palet)} label="Salin Tailwind" className="min-h-11" />
-        </div>
-        <p className="mt-2 font-mono text-[10px] leading-relaxed text-redup">
+        <p className="mb-2 font-mono text-[10px] leading-relaxed text-redup">
           {daftarHex(palet).join(' · ')}
         </p>
+        <TombolSalin
+          teks={daftarHex(palet).join(', ')}
+          label="Salin semua kode"
+          className="min-h-10"
+        />
       </section>
     </div>
   )

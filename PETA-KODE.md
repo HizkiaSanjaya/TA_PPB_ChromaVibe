@@ -41,12 +41,12 @@ Kalau asisten menunjuk layar lalu bertanya kode mana yang menggambarnya.
 | Kerangka halaman dan bottom nav dipasang | `web/src/components/Layout.tsx` | 25 | Nav dipasang sekali di layout induk, jadi tidak dibongkar-pasang saat pindah halaman. |
 | Tab aktif dan aria untuk pembaca layar | `web/src/components/BottomNav.tsx` | 25 | NavLink memberi aria-current="page" otomatis, dan tampilan aktif ditandai garis atas serta warna teks. |
 | Tombol Generator dan perubahan tema | `web/src/pages/Generator.tsx` | 3 | Seluruh pengaturan disimpan di URL, bukan state lokal, sehingga hasil bisa dibagikan dan tetap ada setelah muat ulang. |
-| Permintaan ke API dari Generator | `web/src/pages/Generator.tsx` | 110 | TanStack Query memanggil api.buatPalet dengan base, tema, harmoni, jumlah, seed, dan kecerahan sebagai kunci cache. |
+| Permintaan ke API dari Generator | `web/src/pages/Generator.tsx` | 105 | TanStack Query memanggil api.buatPalet dengan base, tema, harmoni, jumlah, seed, dan kecerahan sebagai kunci cache. |
 | Menyimpan palet ke koleksi | `web/src/hooks/useKoleksi.ts` | 55 | Disimpan ke localStorage dengan kunci chromavibe:koleksi:v1. Pembaca lain diberi tahu lewat useSyncExternalStore. |
 | Halaman koleksi membaca penyimpanan lokal | `web/src/hooks/useKoleksi.ts` | 5 | Kunci penyimpanan dan pembacaan awal. Tidak ada permintaan jaringan di halaman koleksi. |
 | Tombol simpan di kartu hasil | `web/src/components/TombolSimpan.tsx` | 11 | Satu komponen kecil yang membaca status koleksi, jadi tombol langsung berubah jadi Tersimpan. |
 | Tombol salin hex, CSS, dan Tailwind | `web/src/components/TombolSalin.tsx` | 22 | Memakai Clipboard API dengan fallback textarea untuk browser lama. Umpan balik Tersalin muncul 1,6 detik. |
-| Isi teks ekspor CSS | `web/src/utils/warna.ts` | 56 | Menghasilkan custom properties per peran warna. Versi Tailwind ada di fungsi berikutnya, hexKeTailwind. |
+| Daftar kode hex yang bisa disalin | `web/src/utils/warna.ts` | 56 | Mengambil lima kode hex dari satu palet. Dipakai tombol Salin hex di Generator dan Salin semua kode di Detail Palet. Aplikasi sengaja tidak lagi menyediakan ekspor CSS atau Tailwind karena tujuannya merekomendasikan warna, bukan memasangnya ke kode. |
 | Pratinjau palet yang dipakai sungguhan | `web/src/pages/DetailPalet.tsx` | 78 | Lima peran warna dirender berurutan dengan label, keterangan, dan kode hex yang bisa disalin. |
 
 ## C. API dan validasi
