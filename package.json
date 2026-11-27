@@ -11,6 +11,7 @@
     "check": "npm --prefix api run check && npm --prefix web run format:check",
     "build:web": "npm --prefix web run build",
     "seed": "npm --prefix api run seed:build",
-    "peta": "node scripts/peta-kode.mjs"
+    "peta": "node scripts/peta-kode.mjs",
+    "fungsi": "node scripts/inventaris-fungsi.mjs"
   }
 }
