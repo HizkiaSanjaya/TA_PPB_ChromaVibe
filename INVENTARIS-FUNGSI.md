@@ -616,7 +616,7 @@ Jumlah baris: 189. Isi: 9 penanda.
 
 ## `web/src/utils/warna.ts`
 
-Bantuan warna: label, rasio, ekspor CSS
+Bantuan warna: label, rasio, daftar kode hex
 
 Jumlah baris: 65. Isi: 8 penanda.
 

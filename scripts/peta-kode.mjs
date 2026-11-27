@@ -120,7 +120,7 @@ const BAGIAN = [
         berkas: 'web/src/pages/DetailPalet.tsx',
         penanda: 'palet.warna.map',
         catatan:
-          'Menampilkan pratinjau berbentuk antarmuka mini, lima peran warna beserta kodenya, dan tombol ekspor CSS.',
+          'Menampilkan pratinjau berbentuk antarmuka mini, lima peran warna beserta kodenya, dan tombol salin semua kode.',
       },
       {
         tanya: 'Halaman profil atau tentang',
@@ -199,7 +199,7 @@ const BAGIAN = [
           'Satu komponen kecil yang membaca status koleksi, jadi tombol langsung berubah jadi Tersimpan.',
       },
       {
-        tanya: 'Tombol salin hex, CSS, dan Tailwind',
+        tanya: 'Tombol salin kode warna',
         berkas: 'web/src/components/TombolSalin.tsx',
         penanda: 'navigator.clipboard.writeText',
         catatan:

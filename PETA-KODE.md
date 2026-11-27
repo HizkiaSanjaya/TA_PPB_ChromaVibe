@@ -27,7 +27,7 @@ Bagian ini yang paling sering ditanya. Setiap syarat dipetakan ke berkas dan bar
 | Kenapa judul pratinjau bisa memakai warna utama | `api/src/lib/palette/generator.js` | 19 | Warna utama dan warna kedua wajib 4.5 banding 1 terhadap latar dan kartu, bukan hanya 3. Syarat itu yang membuat keduanya layak dipakai sebagai tulisan, bukan sekadar latar tombol. |
 | Roda warna untuk menjelaskan harmoni | `web/src/components/RodaWarna.tsx` | 13 | Menampilkan posisi hue warna utama dan warna kedua pada lingkaran, supaya perbedaan harmoni terlihat, bukan hanya terbaca sebagai nama. |
 | Kenapa monokrom dulu menghasilkan dua warna sama | `api/src/lib/palette/generator.js` | 188 | Pada monokrom kedua warna berbagi hue, jadi hanya kecerahan yang memisahkan. Pemisahan dilakukan setelah kontras ditegakkan, kalau tidak, aturan kontras akan menariknya kembali. |
-| Halaman detail palet ada di mana | `web/src/pages/DetailPalet.tsx` | 78 | Menampilkan pratinjau berbentuk antarmuka mini, lima peran warna beserta kodenya, dan tombol ekspor CSS. |
+| Halaman detail palet ada di mana | `web/src/pages/DetailPalet.tsx` | 78 | Menampilkan pratinjau berbentuk antarmuka mini, lima peran warna beserta kodenya, dan tombol salin semua kode. |
 | Halaman profil atau tentang | `web/src/pages/Tentang.tsx` | 6 | Memuat penyusun, ide dasar, teknologi, daftar endpoint, dan tautan repositori. Nama serta NIM diambil dari src/konfigurasi.ts. |
 | PWA dan manifest | `web/vite.config.ts` | 20 | Nama, ikon 192 dan 512 termasuk maskable, display standalone, serta warna tema. Dihasilkan menjadi manifest.webmanifest saat build. |
 | Service worker dan cache offline | `web/src/sw.ts` | 147 | Tiga cabang: permintaan /api/v1, navigasi halaman, dan aset. Strategi cache dijelaskan pada fungsi layaniApi di berkas yang sama. |
@@ -45,7 +45,7 @@ Kalau asisten menunjuk layar lalu bertanya kode mana yang menggambarnya.
 | Menyimpan palet ke koleksi | `web/src/hooks/useKoleksi.ts` | 55 | Disimpan ke localStorage dengan kunci chromavibe:koleksi:v1. Pembaca lain diberi tahu lewat useSyncExternalStore. |
 | Halaman koleksi membaca penyimpanan lokal | `web/src/hooks/useKoleksi.ts` | 5 | Kunci penyimpanan dan pembacaan awal. Tidak ada permintaan jaringan di halaman koleksi. |
 | Tombol simpan di kartu hasil | `web/src/components/TombolSimpan.tsx` | 11 | Satu komponen kecil yang membaca status koleksi, jadi tombol langsung berubah jadi Tersimpan. |
-| Tombol salin hex, CSS, dan Tailwind | `web/src/components/TombolSalin.tsx` | 22 | Memakai Clipboard API dengan fallback textarea untuk browser lama. Umpan balik Tersalin muncul 1,6 detik. |
+| Tombol salin kode warna | `web/src/components/TombolSalin.tsx` | 22 | Memakai Clipboard API dengan fallback textarea untuk browser lama. Umpan balik Tersalin muncul 1,6 detik. |
 | Daftar kode hex yang bisa disalin | `web/src/utils/warna.ts` | 56 | Mengambil lima kode hex dari satu palet. Dipakai tombol Salin hex di Generator dan Salin semua kode di Detail Palet. Aplikasi sengaja tidak lagi menyediakan ekspor CSS atau Tailwind karena tujuannya merekomendasikan warna, bukan memasangnya ke kode. |
 | Pratinjau palet yang dipakai sungguhan | `web/src/pages/DetailPalet.tsx` | 78 | Lima peran warna dirender berurutan dengan label, keterangan, dan kode hex yang bisa disalin. |
 

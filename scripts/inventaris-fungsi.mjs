@@ -110,7 +110,7 @@ const KETERANGAN = {
   'web/src/konfigurasi.ts': 'Identitas aplikasi dan penyusun',
   'web/src/api/client.ts': 'Penghubung ke API dan daftar endpoint',
   'web/src/api/types.ts': 'Bentuk data yang dikirim API',
-  'web/src/utils/warna.ts': 'Bantuan warna: label, rasio, ekspor CSS',
+  'web/src/utils/warna.ts': 'Bantuan warna: label, rasio, daftar kode hex',
   'web/src/data/warna-umum.ts': 'Daftar warna bernama dan tingkat kecerahan',
   'web/src/hooks/useKoleksi.ts': 'Menyimpan palet di perangkat',
   'web/src/hooks/usePasang.ts': 'Status pemasangan PWA',
