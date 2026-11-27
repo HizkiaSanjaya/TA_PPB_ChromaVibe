@@ -71,7 +71,7 @@ const BAGIAN = [
         berkas: 'web/src/pages/Panduan.tsx',
         penanda: 'export function Panduan',
         catatan:
-          'Menjelaskan tugas lima warna, perbedaan empat tema yang paling berlawanan, dan perbedaan enam harmoni. Semua contoh dihitung langsung oleh API. Ada juga kode CSS siap salin.',
+          'Menjelaskan tugas lima warna, perbedaan empat tema yang paling berlawanan, dan perbedaan enam harmoni. Semua contoh dihitung langsung oleh API.',
       },
       {
         tanya: 'Kecerahan mengubah warna dan latar',

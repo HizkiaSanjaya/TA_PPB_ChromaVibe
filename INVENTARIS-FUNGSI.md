@@ -570,11 +570,11 @@ Jumlah baris: 78. Isi: 1 penanda.
 
 Penjelasan lima warna dan enam harmoni
 
-Jumlah baris: 225. Isi: 1 penanda.
+Jumlah baris: 196. Isi: 1 penanda.
 
 | Baris | Nama | Jenis |
 | --- | --- | --- |
-| 38 | `Panduan` | fungsi |
+| 37 | `Panduan` | fungsi |
 
 ## `web/src/pages/Tentang.tsx`
 

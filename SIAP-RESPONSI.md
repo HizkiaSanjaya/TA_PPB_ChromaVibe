@@ -82,8 +82,8 @@ Tunjukkan enam palet contoh.
 
 **Langkah 3. Buka satu palet.**
 
-Tunjukkan miniatur antarmuka, lima peran warna beserta kodenya, lalu tekan Salin
-CSS.
+Tunjukkan miniatur antarmuka dan lima peran warna beserta kodenya. Jangan berhenti
+di kotak warna, tunjukkan bahwa yang di atasnya adalah contoh pemakaian.
 
 > "Lima warna ini punya tugas masing-masing: latar, kartu, warna utama, warna
 > kedua, dan teks. Yang ditampilkan di atas bukan kotak warna, tapi contoh
@@ -144,7 +144,7 @@ Tabel ini untuk dipakai kalau penguji menunjuk layar lalu bertanya "kodenya mana
 | Pilihan warna bernama   | `web/src/data/warna-umum.ts`            | 9     |
 | Pengatur kecerahan      | `api/src/lib/palette/generator.js`      | 91    |
 | Roda warna harmoni      | `web/src/components/RodaWarna.tsx`      | 13    |
-| Halaman Panduan         | `web/src/pages/Panduan.tsx`             | 38    |
+| Halaman Panduan         | `web/src/pages/Panduan.tsx`             | 37    |
 | Simpan ke koleksi       | `web/src/hooks/useKoleksi.ts`           | 55    |
 | Pemasangan PWA          | `web/src/hooks/usePasang.ts`            | 21    |
 | Cache dan offline       | `web/src/sw.ts`                         | 32    |

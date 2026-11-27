@@ -5,8 +5,7 @@ import { KepalaHalaman } from '../components/KepalaHalaman'
 import { PratinjauPalet } from '../components/PratinjauPalet'
 import { RodaWarna, bacaHarmoni } from '../components/RodaWarna'
 import { Galat, Memuat } from '../components/Status'
-import { TombolSalin } from '../components/TombolSalin'
-import { ambilHex, hexKeCss, KETERANGAN_PERAN, LABEL_PERAN } from '../utils/warna'
+import { ambilHex, KETERANGAN_PERAN, LABEL_PERAN } from '../utils/warna'
 
 // Satu warna dasar dipakai untuk semua contoh harmoni, supaya bedanya murni
 // berasal dari harmoni, bukan dari warna yang berbeda.
@@ -73,13 +72,23 @@ export function Panduan() {
     <div className="space-y-7">
       <KepalaHalaman
         judul="Panduan"
-        keterangan="Arti lima warna, cara memakainya, bedanya tema, dan bedanya enam harmoni."
+        keterangan="Arti lima warna, bedanya tema, dan bedanya enam harmoni."
       />
 
       <section aria-labelledby="judul-peran">
         <h2 id="judul-peran" className="mb-2.5 text-base font-semibold">
           Lima warna dan tugasnya
         </h2>
+
+        {!paletContoh && contoh[0]?.isError && (
+          <div className="mb-2.5">
+            <Galat
+              pesan={(contoh[0]?.error as Error | undefined)?.message ?? 'Contoh gagal dimuat.'}
+              ulangi={() => void contoh[0]?.refetch()}
+            />
+          </div>
+        )}
+
         <ul className="space-y-1.5">
           {(['background', 'surface', 'base', 'accent', 'text'] as const).map((peran) => (
             <li
@@ -90,7 +99,7 @@ export function Panduan() {
                 aria-hidden="true"
                 className="size-7 shrink-0 rounded ring-1 ring-white/20"
                 style={{
-                  backgroundColor: paletContoh ? ambilHex(paletContoh, peran) : '#777',
+                  backgroundColor: paletContoh ? ambilHex(paletContoh, peran) : 'transparent',
                 }}
               />
               <div className="min-w-0">
@@ -100,44 +109,6 @@ export function Panduan() {
             </li>
           ))}
         </ul>
-      </section>
-
-      <section aria-labelledby="judul-pakai">
-        <h2 id="judul-pakai" className="mb-1 text-base font-semibold">
-          Cara memakainya
-        </h2>
-        <p className="mb-2.5 text-xs leading-relaxed text-redup">
-          Salin kode di bawah ke berkas CSS, lalu panggil namanya dengan{' '}
-          <code className="text-teks">var(--warna-base)</code> untuk warna utama, atau{' '}
-          <code className="text-teks">var(--warna-text)</code> untuk tulisan.
-        </p>
-
-        {(() => {
-          if (contoh.some((item) => item.isPending)) return <Memuat pesan="Menyiapkan contoh" />
-          if (!paletContoh) {
-            return (
-              <Galat
-                pesan={(contoh[0]?.error as Error | undefined)?.message ?? 'Contoh gagal dimuat.'}
-                ulangi={() => void contoh[0]?.refetch()}
-              />
-            )
-          }
-
-          const kode = hexKeCss(paletContoh)
-
-          return (
-            <div className="rounded-xl border border-garis bg-panel/40 p-2.5">
-              <pre className="overflow-x-auto text-[10px] leading-relaxed text-redup">
-                <code>{kode}</code>
-              </pre>
-              <TombolSalin
-                teks={kode}
-                label="Salin CSS"
-                className="mt-2 min-h-8 px-2 text-[10px]"
-              />
-            </div>
-          )
-        })()}
       </section>
 
       <section aria-labelledby="judul-tema">
