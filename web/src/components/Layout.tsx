@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom'
 
 import { BottomNav } from './BottomNav'
 import { PenandaOffline } from './PenandaOffline'
+import { useGeserTab } from '../hooks/useGeserTab'
 
 function GulirKeAtas() {
   const { pathname } = useLocation()
@@ -15,6 +16,8 @@ function GulirKeAtas() {
 }
 
 export function Layout() {
+  useGeserTab()
+
   return (
     <div className="relative mx-auto flex min-h-dvh w-full max-w-[460px] flex-col border-x border-garis/50 bg-latar/30">
       <GulirKeAtas />

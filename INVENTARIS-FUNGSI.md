@@ -314,11 +314,11 @@ Jumlah baris: 91. Isi: 11 penanda.
 
 Navigasi bawah lima tab
 
-Jumlah baris: 48. Isi: 1 penanda.
+Jumlah baris: 51. Isi: 1 penanda.
 
 | Baris | Nama | Jenis |
 | --- | --- | --- |
-| 16 | `BottomNav` | fungsi |
+| 19 | `BottomNav` | fungsi |
 
 ## `web/src/components/Ikon.tsx`
 
@@ -361,12 +361,12 @@ Jumlah baris: 27. Isi: 1 penanda.
 
 Kerangka halaman, nav, dan penanda offline
 
-Jumlah baris: 28. Isi: 2 penanda.
+Jumlah baris: 31. Isi: 2 penanda.
 
 | Baris | Nama | Jenis |
 | --- | --- | --- |
-| 7 | `GulirKeAtas` | fungsi dalam |
-| 17 | `Layout` | fungsi |
+| 8 | `GulirKeAtas` | fungsi dalam |
+| 18 | `Layout` | fungsi |
 
 ## `web/src/components/PenandaOffline.tsx`
 
@@ -467,6 +467,17 @@ Jumlah baris: 35. Isi: 3 penanda.
 | 30 | `TINGKAT_KECERAHAN` | konstanta larik |
 | 32 | `namaWarna` | fungsi |
 
+## `web/src/hooks/useGeserTab.ts`
+
+Pindah tab dengan menggeser jari
+
+Jumlah baris: 109. Isi: 2 penanda.
+
+| Baris | Nama | Jenis |
+| --- | --- | --- |
+| 20 | `adaGeserMendatar` | fungsi dalam |
+| 48 | `useGeserTab` | fungsi |
+
 ## `web/src/hooks/useKoleksi.ts`
 
 Menyimpan palet di perangkat
@@ -512,6 +523,16 @@ Menempelkan React ke halaman
 Jumlah baris: 31. Isi: 0 penanda.
 
 _Tidak ada fungsi, hanya isi langsung._
+
+## `web/src/navigasi.ts`
+
+Daftar lima tab, dipakai navigasi dan gestur geser
+
+Jumlah baris: 12. Isi: 1 penanda.
+
+| Baris | Nama | Jenis |
+| --- | --- | --- |
+| 6 | `TAB` | konstanta larik |
 
 ## `web/src/pages/Beranda.tsx`
 
@@ -639,7 +660,7 @@ _Tidak ada fungsi, hanya isi langsung._
 
 ---
 
-Total 52 berkas, 167 penanda fungsi dan kelas.
+Total 54 berkas, 170 penanda fungsi dan kelas.
 
 Untuk memperbarui berkas ini setelah menyunting kode:
 

@@ -27,9 +27,23 @@ const BAGIAN = [
       {
         tanya: 'Bottom navigation bar',
         berkas: 'web/src/components/BottomNav.tsx',
-        penanda: 'const ITEM = [',
+        penanda: 'TAB.map',
         catatan:
-          'Lima tab: Beranda, Panduan, Generator, Koleksi, Tentang. Generator ditaruh di tengah karena itu halaman utama. Tab aktif ditentukan NavLink lewat isActive.',
+          'Lima tab: Beranda, Panduan, Generator, Koleksi, Tentang. Urutannya diambil dari src/navigasi.ts supaya sama dengan gestur geser. Generator ditaruh di tengah karena itu halaman utama.',
+      },
+      {
+        tanya: 'Geser jari untuk pindah tab',
+        berkas: 'web/src/hooks/useGeserTab.ts',
+        penanda: 'export function useGeserTab',
+        catatan:
+          'Mendengarkan touchstart dan touchend di lima halaman tab. Geseran wajib lebih dari 60 piksel, lebih mendatar daripada menurun, dan selesai dalam 800 milidetik. Area yang punya data-tanpa-geser, seperti daftar tema di Generator, dilewati supaya menggulir tidak ikut memindah halaman.',
+      },
+      {
+        tanya: 'Urutan tab yang dipakai navigasi dan gestur',
+        berkas: 'web/src/navigasi.ts',
+        penanda: 'export const TAB',
+        catatan:
+          'Satu daftar lima tab. BottomNav memakainya untuk menggambar tombol, useGeserTab memakainya untuk tahu tab sebelum dan sesudah halaman aktif.',
       },
       {
         tanya: 'Minimal lima halaman',

@@ -14,7 +14,9 @@ Bagian ini yang paling sering ditanya. Setiap syarat dipetakan ke berkas dan bar
 | Kalau ditanya | Berkas | Baris | Yang dijelaskan |
 | --- | --- | --- | --- |
 | Memakai API buatan sendiri | `api/src/app.js` | 65 | Tiga router dipasang di bawah prefiks /api/v1. Daftar lengkap endpoint ada di route "/" pada berkas yang sama. |
-| Bottom navigation bar | `web/src/components/BottomNav.tsx` | 8 | Lima tab: Beranda, Panduan, Generator, Koleksi, Tentang. Generator ditaruh di tengah karena itu halaman utama. Tab aktif ditentukan NavLink lewat isActive. |
+| Bottom navigation bar | `web/src/components/BottomNav.tsx` | 26 | Lima tab: Beranda, Panduan, Generator, Koleksi, Tentang. Urutannya diambil dari src/navigasi.ts supaya sama dengan gestur geser. Generator ditaruh di tengah karena itu halaman utama. |
+| Geser jari untuk pindah tab | `web/src/hooks/useGeserTab.ts` | 48 | Mendengarkan touchstart dan touchend di lima halaman tab. Geseran wajib lebih dari 60 piksel, lebih mendatar daripada menurun, dan selesai dalam 800 milidetik. Area yang punya data-tanpa-geser, seperti daftar tema di Generator, dilewati supaya menggulir tidak ikut memindah halaman. |
+| Urutan tab yang dipakai navigasi dan gestur | `web/src/navigasi.ts` | 6 | Satu daftar lima tab. BottomNav memakainya untuk menggambar tombol, useGeserTab memakainya untuk tahu tab sebelum dan sesudah halaman aktif. |
 | Minimal lima halaman | `web/src/App.tsx` | 17 | Delapan rute terdaftar di bawah ini: beranda, panduan, detail tema, detail palet, generator, koleksi, tentang, dan 404. |
 | Daftar pertama, yaitu tema | `web/src/pages/Beranda.tsx` | 30 | Data diambil dari GET /api/v1/themes lewat TanStack Query, lalu dirender sebagai kartu yang bisa diklik. |
 | Detail dari daftar pertama | `web/src/pages/DetailTema.tsx` | 22 | Slug dibaca dari URL lewat useParams, lalu palet kurasi tema itu dimuat. Inilah daftar kedua. |
@@ -38,8 +40,8 @@ Kalau asisten menunjuk layar lalu bertanya kode mana yang menggambarnya.
 
 | Kalau ditanya | Berkas | Baris | Yang dijelaskan |
 | --- | --- | --- | --- |
-| Kerangka halaman dan bottom nav dipasang | `web/src/components/Layout.tsx` | 25 | Nav dipasang sekali di layout induk, jadi tidak dibongkar-pasang saat pindah halaman. |
-| Tab aktif dan aria untuk pembaca layar | `web/src/components/BottomNav.tsx` | 25 | NavLink memberi aria-current="page" otomatis, dan tampilan aktif ditandai garis atas serta warna teks. |
+| Kerangka halaman dan bottom nav dipasang | `web/src/components/Layout.tsx` | 28 | Nav dipasang sekali di layout induk, jadi tidak dibongkar-pasang saat pindah halaman. |
+| Tab aktif dan aria untuk pembaca layar | `web/src/components/BottomNav.tsx` | 28 | NavLink memberi aria-current="page" otomatis, dan tampilan aktif ditandai garis atas serta warna teks. |
 | Tombol Generator dan perubahan tema | `web/src/pages/Generator.tsx` | 3 | Seluruh pengaturan disimpan di URL, bukan state lokal, sehingga hasil bisa dibagikan dan tetap ada setelah muat ulang. |
 | Permintaan ke API dari Generator | `web/src/pages/Generator.tsx` | 105 | TanStack Query memanggil api.buatPalet dengan base, tema, harmoni, jumlah, seed, dan kecerahan sebagai kunci cache. |
 | Menyimpan palet ke koleksi | `web/src/hooks/useKoleksi.ts` | 55 | Disimpan ke localStorage dengan kunci chromavibe:koleksi:v1. Pembaca lain diberi tahu lewat useSyncExternalStore. |

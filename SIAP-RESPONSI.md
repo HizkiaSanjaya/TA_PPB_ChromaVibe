@@ -72,7 +72,12 @@ Ini urutan yang aku sarankan. Total sekitar tujuh menit.
 Tunjukkan sepuluh kartu tema. Sebut bahwa tiap kartu bentuknya beda, bukan cuma
 warnanya, karena karakternya beda. Sebut juga lima tab di bawah.
 
-> "Ada lima tab: Beranda, Panduan, Generator, Koleksi, Tentang."
+> "Ada lima tab: Beranda, Panduan, Generator, Koleksi, Tentang. Bisa juga digeser
+> pakai jari, kiri untuk maju, kanan untuk mundur."
+
+Sekalian geser sekali di depan penguji, lalu sebut bahwa gesturnya sengaja
+dimatikan di halaman detail dan di daftar tema Generator, supaya menggulir tidak
+ikut memindah halaman.
 
 **Langkah 2. Buka satu tema, misalnya Brutalism.**
 
@@ -136,7 +141,8 @@ Tabel ini untuk dipakai kalau penguji menunjuk layar lalu bertanya "kodenya mana
 
 | Yang ditunjuk           | Berkas                                  | Baris |
 | ----------------------- | --------------------------------------- | ----- |
-| Navigasi bawah lima tab | `web/src/components/BottomNav.tsx`      | 8     |
+| Navigasi bawah lima tab | `web/src/components/BottomNav.tsx`      | 17    |
+| Geser jari pindah tab   | `web/src/hooks/useGeserTab.ts`          | 47    |
 | Daftar rute halaman     | `web/src/App.tsx`                       | 17    |
 | Daftar tema di beranda  | `web/src/pages/Beranda.tsx`             | 30    |
 | Daftar palet per tema   | `web/src/pages/DetailTema.tsx`          | 89    |

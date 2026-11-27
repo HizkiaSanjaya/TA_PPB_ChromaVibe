@@ -288,7 +288,7 @@ export function Generator() {
             />
           )}
           {daftarTema.data && (
-            <div className="geser-sentuh mt-2 flex gap-2 overflow-x-auto pb-1">
+            <div className="geser-sentuh mt-2 flex gap-2 overflow-x-auto pb-1" data-tanpa-geser>
               {daftarTema.data.map((item) => (
                 <button
                   key={item.slug}
